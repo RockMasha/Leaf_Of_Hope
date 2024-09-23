@@ -1,0 +1,22 @@
+{
+  "name": "Leaf_Of_Hope",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/Leaf_Of_Hope/"
+  },
+  "author": "Mary",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.79.3",
+    "vite": "^5.2.10",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2"
+  },
+  "dependencies": {
+    "swiper": "^11.1.14"
+  }
+}
