@@ -1,9 +1,9 @@
-@import "./reset";
-@import "./scss/universal/header/header";
-@import "./scss/main/mainInfo/mainInfo";
-@import "./scss/main/opportunities/opportunities";
-@import "./scss/main/needPlants/needPlants";
-@import "./scss/universal/footer/footer";
+@import "./_reset";
+@import "./scss/universal/header/_header";
+@import "./scss/main/mainInfo/_mainInfo";
+@import "./scss/main/opportunities/_opportunities";
+@import "./scss/main/needPlants/_needPlants";
+@import "./scss/universal/footer/_footer";
 
 :root {
   --color-background: #134611;
