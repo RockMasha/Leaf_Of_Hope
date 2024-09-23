@@ -11,7 +11,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src/index.html"),
-        // nested: resolve(__dirname, "src/genres.html"),
+        nested: resolve(__dirname, "src/search.html"),
+        nestedTwo: resolve(__dirname, "src/profile.html"),
+        nestedThee: resolve(__dirname, "src/redactProfile.html"),
+        nestedFour: resolve(__dirname, "src/advert.html"),
+        nestedFive: resolve(__dirname, "src/formAdvert.html"),
       },
     },
     outDir: "../dist",
