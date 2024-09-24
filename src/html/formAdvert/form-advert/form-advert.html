@@ -1,0 +1,213 @@
+<section class="formAdvert">
+  <div class="container">
+    <form class="form-advert">
+      <div class="form-advert__flex-block">
+        <label class="form-advert__img">
+          <input class="form-advert__file" type="file" />
+          <img class="form-advert__svg" src="./img/formAdvert/plant.svg" />
+        </label>
+        <div class="form-advert__flex-block-small">
+          <input
+            class="form-advert__name"
+            type="text"
+            placeholder="Введіть назву рослини"
+          />
+          <div class="form-advert-way">
+            <p class="form-advert-way__text">
+              <input
+                class="form-advert-way__input form-advert-way__input_exchange"
+                type="radio"
+                name="way"
+                checked
+              />
+              Віддача
+            </p>
+            <p class="form-advert-way__text">
+              <input
+                class="form-advert-way__input form-advert-way__input_give"
+                type="radio"
+                name="way"
+              />
+              Обмін
+            </p>
+          </div>
+          <textarea
+            class="form-advert__description"
+            placeholder="Опишіть вашу рослинку"
+          ></textarea>
+        </div>
+      </div>
+      <div class="form-advert__opinion-of-plant">
+        <div class="form-advert__opinion-block-one">
+          <div class="form-advert-characteristic">
+            <p class="form-advert-characteristic__signature">Освітлення</p>
+            <select
+              class="form-advert-characteristic-select"
+              name="light"
+              id="1"
+            >
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="many"
+              >
+                багато
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="normal"
+              >
+                помірно
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="some"
+              >
+                мало
+              </option>
+            </select>
+          </div>
+          <div class="form-advert-characteristic">
+            <p class="form-advert-characteristic__signature">Темпаратура</p>
+            <select
+              class="form-advert-characteristic-select"
+              name="temparature"
+              id="2"
+            >
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="0-15"
+              >
+                0-15°С
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="15-25"
+              >
+                15-25°С
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="25-35"
+              >
+                25-35°С
+              </option>
+            </select>
+          </div>
+          <p class="form-advert-characteristic__signature">Розмір</p>
+          <div class="form-advert-characteristic">
+            <select
+              class="form-advert-characteristic-select"
+              name="size"
+              id="3"
+            >
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="small"
+              >
+                малий
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="middle"
+              >
+                середній
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="big"
+              >
+                великий
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="form-advert__opinion-block-two">
+          <div class="form-advert-characteristic">
+            <p class="form-advert-characteristic__signature">Тривалісь життя</p>
+            <select
+              class="form-advert-characteristic-select"
+              name="life"
+              id="4"
+            >
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="one-year"
+              >
+                однорічні
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="many-years"
+              >
+                багаторічні
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="very-many-years"
+              >
+                довгожителі
+              </option>
+            </select>
+          </div>
+          <div class="form-advert-characteristic">
+            <p class="form-advert-characteristic__signature">Алергійність</p>
+            <select
+              class="form-advert-characteristic-select"
+              name="allergy"
+              id="5"
+            >
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="no-name"
+              >
+                невказано
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="yes"
+              >
+                наявна
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="no"
+              >
+                відсутння
+              </option>
+            </select>
+          </div>
+          <div
+            class="form-advert-characteristic form-advert-characteristic__last"
+          >
+            <p class="form-advert-characteristic__signature">Вологість</p>
+            <select class="form-advert-characteristic-select" name="wet" id="6">
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="many"
+              >
+                багато
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="normal"
+              >
+                помірно
+              </option>
+              <option
+                class="form-advert-characteristic-select__opinion"
+                value="some"
+              >
+                мало
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <textarea
+        class="form-advert__wish"
+        placeholder="На що б ви хотіли обміняти цю рослину?"
+      ></textarea>
+      <button class="form-advert__btn-submit" type="submit">Створити</button>
+    </form>
+  </div>
+</section>
