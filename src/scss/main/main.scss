@@ -1,20 +1,29 @@
 @import "../universal/reset";
+@import "../utility/variobuls";
 @import "../universal/header/header";
 @import "./mainInfo/mainInfo";
 @import "./opportunities/opportunities";
 @import "./needPlants/needPlants";
 @import "../universal/footer/footer";
-
-:root {
-  --color-background: #134611;
-  --color-text: #cbf4c6;
-}
+@import "../universal/font/inter";
 
 body {
   font-family: Inter;
+  line-height: normal;
 }
 .container {
-  
   width: 296px;
   margin: 0 auto;
+}
+
+@media(min-width: 768px){
+  .container {
+    width: 692px;
+  }
+}
+
+@media(min-width: 1440px){
+  .container {
+    width: 1254px;
+  }
 }

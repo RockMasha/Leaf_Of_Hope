@@ -1,31 +1,22 @@
+@import "../logo/logo.scss";
 .header {
   padding: 12px 0;
-  background-image: url("./img/universal/background.jpg");
+  background-image: url("/img/universal/background.jpg");
+  background-size: cover;
 }
 .header__container {
   display: flex;
   justify-content: space-between;
 }
-.logo {
-  width: 102px;
-  height: 38px;
-  padding: 3.5px;
-  background-color: white;
-  border-radius: 10px;
-}
-.logo__svg {
-  width: 78px;
-  height: 31px;
-}
-.menu__svg_search{
+.menu__svg_search {
   width: 20px;
   height: 21px;
 }
-.menu__svg_add{
+.menu__svg_add {
   width: 26px;
   height: 26px;
 }
-.menu__svg_profile{
+.menu__svg_profile {
   width: 18px;
   height: 22px;
 }
@@ -50,4 +41,54 @@
 .menu__item_add {
 }
 .menu__item_profile {
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 15px 0;
+  }
+  .menu__svg_search {
+    width: 24px;
+    height: 26px;
+  }
+  .menu__svg_add {
+    width: 26px;
+    height: 26px;
+  }
+  .menu__svg_profile {
+    width: 24px;
+    height: 29px;
+  }
+  .menu {
+    gap: 11px;
+  }
+  .menu__item {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    padding: 18px 0;
+  }
+  .menu__svg_search {
+    width: 45px;
+    height: 47px;
+  }
+  .menu__svg_add {
+    width: 42px;
+    height: 42px;
+  }
+  .menu__svg_profile {
+    width: 37px;
+    height: 49px;
+  }
+  .menu {
+    gap: 16px;
+  }
+  .menu__item {
+    width: 67px;
+    height: 67px;
+  }
 }

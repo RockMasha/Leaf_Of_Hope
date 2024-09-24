@@ -1,11 +1,35 @@
+@import "../logo/logo.scss";
 .footer {
+  padding: 11px 0;
+  background-image: url("/img/universal/background.jpg");
 }
 .footer__container {
   display: flex;
-}
-.logo {
-}
-.logo__svg {
+  align-items: center;
+  justify-content: space-between;
 }
 .footer__copyright {
+  width: 72px;
+  color: $color-main-text;
+  font-size: 8px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 15px 0;
+  }
+  .footer__copyright {
+    width: 178px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    padding: 18px 0;
+  }
+  .footer__copyright {
+    width: auto;
+    font-size: 24px;
+  }
 }
