@@ -2,31 +2,20 @@ import Swiper from "swiper/bundle";
 import "swiper/css";
 import "swiper/css/bundle";
 
-const swiper = new Swiper(".swiper", {
+if (window.innerWidth < 1440) {
+  const swiper = new Swiper(".swiper", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    // loop: true,
-    // keyboard: {
-    //   enabled: true,
-    //   onlyInViewport: true,
-    //   pageUpDown: true,
-    // },
-    // mousewheel: {
-    //   sensitivity: 0.35,
-    //   eventsTarget: ".swiper",
-    // },
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: true,
-    // },
-    // speed: 500,
-    // spaceBetween: "50px",
-    // observeSlideChildren: true,
-    // observer: true,
-    // observeParents: true,
-    // slidesPerView: 1,
-    // slidesPerGroup: 1,
-    // freeMode: true,
+
+    breakpoints: {
+      320: {
+        spaceBetween: "50px",
+      },
+      768: {
+        spaceBetween: "90px",
+      },
+    },
   });
+}
