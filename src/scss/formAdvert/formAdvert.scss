@@ -1,0 +1,26 @@
+@import "../universal/fonts";
+@import "../universal/reset";
+@import "../universal/header/header";
+@import "../utility/variobuls";
+@import "./formAdverts/form-advert";
+@import "../universal/footer/footer";
+body {
+  font-family: Inter;
+  line-height: normal;
+}
+.container {
+  width: 296px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 692px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 1254px;
+  }
+}
