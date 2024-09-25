@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf_Of_Hope</title>
+  <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nested-Cp60aLaC.js"></script>
+  <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/index-Cc1re3aa.css">
+</head>
+<body>
+    <header class="header">
+  <div class="container header__container">
+    <a class="logo" href="index.html">
+      <div class="logo__svg"></div>
+    </a>
+    <ul class="header__menu menu">
+      <li class="menu__item menu__item_search">
+        <a class="menu__link" href="search.html">
+          <svg class="menu__svg menu__svg_search">
+            <use href="/Leaf_Of_Hope/assets/search-DtyNUSZq.svg#search"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="menu__item menu__item_add">
+        <a class="menu__link" href="formAdvert">
+          <svg class="menu__svg menu__svg_add">
+            <use href="/Leaf_Of_Hope/assets/plus-CQ9xH6wd.svg#plus"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="menu__item menu__item_profile">
+        <a class="menu__link" href="profile.html">
+          <img
+            class="menu__svg menu__svg_profile"
+            src="/Leaf_Of_Hope/assets/profile-CrWxUfWR.svg#profile"
+            alt="profile"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <main class="search__main">
+        <section class="side-panel is-hidden" id="modal-js">
+  <div class="side-panel__wrapp">
+    <button class="side-panel__close-btn" id="close-modal-js">x</button>
+    <h2 class="side-panel__title">Обери свою рослинку</h2>
+    <form class="side-panel__form">
+      <ul class="side-panel__radio-list">
+        <li>
+          <input
+            type="radio"
+            id="all"
+            name="way"
+            class="side-panel__radio-btn"
+          /><label for="all">Усе</label>
+        </li>
+        <li>
+          <input
+            type="radio"
+            id="axchange"
+            name="way"
+            class="side-panel__radio-btn"
+          /><label for="axchange">Обмін</label>
+        </li>
+        <li>
+          <input
+            type="radio"
+            id="dedication"
+            name="way"
+            class="side-panel__radio-btn"
+          /><label for="dedication">Віддача</label>
+        </li>
+      </ul>
+      <ul class="side-panel__select-list">
+        <li>
+          <label for="light">Освітлення</label>
+          <select name="light" id="light" class="side-panel__select">
+            <option value="undefined">не вказано</option>
+            <option value="many">багато</option>
+            <option value="normal">помірно</option>
+            <option value="little">мало</option>
+          </select>
+        </li>
+        <li>
+          <label for="temperature">Температура</label>
+          <select
+            name="temperature"
+            id="temperature"
+            class="side-panel__select"
+          >
+            <option value="undefined">не вказано</option>
+            <option value="low">0-15°С</option>
+            <option value="normal">15-25°С</option>
+            <option value="high">25-35°С</option>
+          </select>
+        </li>
+        <li>
+          <label for="size">Розмір</label>
+          <select name="size" id="size" class="side-panel__select">
+            <option value="undefined">не вказано</option>
+            <option value="large">багато</option>
+            <option value="medium">помірно</option>
+            <option value="small">мало</option>
+          </select>
+        </li>
+        <li>
+          <label for="lifeDuration">Тривалість життя</label>
+          <select
+            name="lifeDuration"
+            id="lifeDuration"
+            class="side-panel__select"
+          >
+            <option value="undefined">не вказано</option>
+            <option value="annual">однорічний</option>
+            <option value="biennial">дворічний</option>
+            <option value="perennial">довгожитель</option>
+          </select>
+        </li>
+        <li>
+          <label for="alergenicity">Алергенність</label>
+          <select
+            name="alergenicity"
+            id="alergenicity"
+            class="side-panel__select"
+          >
+            <option value="undefined">не вказано</option>
+            <option value="true">наявна</option>
+            <option value="false">відсутня</option>
+          </select>
+        </li>
+        <li>
+          <label for="humidity">Вологість</label>
+          <select name="humidity" id="humidity" class="side-panel__select">
+            <option value="undefined">не вказано</option>
+            <option value="low">мала</option>
+            <option value="normal">помірна</option>
+            <option value="high">висока</option>
+          </select>
+        </li>
+      </ul>
+      <button type="submit" class="side-panel__submit-btn">Search</button>
+    </form>
+  </div>
+</section>
+
+        <section class="left-side">
+  <div class="container left-side__container">
+    <button class="left-side__button" id="open-modal-js" type="button">
+      <svg class="left-side__burger-menu-svg" width="41px" height="25px">
+        <use href="/Leaf_Of_Hope/assets/burger-menu-CkG2OxNi.svg#burger-menu"></use>
+      </svg>
+    </button>
+    <ul class="left-side__list">
+      <li class="left-side__item">
+        <a href="#" class="card">
+          <p class="card__way">Віддача</p>
+          <div class="card__info-wrapp">
+            <div class="card__thumb">
+              <img
+                class="card__img"
+                src="../../img/search/cactus.jpg"
+                alt="Рослинка"
+              />
+            </div>
+            <div>
+              <div class="card__title-wrapp">
+                <h4 class="card__title">Кактус зелений</h4>
+              </div>
+              <ul class="card__info-list">
+                <li class="card__info-item"><p>Освітлення: багато</p></li>
+                <li class="card__info-item"><p>Вологість: мало</p></li>
+                <li class="card__info-item"><p>Розмір: 15см</p></li>
+                <li class="card__info-item">
+                  <p>Тривальсть життя: <span>багаторічний</span></p>
+                </li>
+                <li class="card__info-item">
+                  <p>Алергеність: <span>відсутння</span></p>
+                </li>
+                <li class="card__info-item">
+                  <p>Темпаратура: <span>15-25°C</span></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="container footer__container">
+    <div class="logo">
+      <div class="logo__svg"></div>
+    </div>
+    <p class="footer__copyright">Copyright © 2024. All rights reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>
