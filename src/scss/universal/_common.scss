@@ -1,18 +1,22 @@
 body {
-    font-family: Inter;
-    line-height: normal;
-  }
+  font-family: Inter;
+  line-height: normal;
   display: flex;
   flex-direction: column;
   font-family: Inter;
   line-height: normal;
 }
-main{
+main {
   flex-grow: 1;
 }
 .container {
   width: 296px;
   margin: 0 auto;
+  @media (min-width: 768px) {
+      width: 692px;
+  }
+  @media (min-width: 1440px) {
+      width: 1254px;
 }
 
 img.big-photo {
@@ -21,23 +25,6 @@ img.big-photo {
   border-radius: 20px;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 692px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .container {
-    width: 1254px;
-  }
-  
-  @media(min-width: 1440px){
-    .container {
-      width: 1254px;
-    }
-  }
-
   .is-hidden {
     position: absolute;
     width: 1px;
@@ -45,7 +32,7 @@ img.big-photo {
     margin: -1px;
     border: 0;
     padding: 0;
-    
+
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
