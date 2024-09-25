@@ -1,0 +1,36 @@
+.left-side {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    width: 70%;
+    padding-top: 30px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 75%;
+    padding-top: 30px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      width: 490px;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 1033px;
+    }
+  }
+  &__button {
+    align-self: flex-end;
+    border: none;
+    background-color: transparent;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  &__list {
+    margin-top: 11px;
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+}
