@@ -1,1 +1,0 @@
-import"./index-Cyj73yee.js";const r={photo:document.querySelector(".form-advert__img")};function i(o){const t=o.querySelector("img"),n=o.querySelector("input[type=file]").files[0],e=new FileReader;e.addEventListener("load",()=>{t.src=e.result,t.classList.add("big-photo")},!1),n&&e.readAsDataURL(n)}r.photo.onchange=i.bind(void 0,r.photo);
