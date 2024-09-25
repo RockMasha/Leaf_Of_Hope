@@ -1,0 +1,114 @@
+.card {
+  width: 286px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 22px 22px;
+  border-radius: 30px;
+  background-color: $color-card-sidePanel;
+  color: $color-text-line;
+  @media screen and (min-width: 768px) {
+    width: 490px;
+    padding: 9px 12px 0px 16px;
+  }
+  @media screen and (min-width: 1440px) {
+    position: relative;
+    width: 945px;
+    padding: 33px;
+  }
+  &__way {
+    align-self: flex-end;
+    margin-bottom: 11px;
+    padding: 6px;
+    border-radius: 12px;
+    background-color: $color-card;
+    font-size: 16px;
+    font-weight: 500;
+    @media screen and (min-width: 1440px) {
+      position: absolute;
+      right: 45px;
+      top: 33px;
+      margin: 0;
+      padding: 13px  2px;
+      font-size: 26px;
+    }
+  }
+
+  &__info-wrapp {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  &__thumb {
+    margin-bottom: 19px;
+  }
+
+  &__img {
+    width: 179px;
+    height: 174px;
+    margin: 0 auto;
+    background-repeat: 12px;
+    background-color: $color-card;
+    @media screen and (min-width: 1440px) {
+      width: 301px;
+      height: 324px;
+    }
+  }
+  &__title-wrapp {
+    position: relative;
+    padding: 8px 45px 6px 10px;
+    border-radius: 12px 12px 0 0;
+    background-color: $color-card;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 219px;
+      height: 2px;
+      background-color: $color-text-line;
+    }
+    @media screen and (min-width: 768px) {
+      padding-right: 47px;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 424px;
+      padding-bottom: 14px;
+      padding-left: 35px;
+      &::before {
+        width: 307px;
+      }
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    @media screen and (min-width: 1440px) {
+      font-size: 40px;
+    }
+  }
+
+  &__info-list {
+    padding: 9px 3px 7px 12px;
+    border-radius: 0 0 12px 12px;
+    background-color: $color-card;
+    @media screen and (min-width: 768px) {
+      padding-right: 5px;
+    }
+    @media screen and (min-width: 1440px) {
+      height: 252px;
+      padding: 24px 48px 24px 30px;
+      border-radius: 0 12px 12px 12px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      row-gap: 8px;
+      column-gap: 79px;
+      font-size: 24px;
+      & span {
+        display: block;
+      }
+    }
+  }
+}
