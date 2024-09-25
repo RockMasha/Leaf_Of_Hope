@@ -5,7 +5,7 @@
     padding: 50px 0 50px 0;
   }
   &__thumb {
-    background-color: rgba(239, 239, 239, 1);
+    background-color: color-grey-very-light;
     width: 264px;
     height: 243px;
     border-radius: 20px;
@@ -37,7 +37,7 @@
     left: 230px;
     width: 32px;
     height: 25.75px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $color-white;
     border: none;
     @media screen and (min-width: 768px) {
       top: -10px;
@@ -76,7 +76,7 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 1.21;
-    color: rgba(104, 106, 103, 1);
+    color: $color-grey-dark;
     margin-top: 25px;
     &.bold {
       font-size: 20px;
