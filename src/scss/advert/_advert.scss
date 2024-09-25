@@ -1,0 +1,294 @@
+.advert {
+  padding: 40px 0 28px;
+}
+.advert__container {
+  padding: 0 23px;
+}
+.advert-maininfo {
+  margin-bottom: 16px;
+}
+.advert-maininfo__img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 17px;
+  border-radius: 20px;
+}
+.advert-maininfo__title {
+  color: #173414;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.advert-maininfo-way {
+  display: inline-block;
+  padding: 3px 9px;
+  margin-bottom: 15px;
+  background: $color-card;
+  border-radius: 20px;
+}
+.advert-maininfo-way__text {
+  color: $color-text-line;
+  font-size: 16px;
+}
+.advert-properties {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.advert-properties__text {
+  color: $color-text-line;
+  font-size: 16px;
+}
+.advert-discreption {
+  margin-bottom: 16px;
+}
+.advert-discreption__title {
+  color: $color-black;
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+.advert-discreption__text {
+  font-size: 16px;
+}
+.advert-userinfo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 15px 16px 15px 16px;
+  border-radius: 20px;
+  background: $color-grey-lightblue;
+}
+.advert-userinfo__profile-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 75px;
+  background-color: $color-grey-very-light;
+  border-radius: 20px;
+}
+.advert-userinfo__img {
+  width: 30px;
+  height: 40px;
+}
+.advert-userinfos__name {
+  color: $color-black;
+  font-size: 14px;
+  font-weight: 600;
+}
+.advert-userinfos__adress {
+  margin-bottom: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  color: $color-grey-dark;
+}
+.advert-userinfo__phone {
+  color: $color-black;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.advert-userinfo__email {
+  color: $color-black;
+  font-size: 12px;
+  font-weight: 600;
+}
+.advert-wishes {
+  padding: 11px 11px 14px 13px;
+  background: $color-grey-lightblue;
+  border-radius: 20px;
+}
+.advert-wishes__title {
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: $color-black;
+}
+.advert-user {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 16px;
+}
+.advert-wishes__text {
+  color: $color-black;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .advert {
+    padding: 92.4px 0 30px;
+  }
+  .advert-maininfo {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+  .advert-maininfo__title {
+    margin-bottom: 6px;
+    font-size: 40px;
+  }
+  .advert-maininfo__img {
+    min-width: 300px;
+    height: 300px;
+    margin-bottom: 0;
+  }
+  .advert-maininfo-way {
+    padding: 7px 14px;
+  }
+  .advert-maininfo-way__text {
+    font-size: 24px;
+  }
+  .advert-maininfo-way::after {
+    font-size: 24px;
+  }
+
+  .advert-properties {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 375px;
+    row-gap: 19px;
+    column-gap: 11px;
+  }
+  .advert-properties__text {
+    font-size: 21px;
+  }
+  .advert-properties__text span {
+    display: block;
+  }
+  .advert-discreption {
+    margin-bottom: 40px;
+  }
+  .advert-discreption__title {
+    font-size: 44px;
+    margin-bottom: 10px;
+  }
+  .advert-discreption__text {
+    font-size: 26px;
+  }
+  .advert-user {
+    flex-direction: row;
+    gap: 43px;
+    margin-top: 40px;
+  }
+  .advert-userinfo {
+    padding: 26px 20px 25px 25px;
+    gap: 15px;
+  }
+  .advert-userinfo__profile-img {
+    width: 160px;
+    height: 160px;
+  }
+  .advert-userinfo__img {
+    width: 105px;
+    height: 139px;
+  }
+  .advert-userinfos__name {
+    font-size: 20px;
+  }
+  .advert-userinfos__adress {
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .advert-userinfos {
+    width: 150px;
+  }
+  .advert-userinfo__phone {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .advert-userinfo__email {
+    font-size: 16px;
+  }
+  .advert-wishes {
+    padding: 22px 18px 22px 13px;
+  }
+  .advert-wishes__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .advert-wishes__text {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1440px) {
+  .advert {
+    padding: 100px 0 79px;
+  }
+  .advert-maininfo {
+    gap: 59px;
+  }
+  .advert-maininfo__img {
+    min-width: 500px;
+    height: 500px;
+  }
+  .advert-maininfo__title {
+    white-space: nowrap;
+    margin-bottom: 0;
+    font-size: 90px;
+  }
+  .advert-maininfo-way {
+    padding: 5px 12px;
+    margin-bottom: 41px;
+  }
+  .advert-maininfo-way__text {
+    font-size: 36px;
+  }
+  .advert-properties {
+    height: 296px;
+    row-gap: 25px;
+    column-gap: 109px;
+  }
+  .advert-properties__text {
+    font-size: 32px;
+  }
+  .advert-discreption {
+    margin-top: 51px;
+  }
+  .advert-discreption__title {
+    font-size: 64px;
+    margin-bottom: 23px;
+  }
+  .advert-discreption__text {
+    font-size: 40px;
+    font-weight: 300;
+  }
+  .advert-user {
+    gap: 100px;
+    margin-top: 176px;
+  }
+  .advert-userinfo {
+    padding: 34px 59px 32px 31px;
+    gap: 23px;
+  }
+  .advert-userinfo__profile-img {
+    width: 241px;
+    height: 241px;
+  }
+  .advert-userinfos__name {
+    font-size: 36px;
+    margin-bottom: 11px;
+  }
+  .advert-userinfos__adress {
+    margin-bottom: 7px;
+    font-size: 24px;
+  }
+  .advert-userinfos {
+    width: 364px;
+  }
+  .advert-userinfo__phone {
+    font-size: 24px;
+  }
+  .advert-userinfo__email{
+    font-size: 24px;
+  }
+  .advert-wishes {
+    padding: 34px 36px 34px 33px;
+  }
+  .advert-wishes__title {
+    font-size: 36px;
+  }
+  .advert-wishes__text {
+    font-size: 28px;
+  }
+}
