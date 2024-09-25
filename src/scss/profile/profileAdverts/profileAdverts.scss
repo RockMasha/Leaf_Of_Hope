@@ -1,0 +1,61 @@
+.profile-adverts {
+  padding-bottom: 40px;
+  &__title {
+    margin-bottom: 42px;
+    font-size: 44px;
+    color: $color-black;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__btn-list {
+    display: flex;
+    gap: 15px;
+    padding-left: 130px;
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      padding: 0;
+    }
+  }
+  &__btn {
+    position: relative;
+    top: -1px;
+    width: 56px;
+    height: 52px;
+    border: 1px solid $color-card-sidePanel;
+    border-radius: 0 0 20px 20px;
+    background-color: $color-card-sidePanel;
+    background-size: 36px 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    &.edit-btn {
+      background-image: url("../../../img/profile/redact.svg#redact");
+    }
+    &.delete-btn {
+      background-image: url("../../../img/profile/delete.svg#delete");
+    }
+    @media screen and (min-width: 768px) {
+      width: 64px;
+      height: 69px;
+      border-radius: 20px;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 143px;
+      height: 140px;
+      background-size: 76px 72px;
+  }
+  }
+}
