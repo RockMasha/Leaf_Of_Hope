@@ -1,0 +1,116 @@
+.side-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  overflow: auto;
+  width: 100vw;
+  height: 100vh;
+  padding: 27px 0 20px 24px;
+  background-color: $color-card-sidePanel;
+  font-size: 24px;
+  color: $color-search-select;
+  @media screen and (min-width: 768px) {
+    position: static;
+    overflow: hidden;
+    width: 30%;
+    height: 100%;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 25%;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background-color: transparent;
+    font-size: 36px;
+    color: $color-text-line;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__title {
+    width: 196px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 500;
+    color: $color-text-line;
+    @media screen and (min-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 40px;
+    }
+  }
+
+  &__radio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    & > li {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  &__radio-btn {
+    width: 30px;
+    height: 31px;
+    appearance: none;
+    background-image: url("/img/search/checkBox-nocheked.svg");
+    background-repeat: no-repeat;
+    &:checked {
+      background-image: url("/img/search/checkBox-cheked.svg");
+    }
+  }
+
+  &__select-list {
+    margin-top: 28px;
+    & > li {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__select {
+    width: 254px;
+    height: 40px;
+    padding: 5px 0 5px 17px;
+    border-radius: 12px;
+    appearance: none;
+    border: 1px solid transparent;
+    background-image: url("/img/formAdvert/select-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 55%;
+    background-size: 20px 20px;
+    color: $color-card-sidePanel;
+    font-size: 24px;
+    font-weight: 500;
+    @media screen and (min-width: 768px) {
+      width: 80%;
+      height: 42px;
+    }
+  }
+
+  &__submit-btn {
+    margin-top: 20px;
+    padding: 12px 42px;
+    font-size: 20px;
+    color: $color-text-line;
+    background-color: $color-card;
+    border: 1px solid transparent;
+    border-radius: 20px;
+  }
+}
