@@ -14,15 +14,10 @@
 }
 .need-plants_background-image {
   position: absolute;
-  top: 93px;
   left: 50%;
-  width: 249px;
-  height: 324px;
   transform: translateX(-50%);
-  background-image: url("/img/main/needPlant-photo.jpg");
-  background-size: cover;
   border-radius: 20px;
-  opacity: 0.25;
+  opacity: 0.5;
 }
 .need-plants__text {
   padding: 23px 10px;
@@ -42,11 +37,6 @@
     margin-bottom: 14px;
     font-size: 48px;
   }
-  .need-plants_background-image {
-    top: 147px;
-    width: 611px;
-    height: 302px;
-  }
   .need-plants__text {
     padding: 35px 15px 35px 30px;
     font-size: 24px;
@@ -64,11 +54,6 @@
     width: auto;
     margin-bottom: 14px;
     font-size: 64px;
-  }
-  .need-plants_background-image {
-    top: 145px;
-    width: 1143px;
-    height: 392px;
   }
   .need-plants__text {
     padding: 35px 15px 35px 30px;
