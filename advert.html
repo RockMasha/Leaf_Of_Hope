@@ -4,9 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaf_Of_Hope</title>
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/index-Ck9q1qov.css">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/index-uMy4zD18.css">
   </head>
   <body>
+    <div class="modal-wrapper is-hidden">
+  <div class="signin-modal">
+    <h2 class="signin-modal__title">Вхід</h2>
+    <form class="signin-modal-form">
+      <div class="signin-modal-form__enter-block">
+        <label class="signin-modal-form__enter">
+          Пошта
+          <input
+            class="signin-modal-form__input"
+            type="email"
+            placeholder="Ведіть ваш емейл"
+            name="email"
+            required
+        /></label>
+        <label class="signin-modal-form__enter">
+          Пароль
+          <input
+            class="signin-modal-form__input"
+            type="password"
+            placeholder="Ведіть пароль"
+            name="password"
+            required
+          />
+        </label>
+      </div>
+      <button class="signin-modal-form__btn-submit" type="submit">
+        Увійти
+      </button>
+    </form>
+    <p class="signin-modal__error"></p>
+    <a class="signin-modal__link" href="createProfile.html">Зареєструватись</a>
+  </div>
+</div>
+
+
     <header class="header">
   <div class="container header__container">
     <a class="logo" href="index.html">
