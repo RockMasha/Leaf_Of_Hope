@@ -1,3 +1,5 @@
+import { cardData } from "../cardData/cardData";
+
 export function getCard(info) {
   const {
     alergenicity,
@@ -14,7 +16,7 @@ export function getCard(info) {
   return `
       <li class="left-side__item">
         <a href="advert.html" class="card">
-          <p class="card__way">${way}</p>
+          <p class="card__way">${cardData.way[way]}</p>
           <div class="card__info-wrapp">
             <div class="card__thumb">
               <img
@@ -28,17 +30,17 @@ export function getCard(info) {
                 <h4 class="card__title">${name}</h4>
               </div>
               <ul class="card__info-list">
-                <li class="card__info-item"><p>Освітлення: ${light}</p></li>
-                <li class="card__info-item"><p>Вологість: ${humidity}</p></li>
-                <li class="card__info-item"><p>Розмір: ${size}</p></li>
+                <li class="card__info-item"><p>Освітлення: ${cardData.light[light]}</p></li>
+                <li class="card__info-item"><p>Вологість: ${cardData.humidity[humidity]}</p></li>
+                <li class="card__info-item"><p>Розмір: ${cardData.size[size]}</p></li>
                 <li class="card__info-item">
-                  <p>Тривальсть життя: <span>${lifeDuration}</span></p>
+                  <p>Тривальсть життя: <span>${cardData.lifeDuration[lifeDuration]}</span></p>
                 </li>
                 <li class="card__info-item">
-                  <p>Алергеність: <span>${alergenicity}</span></p>
+                  <p>Алергеність: <span>${cardData.alergenicity[alergenicity]}</span></p>
                 </li>
                 <li class="card__info-item">
-                  <p>Темпаратура: <span>${temperature}</span></p>
+                  <p>Темпаратура: <span>${cardData.temperature[temperature]}</span></p>
                 </li>
               </ul>
             </div>
