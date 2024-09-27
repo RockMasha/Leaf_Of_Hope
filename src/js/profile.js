@@ -13,9 +13,6 @@ if (res) {
         <img class="user-info__svg" src="${user.avatar}" alt="avatar">
     </div>
     <div class="user-info__user">
-        <button class="user-info__button">
-            <img class="user-info__button-image" src="./img/profile/redact-profile.svg" alt="redact">
-        </button>
         <h2 class="user-info__title">${user.username}</h2>
         <p class="user-info__text">${user.adress}</p>
         <p class="user-info__text bold">${user.phone}</p>
