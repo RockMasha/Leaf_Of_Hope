@@ -16,6 +16,7 @@ export default defineConfig({
         nestedThee: resolve(__dirname, "src/redactProfile.html"),
         nestedFour: resolve(__dirname, "src/advert.html"),
         nestedFive: resolve(__dirname, "src/formAdvert.html"),
+        nestedSix: resolve(__dirname, "src/createProfile.html"),
       },
     },
     outDir: "../dist",
