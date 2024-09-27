@@ -1,0 +1,156 @@
+.modal-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+}
+.signin-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: $color-white;
+  border-radius: 30px;
+}
+.signin-modal__title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: $color-text-line;
+}
+.signin-modal-form {
+}
+.signin-modal-form__enter-block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.signin-modal-form__enter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.signin-modal-form__input {
+  display: block;
+  width: 220px;
+  padding-bottom: 3px;
+  font-size: 12px;
+  color: $color-text-line;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1.5px solid $color-text-line;
+}
+.signin-modal-form__input::placeholder {
+  color: $color-grey-dark;
+}
+.signin-modal-form__input:invalid {
+  border-bottom: 1.5px solid $color-red;
+}
+.signin-modal-form__btn-submit {
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+  padding: 5px 15px;
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: $color-text-line;
+  background-color: $color-card-sidePanel;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+.signin-modal__link {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333899;
+}
+.signin-modal__error {
+  position: absolute;
+  bottom: 42px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: $color-red;
+}
+
+@media (min-width: 768px) {
+  .signin-modal {
+    padding: 50px;
+  }
+  .signin-modal__title {
+    margin-bottom: 25px;
+    font-size: 52px;
+  }
+  .signin-modal-form {
+  }
+  .signin-modal-form__enter-block {
+    gap: 45px;
+    margin-bottom: 60px;
+  }
+  .signin-modal-form__enter {
+    font-size: 28px;
+  }
+  .signin-modal-form__input {
+    width: 500px;
+    padding-bottom: 5px;
+    font-size: 24px;
+    border-bottom-width: 2.5px;
+  }
+  .signin-modal-form__btn-submit {
+    padding: 20px 40px;
+    margin-bottom: 50px;
+    font-size: 32px;
+  }
+  .signin-modal__link {
+    font-size: 21px;
+  }
+  .signin-modal__error {
+    bottom: 85px;
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .signin-modal {
+    padding: 70px;
+  }
+  .signin-modal__title {
+    margin-bottom: 60px;
+    font-size: 72px;
+  }
+  .signin-modal-form {
+  }
+  .signin-modal-form__enter {
+    gap: 10px;
+    font-size: 38px;
+  }
+  .signin-modal-form__input {
+    display: block;
+    width: 800px;
+    padding-bottom: 5px;
+    font-size: 32px;
+    border-bottom-width: 2.5px;
+  }
+  .signin-modal-form__btn-submit {
+    padding: 15px 40px;
+    font-size: 40px;
+  }
+  .signin-modal__link {
+    font-size: 28px;
+  }
+  .signin-modal__error {
+    top: 175px;
+    font-size: 28px;
+  }
+}
