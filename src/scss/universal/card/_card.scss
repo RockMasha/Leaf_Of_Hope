@@ -17,7 +17,9 @@
     padding: 33px;
   }
   &__way {
+    min-width: 50px;
     align-self: flex-end;
+    text-align: center;
     margin-bottom: 11px;
     padding: 6px;
     border-radius: 12px;
@@ -28,6 +30,7 @@
       position: absolute;
       right: 45px;
       top: 33px;
+      min-width: 100px;
       margin: 0;
       padding: 13px  2px;
       font-size: 26px;
@@ -38,6 +41,10 @@
     @media screen and (min-width: 768px) {
       display: flex;
       gap: 10px;
+    }
+    @media screen and (min-width: 1440px) {
+      display: flex;
+      gap: 25px;
     }
   }
 
@@ -51,6 +58,7 @@
     margin: 0 auto;
     background-repeat: 12px;
     background-color: $color-card;
+    border-radius: 20px;
     @media screen and (min-width: 1440px) {
       width: 301px;
       height: 324px;
