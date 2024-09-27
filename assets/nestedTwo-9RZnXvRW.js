@@ -1,7 +1,7 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */import{i as p,g as u,s as f}from"./isSignin-BCgmZZk3.js";import{a as m}from"./api-BqoOazn-.js";import"./createToken-BZzyubv1.js";const r={userInfo:document.querySelector("#user-info-js"),userCards:document.querySelector("#user-cards-js")},v=s=>{const{alergenicity:i,humidity:t,image:l,lifeDuration:a,light:e,name:o,size:c,temperature:_,way:d}=s;return`
+import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */import{i as p,g as u,s as m}from"./isSignin-BCgmZZk3.js";import{a as f}from"./api-BqoOazn-.js";import"./createToken-BZzyubv1.js";const r={userInfo:document.querySelector("#user-info-js"),userCards:document.querySelector("#user-cards-js")},v=s=>{const{alergenicity:i,humidity:t,image:l,lifeDuration:a,light:e,name:o,size:c,temperature:d,way:_}=s;return`
           <li class="left-side__item">
             <a href="advert.html" class="card">
-              <p class="card__way">${d}</p>
+              <p class="card__way">${_}</p>
               <div class="card__info-wrapp">
                 <div class="card__thumb">
                   <img
@@ -25,7 +25,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */import{
                       <p>Алергеність: <span>${i}</span></p>
                     </li>
                     <li class="card__info-item">
-                      <p>Темпаратура: <span>${_}</span></p>
+                      <p>Темпаратура: <span>${d}</span></p>
                     </li>
                   </ul>
                 </div>
@@ -42,12 +42,9 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */import{
         <img class="user-info__svg" src="${s.avatar}" alt="avatar">
     </div>
     <div class="user-info__user">
-        <button class="user-info__button">
-            <img class="user-info__button-image" src="./img/profile/redact-profile.svg" alt="redact">
-        </button>
         <h2 class="user-info__title">${s.username}</h2>
         <p class="user-info__text">${s.adress}</p>
         <p class="user-info__text bold">${s.phone}</p>
         <p class="user-info__text bold">${s.email}</p>
     </div>
-</div>`,console.log(s.token);const{result:i,tottal:t}=await m(`${u()}`);if(console.log(i),t===0)r.userCards.innerHTML="<p>Немає оголошень</p>";else{const a=i.map(e=>v(e)).join("");r.userCards.innerHTML=a}}else f();
+</div>`,console.log(s.token);const{result:i,tottal:t}=await f(`${u()}`);if(console.log(i),t===0)r.userCards.innerHTML="<p>Немає оголошень</p>";else{const a=i.map(e=>v(e)).join("");r.userCards.innerHTML=a}}else m();
