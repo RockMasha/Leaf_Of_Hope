@@ -1,7 +1,7 @@
 import axios from "axios";
 
 axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
-// axios.defaults.baseURL = "https://115e-46-164-129-202.ngrok-free.app";
+// axios.defaults.baseURL = " https://33ef-46-164-129-202.ngrok-free.app";
 
 export async function authorization(user) {
   try {
@@ -18,7 +18,11 @@ export async function authorization(user) {
 
 export async function getInfo(token) {
   try {
-    const answer = await axios.get("/api/auth/getInfo");
+    const answer = await axios.get("/api/auth/getInfo", {
+      headers: {
+        Authorization: token,
+      },
+    });
     return answer.data;
   } catch (error) {
     console.log(error);
@@ -57,5 +61,5 @@ export async function getAdverts(info) {
 }
 
 export const setAuthHeader = (token) => {
-  axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  axios.defaults.headers.Authorization = `Bearer ${token}`;
 };
