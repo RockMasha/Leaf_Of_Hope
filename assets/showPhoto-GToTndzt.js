@@ -1,0 +1,1 @@
+function i(t){const s=t.querySelector("img"),o=t.querySelector("input[type=file]").files[0],e=new FileReader;e.addEventListener("load",()=>{s.src=e.result,s.classList.add("big-photo")},!1),o&&e.readAsDataURL(o)}export{i as s};
