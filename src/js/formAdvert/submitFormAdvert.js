@@ -11,6 +11,7 @@ export async function submitFormAdvert(event) {
     const token = getToken();
     await postAdvert(data, token);
     history.go(-1);
+    
   } catch (error) {
     console.log(error);
 
