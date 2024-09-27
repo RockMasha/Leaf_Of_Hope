@@ -4,7 +4,12 @@
     <form class="create-profile-form">
       <div class="create-profile__main-block">
         <label class="create-profile-form__img">
-          <input class="create-profile-form__file" type="file" />
+          <input
+            name="avatar"
+            accept="image/png, image/jpeg, image/svg"
+            class="create-profile-form__file"
+            type="file"
+          />
           <img
             class="create-profile-form__svg"
             src="./img/universal/bigProfile.svg"
@@ -18,6 +23,8 @@
                 class="create-profile-form__input create-profile-form__input_name"
                 type="text"
                 placeholder="Ведіть ім'я"
+                name="username"
+                required
               />
             </label>
           </li>
@@ -28,6 +35,8 @@
                 class="create-profile-form__input create-profile-form__input_location"
                 type="text"
                 placeholder="Ведіть місце проживання"
+                name="adress"
+                required
               />
             </label>
           </li>
@@ -36,8 +45,10 @@
               Телефон
               <input
                 class="create-profile-form__input create-profile-form__input_phone"
-                type="text"
+                type="tel"
                 placeholder="Ведіть номер телефону"
+                name="phone"
+                required
             /></label>
           </li>
           <li class="create-profile-form__item">
@@ -45,8 +56,10 @@
               Пошта
               <input
                 class="create-profile-form__input create-profile-form__input_email"
-                type="text"
+                type="email"
                 placeholder="Ведіть ваш емейл"
+                name="email"
+                required
             /></label>
           </li>
           <li class="create-profile-form__item">
@@ -56,6 +69,8 @@
                 class="create-profile-form__input create-profile-form__input_password"
                 type="password"
                 placeholder="Ведіть пароль"
+                name="password"
+                required
               />
             </label>
           </li>
@@ -65,5 +80,6 @@
         Cтворити
       </button>
     </form>
+    <p class="create-profile__error"></p>
   </div>
 </section>

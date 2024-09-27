@@ -3,7 +3,7 @@
     <form class="form-advert">
       <div class="form-advert__flex-block">
         <label class="form-advert__img">
-          <input class="form-advert__file" type="file" />
+          <input class="form-advert__file" type="file" name="image" />
           <img class="form-advert__svg" src="./img/formAdvert/plant.svg" />
         </label>
         <div class="form-advert__flex-block-small">
@@ -11,6 +11,7 @@
             class="form-advert__name"
             type="text"
             placeholder="Введіть назву рослини"
+            name="name"
           />
           <div class="form-advert-way">
             <label class="form-advert-way__label">
@@ -18,7 +19,9 @@
                 class="form-advert-way__input form-advert-way__input_exchange"
                 type="radio"
                 name="way"
+                id="exchange"
                 checked
+                value="exchange"
               />
               Віддача
             </label>
@@ -27,6 +30,8 @@
                 class="form-advert-way__input form-advert-way__input_give"
                 type="radio"
                 name="way"
+                id="give"
+                value="give"
               />
               Обмін
             </label>
@@ -34,6 +39,7 @@
           <textarea
             class="form-advert__description"
             placeholder="Опишіть вашу рослинку"
+            id="description"
           ></textarea>
         </div>
       </div>
@@ -60,7 +66,7 @@
               </option>
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="some"
+                value="little"
               >
                 мало
               </option>
@@ -70,24 +76,24 @@
             <p class="form-advert-characteristic__signature">Темпаратура</p>
             <select
               class="form-advert-characteristic-select"
-              name="temparature"
+              name="temperature"
               id="2"
             >
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="0-15"
+                value="low"
               >
                 0-15°С
               </option>
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="15-25"
+                value="normal"
               >
                 15-25°С
               </option>
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="25-35"
+                value="low"
               >
                 25-35°С
               </option>
@@ -108,13 +114,13 @@
               </option>
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="middle"
+                value="medium"
               >
                 середній
               </option>
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="big"
+                value="large"
               >
                 великий
               </option>
@@ -126,24 +132,24 @@
             <p class="form-advert-characteristic__signature">Тривалісь життя</p>
             <select
               class="form-advert-characteristic-select"
-              name="life"
+              name="lifeDuration"
               id="4"
             >
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="one-year"
+                value="annual"
               >
                 однорічні
               </option>
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="many-years"
+                value="biennial"
               >
                 багаторічні
               </option>
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="very-many-years"
+                value="perennial"
               >
                 довгожителі
               </option>
@@ -153,24 +159,18 @@
             <p class="form-advert-characteristic__signature">Алергійність</p>
             <select
               class="form-advert-characteristic-select"
-              name="allergy"
+              name="alergenicity"
               id="5"
             >
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="no-name"
-              >
-                невказано
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="yes"
+                value="true"
               >
                 наявна
               </option>
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="no"
+                value="false"
               >
                 відсутння
               </option>
@@ -180,10 +180,14 @@
             class="form-advert-characteristic form-advert-characteristic__last"
           >
             <p class="form-advert-characteristic__signature">Вологість</p>
-            <select class="form-advert-characteristic-select" name="wet" id="6">
+            <select
+              class="form-advert-characteristic-select"
+              name="humidity"
+              id="6"
+            >
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="many"
+                value="high"
               >
                 багато
               </option>
@@ -195,7 +199,7 @@
               </option>
               <option
                 class="form-advert-characteristic-select__opinion"
-                value="some"
+                value="low"
               >
                 мало
               </option>
@@ -206,8 +210,10 @@
       <textarea
         class="form-advert__wish"
         placeholder="На що б ви хотіли обміняти цю рослину?"
+        name="wish"
       ></textarea>
       <button class="form-advert__btn-submit" type="submit">Створити</button>
     </form>
+    <p class="formAdvert__error"></p>
   </div>
 </section>

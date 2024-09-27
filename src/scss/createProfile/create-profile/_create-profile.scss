@@ -1,4 +1,5 @@
 .create-profile {
+  position: relative;
   padding: 39px 0 35px;
 }
 .create-profile__container {
@@ -55,6 +56,9 @@
 .create-profile-form__input::placeholder {
   color: $color-grey-very-light;
 }
+.create-profile-form__input:invalid {
+  border-bottom: 2.5px solid $color-red;
+}
 .create-profile-form__btn-submit {
   position: relative;
   left: 100%;
@@ -66,6 +70,16 @@
   background-color: $color-createProfile-btn-submit;
   border: 1px solid transparent;
   border-radius: 20px;
+}
+.create-profile__error {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-red;
 }
 
 @media (min-width: 768px) {
@@ -109,6 +123,10 @@
     padding: 10px 20px;
     font-size: 28px;
   }
+  .create-profile__error {
+    bottom: 25px;
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -133,7 +151,6 @@
   .create-profile-form__svg {
     width: 220px;
     height: 280px;
-    border-radius: 40px;
   }
   .create-profile-form__list {
     flex-grow: 1;
@@ -153,5 +170,9 @@
   .create-profile-form__btn-submit {
     padding: 15px 40px;
     font-size: 40px;
+  }
+  .create-profile__error {
+    bottom: 50px;
+    font-size: 34px;
   }
 }
