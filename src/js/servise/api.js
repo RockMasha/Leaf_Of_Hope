@@ -51,6 +51,20 @@ export async function postAdvert(info, token) {
   }
 }
 
+export const getUserAdverts = async (token) => {
+  try {
+    const answer = await axios.get("/api/advert/userAdverts", {
+      headers: {
+        Authorization: token,
+      },
+    });
+    console.log(answer.data);
+    return answer.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export async function getAdverts(info) {
   try {
     const answer = await axios.get("/api/advert/", info);
