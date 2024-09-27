@@ -1,6 +1,6 @@
 import { authorization } from "../servise/api";
+import { createToken } from "../token/createToken";
 import { createFormData } from "../universal/createFormData";
-import { createToken } from "../universal/createToken";
 import { root } from "./root";
 
 export async function submitProfileForm(event) {
@@ -8,14 +8,10 @@ export async function submitProfileForm(event) {
 
   try {
     const data = createFormData(root.form);
-    // data.avatar = root.form.avatar.src;
-    // console.log(root.form.avatar.value);
-
     const answer = await authorization(data);
-
     createToken(answer.token);
     history.go(-1);
   } catch (error) {
-    root.error.textContent = "Неравельно відд або такий юзер вже є";
+    root.error.textContent = "Неравельно ввід або такий юзер вже є";
   }
 }

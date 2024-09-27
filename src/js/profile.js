@@ -1,3 +1,3 @@
-import { isSignin } from "./universal/isSignin";
+import { isSignin } from "./signin/isSignin";
 
 isSignin();

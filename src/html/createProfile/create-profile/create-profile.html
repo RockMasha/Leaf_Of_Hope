@@ -4,13 +4,15 @@
     <form class="create-profile-form">
       <div class="create-profile__main-block">
         <label class="create-profile-form__img">
-          <input class="create-profile-form__file" type="file" />
+          <input
+            name="avatar"
+            accept="image/png, image/jpeg, image/svg"
+            class="create-profile-form__file"
+            type="file"
+          />
           <img
             class="create-profile-form__svg"
             src="./img/universal/bigProfile.svg"
-            name="avatar"
-            accept="image/png, image/jpeg, image/svg"
-          />
           />
         </label>
         <ul class="create-profile-form__list">
