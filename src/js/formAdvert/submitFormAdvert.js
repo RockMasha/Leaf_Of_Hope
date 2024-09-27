@@ -10,7 +10,8 @@ export async function submitFormAdvert(event) {
     const data = createFormData(root.form);
     const token = getToken();
     await postAdvert(data, token);
-    // history.go(-1);
+    history.go(-1);
+    
   } catch (error) {
     console.log(error);
 
