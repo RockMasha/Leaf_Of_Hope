@@ -4,14 +4,14 @@ import { showSigninModal } from "./showSigninModal";
 
 export async function isSignin() {
   const token = getToken()
-
   if (!token) {
     showSigninModal();
   }
-
-  setAuthHeader(token);
-
-  // const answer = await getInfo(token)
-  // console.log(answer);
-  return true;
+  try {
+    const answer = await getInfo(token)
+    return answer
+  } catch (error) {
+    console.log(error);
+    return false
+  }
 }
