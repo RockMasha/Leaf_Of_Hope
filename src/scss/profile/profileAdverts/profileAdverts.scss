@@ -1,9 +1,16 @@
 .profile-adverts {
   padding-bottom: 40px;
+  &__container {
+    padding: 0 5px;
+    @media (min-width: 768px) {
+      padding: 0;
+    }
+  }
   &__title {
     margin-bottom: 42px;
     font-size: 44px;
     color: $color-black;
+    font-weight: 500;
   }
 
   &__list {
@@ -12,8 +19,9 @@
     gap: 30px;
   }
 
-  &__item {
+  &__card {
     @media (min-width: 768px) {
+      align-items: center;
       display: flex;
       justify-content: space-between;
     }
@@ -56,6 +64,15 @@
       width: 143px;
       height: 140px;
       background-size: 76px 72px;
+    }
+  }
+  &__no-advert-text {
+    font-size: 20px;
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 40px;
     }
   }
 }

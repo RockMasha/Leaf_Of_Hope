@@ -8,7 +8,7 @@
   background-color: $color-card-sidePanel;
   color: $color-text-line;
   @media (min-width: 768px) {
-    width: 490px;
+    width: 500px;
     padding: 9px 12px 0px 16px;
   }
   @media (min-width: 1440px) {
@@ -21,6 +21,7 @@
     align-self: flex-end;
     text-align: center;
     margin-bottom: 11px;
+    margin-right: 10px;
     padding: 6px;
     border-radius: 12px;
     background-color: $color-card;
@@ -92,8 +93,17 @@
   &__title {
     font-size: 24px;
     font-weight: 500;
-    @media screen and (min-width: 1440px) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    @media(min-width: 768px) {
+      width: 223px;
+    }
+    @media(min-width: 1440px) {
       font-size: 40px;
+      width: 375px;
     }
   }
 
