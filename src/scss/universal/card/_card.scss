@@ -7,11 +7,11 @@
   border-radius: 30px;
   background-color: $color-card-sidePanel;
   color: $color-text-line;
-  @media screen and (min-width: 768px) {
+  @media (min-width: 768px) {
     width: 490px;
     padding: 9px 12px 0px 16px;
   }
-  @media screen and (min-width: 1440px) {
+  @media (min-width: 1440px) {
     position: relative;
     width: 945px;
     padding: 33px;
@@ -26,23 +26,23 @@
     background-color: $color-card;
     font-size: 16px;
     font-weight: 500;
-    @media screen and (min-width: 1440px) {
+    @media (min-width: 1440px) {
       position: absolute;
       right: 45px;
       top: 33px;
       min-width: 100px;
       margin: 0;
-      padding: 13px  2px;
+      padding: 13px 2px;
       font-size: 26px;
     }
   }
 
   &__info-wrapp {
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       display: flex;
       gap: 10px;
     }
-    @media screen and (min-width: 1440px) {
+    @media (min-width: 1440px) {
       display: flex;
       gap: 25px;
     }
@@ -77,10 +77,10 @@
       height: 2px;
       background-color: $color-text-line;
     }
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       padding-right: 47px;
     }
-    @media screen and (min-width: 1440px) {
+    @media (min-width: 1440px) {
       width: 424px;
       padding-bottom: 14px;
       padding-left: 35px;
@@ -101,10 +101,10 @@
     padding: 9px 3px 7px 12px;
     border-radius: 0 0 12px 12px;
     background-color: $color-card;
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       padding-right: 5px;
     }
-    @media screen and (min-width: 1440px) {
+    @media (min-width: 1440px) {
       height: 252px;
       padding: 24px 48px 24px 30px;
       border-radius: 0 12px 12px 12px;

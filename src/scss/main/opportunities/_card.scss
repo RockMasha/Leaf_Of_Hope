@@ -5,61 +5,54 @@
   padding: 20px 27px 0;
   background-color: $color-main-card;
   border-radius: 20px;
-}
-.opportunities-card__img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 199px;
-  height: 311px;
-  opacity: 0.5;
-}
-.opportunities-card__title {
-  margin-bottom: 13px;
-  color: $color-main-text;
-  font-size: 20px;
-}
-.opportunities-card__text {
-  color: $color-main-text;
-  font-size: 16px;
-}
-
-@media (min-width: 768px) {
-  .swiper > .swiper-wrapper .opportunities-card {
+  @media (min-width: 768px) {
     width: 517px;
     height: 338px;
     padding: 40px 33px 0 60px;
   }
-  .opportunities-card__img {
-    width: 476px;
-    height: 304px;
-  }
-  .opportunities-card__title {
-    margin-bottom: 15px;
-    font-size: 32px;
-  }
-  .opportunities-card__text {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .swiper > .swiper-wrapper .opportunities-card {
+  @media (min-width: 1440px) {
     width: 314px;
     height: 399px;
     padding: 36px 34px 45px 30px;
   }
-  .opportunities-card__img {
-    width: 276px;
-    height: 362px;
+  &__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 199px;
+    height: 311px;
+    opacity: 0.5;
+    @media (min-width: 768px) {
+      width: 476px;
+      height: 304px;
+    }
+    @media (min-width: 1440px) {
+      width: 276px;
+      height: 362px;
+    }
   }
-  .opportunities-card__title {
-    margin-bottom: 15px;
-    font-size: 32px;
+  &__title {
+    margin-bottom: 13px;
+    color: $color-main-text;
+    font-size: 20px;
+    @media (min-width: 768px) {
+      margin-bottom: 15px;
+      font-size: 32px;
+    }
+    @media (min-width: 1440px) {
+      margin-bottom: 15px;
+      font-size: 32px;
+    }
   }
-  .opportunities-card__text {
-    font-size: 21px;
+  &__text {
+    color: $color-main-text;
+    font-size: 16px;
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 21px;
+    }
   }
 }
-

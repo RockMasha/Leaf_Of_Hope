@@ -1,12 +1,12 @@
 @import "./leftSide/leftSide.scss";
 @import "./sidePanel/sidePanel.scss";
 
-.search__body{
+.search__body {
   position: relative;
 }
 
-.search__main{
-    @media screen and (min-width: 768px) {
-        display: flex;
-      }
+.search__main {
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }

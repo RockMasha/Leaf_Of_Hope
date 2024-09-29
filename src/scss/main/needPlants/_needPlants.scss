@@ -1,62 +1,56 @@
 .need-plants {
   padding-bottom: 52px;
-}
-.need-plants__container {
-  position: relative;
-  padding: 19px 23px 23px;
-  background-color: $color-main-background;
-  border-radius: 20px;
-}
-.need-plants__title {
-  margin-bottom: 16px;
-  color: $color-main-text;
-  font-size: 24px;
-}
-.need-plants_background-image {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 20px;
-  opacity: 0.5;
-}
-.need-plants__text {
-  padding: 23px 10px;
-  color: $color-main-text;
-  font-size: 16px;
-}
-
-@media (min-width: 768px) {
-  .need-plants {
+  @media (min-width: 768px) {
     padding-bottom: 70px;
   }
-  .need-plants__container {
-    padding: 26px 38px 28px;
-  }
-  .need-plants__title {
-    width: 394px;
-    margin-bottom: 14px;
-    font-size: 48px;
-  }
-  .need-plants__text {
-    padding: 35px 15px 35px 30px;
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .need-plants {
+  @media (min-width: 1440px) {
     padding-bottom: 108px;
   }
-  .need-plants__container {
-    padding: 47px 108px 103px 75px;
+  &__container {
+    position: relative;
+    padding: 19px 23px 23px;
+    background-color: $color-main-background;
+    border-radius: 20px;
+    @media (min-width: 768px) {
+      padding: 26px 38px 28px;
+    }
+    @media (min-width: 1440px) {
+      padding: 47px 108px 103px 75px;
+    }
   }
-  .need-plants__title {
-    width: auto;
-    margin-bottom: 14px;
-    font-size: 64px;
+  &__title {
+    margin-bottom: 16px;
+    color: $color-main-text;
+    font-size: 24px;
+    @media (min-width: 768px) {
+      width: 394px;
+      margin-bottom: 14px;
+      font-size: 48px;
+    }
+    @media (min-width: 1440px) {
+      width: auto;
+      margin-bottom: 14px;
+      font-size: 64px;
+    }
   }
-  .need-plants__text {
-    padding: 35px 15px 35px 30px;
-    font-size: 40px;
+  &__background-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    opacity: 0.5;
+  }
+  &__text {
+    padding: 23px 10px;
+    color: $color-main-text;
+    font-size: 16px;
+    @media (min-width: 768px) {
+      padding: 35px 15px 35px 30px;
+      font-size: 24px;
+    }
+    @media (min-width: 1440px) {
+      padding: 35px 15px 35px 30px;
+      font-size: 40px;
+    }
   }
 }

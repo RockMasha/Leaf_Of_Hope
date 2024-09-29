@@ -1,7 +1,7 @@
 .user-info {
   font-family: "Inter";
   padding: 30px 0 35px 0;
-  @media screen and (min-width: 768px) {
+  @media (min-width: 768px) {
     padding: 50px 0 50px 0;
   }
   &__thumb {
@@ -12,21 +12,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       width: 241px;
       height: 241px;
     }
-    @media screen and (min-width: 1440px) {
-        width: 420px;
-        height: 455px;
+    @media (min-width: 1440px) {
+      width: 420px;
+      height: 455px;
     }
   }
   &__svg {
     width: 116px;
     height: 145px;
-    @media screen and (min-width: 1440px) {
-        width: 184px;
-        height: 248px;
+    @media (min-width: 1440px) {
+      width: 184px;
+      height: 248px;
     }
   }
   &__user {
@@ -39,22 +39,22 @@
     height: 25.75px;
     background-color: $color-white;
     border: none;
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       top: -10px;
       left: 129px;
     }
-    @media screen and (min-width: 1440px) {
-        width: 49px;
-        height: 42px;
-        left: 530px;
+    @media (min-width: 1440px) {
+      width: 49px;
+      height: 42px;
+      left: 530px;
     }
   }
   &__button-image {
     width: 32px;
     height: 25.75px;
-    @media screen and (min-width: 1440px) {
-        width: 49px;
-        height: 42px;
+    @media (min-width: 1440px) {
+      width: 49px;
+      height: 42px;
     }
   }
   &__title {
@@ -62,14 +62,14 @@
     font-weight: 600;
     line-height: 1.21;
     margin-top: 25px;
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       margin-top: 0;
       width: 300px;
       font-size: 36px;
     }
-    @media screen and (min-width: 1440px) {
-        width: auto;
-        font-size: 48px;
+    @media (min-width: 1440px) {
+      width: auto;
+      font-size: 48px;
     }
   }
   &__text {
@@ -83,26 +83,26 @@
       margin-top: 10px;
       color: $color-black;
     }
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       font-size: 20px;
       margin-top: 12px;
     }
-    @media screen and (min-width: 1440px) {
-        margin-top: 15px;
+    @media (min-width: 1440px) {
+      margin-top: 15px;
+      font-size: 32px;
+      &.bold {
         font-size: 32px;
-        &.bold{
-            font-size: 32px;
-        }
+      }
     }
   }
   &__card-user {
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       display: flex;
       gap: 29px;
       margin: 0 77px 0 63px;
     }
-    @media screen and (min-width: 1440px) {
-        margin: 0;
+    @media (min-width: 1440px) {
+      margin: 0;
     }
   }
 }
