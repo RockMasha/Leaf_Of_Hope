@@ -1,0 +1,42 @@
+.content-loader-wrapper[active] {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: $color-content-loader;
+  z-index: 1000;
+}
+
+.content-loader-wrapper[active] > .content-loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.content-loader-wrapper[active] > .content-loader::before,
+.content-loader-wrapper[active] > .content-loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 18px 18px;
+  animation: l12 1s infinite;
+}
+.content-loader-wrapper[active] > .content-loader::before {
+  margin: 12px;
+  filter: hue-rotate(45deg);
+  background-size: 24px 24px;
+  animation-timing-function: linear;
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}

@@ -61,9 +61,9 @@ export const getUserAdverts = async (token) => {
   }
 };
 
-export async function getAdverts(info) {
+export async function getAdverts(info, page = 1) {
   try {
-    const answer = await axios.get("/api/advert/", info);
+    const answer = await axios.get(`/api/advert?page=${page}&limit=10`, info);
     return answer.data;
   } catch (error) {
     console.log(error);
