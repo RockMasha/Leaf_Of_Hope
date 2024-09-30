@@ -1,97 +1,82 @@
 @import "./card.scss";
 .opportunities {
   padding-bottom: 70px;
-}
-.opportunities__container {
-  padding: 33px 9px 29px;
-  background-color: $color-main-background;
-  border-radius: 20px;
-}
-.opportunities__title {
-  padding-left: 14px;
-  margin-bottom: 26px;
-  color: $color-main-text;
-  font-size: 24px;
-}
-.opportunities > .opportunities__container > .swiper {
-  position: relative;
-  left: -9px;
-  width: 296px;
-  padding: 0 36px;
-}
-.swiper > .swiper-button-prev,
-.swiper > .swiper-button-next {
-  width: 12px;
-  height: 27px;
-}
-
-.swiper > .swiper-button-prev::after {
-  content: "";
-  width: 12px;
-  height: 27px;
-  background-image: url("/img/main/arrow-left.svg");
-  background-size: cover;
-}
-.swiper > .swiper-button-next::after {
-  content: "";
-  width: 12px;
-  height: 27px;
-  background-image: url("/img/main/arrow-right.svg");
-  background-size: cover;
-}
-
-@media (min-width: 768px) {
-  .opportunities {
+  @media (min-width: 768px) {
     padding-bottom: 78px;
   }
-  .opportunities__container {
-    padding: 27px 29px 42px;
-  }
-  .opportunities__title {
-    margin-bottom: 12px;
-    font-size: 48px;
-  }
-  .opportunities > .opportunities__container > .swiper {
-    position: relative;
-    left: -29px;
-    width: 692px;
-    padding: 0 90px;
-  }
-  .swiper > .swiper-button-prev::after {
-    position: absolute;
-    right: -30px;
-  }
-  .swiper > .swiper-button-next::after {
-    position: absolute;
-    left: -30px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .opportunities {
+  @media (min-width: 1440px) {
     padding-bottom: 86px;
   }
-  .opportunities__container {
-    padding: 51px 52px;
+  &__container {
+    padding: 33px 9px 29px;
+    background-color: $color-main-background;
+    border-radius: 20px;
+    @media (min-width: 768px) {
+      padding: 27px 29px 42px;
+    }
+    @media (min-width: 1440px) {
+      padding: 51px 52px;
+    }
   }
-  .opportunities__title {
-    margin-bottom: 31px;
-    font-size: 64px;
+  &__title {
+    padding-left: 14px;
+    margin-bottom: 26px;
+    color: $color-main-text;
+    font-size: 24px;
+    @media (min-width: 768px) {
+      margin-bottom: 12px;
+      font-size: 48px;
+    }
   }
-  .opportunities__container > .swiper > .swiper-wrapper{
-    display: flex;
-    gap: 102px;
-  }
-  .opportunities > .opportunities__container > .swiper {
+  
+  & > &__container > .swiper {
     position: relative;
-    left: 0;
-    width: auto;
-    padding: 0;
-  }
-  .swiper > .swiper-button-prev::after {
-    display: none;
-  }
-  .swiper > .swiper-button-next::after {
-    display: none;
+    left: -9px;
+    width: 296px;
+    padding: 0 36px;
+    @media (min-width: 768px) {
+      left: -29px;
+      width: 692px;
+      padding: 0 90px;
+    }
+    @media (min-width: 1440px) {
+      left: 0;
+      width: auto;
+      padding: 0;
+    }
+    & > .swiper-wrapper {
+      display: flex;
+      gap: 102px;
+    }
+    & > .swiper-button-prev,
+    & > .swiper-button-next {
+      width: 12px;
+      height: 27px;
+    }
+    & > .swiper-button-prev::after,
+    & > .swiper-button-next::after {
+      content: "";
+      width: 12px;
+      height: 27px;
+      background-size: cover;
+      @media (min-width: 768px) {
+        position: absolute;
+      }
+      @media (min-width: 1440px) {
+        display: none;
+      }
+    }
+    & > .swiper-button-prev::after {
+      background-image: url("/img/main/arrow-left.svg");
+      @media (min-width: 768px) {
+        right: -30px;
+      }
+    }
+    & .swiper-button-next::after {
+      background-image: url("/img/main/arrow-right.svg");
+      @media (min-width: 768px) {
+        left: -30px;
+      }
+    }
   }
 }

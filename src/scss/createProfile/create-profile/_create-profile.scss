@@ -1,178 +1,183 @@
 .create-profile {
   position: relative;
   padding: 39px 0 35px;
-}
-.create-profile__container {
-  padding: 0 23px;
-}
-.create-profile__title {
-  margin-bottom: 30px;
-  font-size: 30px;
-  font-weight: 600;
-  text-align: center;
-  color: $color-text-line;
-}
-.create-profile__main-block {
-  margin-bottom: 36px;
-}
-.create-profile-form__img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  height: 250px;
-  margin-bottom: 20px;
-  background-color: $color-grey-very-light;
-  border-radius: 20px;
-}
-.create-profile-form__file {
-  display: none;
-}
-.create-profile-form__svg {
-  width: 110px;
-  height: 136px;
-}
-.create-profile-form__list {
-  display: flex;
-  flex-direction: column;
-  gap: 34px;
-}
-.create-profile-form__enter {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 15px;
-  font-weight: 500;
-}
-.create-profile-form__input {
-  display: block;
-  width: 100%;
-  padding-bottom: 3px;
-  font-size: 12px;
-  color: $color-text-line;
-  border: 1px solid transparent;
-  border-bottom: 1.5px solid $color-text-line;
-}
-.create-profile-form__input::placeholder {
-  color: $color-grey-very-light;
-}
-.create-profile-form__input:invalid {
-  border-bottom: 2.5px solid $color-red;
-}
-.create-profile-form__btn-submit {
-  position: relative;
-  left: 100%;
-  transform: translateX(-100%);
-  padding: 7px 17px;
-  font-size: 20px;
-  font-weight: 500;
-  color: $color-text-line;
-  background-color: $color-createProfile-btn-submit;
-  border: 1px solid transparent;
-  border-radius: 20px;
-}
-.create-profile__error {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  font-size: 14px;
-  font-weight: 600;
-  color: $color-red;
-}
-
-@media (min-width: 768px) {
-  .create-profile {
+  @media (min-width: 768px) {
     padding: 40px 0 60px;
   }
-  .create-profile__container {
-    padding: 0;
-  }
-  .create-profile__title {
-    margin-bottom: 40px;
-    font-size: 52px;
-  }
-  .create-profile__main-block {
-    margin-bottom: 55px;
-  }
-  .create-profile-form__img {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto 30px;
-  }
-  .create-profile-form__svg {
-    width: 140px;
-    height: 174px;
-  }
-  .create-profile-form__list {
-    gap: 25px;
-  }
-  .create-profile-form__enter {
-    gap: 10px;
-    font-size: 24px;
-  }
-  .create-profile-form__input {
-    display: block;
-    width: 100%;
-    padding-bottom: 5px;
-    font-size: 21px;
-    border-bottom-width: 2.5px;
-  }
-  .create-profile-form__btn-submit {
-    padding: 10px 20px;
-    font-size: 28px;
-  }
-  .create-profile__error {
-    bottom: 25px;
-    font-size: 22px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .create-profile {
+  @media (min-width: 1440px) {
     padding: 150px 0 131px;
   }
-  .create-profile__title {
-    margin-bottom: 60px;
-    font-size: 72px;
-    text-align: start;
+  &__container {
+    padding: 0 23px;
+    @media (min-width: 768px) {
+      padding: 0;
+    }
+    @media (min-width: 1440px) {
+    }
   }
-  .create-profile__main-block {
-    display: flex;
-    gap: 55px;
-    margin-bottom: 87px;
+  &__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: $color-text-line;
+    @media (min-width: 768px) {
+      margin-bottom: 40px;
+      font-size: 52px;
+    }
+    @media (min-width: 1440px) {
+      margin-bottom: 60px;
+      font-size: 72px;
+      text-align: start;
+    }
   }
-  .create-profile-form__img {
-    width: 556px;
-    height: 556px;
-    margin: 0;
+  &-form {
+    &__main-block {
+      margin-bottom: 36px;
+      @media (min-width: 768px) {
+        margin-bottom: 55px;
+      }
+      @media (min-width: 1440px) {
+        display: flex;
+        gap: 55px;
+        margin-bottom: 87px;
+      }
+    }
+    &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 250px;
+      margin-bottom: 20px;
+      background-color: $color-grey-very-light;
+      border-radius: 20px;
+      @media (min-width: 768px) {
+        width: 400px;
+        height: 400px;
+        margin: 0 auto 30px;
+      }
+      @media (min-width: 1440px) {
+        width: 556px;
+        height: 556px;
+        margin: 0;
+      }
+    }
+    &__file {
+      display: none;
+    }
+    &__svg {
+      width: 110px;
+      height: 136px;
+      @media (min-width: 768px) {
+        width: 140px;
+        height: 174px;
+      }
+      @media (min-width: 1440px) {
+        width: 220px;
+        height: 280px;
+      }
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
+      @media (min-width: 768px) {
+        gap: 25px;
+      }
+      @media (min-width: 1440px) {
+        flex-grow: 1;
+      }
+    }
+    &__enter {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      @media (min-width: 768px) {
+        gap: 10px;
+        font-size: 24px;
+      }
+      @media (min-width: 1440px) {
+        gap: 10px;
+        font-size: 32px;
+      }
+    }
+    &__input {
+      display: block;
+      width: 100%;
+      padding-bottom: 3px;
+      font-size: 12px;
+      color: $color-text-line;
+      border: 1px solid transparent;
+      border-bottom: 1.5px solid $color-text-line;
+      @media (min-width: 768px) {
+        display: block;
+        width: 100%;
+        padding-bottom: 5px;
+        font-size: 21px;
+        border-bottom-width: 2.5px;
+      }
+      @media (min-width: 1440px) {
+        display: block;
+        width: 100%;
+        padding-bottom: 5px;
+        font-size: 28px;
+        border-bottom-width: 2.5px;
+      }
+    }
+    &__input::placeholder {
+      color: $color-grey-very-light;
+      @media (min-width: 768px) {
+      }
+      @media (min-width: 1440px) {
+      }
+    }
+    &__input:invalid {
+      border-bottom: 2.5px solid $color-red;
+      @media (min-width: 768px) {
+      }
+      @media (min-width: 1440px) {
+      }
+    }
+    &__btn-submit {
+      position: relative;
+      left: 100%;
+      transform: translateX(-100%);
+      padding: 7px 17px;
+      font-size: 20px;
+      font-weight: 500;
+      color: $color-text-line;
+      background-color: $color-createProfile-btn-submit;
+      border: 1px solid transparent;
+      border-radius: 20px;
+      @media (min-width: 768px) {
+        padding: 10px 20px;
+        font-size: 28px;
+      }
+      @media (min-width: 1440px) {
+        padding: 15px 40px;
+        font-size: 40px;
+      }
+    }
   }
-  .create-profile-form__svg {
-    width: 220px;
-    height: 280px;
-  }
-  .create-profile-form__list {
-    flex-grow: 1;
-    gap: 25px;
-  }
-  .create-profile-form__enter {
-    gap: 10px;
-    font-size: 32px;
-  }
-  .create-profile-form__input {
-    display: block;
-    width: 100%;
-    padding-bottom: 5px;
-    font-size: 28px;
-    border-bottom-width: 2.5px;
-  }
-  .create-profile-form__btn-submit {
-    padding: 15px 40px;
-    font-size: 40px;
-  }
-  .create-profile__error {
-    bottom: 50px;
-    font-size: 34px;
+  &__error {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-red;
+    @media (min-width: 768px) {
+      bottom: 25px;
+      font-size: 22px;
+    }
+    @media (min-width: 1440px) {
+      bottom: 50px;
+      font-size: 34px;
+    }
   }
 }

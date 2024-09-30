@@ -2,36 +2,28 @@
   display: flex;
   align-items: center;
   padding: 3.5px 20px 3.5px 3.5px;
-  background-color: white;
+  background-color: $color-white;
   border-radius: 10px;
+  @media (min-width: 768px) {
+    padding: 5px;
+  }
+  @media (min-width: 1440px) {
+    padding: 5px 9px;
+    border-radius: 15px;
+  }
 }
+
 .logo__svg {
   width: 78px;
   height: 31px;
   background-image: url("/img/universal/logo.svg");
   background-repeat: no-repeat;
-}
-
-@media (min-width: 768px) {
-  .logo {
-    padding: 5px;
-    background-color: white;
-    border-radius: 10px;
-  }
-  .logo__svg {
+  @media (min-width: 768px) {
     width: 105.5px;
     height: 40px;
-    background-image: url("/img/universal/logo.svg");
-    background-repeat: no-repeat;
   }
-}
-
-@media (min-width: 1440px) {
-  .logo {
-    padding: 8px 18px;
-  }
-  .logo__svg {
-    width: 134px;
-    height: 50px;
+  @media (min-width: 1440px) {
+    width: 152px;
+    height: 56px;
   }
 }

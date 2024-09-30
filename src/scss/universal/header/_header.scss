@@ -1,89 +1,88 @@
 @import "../logo/logo.scss";
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding: 12px 0;
   background-image: url("/img/universal/background.jpg");
   background-size: cover;
+  z-index: 100;
+  @media (min-width: 768px) {
+    padding: 15px 0;
+  }
+  @media (min-width: 1440px) {
+    padding: 18px 0;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
-.header__container {
-  display: flex;
-  justify-content: space-between;
-}
-.menu__svg_search {
-  width: 20px;
-  height: 21px;
-}
-.menu__svg_add {
-  width: 26px;
-  height: 26px;
-}
-.menu__svg_profile {
-  width: 18px;
-  height: 22px;
-}
+
 .menu {
   align-items: center;
   display: flex;
   gap: 7px;
-}
-.menu__item {
-  border-radius: 10px;
-}
-.menu__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 36px;
-  height: 36px;
-  background-color: white;
-  border-radius: 10px;
-}
-
-@media (min-width: 768px) {
-  .header {
-    padding: 15px 0;
-  }
-  .menu__svg_search {
-    width: 24px;
-    height: 26px;
-  }
-  .menu__svg_add {
-    width: 26px;
-    height: 26px;
-  }
-  .menu__svg_profile {
-    width: 24px;
-    height: 29px;
-  }
-  .menu {
+  @media (min-width: 768px) {
     gap: 11px;
   }
-  .menu__link {
-    width: 44px;
-    height: 44px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .header {
-    padding: 18px 0;
-  }
-  .menu__svg_search {
-    width: 45px;
-    height: 47px;
-  }
-  .menu__svg_add {
-    width: 42px;
-    height: 42px;
-  }
-  .menu__svg_profile {
-    width: 37px;
-    height: 49px;
-  }
-  .menu {
+  @media (min-width: 1440px) {
     gap: 16px;
   }
-  .menu__link {
-    width: 67px;
-    height: 67px;
+  &__svg_search {
+    width: 20px;
+    height: 21px;
+    @media (min-width: 768px) {
+      width: 24px;
+      height: 26px;
+    }
+    @media (min-width: 1440px) {
+      width: 45px;
+      height: 47px;
+    }
+  }
+  &__svg_add {
+    width: 26px;
+    height: 26px;
+    @media (min-width: 1440px) {
+      width: 42px;
+      height: 42px;
+    }
+  }
+  &__svg_profile {
+    width: 18px;
+    height: 22px;
+    @media (min-width: 768px) {
+      width: 24px;
+      height: 29px;
+    }
+    @media (min-width: 1440px) {
+      width: 37px;
+      height: 49px;
+    }
+  }
+  &__item {
+    border-radius: 10px;
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1440px) {
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    border-radius: 10px;
+    @media (min-width: 768px) {
+      width: 44px;
+      height: 44px;
+    }
+    @media (min-width: 1440px) {
+      width: 67px;
+      height: 67px;
+    }
   }
 }

@@ -1,6 +1,12 @@
-import { modalEl } from "./modalEl";
+import { showProfile } from "../profile/showProfile";
+import { modalEl } from "./root";
 
-export function hiddenSigninModal() {
+export async function hiddenSigninModal() {
   modalEl.classList.add("is-hidden");
   document.body.removeAttribute("lock", "");
+
+  const isProfilePage = document.querySelector(".profile-adverts");
+  if (isProfilePage) {
+    showProfile();
+  }
 }

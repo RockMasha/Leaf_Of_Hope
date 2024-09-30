@@ -1,280 +1,274 @@
 .formAdvert {
   position: relative;
   padding: 23px 0 34px;
-}
-.form-advert__flex-block {
-  margin-bottom: 20px;
-}
-.form-advert__file {
-  display: none;
-}
-.form-advert__img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 284.81px;
-  height: 296.792px;
-  margin: 0 auto 35px;
-  background-color: $color-grey-very-light;
-  border-radius: 30px;
-}
-.form-advert__svg {
-  width: 142.405px;
-  height: 148.396px;
-}
-.form-advert__name {
-  margin-bottom: 9px;
-  color: $color-text-line;
-  border: 1px solid transparent;
-  border-bottom: 1.5px solid $color-text-line;
-  font-size: 20px;
-  font-weight: 500;
-}
-.form-advert__name::placeholder {
-  color: $color-grey-lightblue;
-}
-.form-advert-way {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-.form-advert-way__label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 20px;
-  font-weight: 600;
-  color: $color-text-line;
-}
-.form-advert-way__input {
-  width: 20px;
-  height: 20px;
-  appearance: none;
-  background-image: url("/img/universal/checkBox-nocheked.svg");
-}
-.form-advert-way__input:checked {
-  background-image: url("/img/universal/checkBox-cheked.svg");
-}
-.form-advert__description {
-  width: 290.983px;
-  height: 180.7px;
-  padding: 11px 8px;
-  font-size: 20px;
-  border-radius: 15px;
-  border: 2px solid $color-text-line;
-}
-.form-advert__description::placeholder {
-  color: $color-grey-lightblue;
-}
-.form-advert-characteristic {
-  margin-bottom: 27px;
-}
-.form-advert-characteristic__last {
-  margin-bottom: 0px;
-}
-.form-advert__opinion-of-plant {
-  margin-bottom: 72px;
-}
-.form-advert-characteristic__signature {
-  margin-bottom: 9px;
-  font-size: 20px;
-  color: $color-text-line;
-  font-weight: 600;
-}
-.form-advert-characteristic-select {
-  padding: 16px 14px;
-  width: 100%;
-  border-radius: 20px;
-  font-size: 20px;
-  color: $color-text-line;
-  font-weight: 600;
-  background-color: $color-grey-very-light;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 1px solid transparent;
-  background-image: url("/img/formAdvert/select-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 260px 20px;
-  background-size: 20px 20px;
-}
-.form-advert-characteristic-select__opinion {
-  font-weight: 600;
-  background-color: $color-grey-very-light;
-  border: 1px solid transparent;
-}
-.form-advert__wish {
-  width: 100%;
-  height: 163px;
-  padding: 15px 7px;
-  margin-bottom: 72px;
-  font-size: 20px;
-  color: $color-text-line;
-  border-radius: 15px;
-  border: 2px solid $color-text-line;
-}
-.form-advert__wish::placeholder {
-  color: $color-grey-very-light;
-}
-.form-advert__btn-submit {
-  position: relative;
-  left: 100%;
-  transform: translateX(-100%);
-  padding: 12px 42px;
-  font-size: 20px;
-  color: $color-text-line;
-  background-color: $color-card;
-  border: 1px solid transparent;
-  border-radius: 25px;
-}
-.formAdvert__error {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  font-size: 14px;
-  font-weight: 600;
-  color: $color-red;
-}
-
-@media (min-width: 768px) {
-  .formAdvert {
+  @media (min-width: 768px) {
     padding: 60px 0 41px;
   }
-  .form-advert__flex-block {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 31px;
+  @media (min-width: 1440px) {
+    padding: 117px 0 98px;
   }
-  .form-advert__img {
-    width: 284.81px;
-    height: 296.792px;
-    align-self: center;
-    margin: 0 auto;
-  }
-  .form-advert__name {
-    margin-bottom: 10px;
-    font-size: 28px;
-  }
-  .form-advert-way {
-    gap: 11px;
-    margin-bottom: 20px;
-  }
-  .form-advert-way__label {
-    gap: 5px;
-    font-size: 28px;
-  }
-  .form-advert-way__input {
-    width: 35px;
-    height: 35px;
-  }
-  .form-advert__description {
-    width: 406px;
-    height: 187.174px;
-    padding: 11px;
-    font-size: 28px;
-  }
-  .form-advert__opinion-of-plant {
-    margin-bottom: 33px;
-  }
-  .form-advert-characteristic {
-    margin-bottom: 21px;
-  }
-  .form-advert-characteristic__signature {
-    margin-bottom: 11px;
-    font-size: 30px;
-  }
-  .form-advert-characteristic-select {
-    padding: 10px 33px;
-    font-size: 30px;
-    background-position: 650px 20px;
-  }
-  .form-advert__wish {
-    height: 163px;
-    padding: 16px;
-    margin-bottom: 67px;
-    font-size: 28px;
-  }
-  .form-advert__btn-submit {
-    padding: 18px 66px;
-    font-size: 32px;
-  }
-  .formAdvert__error {
-    font-size: 22px;
+  &__error {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-red;
+    @media (min-width: 768px) {
+      font-size: 22px;
+    }
+    @media (min-width: 1440px) {
+      bottom: 50px;
+      font-size: 34px;
+    }
   }
 }
 
-@media (min-width: 1440px) {
-  .formAdvert {
-    padding: 117px 0 98px;
+.form-advert {
+  &__flex-block {
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 31px;
+    }
+    @media (min-width: 1440px) {
+      gap: 53px;
+      margin-bottom: 57px;
+    }
   }
-  .form-advert__flex-block {
-    gap: 53px;
-    margin-bottom: 57px;
+  &__file {
+    display: none;
   }
-  .form-advert__img {
-    width: 500px;
-    height: 500px;
-  }
-  .form-advert__svg {
-    width: 250px;
-    height: 250px;
-  }
-  .form-advert__name {
-    margin-bottom: 18px;
-    font-size: 40px;
-  }
-  .form-advert-way {
-    gap: 18px;
-    margin-bottom: 16px;
-  }
-  .form-advert-way__label {
-    gap: 13px;
-    font-size: 36px;
-  }
-  .form-advert-way__input {
-    width: 40px;
-    height: 40px;
-  }
-  .form-advert__description {
-    width: 711px;
-    height: 312px;
-    padding: 20px;
-    font-size: 40px;
-  }
-  .form-advert__opinion-of-plant {
-    margin-bottom: 33px;
-  }
-  .form-advert__opinion-of-plant {
+  &__img {
     display: flex;
-    gap: 34px;
+    justify-content: center;
+    align-items: center;
+    width: 284.81px;
+    height: 296.792px;
+    margin: 0 auto 35px;
+    background-color: $color-grey-very-light;
+    border-radius: 30px;
+    @media (min-width: 768px) {
+      width: 284.81px;
+      height: 296.792px;
+      align-self: center;
+      margin: 0 auto;
+    }
+    @media (min-width: 1440px) {
+      width: 500px;
+      height: 500px;
+    }
   }
-  .form-advert-characteristic {
-    margin-bottom: 21px;
+  &__svg {
+    width: 142.405px;
+    height: 148.396px;
+    @media (min-width: 1440px) {
+      width: 250px;
+      height: 250px;
+    }
   }
-  .form-advert-characteristic__signature {
-    margin-bottom: 13px;
+  &__name {
+    margin-bottom: 9px;
+    color: $color-text-line;
+    border: 1px solid transparent;
+    border-bottom: 1.5px solid $color-text-line;
+    font-size: 20px;
+    font-weight: 500;
+    @media (min-width: 768px) {
+      margin-bottom: 10px;
+      font-size: 40px;
+    }
+    @media (min-width: 1440px) {
+      margin-bottom: 18px;
+      font-size: 40px;
+    }
   }
-  .form-advert-characteristic-select {
-    width: 610px;
-    padding: 10px 33px;
-    background-position: 560px 13px;
-    background-size: 30px 30px;
+  &__name::placeholder {
+    color: $color-grey-lightblue;
   }
-  .form-advert__wish {
-    height: 215px;
-    padding: 21px 36px;
-    margin-bottom: 79px;
-    font-size: 40px;
+  &-way {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      gap: 11px;
+      margin-bottom: 20px;
+    }
+    @media (min-width: 1440px) {
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+    &__label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 20px;
+      font-weight: 600;
+      color: $color-text-line;
+      @media (min-width: 768px) {
+        gap: 5px;
+        font-size: 28px;
+      }
+      @media (min-width: 1440px) {
+        gap: 13px;
+        font-size: 36px;
+      }
+    }
+    &__input {
+      width: 20px;
+      height: 20px;
+      appearance: none;
+      background-image: url("/img/universal/checkBox-nocheked.svg");
+      @media (min-width: 768px) {
+        width: 35px;
+        height: 35px;
+      }
+      @media (min-width: 1440px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &__input:checked {
+      background-image: url("/img/universal/checkBox-cheked.svg");
+    }
   }
-  .form-advert__btn-submit {
-    padding: 25px 103px;
-    font-size: 40px;
+  &__description {
+    width: 290.983px;
+    height: 180.7px;
+    padding: 11px 8px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 2px solid $color-text-line;
+    @media (min-width: 768px) {
+      width: 406px;
+      height: 187.174px;
+      padding: 11px;
+      font-size: 28px;
+    }
+    @media (min-width: 1440px) {
+      width: 711px;
+      height: 312px;
+      padding: 20px;
+      font-size: 40px;
+    }
   }
-  .formAdvert__error {
-    bottom: 50px;
-    font-size: 34px;
+  &__description::placeholder {
+    color: $color-grey-lightblue;
+  }
+  &-characteristic {
+    margin-bottom: 27px;
+    @media (min-width: 768px) {
+      margin-bottom: 21px;
+    }
+    @media (min-width: 1440px) {
+      margin-bottom: 21px;
+    }
+    &__last {
+      margin-bottom: 0px;
+    }
+    &__signature {
+      margin-bottom: 9px;
+      font-size: 20px;
+      color: $color-text-line;
+      font-weight: 600;
+      @media (min-width: 768px) {
+        margin-bottom: 11px;
+        font-size: 30px;
+      }
+      @media (min-width: 1440px) {
+        margin-bottom: 13px;
+      }
+    }
+    &-select {
+      padding: 16px 14px;
+      width: 100%;
+      border-radius: 20px;
+      font-size: 20px;
+      color: $color-text-line;
+      font-weight: 600;
+      background-color: $color-grey-very-light;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: 1px solid transparent;
+      background-image: url("/img/formAdvert/select-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: 260px 20px;
+      background-size: 20px 20px;
+      @media (min-width: 768px) {
+        padding: 10px 33px;
+        font-size: 30px;
+        background-position: 650px 20px;
+      }
+      @media (min-width: 1440px) {
+        width: 610px;
+        padding: 10px 33px;
+        background-position: 560px 13px;
+        background-size: 30px 30px;
+      }
+      &__opinion {
+        font-weight: 600;
+        background-color: $color-grey-very-light;
+        border: 1px solid transparent;
+      }
+    }
+  }
+  &__opinion-of-plant {
+    margin-bottom: 72px;
+    @media (min-width: 768px) {
+      margin-bottom: 33px;
+    }
+    @media (min-width: 1440px) {
+      display: flex;
+      gap: 34px;
+    }
+  }
+  &__wish {
+    width: 100%;
+    height: 163px;
+    padding: 15px 7px;
+    margin-bottom: 72px;
+    font-size: 20px;
+    color: $color-text-line;
+    border-radius: 15px;
+    border: 2px solid $color-text-line;
+    @media (min-width: 768px) {
+      height: 163px;
+      padding: 16px;
+      margin-bottom: 67px;
+      font-size: 28px;
+    }
+    @media (min-width: 1440px) {
+      height: 215px;
+      padding: 21px 36px;
+      margin-bottom: 79px;
+      font-size: 40px;
+    }
+    &::placeholder {
+      color: $color-grey-very-light;
+    }
+  }
+  &__btn-submit {
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+    padding: 12px 42px;
+    font-size: 20px;
+    color: $color-text-line;
+    background-color: $color-card;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    @media (min-width: 768px) {
+      padding: 18px 66px;
+      font-size: 32px;
+    }
+    @media (min-width: 1440px) {
+      padding: 25px 103px;
+      font-size: 40px;
+    }
   }
 }
