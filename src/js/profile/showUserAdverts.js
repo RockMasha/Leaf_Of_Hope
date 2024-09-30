@@ -7,6 +7,8 @@ export async function showUserAdverts() {
   const token = getToken();
   const { result, tottal } = await getUserAdverts(token);
 
+  root.advertsTitle.textContent = "Мої оголошення:";
+
   if (tottal === 0) {
     root.userCards.innerHTML = setDefaultText();
     return;

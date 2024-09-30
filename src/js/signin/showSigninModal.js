@@ -1,8 +1,8 @@
-import { modalEl } from "./modalEl";
+import { root } from "./root";
 import { signinUser } from "./signinUser";
 
 export function showSigninModal() {
-  modalEl.classList.remove("is-hidden");
+  root.modalEl.classList.remove("is-hidden");
   document.body.setAttribute("lock", "");
-  modalEl.addEventListener("submit", signinUser);
+  root.modalEl.addEventListener("submit", signinUser);
 }

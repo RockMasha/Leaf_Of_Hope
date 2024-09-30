@@ -7,8 +7,6 @@ export async function authorization(user) {
     const answer = await axios.post("/api/auth/signup", user, {
       headers: { "Content-Type": "multipart/form-data" },
     });
-    console.log(answer);
-
     return answer.data;
   } catch (error) {
     console.log(error);
@@ -57,7 +55,6 @@ export const getUserAdverts = async (token) => {
         Authorization: token,
       },
     });
-    console.log(answer.data);
     return answer.data;
   } catch (error) {
     console.log(error);

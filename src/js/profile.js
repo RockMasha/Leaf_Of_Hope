@@ -1,13 +1,11 @@
 import { isSignin } from "./signin/isSignin";
 import { showSigninModal } from "./signin/showSigninModal";
-import { showUserInfo } from "./profile/showUserInfo";
-import { showUserAdverts } from "./profile/showUserAdverts";
+import { showProfile } from "./profile/showProfile";
 
 const answer = await isSignin();
 
 if (answer) {
-  showUserInfo(answer.user);
-  showUserAdverts();
+  showProfile(answer.user);
 } else {
   showSigninModal();
 }
