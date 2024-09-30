@@ -7,7 +7,14 @@ body {
   line-height: normal;
 }
 main {
+  padding-top: 62px;
   flex-grow: 1;
+  @media (min-width: 768px) {
+    padding-top: 80px;
+  }
+  @media (min-width: 1440px) {
+    padding-top: 103px;
+  }
 }
 .container {
   width: 296px;
@@ -40,6 +47,6 @@ img.big-photo {
   overflow: hidden;
 }
 
-body[lock]{
+body[lock] {
   overflow: hidden;
 }

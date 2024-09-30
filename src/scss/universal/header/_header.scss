@@ -1,8 +1,12 @@
 @import "../logo/logo.scss";
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding: 12px 0;
   background-image: url("/img/universal/background.jpg");
   background-size: cover;
+  z-index: 100;
   @media (min-width: 768px) {
     padding: 15px 0;
   }
