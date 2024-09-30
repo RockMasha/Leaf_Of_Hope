@@ -10,17 +10,20 @@
   overflow: scroll;
   width: 100vw;
   height: 100vh;
-  padding: 27px 0 20px 20px;
+  padding: 100px 0 75px 20px;
   background-color: $color-card-sidePanel;
   font-size: 24px;
   color: $color-search-select;
   @media (min-width: 768px) {
     width: 30%;
     height: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   @media (min-width: 1440px) {
-    top: 103px;
+    top: 20px;
     width: 25%;
+    padding-bottom: 150px;
   }
 
   .side-panel__wrapp {
@@ -28,7 +31,7 @@
 
   &__close-btn {
     position: absolute;
-    top: 30px;
+    top: 65px;
     right: 30px;
     border: none;
     background-color: transparent;

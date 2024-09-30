@@ -9,17 +9,22 @@ export async function showUserAdverts() {
 
   root.advertsTitle.textContent = "Мої оголошення:";
 
-  if (tottal === 0) {
-    root.userCards.innerHTML = setDefaultText();
+  if (tottal == 0) {
+    setDefaultElements();
     return;
   }
 
   setAdvertCard(result);
 }
 
-function setDefaultText() {
-  const textEl = `<p class="profile-adverts__no-advert-text">Немає оголошень</p>`;
-  root.userCards.innerHTML = textEl;
+function setDefaultElements() {
+  const defaultElements = `
+  <div class="profile-adverts-default">
+    <img class="profile-adverts-default__img" src="./img/profile/defoultPlant.svg" alt="plant">
+    <p class="profile-adverts-default__text">Немає оголошень</p>
+  </div>`;
+
+  root.userCards.innerHTML = defaultElements;
 }
 
 function setAdvertCard(result) {
