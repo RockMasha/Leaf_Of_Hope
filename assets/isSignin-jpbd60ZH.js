@@ -1,0 +1,1 @@
+import{b as n}from"./api-DFccIR11.js";function r(){const t=localStorage.getItem("token");return t?`Bearer ${t}`:""}async function a(){const t=r();if(!t)return!1;try{return await n(t)}catch{return!1}}export{r as g,a as i};
