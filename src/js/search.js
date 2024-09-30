@@ -12,5 +12,4 @@ root.closeModalBtn.addEventListener("click", closeModal);
 root.form.addEventListener("submit", submitSearchParams);
 
 
-
 hiddenContentLoader();

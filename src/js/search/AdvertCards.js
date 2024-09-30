@@ -1,81 +1,103 @@
+import { event } from "jquery";
 import { getAdverts } from "../servise/api";
 import { getCard } from "./getCard";
 
 export class AdvertCards {
-  #showPageCard;
+  #showNextCards;
+  #showBackCards;
+  #showSpecifiedCards;
 
   constructor(element) {
     this.fatherElement = element;
     this.listCardsEl = element.querySelector(".cards-list");
-    this.paginationListEl = element.querySelector(".pagination");
-    this.backEl = element.querySelector(".pagination__back");
-    this.nextEl = element.querySelector(".pagination__next");
+    this.paginationEl = element.querySelector(".pagination");
+    this.paginationListEl = element.querySelector(".pagination__numb");
+    this.backEl = element.querySelector(".pagination__arrow_back");
+    this.nextEl = element.querySelector(".pagination__arrow_next");
     this.params;
     this.page = 1;
     this.maxAdvertInPage = 10;
     this.max_page;
   }
 
+  async showFirstCard(params) {
+    this.#nextPage();
+    await this.#setCards(params, this.page);
+    this.#setPagination();
+    this.params = params;
+    this.paginationEl.classList.remove("is-hidden");
+  }
+
   async showNextCards() {
-    this.nextPage();
-    await this.setCards(this.params, this.page);
-    this.setMaxPage(answer.tottal);
-    this.setPagination();
+    if (this.page >= this.max_page) {
+      return;
+    }
+
+    this.#nextPage();
+    await this.#setCards(this.params, this.page);
+    this.#setPagination();
   }
 
   async showBackCards() {
-    this.backPage();
-    await this.setCards(this.params, this.page);
-    this.setMaxPage(answer.tottal);
-    this.setPagination();
+    if (this.page <= 1) {
+      return;
+    }
+
+    this.#backPage();
+    await this.#setCards(this.params, this.page);
+    this.#setPagination();
   }
 
-  async showSpecifiedCards(page) {
-    this.setPage(page);
-    await this.setCards(this.params, this.page);
-    this.setMaxPage(answer.tottal);
-    this.setPagination();
+  async showSpecifiedCards(event) {
+    const element = event.target.closest(".pagination__item");
+    const page = Number(element.dataset.page);
+    this.#setPage(page);
+    await this.#setCards(this.params, this.page);
+    this.#setPagination();
   }
 
-  async setCards(params) {
-    const answer = await getAdverts(params, page);
+  async #setCards(params) {
+    const answer = await getAdverts(params, this.page);
+    this.#setMaxPage(answer.tottal);
     const cardsArr = answer.result;
     const cardsEl = cardsArr.map((advert) => getCard(advert));
     this.listCardsEl.innerHTML = cardsEl.join("");
   }
 
-  setPage(page) {
+  #setPage(page) {
     this.page = page;
   }
-  nextPage() {
+  #nextPage() {
     this.page += 1;
   }
-  backPage() {
+  #backPage() {
     this.page -= 1;
   }
-  resetPage() {
-    this.page = 0;
-  }
 
-  setMaxPage(maxAdvert) {
+  #setMaxPage(maxAdvert) {
     this.max_page = Math.ceil(maxAdvert / this.maxAdvertInPage);
   }
 
-  setPagination() {
-    setListPagination();
-    this.#showPageCard = this.bind.showSpecifiedCards();
-    this.nextEl.addEventListener("click", this.showNextCards);
-    this.backEl.addEventListener("click", this.showBackCards);
-    this.paginationListEl.addEventListener("click", this.#showPageCard);
+  #setPagination() {
+    this.#setListPagination();
+    this.#showBackCards = this.showBackCards.bind(this);
+    this.#showNextCards = this.showNextCards.bind(this);
+    this.#showSpecifiedCards = this.showSpecifiedCards.bind(this);
+    this.nextEl.addEventListener("click", this.#showNextCards);
+    this.backEl.addEventListener("click", this.#showBackCards);
+    this.paginationListEl.addEventListener("click", this.#showSpecifiedCards);
   }
-  disablePagination() {
-    this.nextEl.removeEventListener("click", this.showNextCards);
-    this.backEl.removeEventListener("click", this.showBackCards);
-    this.paginationListEl.removeEventListener("click", this.#showPageCard);
+  #disablePagination() {
+    this.nextEl.removeEventListener("click", this.#showNextCards);
+    this.backEl.removeEventListener("click", this.#showBackCards);
+    this.paginationListEl.removeEventListener(
+      "click",
+      this.#showSpecifiedCards
+    );
   }
 
-  setListPagination() {
-    const paginationBlocks = "";
+  #setListPagination() {
+    let paginationBlocks = "";
     for (let i = 1; i <= this.max_page; i++) {
       paginationBlocks += getPaginationItem(i);
     }
@@ -85,7 +107,7 @@ export class AdvertCards {
 }
 
 function getPaginationItem(numb) {
-  return `<li class="pagination__item">
+  return `<li class="pagination__item" data-page="${numb}">
             <button class="pagination__btn">${numb}</button>
           </li>`;
 }
