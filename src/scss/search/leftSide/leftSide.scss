@@ -93,15 +93,15 @@
 .pagination {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   @media (min-width: 768px) {
   }
   @media (min-width: 1440px) {
     gap: 15px;
   }
-  &__arrow {
-    padding: 5px 10px;
-    font-size: 20px;
+  &-arrow {
+    padding: 3px 8px;
+    font-size: 18px;
     background-color: $color-card;
     border: 2px solid $color-text-line;
     border-radius: 10px;
@@ -111,38 +111,39 @@
       border-width: 3px;
     }
     @media (min-width: 1440px) {
-      padding: 15px 30px;
+      padding: 10px 20px;
       font-size: 32px;
       border-width: 5px;
       border-radius: 15px;
     }
+    &__img {
+      width: 15px;
+      height: 15px;
+      @media (min-width: 768px) {
+        width: 25px;
+        height: 25px;
+      }
+      @media (min-width: 1440px) {
+        width: 35px;
+        height: 35px;
+      }
+      &_left {
+        transform: rotate(180deg);
+      }
+    }
   }
   &__numb {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     @media (min-width: 768px) {
+      gap: 10px;
     }
     @media (min-width: 1440px) {
       gap: 15px;
     }
   }
-  &__item {
-    padding: 5px 10px;
-    background-color: $color-card;
-    border-radius: 10px;
-    border: 2px solid $color-text-line;
-    @media (min-width: 768px) {
-      padding: 7px 15px;
-      border-width: 3px;
-    }
-    @media (min-width: 1440px) {
-      padding: 15px 30px;
-      border-width: 5px;
-      border-radius: 15px;
-    }
-  }
   &__btn {
-    font-size: 20px;
+    font-size: 18px;
     background-color: transparent;
     border: 1px solid transparent;
     @media (min-width: 768px) {
@@ -150,6 +151,34 @@
     }
     @media (min-width: 1440px) {
       font-size: 32px;
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 9px;
+    background-color: $color-card;
+    border-radius: 10px;
+    border: 2px solid $color-text-line;
+    @media (min-width: 768px) {
+      padding: 7px 15px;
+      border-width: 3px;
+    }
+    @media (min-width: 1440px) {
+      padding: 15px 30px;
+      border-width: 5px;
+      border-radius: 15px;
+    }
+    &[active] {
+      background-color: #0aa775;
+      border: 6px solid $color-black;
+      @media (min-width: 768px) {
+        border: 6px solid $color-black;
+      }
+      @media (min-width: 1440px) {
+        border: 7px solid $color-black;
+      }
     }
   }
 }

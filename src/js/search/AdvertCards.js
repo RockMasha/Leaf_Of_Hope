@@ -1,4 +1,3 @@
-import { event } from "jquery";
 import { getAdverts } from "../servise/api";
 import { getCard } from "./getCard";
 
@@ -6,14 +5,19 @@ export class AdvertCards {
   #showNextCards;
   #showBackCards;
   #showSpecifiedCards;
+  #showFirstCards;
+  #showLastCards;
+  #setPagination;
 
   constructor(element) {
     this.fatherElement = element;
     this.listCardsEl = element.querySelector(".cards-list");
     this.paginationEl = element.querySelector(".pagination");
     this.paginationListEl = element.querySelector(".pagination__numb");
-    this.backEl = element.querySelector(".pagination__arrow_back");
-    this.nextEl = element.querySelector(".pagination__arrow_next");
+    this.backEl = element.querySelector(".pagination-arrow_back");
+    this.nextEl = element.querySelector(".pagination-arrow_next");
+    this.firstEL = element.querySelector(".pagination-arrow_first");
+    this.lastEL = element.querySelector(".pagination-arrow_last");
     this.params;
     this.page = 1;
     this.maxAdvertInPage = 10;
@@ -21,9 +25,7 @@ export class AdvertCards {
   }
 
   async showFirstCard(params) {
-    this.#nextPage();
-    await this.#setCards(params, this.page);
-    this.#setPagination();
+    this.#showCards(params);
     this.params = params;
     this.paginationEl.classList.remove("is-hidden");
   }
@@ -34,8 +36,7 @@ export class AdvertCards {
     }
 
     this.#nextPage();
-    await this.#setCards(this.params, this.page);
-    this.#setPagination();
+    this.#showCards();
   }
 
   async showBackCards() {
@@ -44,16 +45,45 @@ export class AdvertCards {
     }
 
     this.#backPage();
-    await this.#setCards(this.params, this.page);
-    this.#setPagination();
+    this.#showCards();
+  }
+
+  async showFirstCards() {
+    if (this.page <= 1) {
+      return;
+    }
+
+    this.#firstPage();
+    this.#showCards();
+  }
+
+  async showLastCards() {
+    if (this.page === this.max_page) {
+      return;
+    }
+
+    this.#lastPage();
+    this.#showCards();
   }
 
   async showSpecifiedCards(event) {
-    const element = event.target.closest(".pagination__item");
+    const targetEl = event.target;
+    const isNoNeedEl =
+      !targetEl.matches(".pagination__btn") &&
+      !targetEl.matches(".pagination__item");
+    if (isNoNeedEl) {
+      return;
+    }
+    const element = targetEl.closest(".pagination__item");
     const page = Number(element.dataset.page);
     this.#setPage(page);
-    await this.#setCards(this.params, this.page);
-    this.#setPagination();
+    this.#showCards();
+  }
+
+  async #showCards(params = this.params) {
+    this.disablePagination();
+    await this.#setCards(params, this.page);
+    this.setPagination();
   }
 
   async #setCards(params) {
@@ -73,36 +103,79 @@ export class AdvertCards {
   #backPage() {
     this.page -= 1;
   }
+  #firstPage() {
+    this.page = 1;
+  }
+  #lastPage() {
+    this.page = this.max_page;
+  }
 
   #setMaxPage(maxAdvert) {
     this.max_page = Math.ceil(maxAdvert / this.maxAdvertInPage);
   }
 
-  #setPagination() {
+  setPagination() {
     this.#setListPagination();
-    this.#showBackCards = this.showBackCards.bind(this);
-    this.#showNextCards = this.showNextCards.bind(this);
-    this.#showSpecifiedCards = this.showSpecifiedCards.bind(this);
+    this.#setPaginationFunction();
     this.nextEl.addEventListener("click", this.#showNextCards);
     this.backEl.addEventListener("click", this.#showBackCards);
     this.paginationListEl.addEventListener("click", this.#showSpecifiedCards);
+    this.firstEL.addEventListener("click", this.#showFirstCards);
+    this.lastEL.addEventListener("click", this.#showLastCards);
   }
-  #disablePagination() {
+  disablePagination() {
     this.nextEl.removeEventListener("click", this.#showNextCards);
     this.backEl.removeEventListener("click", this.#showBackCards);
     this.paginationListEl.removeEventListener(
       "click",
       this.#showSpecifiedCards
     );
+    this.firstEL.removeEventListener("click", this.#showFirstCards);
+    this.lastEL.removeEventListener("click", this.#showLastCards);
+  }
+
+  #setPaginationFunction() {
+    this.#showBackCards = this.showBackCards.bind(this);
+    this.#showNextCards = this.showNextCards.bind(this);
+    this.#showSpecifiedCards = this.showSpecifiedCards.bind(this);
+    this.#setPagination = this.setPagination.bind(this);
+    this.#showFirstCards = this.showFirstCards.bind(this);
+    this.#showLastCards = this.showLastCards.bind(this);
   }
 
   #setListPagination() {
-    let paginationBlocks = "";
-    for (let i = 1; i <= this.max_page; i++) {
-      paginationBlocks += getPaginationItem(i);
-    }
-
+    const paginationBlocks = this.#getPaginationBtn();
     this.paginationListEl.innerHTML = paginationBlocks;
+    this.#setActivePaginationBtn();
+  }
+
+  #getPaginationBtn() {
+    let paginationBlocks = "";
+    if (this.max_page >= 3) {
+      let index = -1;
+      if (this.page === 1) {
+        index = 0;
+      } else if (this.page === this.max_page) {
+        index = -2;
+      }
+      for (let i = 1; i <= 3; i++) {
+        const pageNumb = index + this.page;
+        paginationBlocks += getPaginationItem(pageNumb);
+        index++;
+      }
+    } else {
+      for (let i = 1; i <= this.max_page; i++) {
+        paginationBlocks += getPaginationItem(i);
+      }
+    }
+    return paginationBlocks;
+  }
+
+  #setActivePaginationBtn() {
+    const activePageEl = document.querySelector(
+      `.pagination__item[data-page="${this.page}"]`
+    );
+    activePageEl.setAttribute("active", "");
   }
 }
 
@@ -111,144 +184,3 @@ function getPaginationItem(numb) {
             <button class="pagination__btn">${numb}</button>
           </li>`;
 }
-
-// #showMoreFilms;
-
-// async setCardsOnGenres(id) {
-//   if (this.#isEqualGenres(id)) {
-//     return;
-//   }
-
-//   if (!this.#isOnPageCardLoader()) {
-//     this.#setCardLoader();
-//   }
-
-//   if (!this.isNoBtn && this.btn) {
-//     this.#removeBtn();
-//   } else {
-//     this.isNoBtn = false;
-//   }
-
-//   this.setGenresId(id);
-
-//   this.listCardsEl.innerHTML = "";
-//   this.resetPage();
-//   const answer = await this.setCardsOfFilms();
-
-//   if (answer !== "error") {
-//     this.#setBtn();
-//     this.#removeCardLoader();
-//   }
-// }
-
-// async setCardsOfFilms() {
-//   this.nextPage();
-//   if (this.page !== 1 || this.#checkNumbOfFilms()) {
-//     this.#disableBtn();
-//     this.#loadBtn();
-//   }
-
-//   let answer;
-//   try {
-//     const infoOfCards = await createSomeCards(fetchFilmsByGenres, {
-//       genreId: this.genresId,
-//       page: this.page,
-//     });
-
-//     const { cards, maxFilms } = infoOfCards;
-//     this.#setCards(cards.join(""));
-//     this.#setMaxFilms(maxFilms);
-//   } catch (error) {
-//     answer = "error";
-//   }
-
-//   if (this.#checkNumbOfFilms()) {
-//     this.#removeBtn();
-//     this.isNoBtn = true;
-//   }
-
-//   if (this.page !== 1 && !this.#checkNumbOfFilms()) {
-//     this.#activeBtn();
-//     this.#unLoadBtn();
-//   }
-
-//   updateProgressBar();
-
-//   return answer === "error" ? answer : "ok";
-// }
-
-// setGenresId(id) {
-//   this.genresId = id;
-// }
-
-// nextPage() {
-//   this.page += 1;
-// }
-// resetPage() {
-//   this.page = 0;
-// }
-
-// #isEqualGenres(id) {
-//   return this.genresId === id;
-// }
-
-// #setCards(cards) {
-//   this.listCardsEl.insertAdjacentHTML("beforeend", cards);
-// }
-
-// #setMaxFilms(numb) {
-//   this.max_films = numb;
-// }
-
-// #setBtn() {
-//   const templateBtn = '<button class="genres__bth-more">More movies</button>';
-//   this.fatherElement.insertAdjacentHTML("beforeend", templateBtn);
-//   this.btn = document.querySelector(".genres__bth-more");
-//   this.#activeBtn();
-// }
-// #removeBtn() {
-//   this.btn.remove();
-// }
-// #disableBtn() {
-//   this.btn.removeEventListener("click", this.#showMoreFilms);
-// }
-// #activeBtn() {
-//   this.#showMoreFilms = this.setCardsOfFilms.bind(this);
-//   this.btn.addEventListener("click", this.#showMoreFilms);
-// }
-// #loadBtn() {
-//   this.btn.insertAdjacentHTML("beforeend", getBtnLoader());
-// }
-// #unLoadBtn() {
-//   const loader = this.btn.querySelector(".btnMoreLoader");
-//   loader.remove();
-// }
-
-// #setCardLoader() {
-//   this.fatherElement.insertAdjacentHTML("beforeend", getCardLoader());
-// }
-// #removeCardLoader() {
-//   const loader = this.fatherElement.querySelector(".genresCard-loader");
-//   loader.remove();
-// }
-// #isOnPageCardLoader() {
-//   const loader = this.fatherElement.querySelector(".genresCard-loader");
-//   if (loader) {
-//     return true;
-//   }
-//   return false;
-// }
-
-// #checkNumbOfFilms() {
-//   return this.page * 20 >= this.max_films;
-// }
-// }
-
-// function getBtnLoader() {
-// return `<div class="btnMoreLoader"></div>`;
-// }
-
-// function getCardLoader() {
-// return `<div class="genresCard-loader"></div>`;
-// // }
-//
