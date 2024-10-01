@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaf_Of_Hope</title>
-    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nested-hT9_lr66.js"></script>
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/modulepreload-polyfill-B5Qt9EMX.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-DFccIR11.js">
+    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nested-Dee8CWne.js"></script>
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-BTbEcCAy.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createFormData-CqlKbpTV.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-gcbuf7mz.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getAdvertCardInner-B_bPg60f.js">
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/index-EMxziHuY.css">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/index-CmwATgur.css">
   </head>
   <body>
+    <div class="content-loader-wrapper" active>
+  <div class="content-loader"></div>
+</div>
+
+
     <header class="header">
   <div class="container header__container">
     <a class="logo" href="index.html">
@@ -160,16 +165,49 @@
         <use href="/Leaf_Of_Hope/assets/burger-menu-CkG2OxNi.svg#burger-menu"></use>
       </svg>
     </button>
-    <ul class="left-side__list">
+    <ul class="left-side__list cards-list">
       <li class="left-side-default">
         <img
           class="left-side-default__img"
           src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20version='1.0'%20x='0px'%20y='0px'%20viewBox='0%200%20100%20125'%20enable-background='new%200%200%20100%20100'%20xml:space='preserve'%3e%3cpath%20d='M21.0187664,35.9827538c-1.4546127-2.1763687,1.8543549-4.3971519,3.3089676-2.2207832%20c2.4650707,3.6865005,12.2920361,9.1385231,17.3554249,12.8250237c2.9092255-4.2528,4.1528664-14.2130165-4.7524757-17.4220467%20c-6.8178082-2.4539661-12.9471703,0.1998692-19.6428318-6.9843655c-2.0098095,5.6074791-4.8857241,16.9445782,1.4213009,23.7401752%20c6.073843,6.5624161,14.7348976,4.5303993,19.1653633,2.8537102C32.3891792,44.9880295,23.9390984,40.3576965,21.0187664,35.9827538%20z%20M44.7478409,48.9743347c1.5656509,1.3324699,2.9647446,2.7093582,4.0640335,4.1639709%20c1.1103897-3.6087723,3.064682-7.9393005,6.4624786-11.9700241c-4.6858521-6.4513741-4.9523468-18.7656212,5.5741692-23.2516041%20c6.6068306-2.8203945,17.7773705-0.5440922,20.4090004-8.4389772c0.5774002-1.6655874,2.9314346-1.8432503,3.6976013-0.2109737%20c0.0222092,0.0555191,9.7159271,20.2202339-0.7439575,31.5129166c-9.0274887,9.7492409-22.1190071,4.6414375-25.8388214,2.8870201%20c-5.0189705,5.9072838-6.4846878,12.5141144-6.9066353,15.7675629h19.5317879c1.0992889,0,1.9987106,0.8994179,1.9987106,1.9987068%20l-0.1221466,9.1940422l-5.87397,19.698349c-0.2109756,0.8772125-0.9993515,1.5434494-1.9542923,1.5434494H34.9541855%20c-0.8661079-0.0111084-1.6544838-0.5663071-1.9209785-1.4324112L27.0037785,69.93853v-8.5055962%20c0-1.0992889,0.8994179-1.9987068,1.9987049-1.9987068H47.379467c-0.3442192-2.7315636-2.6649399-5.3631935-5.785141-7.9059906%20c-3.7642288,1.7655258-16.8002262,6.8178062-25.8055038-2.8981209%20c-10.4598904-11.3037872-0.7661705-31.4573994-0.7439632-31.5129204c0.6329241-1.3546772,2.8203964-1.7877302,3.6865005,0.1998711%20c4.5192947,8.3390427,12.5474281,5.5963745,19.4207516,8.0503407%20C49.6446686,29.4758568,49.5669403,42.2897797,44.7478409,48.9743347z%20M58.0281258,38.2812653%20c6.9621544-6.4291706,17.8550987-8.8165131,19.1098442-14.7460041c0.843895-3.9974117,4.8635178-2.2874069,3.9863052,0.4441566%20c-0.6218185,1.9320812-0.4219513,5.7074127-12.5918427,12.0477505c-3.2201385,1.6877937-4.6747513,2.4650688-7.1509247,4.6081276%20c16.6003571,6.828907,29.1366806-4.4748802,21.3306274-26.2940788C74.162117,23.513052,61.548069,17.3947945,57.2397461,26.1890965%20C55.4520149,29.8311825,56.1959801,35.0833359,58.0281258,38.2812653z%20M63.5578766,87.86026l4.7524796-15.9230194H31.6896324%20L36.4421082,87.86026H63.5578766z%20M31.0011902,67.939827h37.9976044v-4.5081902H31.0011902V67.939827z'%20/%3e%3c/svg%3e"
           alt="plant"
         />
-        <p class="left-side-default__text">Виберіть потрібну фільтрацію і натисніть "Знайти"</p>
+        <p class="left-side-default__text">
+          Виберіть потрібну фільтрацію і натисніть "Знайти"
+        </p>
       </li>
     </ul>
+    <div class="left-side__pagination pagination is-hidden">
+      <button class="pagination-arrow pagination-arrow_first">
+        <img
+          class="pagination-arrow__img pagination-arrow__img_left"
+          src="data:image/svg+xml,%3csvg%20class='svg-icon'%20style='width:%201em;%20height:%201em;vertical-align:%20middle;fill:%20currentColor;overflow:%20hidden;'%20viewBox='0%200%201024%201024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M151.467%20204.373a34.133%2034.133%200%201%201%2048.213-48.213l331.947%20331.947a34.133%2034.133%200%200%201%200%2048.213L199.68%20867.84a34.133%2034.133%200%201%201-48.213-48.213L459.093%20512z%20m341.333%200a34.133%2034.133%200%200%201%2048.213-48.213L872.96%20488.107a34.133%2034.133%200%200%201%200%2048.213L541.013%20868.267a34.133%2034.133%200%200%201-48.213-48.214L800.427%20512z'%20/%3e%3c/svg%3e"
+          alt="first"
+        />
+      </button>
+      <button class="pagination-arrow pagination-arrow_back">
+        <img
+          class="pagination-arrow__img pagination-arrow__img_left"
+          src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3csvg%20fill='%23000000'%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20330%20330'%20xml:space='preserve'%3e%3cpath%20id='XMLID_222_'%20d='M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001%20c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213%20C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606%20C255,161.018,253.42,157.202,250.606,154.389z'%20/%3e%3c/svg%3e"
+          alt="back"
+        />
+      </button>
+      <ul class="pagination__numb"></ul>
+      <button class="pagination-arrow pagination-arrow_next">
+        <img
+          class="pagination-arrow__img"
+          src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3csvg%20fill='%23000000'%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20330%20330'%20xml:space='preserve'%3e%3cpath%20id='XMLID_222_'%20d='M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001%20c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213%20C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606%20C255,161.018,253.42,157.202,250.606,154.389z'%20/%3e%3c/svg%3e"
+          alt="next"
+        />
+      </button>
+      <button class="pagination-arrow pagination-arrow_last">
+        <img
+          class="pagination-arrow__img"
+          src="data:image/svg+xml,%3csvg%20class='svg-icon'%20style='width:%201em;%20height:%201em;vertical-align:%20middle;fill:%20currentColor;overflow:%20hidden;'%20viewBox='0%200%201024%201024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M151.467%20204.373a34.133%2034.133%200%201%201%2048.213-48.213l331.947%20331.947a34.133%2034.133%200%200%201%200%2048.213L199.68%20867.84a34.133%2034.133%200%201%201-48.213-48.213L459.093%20512z%20m341.333%200a34.133%2034.133%200%200%201%2048.213-48.213L872.96%20488.107a34.133%2034.133%200%200%201%200%2048.213L541.013%20868.267a34.133%2034.133%200%200%201-48.213-48.214L800.427%20512z'%20/%3e%3c/svg%3e"
+          alt="last"
+        />
+      </button>
+    </div>
   </div>
 </section>
 
