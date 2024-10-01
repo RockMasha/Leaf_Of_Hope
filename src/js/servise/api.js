@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// axios.defaults.baseURL = "https://5394-188-163-74-2.ngrok-free.app";
 axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
 
 export async function authorization(user) {
@@ -63,11 +64,29 @@ export const getUserAdverts = async (token) => {
 
 export async function getAdverts(info, page = 1) {
   try {
-    const answer = await axios.get(`/api/advert?page=${page}&limit=10`, info);
+    const params = getFilterParams(info);
+    console.log(params);
+    
+    const answer = await axios.get(
+      `/api/advert?page=${page}&limit=10${params}`
+    );
+    console.log(answer);
+    
     return answer.data;
   } catch (error) {
     console.log(error);
   }
+}
+
+function getFilterParams(params) {
+  let paramsStr = "";
+  for (const key in params) {
+    const value = params[key];
+    if (value !== "") {
+      paramsStr += `&${key}=${value}`;
+    }
+  }
+  return paramsStr;
 }
 
 export const setAuthHeader = (token) => {

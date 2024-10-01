@@ -1,7 +1,7 @@
 export const cardData = {
   alergenicity: {
-    false: "наявна",
-    true: "відсутння",
+    false: "відсутння",
+    true: "наявна",
   },
   humidity: {
     high: "мало",
