@@ -28,7 +28,7 @@
       font-size: 48px;
     }
   }
-  
+
   & > &__container > .swiper {
     position: relative;
     left: -9px;
@@ -45,8 +45,10 @@
       padding: 0;
     }
     & > .swiper-wrapper {
-      display: flex;
-      gap: 102px;
+      @media (min-width: 1440px) {
+        display: flex;
+        gap: 102px;
+      }
     }
     & > .swiper-button-prev,
     & > .swiper-button-next {

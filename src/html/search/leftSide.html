@@ -5,15 +5,48 @@
         <use href="./img/search/burger-menu.svg#burger-menu"></use>
       </svg>
     </button>
-    <ul class="left-side__list">
+    <ul class="left-side__list cards-list">
       <li class="left-side-default">
         <img
           class="left-side-default__img"
           src="./img/search/defoultPlant.svg"
           alt="plant"
         />
-        <p class="left-side-default__text">Виберіть потрібну фільтрацію і натисніть "Знайти"</p>
+        <p class="left-side-default__text">
+          Виберіть потрібну фільтрацію і натисніть "Знайти"
+        </p>
       </li>
     </ul>
+    <div class="left-side__pagination pagination is-hidden">
+      <button class="pagination-arrow pagination-arrow_first">
+        <img
+          class="pagination-arrow__img pagination-arrow__img_left"
+          src="./img/search/pagination-double-arrow.svg"
+          alt="first"
+        />
+      </button>
+      <button class="pagination-arrow pagination-arrow_back">
+        <img
+          class="pagination-arrow__img pagination-arrow__img_left"
+          src="./img/search/pagination-arrow.svg"
+          alt="back"
+        />
+      </button>
+      <ul class="pagination__numb"></ul>
+      <button class="pagination-arrow pagination-arrow_next">
+        <img
+          class="pagination-arrow__img"
+          src="./img/search/pagination-arrow.svg"
+          alt="next"
+        />
+      </button>
+      <button class="pagination-arrow pagination-arrow_last">
+        <img
+          class="pagination-arrow__img"
+          src="./img/search/pagination-double-arrow.svg"
+          alt="last"
+        />
+      </button>
+    </div>
   </div>
 </section>

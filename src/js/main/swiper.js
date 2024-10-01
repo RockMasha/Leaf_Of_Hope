@@ -8,10 +8,10 @@ if (window.innerWidth < 1440) {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-
+    centeredSlides: true,
     breakpoints: {
       320: {
-        spaceBetween: "50px",
+        spaceBetween: "50px", 
       },
       768: {
         spaceBetween: "90px",
