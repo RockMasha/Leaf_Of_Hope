@@ -65,13 +65,8 @@ export const getUserAdverts = async (token) => {
 export async function getAdverts(info, page = 1) {
   try {
     const params = getFilterParams(info);
-    console.log(params);
-    
-    const answer = await axios.get(
-      `/api/advert?page=${page}&limit=10${params}`
-    );
-    console.log(answer);
-    
+    const url = `/api/advert?page=${page}&limit=10${params}`;
+    const answer = await axios.get(url);
     return answer.data;
   } catch (error) {
     console.log(error);

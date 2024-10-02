@@ -1,4 +1,5 @@
 import { getAdverts } from "../servise/api";
+import { createFormObj } from "../universal/createFormObj";
 import { getCard } from "./getCard";
 
 export class AdvertCards {
@@ -7,9 +8,9 @@ export class AdvertCards {
   #showSpecifiedCards;
   #showFirstCards;
   #showLastCards;
-  #setPagination;
 
-  constructor(element) {
+  constructor(element, form) {
+    this.formEl = form;
     this.fatherElement = element;
     this.listCardsEl = element.querySelector(".cards-list");
     this.paginationEl = element.querySelector(".pagination");
@@ -24,10 +25,19 @@ export class AdvertCards {
     this.max_page;
   }
 
-  async showFirstCard(params) {
-    this.#showCards(params);
-    this.params = params;
+  addSubmitEvent() {
+    this.showFirstCard = this.showFirstCard.bind(this);
+    this.formEl.addEventListener("submit", this.showFirstCard);
+  }
+
+  async showFirstCard(event) {
+    event.preventDefault();
+
+    const params = createFormObj(this.formEl);
+
+    await this.#showCards(params);
     this.paginationEl.classList.remove("is-hidden");
+    this.params = params;
   }
 
   async showNextCards() {
@@ -81,9 +91,11 @@ export class AdvertCards {
   }
 
   async #showCards(params = this.params) {
+    this.#setLoaderCard();
     this.disablePagination();
     await this.#setCards(params, this.page);
     this.setPagination();
+    this.#removeLoaderCard();
   }
 
   async #setCards(params) {
@@ -92,6 +104,7 @@ export class AdvertCards {
     const cardsArr = answer.result;
     const cardsEl = cardsArr.map((advert) => getCard(advert));
     this.listCardsEl.innerHTML = cardsEl.join("");
+    return;
   }
 
   #setPage(page) {
@@ -133,22 +146,18 @@ export class AdvertCards {
     this.firstEL.removeEventListener("click", this.#showFirstCards);
     this.lastEL.removeEventListener("click", this.#showLastCards);
   }
-
   #setPaginationFunction() {
     this.#showBackCards = this.showBackCards.bind(this);
     this.#showNextCards = this.showNextCards.bind(this);
     this.#showSpecifiedCards = this.showSpecifiedCards.bind(this);
-    this.#setPagination = this.setPagination.bind(this);
     this.#showFirstCards = this.showFirstCards.bind(this);
     this.#showLastCards = this.showLastCards.bind(this);
   }
-
   #setListPagination() {
     const paginationBlocks = this.#getPaginationBtn();
     this.paginationListEl.innerHTML = paginationBlocks;
     this.#setActivePaginationBtn();
   }
-
   #getPaginationBtn() {
     let paginationBlocks = "";
     if (this.max_page >= 3) {
@@ -170,12 +179,21 @@ export class AdvertCards {
     }
     return paginationBlocks;
   }
-
   #setActivePaginationBtn() {
     const activePageEl = document.querySelector(
       `.pagination__item[data-page="${this.page}"]`
     );
     activePageEl.setAttribute("active", "");
+  }
+
+  #setLoaderCard() {
+    document.body.setAttribute("lock", "");
+    this.fatherElement.insertAdjacentHTML("beforeend", getCardLoader());
+  }
+  #removeLoaderCard() {
+    document.body.removeAttribute("lock", "");
+    const loader = this.fatherElement.querySelector(".card-loader-wrapper");
+    loader.remove();
   }
 }
 
@@ -183,4 +201,12 @@ function getPaginationItem(numb) {
   return `<li class="pagination__item" data-page="${numb}">
             <button class="pagination__btn">${numb}</button>
           </li>`;
+}
+
+function getCardLoader() {
+  return `<div class="card-loader-wrapper">
+  <div class="card-loader-block">
+    <div class="card-loader"></div>
+  </div>
+</div>`;
 }

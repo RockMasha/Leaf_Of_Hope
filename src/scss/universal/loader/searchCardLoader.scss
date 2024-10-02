@@ -1,0 +1,64 @@
+.card-loader-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $color-background-cardLoader;
+  z-index: 10;
+}
+
+.card-loader-block {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media (min-width: 768px) {
+    left: 65%;
+  }
+  @media (min-width: 1440px) {
+    left: 63%;
+  }
+}
+
+.card-loader {
+  width: 90px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5) 30%,
+        #0000 0 70%,
+        rgb(0 0 0/100%) 0
+      )
+      50%/8% 100%,
+    linear-gradient(90deg, rgb(0 0 0/25%) 30%, #0000 0 70%, rgb(0 0 0/75%) 0)
+      50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+  @media (min-width: 768px) {
+    width: 100px;
+  }
+  @media (min-width: 1440px) {
+    width: 150px;
+  }
+}
+.card-loader::before,
+.card-loader::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+.card-loader::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+@keyframes l23 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
