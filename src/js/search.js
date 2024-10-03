@@ -1,6 +1,6 @@
 import { modalCheck } from "./search/modalCheck";
 import { root } from "./search/root";
-import { submitSearchParams } from "./search/submitSearchParams";
+import { SearchCards } from "./search/SearchCards";
 import { closeModal, openModal } from "./search/toggleModal";
 import { hiddenContentLoader } from "./universal/hiddenContentLoader";
 
@@ -9,7 +9,7 @@ window.addEventListener("resize", modalCheck);
 root.openModalBtn.addEventListener("click", openModal);
 root.closeModalBtn.addEventListener("click", closeModal);
 
-root.form.addEventListener("submit", submitSearchParams);
-
+const advertCard = new SearchCards(root.leftSide, root.form);
+advertCard.addSubmitEvent();
 
 hiddenContentLoader();

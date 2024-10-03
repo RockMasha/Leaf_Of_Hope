@@ -72,26 +72,4 @@
       background-size: 76px 72px;
     }
   }
-  &-default {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &__text {
-      font-size: 20px;
-      @media (min-width: 768px) {
-        font-size: 24px;
-      }
-      @media (min-width: 1440px) {
-        font-size: 36px;
-      }
-    }
-    &__img {
-      width: 200px;
-      height: 200px;
-      @media (min-width: 1440px) {
-        width: 300px;
-        height: 300px;
-      }
-    }
-  }
 }

@@ -1,15 +1,13 @@
-import { getAdverts } from "../servise/api";
-import { getCard } from "./getCard";
+import { getCard } from "../search/getCard";
 
-export class AdvertCards {
-  #showNextCards;
+export class Cards {
   #showBackCards;
+  #showNextCards;
   #showSpecifiedCards;
   #showFirstCards;
   #showLastCards;
-  #setPagination;
 
-  constructor(element) {
+  constructor(element, request, temple = getCard) {
     this.fatherElement = element;
     this.listCardsEl = element.querySelector(".cards-list");
     this.paginationEl = element.querySelector(".pagination");
@@ -18,16 +16,15 @@ export class AdvertCards {
     this.nextEl = element.querySelector(".pagination-arrow_next");
     this.firstEL = element.querySelector(".pagination-arrow_first");
     this.lastEL = element.querySelector(".pagination-arrow_last");
-    this.params;
     this.page = 1;
     this.maxAdvertInPage = 10;
     this.max_page;
+    this.getCard = temple;
+    this.request = request;
   }
 
-  async showFirstCard(params) {
-    this.#showCards(params);
-    this.params = params;
-    this.paginationEl.classList.remove("is-hidden");
+  async showMainCard(params) {
+    await this.showCards(params);
   }
 
   async showNextCards() {
@@ -36,7 +33,7 @@ export class AdvertCards {
     }
 
     this.#nextPage();
-    this.#showCards();
+    this.showCards();
   }
 
   async showBackCards() {
@@ -45,7 +42,7 @@ export class AdvertCards {
     }
 
     this.#backPage();
-    this.#showCards();
+    this.showCards();
   }
 
   async showFirstCards() {
@@ -54,7 +51,7 @@ export class AdvertCards {
     }
 
     this.#firstPage();
-    this.#showCards();
+    this.showCards();
   }
 
   async showLastCards() {
@@ -63,7 +60,7 @@ export class AdvertCards {
     }
 
     this.#lastPage();
-    this.#showCards();
+    this.showCards();
   }
 
   async showSpecifiedCards(event) {
@@ -77,21 +74,31 @@ export class AdvertCards {
     const element = targetEl.closest(".pagination__item");
     const page = Number(element.dataset.page);
     this.#setPage(page);
-    this.#showCards();
+    this.showCards();
   }
 
-  async #showCards(params = this.params) {
+  async showCards(params = {}) {
+    this.#setLoaderCard();
     this.disablePagination();
-    await this.#setCards(params, this.page);
-    this.setPagination();
+    const answer = await this.#setCards(params);
+    if (answer) {
+      this.setPagination();
+    }
+    this.#removeLoaderCard();
   }
 
   async #setCards(params) {
-    const answer = await getAdverts(params, this.page);
+    const answer = await this.request(this.page, params);
     this.#setMaxPage(answer.tottal);
     const cardsArr = answer.result;
-    const cardsEl = cardsArr.map((advert) => getCard(advert));
+    if (cardsArr.length === 0) {
+      this.listCardsEl.innerHTML = this.#getDefaultElement();
+      this.#hiddenPagination();
+      return false;
+    }
+    const cardsEl = cardsArr.map((advert) => this.getCard(advert));
     this.listCardsEl.innerHTML = cardsEl.join("");
+    return true;
   }
 
   #setPage(page) {
@@ -114,9 +121,17 @@ export class AdvertCards {
     this.max_page = Math.ceil(maxAdvert / this.maxAdvertInPage);
   }
 
+  #getDefaultElement() {
+    return `<div class="cards-list-default">
+              <img class="cards-list-default__img" src="./img/profile/defoultPlant.svg" alt="plant">
+              <p class="cards-list-default__text">Немає оголошень</p>
+            </div>`;
+  }
+
   setPagination() {
-    this.#setListPagination();
     this.#setPaginationFunction();
+    this.#showPagination();
+    this.#setListPagination();
     this.nextEl.addEventListener("click", this.#showNextCards);
     this.backEl.addEventListener("click", this.#showBackCards);
     this.paginationListEl.addEventListener("click", this.#showSpecifiedCards);
@@ -133,22 +148,18 @@ export class AdvertCards {
     this.firstEL.removeEventListener("click", this.#showFirstCards);
     this.lastEL.removeEventListener("click", this.#showLastCards);
   }
-
   #setPaginationFunction() {
     this.#showBackCards = this.showBackCards.bind(this);
     this.#showNextCards = this.showNextCards.bind(this);
     this.#showSpecifiedCards = this.showSpecifiedCards.bind(this);
-    this.#setPagination = this.setPagination.bind(this);
     this.#showFirstCards = this.showFirstCards.bind(this);
     this.#showLastCards = this.showLastCards.bind(this);
   }
-
   #setListPagination() {
     const paginationBlocks = this.#getPaginationBtn();
     this.paginationListEl.innerHTML = paginationBlocks;
     this.#setActivePaginationBtn();
   }
-
   #getPaginationBtn() {
     let paginationBlocks = "";
     if (this.max_page >= 3) {
@@ -170,12 +181,27 @@ export class AdvertCards {
     }
     return paginationBlocks;
   }
-
   #setActivePaginationBtn() {
     const activePageEl = document.querySelector(
       `.pagination__item[data-page="${this.page}"]`
     );
     activePageEl.setAttribute("active", "");
+  }
+  #showPagination() {
+    this.paginationEl.classList.remove("is-hidden");
+  }
+  #hiddenPagination() {
+    this.paginationEl.classList.add("is-hidden");
+  }
+
+  #setLoaderCard() {
+    document.body.setAttribute("lock", "");
+    this.fatherElement.insertAdjacentHTML("beforeend", getCardLoader());
+  }
+  #removeLoaderCard() {
+    document.body.removeAttribute("lock", "");
+    const loader = this.fatherElement.querySelector(".card-loader-wrapper");
+    loader.remove();
   }
 }
 
@@ -183,4 +209,12 @@ function getPaginationItem(numb) {
   return `<li class="pagination__item" data-page="${numb}">
             <button class="pagination__btn">${numb}</button>
           </li>`;
+}
+
+function getCardLoader() {
+  return `<div class="card-loader-wrapper">
+            <div class="card-loader-block">
+              <div class="card-loader"></div>
+            </div>
+          </div>`;
 }

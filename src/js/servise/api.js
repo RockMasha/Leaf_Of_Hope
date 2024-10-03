@@ -1,5 +1,7 @@
 import axios from "axios";
+import { getToken } from "../token/getToken";
 
+// axios.defaults.baseURL = "https://5394-188-163-74-2.ngrok-free.app";
 axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
 
 export async function authorization(user) {
@@ -13,7 +15,7 @@ export async function authorization(user) {
   }
 }
 
-export async function getInfo(token) {
+export async function getInfo(token = getToken()) {
   try {
     const answer = await axios.get("/api/auth/getInfo", {
       headers: {
@@ -35,7 +37,7 @@ export async function signin(info) {
   }
 }
 
-export async function postAdvert(info, token) {
+export async function postAdvert(info, token = getToken()) {
   try {
     const answer = await axios.post("/api/advert/", info, {
       headers: {
@@ -48,26 +50,43 @@ export async function postAdvert(info, token) {
   }
 }
 
-export const getUserAdverts = async (token) => {
+export const getUserAdverts = async (page = 1) => {
+  const token = getToken();
   try {
-    const answer = await axios.get("/api/advert/userAdverts", {
-      headers: {
-        Authorization: token,
-      },
-    });
+    const answer = await axios.get(
+      `/api/advert/userAdverts?page=${page}&limit=10`,
+      {
+        headers: {
+          Authorization: token,
+        },
+      }
+    );
     return answer.data;
   } catch (error) {
     console.log(error);
   }
 };
 
-export async function getAdverts(info, page = 1) {
+export async function getAdverts(page = 1, info) {
   try {
-    const answer = await axios.get(`/api/advert?page=${page}&limit=10`, info);
+    const params = getFilterParams(info);
+    const url = `/api/advert?page=${page}&limit=10${params}`;
+    const answer = await axios.get(url);
     return answer.data;
   } catch (error) {
     console.log(error);
   }
+}
+
+function getFilterParams(params) {
+  let paramsStr = "";
+  for (const key in params) {
+    const value = params[key];
+    if (value !== "") {
+      paramsStr += `&${key}=${value}`;
+    }
+  }
+  return paramsStr;
 }
 
 export const setAuthHeader = (token) => {
