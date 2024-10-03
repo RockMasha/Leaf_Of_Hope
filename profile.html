@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaf_Of_Hope</title>
-    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedTwo-DDHyH0DZ.js"></script>
+    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedTwo-B3Vey9PL.js"></script>
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-BTbEcCAy.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-gcbuf7mz.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/isSignin-AGES9O8d.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createToken-uaBdkxDQ.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getAdvertCardInner-B_bPg60f.js">
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/index-CmwATgur.css">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-DvuMLugC.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/isSignin-DAHhQaqV.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createToken-BpNK6dZ6.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createFormObj-BmIEtBFt.js">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/index-9Q-lwvA6.css">
   </head>
   <body>
     <div class="content-loader-wrapper" active>
@@ -95,8 +95,38 @@
       <section class="profile-adverts">
   <div class="container profile-adverts__container">
     <h2 class="profile-adverts__title"></h2>
-    <ul class="profile-adverts__list" id="user-cards-js">
-    </ul>
+    <ul class="profile-adverts__list cards-list" id="user-cards-js"></ul>
+    <div class="left-side__pagination pagination is-hidden">
+      <button class="pagination-arrow pagination-arrow_first">
+        <img
+          class="pagination-arrow__img pagination-arrow__img_left"
+          src="data:image/svg+xml,%3csvg%20class='svg-icon'%20style='width:%201em;%20height:%201em;vertical-align:%20middle;fill:%20currentColor;overflow:%20hidden;'%20viewBox='0%200%201024%201024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M151.467%20204.373a34.133%2034.133%200%201%201%2048.213-48.213l331.947%20331.947a34.133%2034.133%200%200%201%200%2048.213L199.68%20867.84a34.133%2034.133%200%201%201-48.213-48.213L459.093%20512z%20m341.333%200a34.133%2034.133%200%200%201%2048.213-48.213L872.96%20488.107a34.133%2034.133%200%200%201%200%2048.213L541.013%20868.267a34.133%2034.133%200%200%201-48.213-48.214L800.427%20512z'%20/%3e%3c/svg%3e"
+          alt="first"
+        />
+      </button>
+      <button class="pagination-arrow pagination-arrow_back">
+        <img
+          class="pagination-arrow__img pagination-arrow__img_left"
+          src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3csvg%20fill='%23000000'%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20330%20330'%20xml:space='preserve'%3e%3cpath%20id='XMLID_222_'%20d='M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001%20c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213%20C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606%20C255,161.018,253.42,157.202,250.606,154.389z'%20/%3e%3c/svg%3e"
+          alt="back"
+        />
+      </button>
+      <ul class="pagination__numb"></ul>
+      <button class="pagination-arrow pagination-arrow_next">
+        <img
+          class="pagination-arrow__img"
+          src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3csvg%20fill='%23000000'%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20330%20330'%20xml:space='preserve'%3e%3cpath%20id='XMLID_222_'%20d='M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001%20c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213%20C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606%20C255,161.018,253.42,157.202,250.606,154.389z'%20/%3e%3c/svg%3e"
+          alt="next"
+        />
+      </button>
+      <button class="pagination-arrow pagination-arrow_last">
+        <img
+          class="pagination-arrow__img"
+          src="data:image/svg+xml,%3csvg%20class='svg-icon'%20style='width:%201em;%20height:%201em;vertical-align:%20middle;fill:%20currentColor;overflow:%20hidden;'%20viewBox='0%200%201024%201024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M151.467%20204.373a34.133%2034.133%200%201%201%2048.213-48.213l331.947%20331.947a34.133%2034.133%200%200%201%200%2048.213L199.68%20867.84a34.133%2034.133%200%201%201-48.213-48.213L459.093%20512z%20m341.333%200a34.133%2034.133%200%200%201%2048.213-48.213L872.96%20488.107a34.133%2034.133%200%200%201%200%2048.213L541.013%20868.267a34.133%2034.133%200%200%201-48.213-48.214L800.427%20512z'%20/%3e%3c/svg%3e"
+          alt="last"
+        />
+      </button>
+    </div>
   </div>
 </section>
 
