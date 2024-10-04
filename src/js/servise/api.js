@@ -88,6 +88,20 @@ export async function getOneAdvert(id) {
   }
 }
 
+export async function deleteAdvert(id) {
+  const token = getToken();
+  try {
+    const answer = await axios.delete(`/api/advert/${id}`, {
+      headers: {
+        Authorization: token,
+      },
+    });
+    return answer.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 function getFilterParams(params) {
   let paramsStr = "";
   for (const key in params) {

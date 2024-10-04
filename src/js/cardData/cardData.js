@@ -9,9 +9,9 @@ export const cardData = {
     low: "висока",
   },
   lifeDuration: {
-    annual: "однорічні",
-    biennial: "дворічні",
-    perennial: "довгожителі",
+    annual: "однорічна",
+    biennial: "дворічна",
+    perennial: "довгожитель",
   },
   light: {
     many: "багато",

@@ -1,7 +1,3 @@
-::-webkit-scrollbar {
-  display: none;
-}
-
 .side-panel {
   position: fixed;
   top: 0;
@@ -28,7 +24,6 @@
 
   .side-panel__wrapp {
   }
-
   &__close-btn {
     position: absolute;
     top: 65px;
@@ -39,25 +34,20 @@
     color: $color-text-line;
     @media (min-width: 768px) {
       display: none;
+      margin-bottom: 15px;
+      font-size: 30px;
+      font-weight: 500;
+      color: $color-text-line;
+      @media (min-width: 768px) {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+      @media (min-width: 1440px) {
+        min-width: 247px;
+        font-size: 40px;
+      }
     }
   }
-
-  &__title {
-    width: 196px;
-    margin-bottom: 15px;
-    font-size: 30px;
-    font-weight: 500;
-    color: $color-text-line;
-    @media (min-width: 768px) {
-      font-size: 32px;
-      margin-bottom: 30px;
-    }
-    @media (min-width: 1440px) {
-      min-width: 247px;
-      font-size: 40px;
-    }
-  }
-
   &__radio-list {
     display: flex;
     flex-direction: column;

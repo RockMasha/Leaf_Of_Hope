@@ -1,9 +1,9 @@
 import { showUserInfo } from "./showUserInfo";
 import { isSignin } from "../signin/isSignin";
-import { Cards } from "../universal/Cards";
 import { createProfileCard } from "./createProfileCard";
 import { root } from "./root";
 import { getUserAdverts } from "../servise/api";
+import { ProfileCard } from "./ProfileCard";
 
 export async function showProfile(user) {
   if (!user) {
@@ -13,7 +13,7 @@ export async function showProfile(user) {
 
   showUserInfo(user);
   root.advertsTitle.textContent = "Мої оголошення:";
-  const cards = new Cards(
+  const cards = new ProfileCard(
     root.profileAdverts,
     getUserAdverts,
     createProfileCard
