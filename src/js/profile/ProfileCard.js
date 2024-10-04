@@ -45,16 +45,18 @@ export class ProfileCard extends Cards {
       this.#setDeleteLoader(data.cardEl);
       await deleteAdvert(data.id);
       this.#deleteCardOnPage(data.cardEl);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   #openDeleteModal() {
-    document.body.setAttribute("lock", "")
+    document.body.setAttribute("lock", "");
     const modalEl = getDeleteModal();
     document.body.insertAdjacentHTML("afterbegin", modalEl);
   }
   #closeDeleteModal() {
-    document.body.removeAttribute("lock", "")
+    document.body.removeAttribute("lock", "");
     const modalEl = document.querySelector(".modal-wrapper");
     modalEl.remove();
   }
@@ -67,11 +69,26 @@ export class ProfileCard extends Cards {
 
   #deleteCardOnPage(element) {
     element.classList.add("is-hidden");
+
+    if (this.#isEmptyList()) {
+      this.setDefaultElement();
+    }
   }
 
   #setDeleteLoader(cardEl) {
     const loaderEl = getLoaderEl();
     cardEl.insertAdjacentHTML("afterbegin", loaderEl);
+  }
+
+  #isEmptyList() {
+    const allCards = this.listCardsEl.querySelectorAll(
+      ".profile-adverts__card"
+    );
+    const allHiddenCards = this.listCardsEl.querySelectorAll(
+      ".profile-adverts__card.is-hidden"
+    );
+
+    return allCards.length === allHiddenCards.length;
   }
 }
 

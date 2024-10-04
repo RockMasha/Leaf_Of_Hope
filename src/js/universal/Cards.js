@@ -92,8 +92,7 @@ export class Cards {
     this.#setMaxPage(answer.tottal);
     const cardsArr = answer.result;
     if (cardsArr.length === 0) {
-      this.listCardsEl.innerHTML = getDefaultElement();
-      this.#hiddenPagination();
+      this.setDefaultElement();
       return false;
     }
     const cardsEl = cardsArr.map((advert) => this.getCard(advert));
@@ -195,6 +194,11 @@ export class Cards {
     document.body.removeAttribute("lock", "");
     const loader = this.fatherElement.querySelector(".card-loader-wrapper");
     loader.remove();
+  }
+
+  setDefaultElement() {
+    this.listCardsEl.innerHTML = getDefaultElement();
+    this.#hiddenPagination();
   }
 }
 
