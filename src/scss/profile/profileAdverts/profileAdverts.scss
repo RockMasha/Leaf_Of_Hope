@@ -26,6 +26,7 @@
   }
 
   &__card {
+    position: relative;
     @media (min-width: 768px) {
       align-items: center;
       display: flex;

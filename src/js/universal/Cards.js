@@ -92,8 +92,7 @@ export class Cards {
     this.#setMaxPage(answer.tottal);
     const cardsArr = answer.result;
     if (cardsArr.length === 0) {
-      this.listCardsEl.innerHTML = this.#getDefaultElement();
-      this.#hiddenPagination();
+      this.setDefaultElement();
       return false;
     }
     const cardsEl = cardsArr.map((advert) => this.getCard(advert));
@@ -119,13 +118,6 @@ export class Cards {
 
   #setMaxPage(maxAdvert) {
     this.max_page = Math.ceil(maxAdvert / this.maxAdvertInPage);
-  }
-
-  #getDefaultElement() {
-    return `<div class="cards-list-default">
-              <img class="cards-list-default__img" src="./img/profile/defoultPlant.svg" alt="plant">
-              <p class="cards-list-default__text">Немає оголошень</p>
-            </div>`;
   }
 
   setPagination() {
@@ -203,6 +195,11 @@ export class Cards {
     const loader = this.fatherElement.querySelector(".card-loader-wrapper");
     loader.remove();
   }
+
+  setDefaultElement() {
+    this.listCardsEl.innerHTML = getDefaultElement();
+    this.#hiddenPagination();
+  }
 }
 
 function getPaginationItem(numb) {
@@ -216,5 +213,12 @@ function getCardLoader() {
             <div class="card-loader-block">
               <div class="card-loader"></div>
             </div>
+          </div>`;
+}
+
+function getDefaultElement() {
+  return `<div class="cards-list-default">
+            <img class="cards-list-default__img" src="./img/profile/defoultPlant.svg" alt="plant">
+            <p class="cards-list-default__text">Немає оголошень</p>
           </div>`;
 }

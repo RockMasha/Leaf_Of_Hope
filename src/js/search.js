@@ -13,3 +13,5 @@ const advertCard = new SearchCards(root.leftSide, root.form);
 advertCard.addSubmitEvent();
 
 hiddenContentLoader();
+
+advertCard.showOpenCard();

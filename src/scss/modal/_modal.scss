@@ -1,3 +1,6 @@
+@import "./singin-modal";
+@import "./delete-modal";
+
 .modal-wrapper {
   position: fixed;
   width: 100%;
@@ -6,146 +9,11 @@
   z-index: 200;
 }
 
-.signin-modal {
+.modal {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
   background-color: $color-white;
   border-radius: 30px;
-  @media (min-width: 768px) {
-    padding: 50px;
-  }
-  @media (min-width: 1440px) {
-    padding: 70px;
-  }
-  &__title {
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: 600;
-    text-align: center;
-    color: $color-text-line;
-    @media (min-width: 768px) {
-      margin-bottom: 25px;
-      font-size: 52px;
-    }
-    @media (min-width: 1440px) {
-      margin-bottom: 60px;
-      font-size: 72px;
-    }
-  }
-
-  &-form {
-    &__enter-block {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-bottom: 20px;
-      @media (min-width: 768px) {
-        gap: 45px;
-        margin-bottom: 60px;
-      }
-      @media (min-width: 1440px) {
-      }
-    }
-    &__enter {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      font-size: 15px;
-      font-weight: 500;
-      @media (min-width: 768px) {
-        font-size: 28px;
-      }
-      @media (min-width: 1440px) {
-        gap: 10px;
-        font-size: 38px;
-      }
-    }
-    &__input {
-      display: block;
-      width: 220px;
-      padding-bottom: 3px;
-      font-size: 12px;
-      color: $color-text-line;
-      background-color: transparent;
-      border: 1px solid transparent;
-      border-bottom: 1.5px solid $color-text-line;
-      @media (min-width: 768px) {
-        width: 500px;
-        padding-bottom: 5px;
-        font-size: 24px;
-        border-bottom-width: 2.5px;
-      }
-      @media (min-width: 1440px) {
-        display: block;
-        width: 800px;
-        padding-bottom: 5px;
-        font-size: 32px;
-        border-bottom-width: 2.5px;
-      }
-    }
-    &__input::placeholder {
-      color: $color-grey-dark;
-    }
-    &__input:invalid {
-      border-bottom: 1.5px solid $color-red;
-    }
-    &__btn-submit {
-      position: relative;
-      left: 100%;
-      transform: translateX(-100%);
-      padding: 5px 15px;
-      margin-bottom: 25px;
-      font-size: 18px;
-      font-weight: 500;
-      color: $color-text-line;
-      background-color: $color-card-sidePanel;
-      border: 1px solid transparent;
-      border-radius: 20px;
-      @media (min-width: 768px) {
-        padding: 20px 40px;
-        margin-bottom: 50px;
-        font-size: 32px;
-      }
-      @media (min-width: 1440px) {
-        padding: 15px 40px;
-        font-size: 40px;
-      }
-    }
-  }
-
-  &__link {
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 500;
-    color: $color_modal-link;
-    @media (min-width: 768px) {
-      font-size: 21px;
-    }
-    @media (min-width: 1440px) {
-      font-size: 28px;
-    }
-  }
-  &__error {
-    position: absolute;
-    bottom: 42px;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-    font-size: 12px;
-    font-weight: 600;
-    white-space: nowrap;
-    color: $color-red;
-    @media (min-width: 768px) {
-      bottom: 85px;
-      font-size: 21px;
-    }
-    @media (min-width: 1440px) {
-      top: 175px;
-      font-size: 28px;
-    }
-  }
 }

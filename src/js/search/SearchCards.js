@@ -14,14 +14,18 @@ export class SearchCards extends Cards {
     this.formEl.addEventListener("submit", this.showMainCard);
   }
 
-  async showMainCard(event) {
-    event.preventDefault();
-
+  showOpenCard() {
     this.#resetPage();
     const params = createFormObj(this.formEl);
 
     super.showMainCard(params);
     this.#setParams(params);
+  }
+
+  async showMainCard(event) {
+    event.preventDefault();
+
+    this.showOpenCard();
   }
 
   async showCards(params = this.params) {
