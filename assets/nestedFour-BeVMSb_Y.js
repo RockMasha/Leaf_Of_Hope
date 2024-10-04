@@ -1,4 +1,4 @@
-import{h as $}from"./hiddenContentLoader-YZwxA7N9.js";import{b as w}from"./api-DVTkbkxP.js";import{c as e}from"./cardData-C3ZUKnf8.js";function x(t){const{alergenicity:s,humidity:a,image:n,keeper:p,lifeDuration:o,light:l,name:c,size:v,temperature:_,way:i,wish:r,description:d}=t,{username:m,email:u,avatar:f,adress:h,phone:g}=p;return`
+import{h as $}from"./hiddenContentLoader-CROy0A0f.js";import{b as w}from"./api-DlfnOqWE.js";import{c as e}from"./cardData-DyQ4QymL.js";function x(t){const{alergenicity:s,humidity:a,image:n,keeper:p,lifeDuration:o,light:l,name:c,size:v,temperature:_,way:i,wish:r,description:d}=t,{username:m,email:u,avatar:f,adress:h,phone:g}=p;return`
         <section class="advert">
           <div class="container advert__container">
             <div class="advert-maininfo">
