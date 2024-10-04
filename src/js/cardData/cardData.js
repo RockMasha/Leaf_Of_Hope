@@ -4,9 +4,9 @@ export const cardData = {
     true: "наявна",
   },
   humidity: {
-    high: "мало",
-    normal: "помірно",
-    low: "високо",
+    high: "низька",
+    normal: "помірна",
+    low: "висока",
   },
   lifeDuration: {
     annual: "однорічні",
@@ -19,9 +19,9 @@ export const cardData = {
     little: "мало",
   },
   size: {
-    large: "багато",
-    medium: "помірно",
-    small: "мало",
+    large: "великий",
+    medium: "середній",
+    small: "малий",
   },
   temperature: {
     high: "25-35°С",

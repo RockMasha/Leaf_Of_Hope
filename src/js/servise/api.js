@@ -78,6 +78,16 @@ export async function getAdverts(page = 1, info) {
   }
 }
 
+export async function getOneAdvert(id) {
+  try {
+    const url = `/api/advert/${id}`;
+    const answer = await axios.get(url);
+    return answer.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 function getFilterParams(params) {
   let paramsStr = "";
   for (const key in params) {

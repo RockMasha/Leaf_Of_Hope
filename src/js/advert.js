@@ -1,3 +1,6 @@
+import { createAdvert } from "./advert/createAdvert";
 import { hiddenContentLoader } from "./universal/hiddenContentLoader";
 
-hiddenContentLoader()
+await createAdvert();
+
+hiddenContentLoader();
