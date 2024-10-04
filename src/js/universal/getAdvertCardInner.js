@@ -11,9 +11,10 @@ export function getAdvertCardInner(info) {
     size,
     temperature,
     way,
+    _id: id,
   } = info;
 
-  return ` <a href="advert.html" class="card">
+  return ` <a href="advert.html?id=${id}" class="card">
           <p class="card__way">${cardData.way[way]}</p>
           <div class="card__info-wrapp">
             <div class="card__thumb">

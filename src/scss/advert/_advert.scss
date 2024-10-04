@@ -48,9 +48,8 @@
         font-size: 40px;
       }
       @media (min-width: 1440px) {
-        white-space: nowrap;
-        margin-bottom: 0;
-        font-size: 90px;
+        margin-bottom: 10px;
+        font-size: 65px;
       }
     }
     &-way {
@@ -120,17 +119,18 @@
     }
   }
   &-discreption {
-    margin-bottom: 16px;
+    margin-bottom: 30px;
     @media (min-width: 768px) {
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
     @media (min-width: 1440px) {
       margin-top: 51px;
     }
     &__title {
       color: $color-black;
-      font-size: 26px;
+      font-size: 30px;
       margin-bottom: 6px;
+      font-weight: 500;
       @media (min-width: 768px) {
         font-size: 44px;
         margin-bottom: 10px;
@@ -149,45 +149,27 @@
         font-size: 40px;
         font-weight: 300;
       }
+      &_default {
+        color: $color-grey-dark;
+      }
     }
   }
   &-userinfo {
     display: flex;
     gap: 12px;
-    align-items: center;
     padding: 15px 16px 15px 16px;
     border-radius: 20px;
     background: $color-grey-lightblue;
     @media (min-width: 768px) {
       padding: 26px 20px 25px 25px;
       gap: 15px;
-      width: 150px;
     }
     @media (min-width: 1440px) {
       padding: 34px 59px 32px 31px;
       gap: 23px;
     }
-    &__img {
-      width: 30px;
-      height: 40px;
-      @media (min-width: 768px) {
-        width: 105px;
-        height: 139px;
-      }
-      @media (min-width: 1440px) {
-      }
-    }
-    &__profile-img {
-      @media (min-width: 768px) {
-        width: 160px;
-        height: 160px;
-      }
-      @media (min-width: 1440px) {
-        width: 241px;
-        height: 241px;
-      }
-    }
     &__userinfos {
+      padding-top: 5px;
       @media (min-width: 768px) {
         width: 150px;
       }
@@ -197,14 +179,15 @@
     }
     &__name {
       color: $color-black;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       @media (min-width: 768px) {
-        font-size: 20px;
+        margin-bottom: 1px;
+        font-size: 22px;
       }
       @media (min-width: 1440px) {
-        font-size: 36px;
         margin-bottom: 11px;
+        font-size: 40px;
       }
     }
     &__adress {
@@ -218,12 +201,12 @@
       }
       @media (min-width: 1440px) {
         margin-bottom: 7px;
-        font-size: 24px;
+        font-size: 26px;
       }
     }
     &__phone {
       color: $color-black;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 600;
       margin-bottom: 3px;
       @media (min-width: 768px) {
@@ -231,47 +214,55 @@
         margin-bottom: 6px;
       }
       @media (min-width: 1440px) {
-        font-size: 24px;
+        font-size: 28px;
       }
     }
     &__email {
       color: $color-black;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 600;
       @media (min-width: 768px) {
         font-size: 16px;
       }
       @media (min-width: 1440px) {
-        font-size: 24px;
+        font-size: 28px;
       }
     }
     &__profile-img {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 85px;
-      height: 75px;
+      width: 105px;
+      height: 105px;
       background-color: $color-grey-very-light;
       border-radius: 20px;
       @media (min-width: 768px) {
+        min-width: 160px;
+        min-height: 160px;
       }
       @media (min-width: 1440px) {
+        min-width: 241px;
+        min-height: 241px;
       }
     }
   }
   &-wishes {
-    padding: 11px 11px 14px 13px;
+    padding: 15px;
     background: $color-grey-lightblue;
     border-radius: 20px;
+    min-height: 140px;
     @media (min-width: 768px) {
+      min-width: 220px;
       padding: 22px 18px 22px 13px;
     }
     @media (min-width: 1440px) {
+      min-width: 400px;
       padding: 34px 36px 34px 33px;
     }
     &__title {
       margin-bottom: 10px;
       font-size: 17px;
+      font-weight: 500;
       color: $color-black;
       @media (min-width: 768px) {
         font-size: 24px;
@@ -290,6 +281,9 @@
       @media (min-width: 1440px) {
         font-size: 28px;
       }
+      &_default {
+        color: $color-grey-dark;
+      }
     }
   }
   &-user {
@@ -299,12 +293,12 @@
     margin-top: 16px;
     @media (min-width: 768px) {
       flex-direction: row;
-      gap: 43px;
+      justify-content: space-between;
       margin-top: 40px;
     }
     @media (min-width: 1440px) {
       gap: 100px;
-      margin-top: 176px;
+      margin-top: 90px;
     }
   }
 }
