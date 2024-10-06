@@ -15,6 +15,20 @@ export async function authorization(user) {
   }
 }
 
+export async function redactUser(user, token = getToken()) {
+  try {
+    const answer = await axios.put("/api/auth/", user, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: token,
+      },
+    });
+    return answer.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export async function getInfo(token = getToken()) {
   try {
     const answer = await axios.get("/api/auth/getInfo", {
