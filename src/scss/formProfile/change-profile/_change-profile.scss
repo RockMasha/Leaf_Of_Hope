@@ -136,10 +136,6 @@
     }
     &__input:invalid {
       border-bottom: 2.5px solid $color-red;
-      @media (min-width: 768px) {
-      }
-      @media (min-width: 1440px) {
-      }
     }
     &__btn-submit {
       position: relative;
