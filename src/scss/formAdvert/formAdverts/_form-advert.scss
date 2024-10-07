@@ -85,9 +85,12 @@
       margin-bottom: 18px;
       font-size: 40px;
     }
-  }
-  &__name::placeholder {
-    color: $color-grey-lightblue;
+    &::placeholder {
+      color: $color-grey-lightblue;
+    }
+    &:invalid {
+      border-bottom: 2.5px solid $color-red;
+    }
   }
   &-way {
     display: flex;
