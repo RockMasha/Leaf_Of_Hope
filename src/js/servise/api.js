@@ -15,6 +15,20 @@ export async function authorization(user) {
   }
 }
 
+export async function redactUser(user, token = getToken()) {
+  try {
+    const answer = await axios.put("/api/auth/", user, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: token,
+      },
+    });
+    return answer.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export async function getInfo(token = getToken()) {
   try {
     const answer = await axios.get("/api/auth/getInfo", {
@@ -92,6 +106,19 @@ export async function deleteAdvert(id) {
   const token = getToken();
   try {
     const answer = await axios.delete(`/api/advert/${id}`, {
+      headers: {
+        Authorization: token,
+      },
+    });
+    return answer.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+export async function changeAdvert(id, data) {
+  const token = getToken();
+  try {
+    const answer = await axios.put(`/api/advert/${id}`, data, {
       headers: {
         Authorization: token,
       },
