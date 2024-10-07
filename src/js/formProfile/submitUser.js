@@ -6,7 +6,7 @@ import { root } from "./root";
 
 export async function submitUser(event) {
   event.preventDefault();
-  await disableBtnSubmit();
+  await disableFormSubmit();
 
   try {
     const data = createFormData(root.form);
@@ -19,14 +19,20 @@ export async function submitUser(event) {
     window.location.href = "profile.html";
   } catch (error) {
     root.error.textContent = "Неравельно ввід або такий юзер вже є";
-    ableBtnSubmit();
+    ableFormSubmit();
   }
 }
 
-async function disableBtnSubmit() {
-  root.btnSubmit.removeEventListener("submit", submitUser);
+async function disableFormSubmit() {
+  root.form.addEventListener("submit", preventDefaultSubmit);
+  root.form.removeEventListener("submit", submitUser);
 }
 
-function ableBtnSubmit() {
-  root.btnSubmit.addEventListener("submit", submitUser);
+function ableFormSubmit() {
+  root.form.removeEventListener("submit", preventDefaultSubmit);
+  root.form.addEventListener("submit", submitUser);
+}
+
+function preventDefaultSubmit(event) {
+  event.preventDefault();
 }

@@ -115,6 +115,19 @@ export async function deleteAdvert(id) {
     console.log(error);
   }
 }
+export async function changeAdvert(id, data) {
+  const token = getToken();
+  try {
+    const answer = await axios.put(`/api/advert/${id}`, data, {
+      headers: {
+        Authorization: token,
+      },
+    });
+    return answer.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 function getFilterParams(params) {
   let paramsStr = "";

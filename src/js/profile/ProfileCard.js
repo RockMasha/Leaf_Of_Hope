@@ -30,7 +30,7 @@ export class ProfileCard extends Cards {
       this.#showDeleteModal(cardInfo);
       return;
     }
-    this.#redactCard(cardInfo);
+    this.#redactCard(cardInfo.id);
   }
 
   #showDeleteModal(data) {
@@ -38,7 +38,9 @@ export class ProfileCard extends Cards {
     this.#setModalBtnEvent(data);
   }
 
-  async #redactCard(data) {}
+  async #redactCard(id) {
+    window.location.href = `formAdvert.html?id=${id}`;
+  }
   async #deleteCard(data) {
     this.#closeDeleteModal();
     try {
