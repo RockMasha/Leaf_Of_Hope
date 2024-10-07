@@ -14,7 +14,6 @@ export async function authorization(user) {
     console.log(error);
   }
 }
-
 export async function redactUser(user, token = getToken()) {
   try {
     const answer = await axios.put("/api/auth/", user, {
@@ -28,7 +27,6 @@ export async function redactUser(user, token = getToken()) {
     console.log(error);
   }
 }
-
 export async function getInfo(token = getToken()) {
   try {
     const answer = await axios.get("/api/auth/getInfo", {
@@ -41,10 +39,21 @@ export async function getInfo(token = getToken()) {
     console.log(error);
   }
 }
-
 export async function signin(info) {
   try {
     const answer = await axios.post("/api/auth/signin", info);
+    return answer.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+export async function logout(token = getToken()) {
+  try {
+    const answer = await axios.post("/api/auth/logout", {
+      headers: {
+        Authorization: token,
+      },
+    });
     return answer.data;
   } catch (error) {
     console.log(error);
