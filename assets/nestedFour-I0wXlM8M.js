@@ -1,10 +1,10 @@
-import{h as $}from"./hiddenContentLoader-CROy0A0f.js";import{b as w}from"./api-DlfnOqWE.js";import{c as e}from"./cardData-DyQ4QymL.js";function x(t){const{alergenicity:s,humidity:a,image:n,keeper:p,lifeDuration:o,light:l,name:c,size:v,temperature:_,way:i,wish:r,description:d}=t,{username:m,email:u,avatar:f,adress:h,phone:g}=p;return`
+import{h as g}from"./hiddenContentLoader-DSsxorCB.js";import{b as x}from"./api-BAeutddi.js";import{c as e}from"./cardData-DyQ4QymL.js";function w(s){const{alergenicity:t,humidity:a,image:p,keeper:n,lifeDuration:l,light:o,name:c,size:v,temperature:_,way:i,wish:r,description:d}=s,{username:m,email:u,avatar:f,adress:h,phone:$}=n;return`
         <section class="advert">
           <div class="container advert__container">
             <div class="advert-maininfo">
               <img
               class="advert-maininfo__img"
-              src="${n}"
+              src="${p}"
               alt="photo of plant"
             />
               <div>
@@ -14,7 +14,7 @@ import{h as $}from"./hiddenContentLoader-CROy0A0f.js";import{b as w}from"./api-D
                 </div>
                 <ul class="advert-properties">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Освітлення: ${e.light[l]}</p>
+                    <p class="advert-properties__text">Освітлення: ${e.light[o]}</p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">Вологість: ${e.humidity[a]}</p>
@@ -24,12 +24,12 @@ import{h as $}from"./hiddenContentLoader-CROy0A0f.js";import{b as w}from"./api-D
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Тривальсть життя: <span>${e.lifeDuration[o]}</span>
+                      Тривальсть життя: <span>${e.lifeDuration[l]}</span>
                     </p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Алергеність: <span>${e.alergenicity[s]}</span>
+                      Алергеність: <span>${e.alergenicity[t]}</span>
                     </p>
                   </li>
                   <li class="advert-properties__item">
@@ -59,7 +59,7 @@ import{h as $}from"./hiddenContentLoader-CROy0A0f.js";import{b as w}from"./api-D
                   <h2 class="advert-userinfo__name">${m}</h2>
                   <p class="advert-userinfo__adress">${h}</p>
                   <p class="advert-userinfo__phone">
-                    ${g}
+                    ${$}
                   </p>
                   <p class="advert-userinfo__email">
                     ${u}
@@ -74,4 +74,4 @@ import{h as $}from"./hiddenContentLoader-CROy0A0f.js";import{b as w}from"./api-D
               </div>
             </div>
           </div>
-        </section>`}function y(){return new URL(window.location.href).searchParams.get("id")}const A={main:document.querySelector("main")};async function D(){const t=y(),s=await w(t),a=x(s);A.main.innerHTML=a}await D();$();
+        </section>`}const y={main:document.querySelector("main")};async function A(){const s=getValueSrcParams("id"),t=await x(s),a=w(t);y.main.innerHTML=a}await A();g();
