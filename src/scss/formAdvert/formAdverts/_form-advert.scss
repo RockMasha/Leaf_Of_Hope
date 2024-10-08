@@ -46,14 +46,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 284.81px;
+    min-width: 284.81px;
     height: 296.792px;
     margin: 0 auto 35px;
     background-color: $color-grey-very-light;
     border-radius: 30px;
     @media (min-width: 768px) {
-      width: 284.81px;
-      height: 296.792px;
       align-self: center;
       margin: 0 auto;
     }

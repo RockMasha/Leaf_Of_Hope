@@ -1,6 +1,7 @@
 import { getAdverts } from "../servise/api";
 import { Cards } from "../universal/Cards";
 import { createFormObj } from "../universal/createFormObj";
+import { closeModal } from "./toggleModal";
 
 export class SearchCards extends Cards {
   constructor(element, form) {
@@ -25,6 +26,9 @@ export class SearchCards extends Cards {
   async showMainCard(event) {
     event.preventDefault();
 
+    if (window.innerWidth < 768) {
+      closeModal();
+    }
     this.showOpenCard();
   }
 
