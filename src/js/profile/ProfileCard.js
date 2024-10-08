@@ -1,5 +1,7 @@
 import { deleteAdvert } from "../servise/api";
 import { Cards } from "../universal/Cards";
+import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
+import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
 
 export class ProfileCard extends Cards {
   constructor(element, request, temple) {
@@ -44,11 +46,13 @@ export class ProfileCard extends Cards {
   async #deleteCard(data) {
     this.#closeDeleteModal();
     try {
-      this.#setDeleteLoader(data.cardEl);
+      setInProgressLoader();
       await deleteAdvert(data.id);
       this.#deleteCardOnPage(data.cardEl);
     } catch (error) {
       console.log(error);
+    } finally {
+      removeInProgressLoader();
     }
   }
 
@@ -75,11 +79,6 @@ export class ProfileCard extends Cards {
     if (this.#isEmptyList()) {
       this.setDefaultElement();
     }
-  }
-
-  #setDeleteLoader(cardEl) {
-    const loaderEl = getLoaderEl();
-    cardEl.insertAdjacentHTML("afterbegin", loaderEl);
   }
 
   #isEmptyList() {
@@ -111,13 +110,5 @@ function getDeleteModal() {
         </div>
       </div>
     </div>
-  `;
-}
-
-function getLoaderEl() {
-  return `
-  <div class="delete-card-loader-wrapper">
-    <div class="delete-card-loader"></div>
-  </div>
   `;
 }

@@ -1,11 +1,10 @@
-import { getToken } from "../token/getToken";
+import { logoutUser } from "./logaoutUser";
 import { root } from "./root";
 
 export function showUserInfo(user) {
   root.userInfo.innerHTML = getUserEL(user);
-
-  const redactProfileEl = document.querySelector(".user-info__redact-img");
-  redactProfileEl.addEventListener("click", redactProfile);
+  setRedact();
+  setLogout();
 }
 
 function getUserEL(user) {
@@ -30,6 +29,17 @@ function getUserEL(user) {
     </div>`;
 }
 
+function setLogout() {
+  const logoutEl = document.querySelector(".user-info__logout");
+  logoutEl.addEventListener("click", logoutUser);
+}
+
+function setRedact() {
+  const redactProfileEl = document.querySelector(".user-info__redact-img");
+  redactProfileEl.addEventListener("click", redactProfile);
+}
+
 function redactProfile() {
+  event.target.removeEventListener("click", redactProfile);
   window.location.href = `formProfile.html?redact="true"`;
 }

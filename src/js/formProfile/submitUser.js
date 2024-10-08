@@ -1,12 +1,15 @@
 import { authorization, redactUser } from "../servise/api";
 import { createToken } from "../token/createToken";
 import { createFormData } from "../universal/createFormData";
+import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
+import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
 import { isRedactForm } from "./isRedactForm";
 import { root } from "./root";
 
 export async function submitUser(event) {
   event.preventDefault();
-  await disableFormSubmit();
+  disableFormSubmit();
+  setInProgressLoader();
 
   try {
     const data = createFormData(root.form);
@@ -20,10 +23,12 @@ export async function submitUser(event) {
   } catch (error) {
     root.error.textContent = "Неравельно ввід або такий юзер вже є";
     ableFormSubmit();
+  } finally {
+    removeInProgressLoader();
   }
 }
 
-async function disableFormSubmit() {
+function disableFormSubmit() {
   root.form.addEventListener("submit", preventDefaultSubmit);
   root.form.removeEventListener("submit", submitUser);
 }
