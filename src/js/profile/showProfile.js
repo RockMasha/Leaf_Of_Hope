@@ -4,7 +4,6 @@ import { createProfileCard } from "./createProfileCard";
 import { root } from "./root";
 import { getUserAdverts } from "../servise/api";
 import { ProfileCard } from "./ProfileCard";
-import { logoutUser } from "./logaoutUser";
 
 export async function showProfile(user) {
   if (!user) {
@@ -20,7 +19,4 @@ export async function showProfile(user) {
     createProfileCard
   );
   cards.showMainCard();
-
-  const logoutEl = document.querySelector(".user-info__logout");
-  logoutEl.addEventListener("click", logoutUser);
 }
