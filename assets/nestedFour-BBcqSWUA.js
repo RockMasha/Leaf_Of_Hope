@@ -1,4 +1,4 @@
-import{h as g}from"./hiddenContentLoader-BvZHvYTg.js";import{b as x}from"./api-Bqt0gWw5.js";import{c as e}from"./cardData-DyQ4QymL.js";function w(s){const{alergenicity:t,humidity:a,image:p,keeper:n,lifeDuration:l,light:o,name:c,size:v,temperature:_,way:i,wish:r,description:d}=s,{username:m,email:u,avatar:f,adress:h,phone:$}=n;return`
+import{h as $}from"./hiddenContentLoader-DtnzIxqs.js";import{b as x}from"./api-Bqt0gWw5.js";import{g as w}from"./getValueSrcParams-BMgebK2A.js";import{c as e}from"./cardData-DyQ4QymL.js";function y(s){const{alergenicity:t,humidity:a,image:p,keeper:n,lifeDuration:l,light:o,name:c,size:v,temperature:_,way:i,wish:r,description:d}=s,{username:m,email:f,avatar:u,adress:h,phone:g}=n;return`
         <section class="advert">
           <div class="container advert__container">
             <div class="advert-maininfo">
@@ -51,7 +51,7 @@ import{h as g}from"./hiddenContentLoader-BvZHvYTg.js";import{b as x}from"./api-B
                 <div class="advert-userinfo__profile-img">
                   <img
                   class="advert-userinfo__img big-photo"
-                  src="${f}"
+                  src="${u}"
                   alt="photo og profile"
                   />
                 </div>
@@ -59,10 +59,10 @@ import{h as g}from"./hiddenContentLoader-BvZHvYTg.js";import{b as x}from"./api-B
                   <h2 class="advert-userinfo__name">${m}</h2>
                   <p class="advert-userinfo__adress">${h}</p>
                   <p class="advert-userinfo__phone">
-                    ${$}
+                    ${g}
                   </p>
                   <p class="advert-userinfo__email">
-                    ${u}
+                    ${f}
                   </p>
                 </div>
               </div>
@@ -74,4 +74,4 @@ import{h as g}from"./hiddenContentLoader-BvZHvYTg.js";import{b as x}from"./api-B
               </div>
             </div>
           </div>
-        </section>`}const y={main:document.querySelector("main")};async function A(){const s=getValueSrcParams("id"),t=await x(s),a=w(t);y.main.innerHTML=a}await A();g();
+        </section>`}const A={main:document.querySelector("main")};async function D(){const s=w("id"),t=await x(s),a=y(t);A.main.innerHTML=a}await D();$();
