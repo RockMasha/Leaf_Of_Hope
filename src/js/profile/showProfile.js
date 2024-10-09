@@ -1,6 +1,6 @@
 import { showUserInfo } from "./showUserInfo";
 import { isSignin } from "../signin/isSignin";
-import { createProfileCard } from "./createProfileCard";
+import { getProfileCard } from "./getProfileCard";
 import { root } from "./root";
 import { getUserAdverts } from "../servise/api";
 import { ProfileCard } from "./ProfileCard";
@@ -16,7 +16,7 @@ export async function showProfile(user) {
   const cards = new ProfileCard(
     root.profileAdverts,
     getUserAdverts,
-    createProfileCard
+    getProfileCard
   );
   cards.showMainCard();
 }

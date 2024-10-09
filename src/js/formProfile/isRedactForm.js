@@ -1,6 +1,8 @@
+import { getValueSrcParams } from "../universal/getValueSrcParams";
+
 export function isRedactForm() {
-  const url = new URL(window.location.href);
-  if (url.searchParams.get("redact")) {
+  const params = getValueSrcParams("redact");
+  if (params) {
     return true;
   }
   return false;
