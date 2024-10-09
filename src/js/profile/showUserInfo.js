@@ -3,7 +3,6 @@ import { root } from "./root";
 
 export function showUserInfo(user) {
   root.userInfo.innerHTML = getUserEL(user);
-  setRedact();
   setLogout();
 }
 
@@ -24,7 +23,13 @@ function getUserEL(user) {
           </div>
           <button class="user-info__logout">Вийти</button>
         </div>
-        <img class="user-info__redact-img" src="./img/profile/redact-profile.svg" alt="redact img" />
+        <a href="formProfile.html?redact=true">
+          <img
+            class="user-info__redact-img"
+            src="./img/profile/redact-profile.svg"
+            alt="redact img"
+          />
+      </a>
       </div>
     </div>`;
 }
@@ -32,14 +37,4 @@ function getUserEL(user) {
 function setLogout() {
   const logoutEl = document.querySelector(".user-info__logout");
   logoutEl.addEventListener("click", logoutUser);
-}
-
-function setRedact() {
-  const redactProfileEl = document.querySelector(".user-info__redact-img");
-  redactProfileEl.addEventListener("click", redactProfile);
-}
-
-function redactProfile() {
-  event.target.removeEventListener("click", redactProfile);
-  window.location.href = `formProfile.html?redact="true"`;
 }

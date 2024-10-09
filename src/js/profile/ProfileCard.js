@@ -21,18 +21,13 @@ export class ProfileCard extends Cards {
   changeCards(event) {
     const targetEl = event.target;
     const isDeleteEl = targetEl.closest(".delete-btn");
-    const isRedactEl = targetEl.closest(".edit-btn");
-    if (!isDeleteEl && !isRedactEl) {
+    if (!isDeleteEl) {
       return;
     }
 
     const cardInfo = getCardInfo(targetEl);
 
-    if (isDeleteEl) {
-      this.#showDeleteModal(cardInfo);
-      return;
-    }
-    this.#redactCard(cardInfo.id);
+    this.#showDeleteModal(cardInfo);
   }
 
   #showDeleteModal(data) {
@@ -40,9 +35,6 @@ export class ProfileCard extends Cards {
     this.#setModalBtnEvent(data);
   }
 
-  async #redactCard(id) {
-    window.location.href = `formAdvert.html?id=${id}`;
-  }
   async #deleteCard(data) {
     setInProgressLoader();
     this.#closeDeleteModal();
@@ -52,19 +44,24 @@ export class ProfileCard extends Cards {
       await this.showCards(this.params);
     } catch (error) {
       console.log(error);
-    } finally {
     }
   }
 
   #openDeleteModal() {
     document.body.setAttribute("lock", "");
-    const modalEl = getDeleteModal();
+    let modalEl = document.querySelector(".delete-modal-wrapper");
+    if (modalEl) {
+      modalEl.classList.remove("is-hidden");
+      return;
+    }
+
+    modalEl = getDeleteModal();
     document.body.insertAdjacentHTML("afterbegin", modalEl);
   }
   #closeDeleteModal() {
+    const modalEl = document.querySelector(".delete-modal-wrapper");
+    modalEl.classList.add("is-hidden");
     document.body.removeAttribute("lock", "");
-    const modalEl = document.querySelector(".modal-wrapper");
-    modalEl.remove();
   }
   #setModalBtnEvent(data) {
     const disagreeBtn = document.querySelector(".delete-modal__btn_disagree");
@@ -101,7 +98,7 @@ function getCardInfo(element) {
 
 function getDeleteModal() {
   return `
-    <div class="modal-wrapper">
+    <div class="modal-wrapper delete-modal-wrapper">
       <div class="delete-modal modal">
         <h3 class="delete-modal__title">Ви дійсно хочете видалити це оголошення?</h3>
         <div class="delete-modal__btns">

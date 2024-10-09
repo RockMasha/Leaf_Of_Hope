@@ -73,32 +73,45 @@ export async function postAdvert(info, token = getToken()) {
   }
 }
 
+let userAdvertsController = null;
 export const getUserAdverts = async (page = 1) => {
+  if (userAdvertsController) {
+    getAdvertsController.abort();
+  }
+
   const token = getToken();
   try {
+    userAdvertsController = new AbortController();
     const answer = await axios.get(
       `/api/advert/userAdverts?page=${page}&limit=10`,
       {
+        signal: userAdvertsController.signal,
         headers: {
           Authorization: token,
         },
       }
     );
+    userAdvertsController = null;
     return answer.data;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
+let getAdvertsController = null;
 export async function getAdverts(page = 1, info) {
+  if (getAdvertsController) {
+    getAdvertsController.abort();
+  }
+
   try {
+    getAdvertsController = new AbortController();
     const params = getFilterParams(info);
     const url = `/api/advert?page=${page}&limit=10${params}`;
-    const answer = await axios.get(url);
+    const answer = await axios.get(url, {
+      signal: getAdvertsController.signal,
+    });
+    getAdvertsController = null;
     return answer.data;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 }
 
 export async function getOneAdvert(id) {

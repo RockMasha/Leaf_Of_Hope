@@ -88,15 +88,17 @@ export class Cards {
   }
 
   async #setCards(params) {
-    const answer = await this.request(this.page, params);
-    this.#setMaxPage(answer.tottal);
-    const cardsArr = answer.result;
-    if (cardsArr.length === 0) {
-      this.setDefaultElement();
-      return false;
-    }
-    const cardsEl = cardsArr.map((advert) => this.getCard(advert));
-    this.listCardsEl.innerHTML = cardsEl.join("");
+    try {
+      const answer = await this.request(this.page, params);
+      this.#setMaxPage(answer.tottal);
+      const cardsArr = answer.result;
+      if (cardsArr.length === 0) {
+        this.setDefaultElement();
+        return false;
+      }
+      const cardsEl = cardsArr.map((advert) => this.getCard(advert));
+      this.listCardsEl.innerHTML = cardsEl.join("");
+    } catch (error) {}
     return true;
   }
 
