@@ -21,13 +21,44 @@
     width: 25%;
     padding-bottom: 150px;
   }
+  &::-webkit-scrollbar {
+    width: 9px;
+    @media (min-width: 768px) {
+      width: 10px;
+    }
+    @media (min-width: 1440px) {
+      width: 12px;
+    }
+  }
 
-  .side-panel__wrapp {
+  &::-webkit-scrollbar-track {
+    background: $color-card-sidePanel;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-card;
+    border-radius: 20px;
+    border: 2.5px solid $color-card-sidePanel;
+    border-width: 2.5px, 10px, 2.5px, 2.5px;
+    @media (min-width: 1440px) {
+      border-width: 2.5px, 20px, 2.5px, 2.5px;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      padding-bottom: 40px;
+    }
+    @media (min-width: 1440px) {
+      padding-bottom: 60px;
+    }
   }
   &__close-btn {
     position: absolute;
-    top: 65px;
-    right: 30px;
+    top: 85px;
+    right: 25px;
+    width: 35px;
+    height: 35px;
     border: none;
     background-color: transparent;
     font-size: 36px;
@@ -47,6 +78,10 @@
         font-size: 40px;
       }
     }
+  }
+  &__close-svg {
+    width: 35px;
+    height: 35px;
   }
   &__radio-list {
     display: flex;

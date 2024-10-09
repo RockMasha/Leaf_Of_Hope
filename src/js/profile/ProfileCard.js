@@ -44,15 +44,15 @@ export class ProfileCard extends Cards {
     window.location.href = `formAdvert.html?id=${id}`;
   }
   async #deleteCard(data) {
+    setInProgressLoader();
     this.#closeDeleteModal();
     try {
-      setInProgressLoader();
       await deleteAdvert(data.id);
-      this.#deleteCardOnPage(data.cardEl);
+      removeInProgressLoader();
+      await this.showCards(this.params);
     } catch (error) {
       console.log(error);
     } finally {
-      removeInProgressLoader();
     }
   }
 

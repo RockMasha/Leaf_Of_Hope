@@ -13,6 +13,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.left-side .card-loader-block {
   @media (min-width: 768px) {
     left: 65%;
   }
