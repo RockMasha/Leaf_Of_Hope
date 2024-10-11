@@ -1,3 +1,4 @@
+import { checkWishState } from "./formAdvert/checkWishState";
 import { redactAdvert } from "./formAdvert/redactAdvert";
 import { root } from "./formAdvert/root";
 import { submitFormAdvert } from "./formAdvert/submitFormAdvert";
@@ -12,6 +13,8 @@ if (id) {
 } else {
   isSignin();
 }
+
+root.way.addEventListener("click", checkWishState);
 
 root.photo.onchange = showPhoto.bind(this, root.photo);
 
