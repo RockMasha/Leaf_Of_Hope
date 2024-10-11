@@ -39,6 +39,15 @@
       </ul>
       <ul class="side-panel__select-list">
         <li>
+          <label for="sort">Сортування</label>
+          <select name="sort" id="sort" class="side-panel__select">
+            <option value="">нові</option>
+            <option value="old">старі</option>
+            <option value="start-alphabet">алфавіт ↓</option>
+            <option value="end-alphabet">алфавіт ↑</option>
+          </select>
+        </li>
+        <li>
           <label for="light">Освітлення</label>
           <select name="light" id="light" class="side-panel__select">
             <option value="">не вказано</option>
@@ -55,9 +64,9 @@
             class="side-panel__select"
           >
             <option value="">не вказано</option>
-            <option value="low">0-15°С</option>
-            <option value="normal">15-25°С</option>
-            <option value="high">25-35°С</option>
+            <option value="low">холоднолюбиві</option>
+            <option value="normal">нейтральні</option>
+            <option value="high">теплолюбні</option>
           </select>
         </li>
         <li>
@@ -104,6 +113,71 @@
           </select>
         </li>
       </ul>
+      <ul
+        class="side-panel__select-list side-panel__select-list__more is-hidden"
+      >
+        <li>
+          <label for="attention">Затрата уваги</label>
+          <select name="attention" id="attention" class="side-panel__select">
+            <option value="">не вказано</option>
+            <option value="big">велика</option>
+            <option value="middle">середння</option>
+            <option value="small">мала</option>
+          </select>
+        </li>
+        <li>
+          <label for="survive">Живучисть</label>
+          <select name="survive" id="humidity" class="side-panel__select">
+            <option value="">не вказано</option>
+            <option value="low">низька</option>
+            <option value="normal">середння</option>
+            <option value="hight">висока</option>
+          </select>
+        </li>
+        <li>
+          <label for="state">Стан</label>
+          <select name="state" id="humidity" class="side-panel__select">
+            <option value="">не вказано</option>
+            <option value="good">добре</option>
+            <option value="enough">достатьо</option>
+            <option value="bad">погано</option>
+          </select>
+        </li>
+        <li>
+          <label for="flowering">Цвітіння</label>
+          <select name="flowering" id="humidity" class="side-panel__select">
+            <option value="">не вказано</option>
+            <option value="true">так</option>
+            <option value="false">ні</option>
+          </select>
+        </li>
+        <li>
+          <label for="growth rate">Темп зростання</label>
+          <select name="growth rate" id="humidity" class="side-panel__select">
+            <option value="">не вказано</option>
+            <option value="low">низька</option>
+            <option value="normal">середння</option>
+            <option value="hight">висока</option>
+          </select>
+        </li>
+        <li>
+          <label for="healthy">Медичне використання</label>
+          <select name="healthy" id="humidity" class="side-panel__select">
+            <option value="">не вказано</option>
+            <option value="true">так</option>
+            <option value="false">ні</option>
+          </select>
+        </li>
+        <li>
+          <label for="edible">Їстівна</label>
+          <select name="healthy" id="humidity" class="side-panel__select">
+            <option value="">не вказано</option>
+            <option value="true">так</option>
+            <option value="false">ні</option>
+          </select>
+        </li>
+      </ul>
+      <button type="button" class="side-panel__more-btn">ще параметри</button>
       <button type="submit" class="side-panel__submit-btn">Знайти</button>
     </form>
   </div>

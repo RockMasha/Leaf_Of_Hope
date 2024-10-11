@@ -1,4 +1,5 @@
 import { cardData } from "../cardData/cardData";
+import { redactDate } from "../universal/redactDate";
 
 export function getAdvert(info) {
   const {
@@ -14,8 +15,10 @@ export function getAdvert(info) {
     way,
     wish,
     description,
+    createdAt,
   } = info;
 
+  const date = redactDate(createdAt);
   const { username, email, avatar, adress, phone } = keeper;
 
   return `
@@ -28,6 +31,7 @@ export function getAdvert(info) {
               alt="photo of plant"
             />
               <div>
+                <p class="advert-maininfo__date">${date}</p>
                 <h2 class="advert-maininfo__title">${name}</h2>
                 <div class="advert-maininfo-way">
                   <p class="advert-maininfo-way__text">${cardData.way[way]}</p>

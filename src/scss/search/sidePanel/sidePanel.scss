@@ -109,11 +109,19 @@
   }
 
   &__select-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     margin-top: 28px;
     & > li {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 5px;
+      @media (min-width: 768px) {
+        gap: 10px;
+      }
+      @media (min-width: 1440px) {
+      }
     }
     @media (min-width: 768px) {
       font-size: 22px;
@@ -155,7 +163,22 @@
     }
   }
 
+  &__more-btn {
+    margin-top: 20px;
+    padding: 8px 30px;
+    font-size: 16px;
+    color: $color-search-select;
+    background-color: $color-main-background;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    @media (min-width: 1440px) {
+      margin-top: 40px;
+      font-size: 30px;
+    }
+  }
+
   &__submit-btn {
+    display: block;
     margin-top: 20px;
     padding: 12px 42px;
     font-size: 20px;

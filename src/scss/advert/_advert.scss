@@ -52,6 +52,22 @@
         font-size: 65px;
       }
     }
+    &__date {
+      color: $color-content-loader;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 2px;
+      @media (min-width: 768px) {
+        padding-left: 4px;
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+      @media (min-width: 1440px) {
+        padding-left: 7.5px;
+        margin-bottom: 4px;
+        font-size: 28px;
+      }
+    }
     &-way {
       display: inline-block;
       padding: 3px 9px;
@@ -59,7 +75,7 @@
       background: $color-card;
       border-radius: 20px;
       @media (min-width: 768px) {
-        padding: 7px 14px;
+        padding: 5px 14px;
       }
       @media (min-width: 1440px) {
         padding: 5px 12px;
@@ -92,7 +108,7 @@
       flex-wrap: wrap;
       height: 200px;
       width: 375px;
-      row-gap: 19px;
+      row-gap: 10px;
       column-gap: 11px;
     }
     @media (min-width: 1440px) {

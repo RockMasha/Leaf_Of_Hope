@@ -24,9 +24,9 @@ export const cardData = {
     small: "малий",
   },
   temperature: {
-    high: "25-35°С",
-    normal: "15-25°С",
-    low: "0-15°С",
+    high: "теплолюбива",
+    normal: "нейтральна",
+    low: "холоднолюбива",
   },
   way: {
     exchange: "обмін",

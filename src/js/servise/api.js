@@ -110,8 +110,11 @@ export async function getAdverts(page = 1, info) {
       signal: getAdvertsController.signal,
     });
     getAdvertsController = null;
+
     return answer.data;
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export async function getOneAdvert(id) {
