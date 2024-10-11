@@ -1,4 +1,4 @@
-import{h as $}from"./hiddenContentLoader-DnNAx6HY.js";import{b as x}from"./api-CiyxzFpA.js";import{g as w}from"./getValueSrcParams-BMgebK2A.js";import{c as e}from"./cardData-DyQ4QymL.js";function y(s){const{alergenicity:t,humidity:a,image:p,keeper:n,lifeDuration:l,light:o,name:c,size:v,temperature:_,way:i,wish:r,description:d}=s,{username:m,email:f,avatar:u,adress:h,phone:g}=n;return`
+import{h as $}from"./hiddenContentLoader-CntVco9S.js";import{b as x}from"./api-CiyxzFpA.js";import{g as w}from"./getValueSrcParams-BMgebK2A.js";import{c as e}from"./cardData-DyQ4QymL.js";function y(s){const{alergenicity:t,humidity:a,image:p,keeper:n,lifeDuration:l,light:o,name:c,size:v,temperature:_,way:i,wish:r,description:d}=s,{username:m,email:f,avatar:u,adress:h,phone:g}=n;return`
         <section class="advert">
           <div class="container advert__container">
             <div class="advert-maininfo">
