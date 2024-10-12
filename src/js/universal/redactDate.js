@@ -18,8 +18,13 @@ export function redactDate(date) {
   const day = time.getDate();
   const mouth = time.getMonth();
   const year = time.getFullYear();
-  const currentTime = `${time.getHours()}:${time.getMinutes()}`;
-  const changeDate = `${day} ${months[mouth - 1]}, ${year}, ${currentTime}`;
+  const hours = time.getHours();
+  const minutes =
+    Number(time.getMinutes()) > 9 ? time.getMinutes() : "0" + time.getMinutes();
+
+  const changeDate = `${day} ${
+    months[mouth - 1]
+  }, ${year}, ${hours}:${minutes}`;
 
   return changeDate;
 }

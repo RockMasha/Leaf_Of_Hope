@@ -50,168 +50,154 @@
         </div>
       </div>
       <div class="form-advert__opinion-of-plant">
-        <div class="form-advert__opinion-block-one">
-          <div class="form-advert-characteristic">
-            <p class="form-advert-characteristic__signature">Освітлення</p>
-            <select
-              class="form-advert-characteristic-select"
-              name="light"
-              id="1"
-            >
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="many"
+        <ul class="form-advert__opinion-block-one">
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Освітлення
+              <select class="form-advert-characteristic-select" name="light">
+                <option value="many">багато</option>
+                <option value="normal">помірно</option>
+                <option value="little">мало</option>
+              </select>
+            </label>
+          </li>
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Темпаратура
+              <select
+                class="form-advert-characteristic-select"
+                name="temperature"
               >
-                багато
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="normal"
+                <option value="low">холоднолюбива</option>
+                <option value="normal">нейтральна</option>
+                <option value="low">теплолюбна</option>
+              </select>
+            </label>
+          </li>
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Розмір
+              <select class="form-advert-characteristic-select" name="size">
+                <option value="small">малий</option>
+                <option value="medium">середній</option>
+                <option value="large">великий</option>
+              </select>
+            </label>
+          </li>
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Затрата уваги
+              <select
+                class="form-advert-characteristic-select"
+                name="attention"
               >
-                помірно
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="little"
+                <option value="">не вказано</option>
+                <option value="small">малий</option>
+                <option value="middle">середній</option>
+                <option value="big">великий</option>
+              </select>
+            </label>
+          </li>
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Живучисть
+              <select class="form-advert-characteristic-select" name="survive">
+                <option value="">не вказано</option>
+                <option value="low">низька</option>
+                <option value="normal">середня</option>
+                <option value="hight">висока</option>
+              </select>
+            </label>
+          </li>
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Темп зростання
+              <select
+                class="form-advert-characteristic-select"
+                name="growth rate"
               >
-                мало
-              </option>
-            </select>
-          </div>
-          <div class="form-advert-characteristic">
-            <p class="form-advert-characteristic__signature">Темпаратура</p>
-            <select
-              class="form-advert-characteristic-select"
-              name="temperature"
-              id="2"
-            >
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="low"
+                <option value="">не вказано</option>
+                <option value="low">низька</option>
+                <option value="normal">середня</option>
+                <option value="hight">висока</option>
+              </select>
+            </label>
+          </li>
+        </ul>
+        <ul class="form-advert__opinion-block-two">
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Тривалісь життя
+              <select
+                class="form-advert-characteristic-select"
+                name="lifeDuration"
               >
-                0-15°С
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="normal"
+                <option value="annual">однорічні</option>
+                <option value="biennial">багаторічні</option>
+                <option value="perennial">довгожителі</option>
+              </select>
+            </label>
+          </li>
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Алергійність
+              <select
+                class="form-advert-characteristic-select"
+                name="alergenicity"
               >
-                15-25°С
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="low"
+                <option value="true">наявна</option>
+                <option value="false">відсутння</option>
+              </select>
+            </label>
+          </li>
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Вологість
+              <select class="form-advert-characteristic-select" name="humidity">
+                <option value="high">багато</option>
+                <option value="normal">помірно</option>
+                <option value="low">мало</option>
+              </select>
+            </label>
+          </li>
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Стан
+              <select class="form-advert-characteristic-select" name="state">
+                <option value="">не вказано</option>
+                <option value="good">добре</option>
+                <option value="enough">достатньо</option>
+                <option value="bad">погано</option>
+              </select>
+            </label>
+          </li>
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Цвітіння
+              <select
+                class="form-advert-characteristic-select"
+                name="flowering"
               >
-                25-35°С
-              </option>
-            </select>
-          </div>
-          <p class="form-advert-characteristic__signature">Розмір</p>
-          <div class="form-advert-characteristic">
-            <select
-              class="form-advert-characteristic-select"
-              name="size"
-              id="3"
-            >
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="small"
+                <option value="">не вказано</option>
+                <option value="true">так</option>
+                <option value="false">ні</option>
+              </select>
+            </label>
+          </li>
+          <li class="form-advert-characteristic">
+            <label class="form-advert-characteristic__signature"
+              >Їстівна
+              <select
+                class="form-advert-characteristic-select"
+                name="flowering"
               >
-                малий
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="medium"
-              >
-                середній
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="large"
-              >
-                великий
-              </option>
-            </select>
-          </div>
-        </div>
-        <div class="form-advert__opinion-block-two">
-          <div class="form-advert-characteristic">
-            <p class="form-advert-characteristic__signature">Тривалісь життя</p>
-            <select
-              class="form-advert-characteristic-select"
-              name="lifeDuration"
-              id="4"
-            >
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="annual"
-              >
-                однорічні
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="biennial"
-              >
-                багаторічні
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="perennial"
-              >
-                довгожителі
-              </option>
-            </select>
-          </div>
-          <div class="form-advert-characteristic">
-            <p class="form-advert-characteristic__signature">Алергійність</p>
-            <select
-              class="form-advert-characteristic-select"
-              name="alergenicity"
-              id="5"
-            >
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="true"
-              >
-                наявна
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="false"
-              >
-                відсутння
-              </option>
-            </select>
-          </div>
-          <div
-            class="form-advert-characteristic form-advert-characteristic__last"
-          >
-            <p class="form-advert-characteristic__signature">Вологість</p>
-            <select
-              class="form-advert-characteristic-select"
-              name="humidity"
-              id="6"
-            >
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="high"
-              >
-                багато
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="normal"
-              >
-                помірно
-              </option>
-              <option
-                class="form-advert-characteristic-select__opinion"
-                value="low"
-              >
-                мало
-              </option>
-            </select>
-          </div>
-        </div>
+                <option value="">не вказано</option>
+                <option value="true">так</option>
+                <option value="false">ні</option>
+              </select>
+            </label>
+          </li>
+        </ul>
       </div>
       <textarea
         class="form-advert__wish"

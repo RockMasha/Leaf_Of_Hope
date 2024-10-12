@@ -91,6 +91,7 @@ export const getUserAdverts = async (page = 1) => {
         },
       }
     );
+
     userAdvertsController = null;
     return answer.data;
   } catch (error) {}
@@ -109,8 +110,8 @@ export async function getAdverts(page = 1, info) {
     const answer = await axios.get(url, {
       signal: getAdvertsController.signal,
     });
-    getAdvertsController = null;
 
+    getAdvertsController = null;
     return answer.data;
   } catch (error) {
     console.log(error);

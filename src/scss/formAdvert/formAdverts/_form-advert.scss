@@ -168,20 +168,22 @@
     @media (min-width: 1440px) {
       margin-bottom: 21px;
     }
-    &__last {
+    .form-advert__opinion-block-two > &:last-child {
       margin-bottom: 0px;
     }
     &__signature {
-      margin-bottom: 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
       font-size: 20px;
       color: $color-text-line;
       font-weight: 600;
       @media (min-width: 768px) {
-        margin-bottom: 11px;
+        gap: 11px;
         font-size: 30px;
       }
       @media (min-width: 1440px) {
-        margin-bottom: 13px;
+        gap: 13px;
       }
     }
     &-select {
@@ -211,10 +213,8 @@
         background-position: 560px 13px;
         background-size: 30px 30px;
       }
-      &__opinion {
+      & > option {
         font-weight: 600;
-        background-color: $color-grey-very-light;
-        border: 1px solid transparent;
       }
     }
   }
