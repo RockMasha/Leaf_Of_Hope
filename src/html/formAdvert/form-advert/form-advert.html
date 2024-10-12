@@ -41,12 +41,14 @@
               Віддача
             </label>
           </div>
-          <textarea
-            class="form-advert__description"
-            placeholder="Опишіть вашу рослинку"
-            id="description"
-            name="description"
-          ></textarea>
+          <div class="form-advert__textarea-field form-advert__textarea-field_description">
+            <textarea
+              class="form-advert__description form-advert__textarea"
+              placeholder="Опишіть вашу рослинку"
+              id="description"
+              name="description"
+            ></textarea>
+          </div>
         </div>
       </div>
       <div class="form-advert__opinion-of-plant">
@@ -92,9 +94,9 @@
                 name="attention"
               >
                 <option value="">не вказано</option>
-                <option value="small">малий</option>
-                <option value="middle">середній</option>
-                <option value="big">великий</option>
+                <option value="low">низька</option>
+                <option value="normal">середня</option>
+                <option value="hight">висока</option>
               </select>
             </label>
           </li>
@@ -133,7 +135,7 @@
                 name="lifeDuration"
               >
                 <option value="annual">однорічні</option>
-                <option value="biennial">багаторічні</option>
+                <option value="biennial">дворічні</option>
                 <option value="perennial">довгожителі</option>
               </select>
             </label>
@@ -189,7 +191,7 @@
               >Їстівна
               <select
                 class="form-advert-characteristic-select"
-                name="flowering"
+                name="edible"
               >
                 <option value="">не вказано</option>
                 <option value="true">так</option>
@@ -199,11 +201,13 @@
           </li>
         </ul>
       </div>
-      <textarea
-        class="form-advert__wish"
-        placeholder="На що б ви хотіли обміняти цю рослину?"
-        name="wish"
-      ></textarea>
+      <div class="form-advert__textarea-field form-advert__textarea-field_wish">
+        <textarea
+          class="form-advert__wish form-advert__textarea"
+          placeholder="На що б ви хотіли обміняти цю рослину?"
+          name="wish"
+        ></textarea>
+      </div>
       <button class="form-advert__btn-submit" type="submit">Створити</button>
     </form>
     <p class="formAdvert__error"></p>

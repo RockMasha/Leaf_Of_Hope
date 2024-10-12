@@ -1,5 +1,6 @@
 import axios from "axios";
 import { getToken } from "../token/getToken";
+import { createFormObj } from "../universal/createFormObj";
 
 // axios.defaults.baseURL = "https://5394-188-163-74-2.ngrok-free.app";
 axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
@@ -61,6 +62,15 @@ export async function logout(token = getToken()) {
 }
 
 export async function postAdvert(info, token = getToken()) {
+  const data = {};
+  for (let key of info.entries()) {    
+    data[key[0]] = key[1];
+  }
+
+  console.log(data);
+
+  
+
   try {
     const answer = await axios.post("/api/advert/", info, {
       headers: {

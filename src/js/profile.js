@@ -6,9 +6,9 @@ import { hiddenContentLoader } from "./universal/hiddenContentLoader";
 const answer = await isSignin();
 
 if (answer) {
+  hiddenContentLoader();
   await showProfile(answer.user);
 } else {
   showSigninModal();
+  hiddenContentLoader();
 }
-
-hiddenContentLoader()

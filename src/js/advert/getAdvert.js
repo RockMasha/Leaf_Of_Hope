@@ -1,4 +1,4 @@
-import { cardData } from "../cardData/cardData";
+import { cardData } from "../universal/cardData/cardData";
 import { redactDate } from "../universal/redactDate";
 
 export function getAdvert(info) {
