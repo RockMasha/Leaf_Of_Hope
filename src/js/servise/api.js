@@ -1,5 +1,6 @@
 import axios from "axios";
 import { getToken } from "../token/getToken";
+import { createFormObj } from "../universal/createFormObj";
 
 // axios.defaults.baseURL = "https://5394-188-163-74-2.ngrok-free.app";
 axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
@@ -61,8 +62,9 @@ export async function logout(token = getToken()) {
 }
 
 export async function postAdvert(info, token = getToken()) {
+  const data = createFormObj(info);
   try {
-    const answer = await axios.post("/api/advert/", info, {
+    const answer = await axios.post("/api/advert/", data, {
       headers: {
         Authorization: token,
       },
@@ -91,6 +93,7 @@ export const getUserAdverts = async (page = 1) => {
         },
       }
     );
+
     userAdvertsController = null;
     return answer.data;
   } catch (error) {}
@@ -109,9 +112,12 @@ export async function getAdverts(page = 1, info) {
     const answer = await axios.get(url, {
       signal: getAdvertsController.signal,
     });
+
     getAdvertsController = null;
     return answer.data;
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export async function getOneAdvert(id) {

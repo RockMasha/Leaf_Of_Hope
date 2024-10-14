@@ -11,4 +11,4 @@ if (answer) {
   showSigninModal();
 }
 
-hiddenContentLoader()
+hiddenContentLoader();

@@ -11,7 +11,7 @@ const id = getValueSrcParams("id");
 if (id) {
   await redactAdvert();
 } else {
-  isSignin();
+  await isSignin();
 }
 
 root.way.addEventListener("click", checkWishState);

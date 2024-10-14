@@ -4,8 +4,11 @@ import { getProfileCard } from "./getProfileCard";
 import { root } from "./root";
 import { getUserAdverts } from "../servise/api";
 import { ProfileCard } from "./ProfileCard";
+import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
+import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
 
 export async function showProfile(user) {
+  setInProgressLoader();
   if (!user) {
     user = await isSignin();
     user = user.user;
@@ -19,4 +22,5 @@ export async function showProfile(user) {
     getProfileCard
   );
   cards.showMainCard();
+  removeInProgressLoader();
 }

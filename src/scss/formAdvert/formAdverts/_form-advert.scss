@@ -137,28 +137,103 @@
       background-image: url("/img/universal/checkBox-cheked.svg");
     }
   }
-  &__description {
-    width: 290.983px;
-    height: 180.7px;
-    padding: 11px 8px;
-    font-size: 20px;
-    border-radius: 15px;
+  &__textarea-field {
+    padding: 3px;
     border: 2px solid $color-text-line;
+    border-radius: 15px;
     @media (min-width: 768px) {
-      width: 406px;
-      height: 187.174px;
-      padding: 11px;
+      padding: 4px;
+    }
+    @media (min-width: 1440px) {
+      padding: 6px;
+      border-radius: 20px;
+    }
+    &_wish {
+      width: 100%;
+      height: 161px;
+      margin-bottom: 72px;
+      @media (min-width: 768px) {
+        height: 161px;
+        margin-bottom: 67px;
+      }
+      @media (min-width: 1440px) {
+        height: 212.5px;
+        margin-bottom: 79px;
+      }
+    }
+    &_description {
+      width: 290.983px;
+      height: 180.7px;
+      @media (min-width: 768px) {
+        width: 406px;
+        height: 187.174px;
+        font-size: 28px;
+      }
+      @media (min-width: 1440px) {
+        width: 711px;
+        height: 312px;
+        font-size: 40px;
+      }
+    }
+  }
+  &__textarea {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: $color-text-line;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    resize: none;
+    @media (min-width: 768px) {
       font-size: 28px;
     }
     @media (min-width: 1440px) {
-      width: 711px;
-      height: 312px;
-      padding: 20px;
       font-size: 40px;
     }
+    &::-webkit-scrollbar {
+      width: 6px;
+      border-radius: 15px;
+      @media (min-width: 768px) {
+        width: 8px;
+      }
+      @media (min-width: 1440px) {
+        width: 12px;
+      }
+    }
+    &::-webkit-scrollbar-track {
+      background: $color-white;
+      border-radius: 15px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-grey-dark;
+      border-radius: 20px;
+      border-width: 2.5px, 10px, 2.5px, 2.5px;
+      @media (min-width: 1440px) {
+        border-width: 2.5px, 20px, 2.5px, 2.5px;
+      }
+      border-radius: 15px;
+    }
+    &__description::placeholder {
+      color: $color-grey-lightblue;
+    }
   }
-  &__description::placeholder {
-    color: $color-grey-lightblue;
+  &__wish {
+    padding: 15px 7px;
+    @media (min-width: 768px) {
+      padding: 16px;
+    }
+    @media (min-width: 1440px) {
+      padding: 21px 36px;
+    }
+  }
+  &__description {
+    padding: 11px 8px;
+    @media (min-width: 768px) {
+      padding: 11px;
+    }
+    @media (min-width: 1440px) {
+      padding: 20px;
+    }
   }
   &-characteristic {
     margin-bottom: 27px;
@@ -168,20 +243,22 @@
     @media (min-width: 1440px) {
       margin-bottom: 21px;
     }
-    &__last {
+    .form-advert__opinion-block-two > &:last-child {
       margin-bottom: 0px;
     }
     &__signature {
-      margin-bottom: 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
       font-size: 20px;
       color: $color-text-line;
       font-weight: 600;
       @media (min-width: 768px) {
-        margin-bottom: 11px;
+        gap: 11px;
         font-size: 30px;
       }
       @media (min-width: 1440px) {
-        margin-bottom: 13px;
+        gap: 13px;
       }
     }
     &-select {
@@ -211,10 +288,8 @@
         background-position: 560px 13px;
         background-size: 30px 30px;
       }
-      &__opinion {
+      & > option {
         font-weight: 600;
-        background-color: $color-grey-very-light;
-        border: 1px solid transparent;
       }
     }
   }
@@ -226,31 +301,6 @@
     @media (min-width: 1440px) {
       display: flex;
       gap: 34px;
-    }
-  }
-  &__wish {
-    width: 100%;
-    height: 163px;
-    padding: 15px 7px;
-    margin-bottom: 72px;
-    font-size: 20px;
-    color: $color-text-line;
-    border-radius: 15px;
-    border: 2px solid $color-text-line;
-    @media (min-width: 768px) {
-      height: 163px;
-      padding: 16px;
-      margin-bottom: 67px;
-      font-size: 28px;
-    }
-    @media (min-width: 1440px) {
-      height: 215px;
-      padding: 21px 36px;
-      margin-bottom: 79px;
-      font-size: 40px;
-    }
-    &::placeholder {
-      color: $color-grey-very-light;
     }
   }
   &__btn-submit {

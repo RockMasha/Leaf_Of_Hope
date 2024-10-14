@@ -20,7 +20,7 @@ export async function submitFormAdvert(event) {
       const token = getToken();
       await postAdvert(data, token);
     }
-    history.go(-1);
+    window.location.href = "profile.html"
   } catch (error) {
     console.log(error);
     ableFormSubmit();

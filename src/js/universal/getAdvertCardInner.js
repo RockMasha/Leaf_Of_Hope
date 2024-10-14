@@ -1,4 +1,5 @@
-import { cardData } from "../cardData/cardData";
+import { cardData } from "./cardData/cardData";
+import { redactDate } from "./redactDate";
 
 export function getAdvertCardInner(info) {
   const {
@@ -24,7 +25,7 @@ export function getAdvertCardInner(info) {
             <div class="card__thumb">
               <img
                 class="card__img"
-                src="${image}"
+                src="${image ? image : "./img/universal/defoultPlantPhoto.jpg"}"
                 alt="Рослинка"
                 loading="lazy"
               />
@@ -51,29 +52,4 @@ export function getAdvertCardInner(info) {
           </div>
           <p class="card__date">${date}</p>
         </a>`;
-}
-
-const months = [
-  "Січеня",
-  "Лютого",
-  "Березеня",
-  "Квітеня",
-  "Травеня",
-  "Червеня",
-  "Липеня",
-  "Серпеня",
-  "Вересеня",
-  "Жовтеня",
-  "Листопада",
-  "Грудня",
-];
-function redactDate(date) {
-  const time = new Date(date);
-  const day = time.getDate();
-  const mouth = time.getMonth();
-  const year = time.getFullYear();
-  const currentTime = `${time.getHours()}:${time.getMinutes()}`;
-  const changeDate = `${day} ${months[mouth - 1]}, ${year}, ${currentTime}`;
-
-  return changeDate;
 }

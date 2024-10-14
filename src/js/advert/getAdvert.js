@@ -1,4 +1,5 @@
-import { cardData } from "../cardData/cardData";
+import { cardData } from "../universal/cardData/cardData";
+import { redactDate } from "../universal/redactDate";
 
 export function getAdvert(info) {
   const {
@@ -14,8 +15,10 @@ export function getAdvert(info) {
     way,
     wish,
     description,
+    createdAt,
   } = info;
 
+  const date = redactDate(createdAt);
   const { username, email, avatar, adress, phone } = keeper;
 
   return `
@@ -24,10 +27,11 @@ export function getAdvert(info) {
             <div class="advert-maininfo">
               <img
               class="advert-maininfo__img"
-              src="${image}"
+              src="${image ? image : "./img/universal/defoultPlantPhoto.jpg"}"
               alt="photo of plant"
             />
               <div>
+                <p class="advert-maininfo__date">${date}</p>
                 <h2 class="advert-maininfo__title">${name}</h2>
                 <div class="advert-maininfo-way">
                   <p class="advert-maininfo-way__text">${cardData.way[way]}</p>
@@ -86,9 +90,9 @@ export function getAdvert(info) {
               <div class="advert-userinfo">
                 <div class="advert-userinfo__profile-img">
                   <img
-                  class="advert-userinfo__img big-photo"
-                  src="${avatar}"
-                  alt="photo og profile"
+                  class="advert-userinfo__img ${avatar ? "big-photo" : ""}"
+                  src="${avatar ? avatar : "./img/universal/bigProfile.svg"}"
+                  alt="photo of profile"
                   />
                 </div>
                 <div class="advert-userinfo__userinfos">

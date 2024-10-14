@@ -16,6 +16,7 @@ export class Cards {
     this.nextEl = element.querySelector(".pagination-arrow_next");
     this.firstEL = element.querySelector(".pagination-arrow_first");
     this.lastEL = element.querySelector(".pagination-arrow_last");
+    this.loaderEL;
     this.page = 1;
     this.maxAdvertInPage = 10;
     this.max_page;
@@ -98,7 +99,9 @@ export class Cards {
       }
       const cardsEl = cardsArr.map((advert) => this.getCard(advert));
       this.listCardsEl.innerHTML = cardsEl.join("");
-    } catch (error) {}
+    } catch (error) {
+      return false;
+    }
     return true;
   }
 
@@ -190,12 +193,16 @@ export class Cards {
 
   #setLoaderCard() {
     document.body.setAttribute("lock", "");
-    this.fatherElement.insertAdjacentHTML("beforeend", getCardLoader());
+    if (!this.loaderEL) {
+      this.fatherElement.insertAdjacentHTML("beforeend", getCardLoader());
+      this.loaderEL = document.querySelector(".card-loader-wrapper");
+      return;
+    }
+    this.loaderEL.classList.remove("is-hidden");
   }
   #removeLoaderCard() {
     document.body.removeAttribute("lock", "");
-    const loader = this.fatherElement.querySelector(".card-loader-wrapper");
-    loader.remove();
+    this.loaderEL.classList.add("is-hidden");
   }
 
   setDefaultElement() {

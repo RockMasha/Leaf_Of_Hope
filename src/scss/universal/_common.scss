@@ -5,6 +5,9 @@ body {
   flex-direction: column;
   font-family: Inter;
   line-height: normal;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 main {
   padding-top: 62px;
