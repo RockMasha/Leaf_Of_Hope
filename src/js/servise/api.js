@@ -62,17 +62,9 @@ export async function logout(token = getToken()) {
 }
 
 export async function postAdvert(info, token = getToken()) {
-  const data = {};
-  for (let key of info.entries()) {    
-    data[key[0]] = key[1];
-  }
-
-  console.log(data);
-
-  
-
+  const data = createFormObj(info);
   try {
-    const answer = await axios.post("/api/advert/", info, {
+    const answer = await axios.post("/api/advert/", data, {
       headers: {
         Authorization: token,
       },

@@ -1,6 +1,7 @@
 export const root = {
   form: document.querySelector(".side-panel__form"),
   leftSide: document.querySelector(".left-side"),
+  searchBtn: document.querySelector(".side-panel-search-field__btn"),
   btnMore: document.querySelector(".side-panel__more-btn"),
   moreList: document.querySelector(".side-panel__select-list__more"),
   openModalBtn: document.querySelector("#open-modal-js"),

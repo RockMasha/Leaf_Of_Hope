@@ -20,7 +20,7 @@ export async function submitFormAdvert(event) {
       const token = getToken();
       await postAdvert(data, token);
     }
-    // history.go(-1);
+    window.location.href = "profile.html"
   } catch (error) {
     console.log(error);
     ableFormSubmit();
@@ -43,8 +43,3 @@ function ableFormSubmit() {
 function preventDefaultSubmit(event) {
   event.preventDefault();
 }
-
-// "advert validation failed: flowering: Cast to Boolean failed for value "[ '', '' ]" 
-// (type Array) at path "flowering" because of "CastError", attention: `` is not a valid enum
-// value for path `attention`., 
-// survive: `` is not a valid enum value for path `survive`., state: `` is not a valid enum value for path `state`."

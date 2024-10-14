@@ -6,7 +6,6 @@ export function checkWishState(event) {
   if (!isRadioEl) {
     return;
   }
-  console.log(targetEl);
 
   if (targetEl.classList.contains("form-advert-way__input_give")) {
     hiddenWishField();
@@ -18,7 +17,6 @@ export function checkWishState(event) {
 
 function hiddenWishField() {
   root.wishField.classList.add("is-hidden");
-//   root.wishField.remove();
 }
 
 function showWishField() {

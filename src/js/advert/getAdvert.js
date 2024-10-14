@@ -27,7 +27,7 @@ export function getAdvert(info) {
             <div class="advert-maininfo">
               <img
               class="advert-maininfo__img"
-              src="${image}"
+              src="${image ? image : "./img/universal/defoultPlantPhoto.jpg"}"
               alt="photo of plant"
             />
               <div>
@@ -90,9 +90,9 @@ export function getAdvert(info) {
               <div class="advert-userinfo">
                 <div class="advert-userinfo__profile-img">
                   <img
-                  class="advert-userinfo__img big-photo"
-                  src="${avatar}"
-                  alt="photo og profile"
+                  class="advert-userinfo__img ${avatar ? "big-photo" : ""}"
+                  src="${avatar ? avatar : "./img/universal/bigProfile.svg"}"
+                  alt="photo of profile"
                   />
                 </div>
                 <div class="advert-userinfo__userinfos">

@@ -1,4 +1,4 @@
-import { getInfo, setAuthHeader } from "../servise/api";
+import { getInfo } from "../servise/api";
 import { getToken } from "../token/getToken";
 
 export async function isSignin() {
@@ -11,7 +11,6 @@ export async function isSignin() {
   try {
     const answer = await getInfo(token);
     return answer;
-
   } catch (error) {
     return false;
   }

@@ -25,7 +25,7 @@ export function getAdvertCardInner(info) {
             <div class="card__thumb">
               <img
                 class="card__img"
-                src="${image}"
+                src="${image ? image : "./img/universal/defoultPlantPhoto.jpg"}"
                 alt="Рослинка"
                 loading="lazy"
               />

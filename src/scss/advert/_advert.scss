@@ -187,16 +187,17 @@
     &__userinfos {
       padding-top: 5px;
       @media (min-width: 768px) {
-        width: 150px;
+        min-width: 150px;
       }
       @media (min-width: 1440px) {
-        width: 364px;
+        min-width: 364px;
       }
     }
     &__name {
       color: $color-black;
       font-size: 16px;
       font-weight: 600;
+      word-break: break-all;
       @media (min-width: 768px) {
         margin-bottom: 1px;
         font-size: 22px;
@@ -211,6 +212,7 @@
       font-size: 11px;
       font-weight: 600;
       color: $color-grey-dark;
+      word-break: break-all;
       @media (min-width: 768px) {
         margin-bottom: 6px;
         font-size: 14px;
@@ -237,6 +239,7 @@
       color: $color-black;
       font-size: 13px;
       font-weight: 600;
+      word-break: break-all;
       @media (min-width: 768px) {
         font-size: 16px;
       }
@@ -248,7 +251,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 105px;
+      min-width: 105px;
       height: 105px;
       background-color: $color-grey-very-light;
       border-radius: 20px;
@@ -260,6 +263,10 @@
         min-width: 241px;
         min-height: 241px;
       }
+    }
+    &__img {
+      width: 80%;
+      height: 80%;
     }
   }
   &-wishes {
