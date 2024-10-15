@@ -2,7 +2,6 @@ import axios from "axios";
 import { getToken } from "../token/getToken";
 import { createFormObj } from "../universal/createFormObj";
 
-// axios.defaults.baseURL = "https://5394-188-163-74-2.ngrok-free.app";
 axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
 
 export async function authorization(user) {
@@ -51,20 +50,6 @@ export async function signin(info) {
 export async function logout(token = getToken()) {
   try {
     const answer = await axios.post("/api/auth/logout", {
-      headers: {
-        Authorization: token,
-      },
-    });
-    return answer.data;
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-export async function postAdvert(info, token = getToken()) {
-  const data = createFormObj(info);
-  try {
-    const answer = await axios.post("/api/advert/", data, {
       headers: {
         Authorization: token,
       },
@@ -130,6 +115,18 @@ export async function getOneAdvert(id) {
   }
 }
 
+export async function postAdvert(info, token = getToken()) {
+  try {
+    const answer = await axios.post("/api/advert/", info, {
+      headers: {
+        Authorization: token,
+      },
+    });
+    return answer.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
 export async function deleteAdvert(id) {
   const token = getToken();
   try {
@@ -168,6 +165,7 @@ function getFilterParams(params) {
   return paramsStr;
 }
 
-export const setAuthHeader = (token) => {
+export const setAuthHeader = () => {
+  const token = getToken();
   axios.defaults.headers.Authorization = `Bearer ${token}`;
 };

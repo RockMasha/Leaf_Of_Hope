@@ -146,6 +146,14 @@
       gap: 40px;
     }
   }
+  &__redact-link {
+    width: 30px;
+    height: 30px;
+    @media (min-width: 1440px) {
+      width: 45px;
+      height: 45px;
+    }
+  }
   &__redact-img {
     width: 30px;
     height: 30px;

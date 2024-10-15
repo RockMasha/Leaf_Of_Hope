@@ -46,11 +46,16 @@
   }
   &__title {
     margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: $color-text-line;
     @media (min-width: 768px) {
       padding-bottom: 40px;
+      font-size: 32px;
     }
     @media (min-width: 1440px) {
       padding-bottom: 60px;
+      font-size: 48px;
     }
   }
   &-search-field {
@@ -59,19 +64,13 @@
     gap: 8px;
     margin-bottom: 20px;
     font-size: 26px;
-    @media (min-width: 768px) {
-    }
     @media (min-width: 1440px) {
-      font-size: 36px;
+      font-size: 32px;
     }
     &__main-part {
       display: flex;
       align-items: center;
       gap: 15px;
-      @media (min-width: 768px) {
-      }
-      @media (min-width: 1440px) {
-      }
     }
     &__input {
       width: 100%;

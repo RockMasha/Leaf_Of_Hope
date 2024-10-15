@@ -17,6 +17,7 @@ export function checkWishState(event) {
 
 function hiddenWishField() {
   root.wishField.classList.add("is-hidden");
+  root.wishTextArea.value = "";
 }
 
 function showWishField() {
