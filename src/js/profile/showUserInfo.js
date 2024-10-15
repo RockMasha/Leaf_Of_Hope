@@ -11,7 +11,7 @@ function getUserEL(user) {
 
   return `
     <div class="user-info__thumb">
-      <img class="user-info__svg big-photo" src="${avatar}" alt="avatar">
+      ${getUserPhoto(avatar)}
       </div> 
       <div class="user-info__text-block">
         <div class="user-info__user">
@@ -23,13 +23,13 @@ function getUserEL(user) {
           </div>
           <button class="user-info__logout">Вийти</button>
         </div>
-        <a href="formProfile.html?redact=true">
+        <a class="user-info__redact-link" href="formProfile.html?redact=true">
           <img
             class="user-info__redact-img"
             src="./img/profile/redact-profile.svg"
             alt="redact img"
           />
-      </a>
+        </a>
       </div>
     </div>`;
 }
@@ -37,4 +37,32 @@ function getUserEL(user) {
 function setLogout() {
   const logoutEl = document.querySelector(".user-info__logout");
   logoutEl.addEventListener("click", logoutUser);
+}
+
+function getUserPhoto(image) {
+  const smallImg = image["small-250px"];
+  const middleImg = image["medium-300px"];
+  const bigImg = image["large-500px"];
+  const classBigPhoto = smallImg ? "big-photo" : "";
+
+  return `
+    <picture class="user-info__svg ${classBigPhoto}">
+      <source
+        srcset="${bigImg}"
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="${middleImg}"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="${smallImg}"
+      />
+      <img
+        src="${smallImg ? smallImg : "./img/universal/defoultPlantPhoto.jpg"}"
+        class="user-info__svg ${classBigPhoto}"
+        alt="plant"
+        loading="lazy"
+      />
+    </picture>`;
 }

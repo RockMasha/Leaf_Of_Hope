@@ -1,18 +1,23 @@
 export function showPhoto(label) {
-  const imgEL = label.querySelector("img");
-  const inputEL = label.querySelector("input[type=file]").files[0];
+  const imgWrappEL = label.querySelector(".img-wrapp");
+  const imgEl = imgWrappEL.querySelector("img");
+  const fileEl = label.querySelector("input[type=file]");
+
+  const file = fileEl.files[0];
   const reader = new FileReader();
 
-  reader.addEventListener(
-    "load",
-    () => {
-      imgEL.src = reader.result;
-      imgEL.classList.add("big-photo");
-    },
-    false
-  );
+  reader.addEventListener("load", setImgInPage, false);
 
-  if (inputEL) {
-    reader.readAsDataURL(inputEL);
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+
+  function setImgInPage() {
+    imgEl.src = reader.result;
+    if (!imgEl.classList.contains("big-photo")) {
+      imgEl.classList.add("big-photo");
+    }
+    const imgOuter = imgEl.outerHTML;
+    imgWrappEL.innerHTML = imgOuter;
   }
 }

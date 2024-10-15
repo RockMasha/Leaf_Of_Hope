@@ -60,6 +60,13 @@
       height: 500px;
     }
   }
+  &__svg-wrapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
   &__svg {
     width: 142.405px;
     height: 148.396px;

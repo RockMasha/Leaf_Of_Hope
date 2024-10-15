@@ -36,8 +36,33 @@ export async function setInputs() {
     const value = `${data[name]}`;
     formInputs[name].value = value !== "undefined" ? value : "";
   }
-  
-  const imgEl = document.querySelector(".form-advert__svg");
-  imgEl.src = data.image;
-  imgEl.classList.add("big-photo");
+
+  root.svgWrapp.innerHTML = getPicture(data.image);
+}
+
+function getPicture(image) {
+  const smallImg = image["small-250px"];
+  const middleImg = image["medium-300px"];
+  const bigImg = image["large-500px"];
+
+  return `
+    <picture class="form-advert__svg big-photo">
+      <source
+        srcset="${bigImg}"
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="${middleImg}"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="${smallImg}"
+      />
+      <img
+        src="${smallImg ? smallImg : "./img/universal/defoultPlantPhoto.jpg"}"
+        class="form-advert__svg big-photo"
+        alt="plant"
+        loading="lazy"
+      />
+    </picture>`;
 }

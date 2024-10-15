@@ -1,76 +1,84 @@
-import { cardData } from "../universal/cardData/cardData";
-import { redactDate } from "../universal/redactDate";
+import { getDataValue } from "../universal/cardData/getDataValue";
 
 export function getAdvert(info) {
+  const data = getDataValue(info);
+
   const {
+    light,
     alergenicity,
     humidity,
-    image,
-    keeper,
-    lifeDuration,
-    light,
-    name,
     size,
     temperature,
+    lifeDuration,
     way,
+    image,
+    name,
     wish,
     description,
-    createdAt,
-  } = info;
-
-  const date = redactDate(createdAt);
-  const { username, email, avatar, adress, phone } = keeper;
+    username,
+    email,
+    avatar,
+    adress,
+    phone,
+    date,
+  } = data;
 
   return `
         <section class="advert">
           <div class="container advert__container">
             <div class="advert-maininfo">
-              <img
-              class="advert-maininfo__img"
-              src="${image ? image : "./img/universal/defoultPlantPhoto.jpg"}"
-              alt="photo of plant"
-            />
+              <picture class="advert-maininfo__img">
+                <source
+                  srcset="${image["large-500px"]}"
+                  media="(min-width: 1440px)"
+                />
+                <source
+                  srcset="${image["medium-300px"]}"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="${image["small-250px"]}"
+                />
+                <img
+                  src="${
+                    image["small-250px"]
+                      ? image["small-250px"]
+                      : "./img/universal/defoultPlantPhoto.jpg"
+                  }"
+                  class="advert-maininfo__img"
+                  alt="plant"
+                  loading="lazy"
+                />
+              </picture>
               <div>
                 <p class="advert-maininfo__date">${date}</p>
                 <h2 class="advert-maininfo__title">${name}</h2>
                 <div class="advert-maininfo-way">
-                  <p class="advert-maininfo-way__text">${cardData.way[way]}</p>
+                  <p class="advert-maininfo-way__text">${way}</p>
                 </div>
                 <ul class="advert-properties">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Освітлення: ${
-                      cardData.light[light]
-                    }</p>
+                    <p class="advert-properties__text">Освітлення: ${light}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Вологість: ${
-                      cardData.humidity[humidity]
-                    }</p>
+                    <p class="advert-properties__text">Вологість: ${humidity}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Розмір: ${
-                      cardData.size[size]
-                    }</p>
+                    <p class="advert-properties__text">Розмір: ${size}</p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Тривальсть життя: <span>${
-                        cardData.lifeDuration[lifeDuration]
-                      }</span>
+                      Тривальсть життя: <span>${lifeDuration}</span>
                     </p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Алергеність: <span>${
-                        cardData.alergenicity[alergenicity]
-                      }</span>
+                      Алергеність: <span>${alergenicity}</span>
                     </p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Темпаратура: <span>${
-                        cardData.temperature[temperature]
-                      }</span>
+                      Темпаратура: <span>${temperature}</span>
                     </p>
                   </li>
                 </ul>
@@ -89,11 +97,7 @@ export function getAdvert(info) {
             <div class="advert-user">
               <div class="advert-userinfo">
                 <div class="advert-userinfo__profile-img">
-                  <img
-                  class="advert-userinfo__img ${avatar ? "big-photo" : ""}"
-                  src="${avatar ? avatar : "./img/universal/bigProfile.svg"}"
-                  alt="photo of profile"
-                  />
+                  ${getPicture(avatar)}
                 </div>
                 <div class="advert-userinfo__userinfos">
                   <h2 class="advert-userinfo__name">${username}</h2>
@@ -107,7 +111,7 @@ export function getAdvert(info) {
                 </div>
               </div>
               <div class="advert-wishes ${
-                way === "exchange" ? `` : `is-hidden`
+                info.way === "exchange" ? `` : `is-hidden`
               }">
                 <h2 class="advert-wishes__title">Побажання</h2>
                 <p class="advert-wishes__text">
@@ -121,4 +125,31 @@ export function getAdvert(info) {
             </div>
           </div>
         </section>`;
+}
+
+function getPicture(image) {
+  const smallImg = image["large-500px"];
+  const middleImg = image["medium-300px"];
+  const bigImg = image["large-500px"];
+
+  return `
+    <picture class="advert-userinfo__img big-photo">
+      <source
+        srcset="${bigImg}"
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="${middleImg}"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="${smallImg}"
+      />
+      <img
+        src="${smallImg ? smallImg : "./img/universal/defoultPlantPhoto.jpg"}"
+        class="advert-userinfo__img big-photo"
+        alt="plant"
+        loading="lazy"
+      />
+    </picture>`;
 }
