@@ -1,0 +1,1 @@
+function c(e){return new FormData(e)}function l(e){const o=e.querySelector(".img-wrapp"),t=o.querySelector("img"),a=e.querySelector("input[type=file]").files[0],r=new FileReader;r.addEventListener("load",i,!1),a&&r.readAsDataURL(a);function i(){t.src=r.result,t.classList.contains("big-photo")||t.classList.add("big-photo");const s=t.outerHTML;o.innerHTML=s}}export{c,l as s};

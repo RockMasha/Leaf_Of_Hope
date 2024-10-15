@@ -1,1 +1,0 @@
-function o(e){return new FormData(e)}function s(e){const t=e.querySelector("img"),r=e.querySelector("input[type=file]").files[0],a=new FileReader;a.addEventListener("load",()=>{t.src=a.result,t.classList.add("big-photo")},!1),r&&a.readAsDataURL(r)}export{o as c,s};
