@@ -3,6 +3,23 @@ import { getValueSrcParams } from "../universal/getValueSrcParams";
 import { root } from "./root";
 
 export async function setInputs() {
+  const formInputs = createFormInputsObj();
+  const id = getValueSrcParams("id");
+  const data = await getOneAdvert(id);
+
+  for (const name in formInputs) {
+    const value = `${data[name]}`;
+    root.form[name].value = value !== "undefined" ? value : "";
+  }
+
+  if (formInputs["way"].value === "give") {
+    root.wishField.classList.add("is-hidden");
+  }
+
+  root.svgWrapp.innerHTML = getPicture(data.image);
+}
+
+function createFormInputsObj() {
   const {
     alergenicity,
     humidity,
@@ -14,9 +31,15 @@ export async function setInputs() {
     way,
     wish,
     description,
+    attention,
+    survive,
+    state,
+    flowering,
+    growthRate,
+    edible,
   } = root.form;
 
-  const formInputs = {
+  return {
     alergenicity,
     humidity,
     lifeDuration,
@@ -27,17 +50,13 @@ export async function setInputs() {
     way,
     wish,
     description,
+    attention,
+    survive,
+    state,
+    flowering,
+    growthRate,
+    edible,
   };
-
-  const id = getValueSrcParams("id");
-  const data = await getOneAdvert(id);
-
-  for (const name in formInputs) {
-    const value = `${data[name]}`;
-    formInputs[name].value = value !== "undefined" ? value : "";
-  }
-
-  root.svgWrapp.innerHTML = getPicture(data.image);
 }
 
 function getPicture(image) {

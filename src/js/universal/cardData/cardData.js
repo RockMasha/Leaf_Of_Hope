@@ -32,4 +32,32 @@ export const cardData = {
     exchange: "обмін",
     give: "відачча",
   },
+  attention: {
+    many: "висока",
+    normal: "середня",
+    little: "низька",
+  },
+  survive: {
+    high: "висока",
+    normal: "середня",
+    low: "низька",
+  },
+  state: {
+    good: "добре",
+    bad: "погано",
+    enough: "середній",
+  },
+  flowering: {
+    false: "так",
+    true: "ні",
+  },
+  growthRate: {
+    high: "висока",
+    normal: "середня",
+    low: "низька",
+  },
+  edible: {
+    false: "так",
+    true: "ні",
+  },
 };

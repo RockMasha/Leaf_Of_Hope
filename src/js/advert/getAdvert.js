@@ -21,6 +21,12 @@ export function getAdvert(info) {
     adress,
     phone,
     date,
+    attention,
+    survive,
+    state,
+    flowering,
+    growthRate,
+    edible,
   } = data;
 
   return `
@@ -84,6 +90,40 @@ export function getAdvert(info) {
                 </ul>
               </div>
             </div>
+            <ul class="advert-properties advert-properties_more advert-properties_hidden">
+              <li>
+                <ul class="advert-properties__more-list">
+                  <li class="advert-properties__item">
+                    <p class="advert-properties__text">Затратва уваги: ${attention}</p>
+                  </li>
+                  <li class="advert-properties__item">
+                    <p class="advert-properties__text">Живучість: ${survive}</p>
+                  </li>
+                  <li class="advert-properties__item">
+                    <p class="advert-properties__text">Стан: ${state}</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="advert-properties__more-list">
+                  <li class="advert-properties__item">
+                    <p class="advert-properties__text">Темп Зростання: ${growthRate}</p>
+                  </li>
+                  <li class="advert-properties__item">
+                    <p class="advert-properties__text">Цвітіння: ${flowering}</p>
+                  </li>
+                  <li class="advert-properties__item">
+                    <p class="advert-properties__text">Їстівна: ${edible}</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <button class="advert-properties__more-btn">
+              <ul class="advert-properties-cross">
+                <li class="advert-properties-cross__line advert-properties-cross__line_vertical"></li>
+                <li class="advert-properties-cross__line advert-properties-cross__line_horizontal"></li>
+              </ul>
+            </button>
             <div class="advert-discreption">
               <h2 class="advert-discreption__title">Опис</h2>
               <p class="advert-discreption__text">
