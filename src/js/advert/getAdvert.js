@@ -32,6 +32,7 @@ export function getAdvert(info) {
   return `
         <section class="advert">
           <div class="container advert__container">
+            <h1 hidden>Оголошення</h1>
             <div class="advert-maininfo">
               <picture class="advert-maininfo__img">
                 <source
