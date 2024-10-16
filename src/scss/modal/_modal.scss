@@ -6,7 +6,8 @@
   width: 100%;
   height: 100%;
   background-color: $color-background-modal;
-  z-index: 200;
+  backdrop-filter: blur(3px);
+  z-index: 150;
 }
 
 .modal {
@@ -16,6 +17,7 @@
   transform: translate(-50%, -50%);
   background-color: $color-white;
   border-radius: 30px;
+  z-index: 1200;
   @media (min-width: 1440px) {
     border-radius: 40px;
   }

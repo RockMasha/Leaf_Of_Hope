@@ -16,19 +16,31 @@ export function getDataValue(info) {
     wish,
     description,
     createdAt,
+    attention,
+    survive,
+    state,
+    flowering,
+    growthRate,
+    edible,
     _id: id,
   } = info;
   const date = redactDate(createdAt);
   const { username, email, avatar, adress, phone } = keeper;
 
   const result = {
-    light: cardData.light[light],
-    alergenicity: cardData.alergenicity[alergenicity],
-    humidity: cardData.humidity[humidity],
-    size: cardData.size[size],
-    temperature: cardData.temperature[temperature],
-    lifeDuration: cardData.lifeDuration[lifeDuration],
-    way: cardData.way[way],
+    light: translateProperty({ light }),
+    alergenicity: translateProperty({ alergenicity }),
+    humidity: translateProperty({ humidity }),
+    size: translateProperty({ size }),
+    temperature: translateProperty({ temperature }),
+    lifeDuration: translateProperty({ lifeDuration }),
+    way: translateProperty({ way }),
+    attention: translateProperty({ attention }),
+    survive: translateProperty({ survive }),
+    state: translateProperty({ state }),
+    flowering: translateProperty({ flowering }),
+    growthRate: translateProperty({ growthRate }),
+    edible: translateProperty({ edible }),
     image,
     name,
     wish,
@@ -43,4 +55,11 @@ export function getDataValue(info) {
   };
 
   return result;
+}
+
+function translateProperty(item) {
+  const name = Object.keys(item)[0];
+  const property = item[name];
+
+  return `${property}` !== "undefined" ? cardData[name][property] : "не вказано";
 }
