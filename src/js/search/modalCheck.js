@@ -1,13 +1,18 @@
 import { root } from "./root";
-import { closeModal } from "./toggleModal";
+import { closeModal, openModal } from "./toggleModal";
 
-export const modalCheck = () => {
-    const isNotPhone = window.matchMedia("(min-width: 768px)").matches
+let isNotPhone = false;
 
-    if(isNotPhone && root.modal.classList.contains("is-hidden")){
-        root.modal.classList.remove("is-hidden");
-    }
-    else if(!isNotPhone && !root.modal.classList.contains("is-hidden")){
-        closeModal()
-    }
-};
+export function modalCheck() {
+  const state = window.matchMedia("(min-width: 768px)").matches;
+  const isChangeToNotMobile = !isNotPhone && state;
+  const isChangeToMobile = isNotPhone && !state;
+
+  if (isChangeToMobile) {
+    isNotPhone = false;
+    closeModal();
+  } else if (isChangeToNotMobile) {
+    isNotPhone = true;
+    root.modal.classList.remove("is-hidden");
+  }
+}
