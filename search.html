@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Search adverts by filtering">
     <title>Leaf_Of_Hope</title>
-    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nested-DRhHfzTN.js"></script>
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-BYqOox_D.js">
+    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nested-CtfdwFLn.js"></script>
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-BPC3HtL-.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-C87ePszt.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/btnUpSettings-Ck6O69iz.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getDataValue-CDujFWLP.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createFormObj-BsGF3NHA.js">
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-1pNdOJ4F.css">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createFormObj-BdUqBLN0.js">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-B3D-xKBq.css">
   </head>
   <body>
     <div class="content-loader-wrapper" active>
@@ -38,26 +39,26 @@
 
     <header class="header">
   <div class="container header__container">
-    <a class="logo" href="index.html" name="logo-link">
+    <a class="logo" href="index.html" aria-label="logo-link">
       <div class="logo__svg"></div>
     </a>          
     <ul class="header__menu menu">
       <li class="menu__item menu__item_search">
-        <a class="menu__link" href="search.html" name="search-link">
+        <a class="menu__link" href="search.html" aria-label="search-link">
           <svg class="menu__svg menu__svg_search">
             <use href="/Leaf_Of_Hope/assets/search-DtyNUSZq.svg#search"></use>
           </svg>
         </a>
       </li>
       <li class="menu__item menu__item_add">
-        <a class="menu__link" href="formAdvert" name="plus-link">
+        <a class="menu__link" href="formAdvert" aria-label="plus-link">
           <svg class="menu__svg menu__svg_add">
             <use href="/Leaf_Of_Hope/assets/plus-CQ9xH6wd.svg#plus"></use>
           </svg>
         </a>
       </li>
       <li class="menu__item menu__item_profile">
-        <a class="menu__link" href="profile.html" name="profile-link">
+        <a class="menu__link" href="profile.html" aria-label="profile-link">
           <img
             class="menu__svg menu__svg_profile"
             src="/Leaf_Of_Hope/assets/profile-CrWxUfWR.svg#profile"
@@ -73,7 +74,7 @@
       <section class="side-panel is-hidden" id="modal-js">
   <div class="side-panel__wrapp">
     <h1 class="side-panel__title">Обери свою рослинку</h1>
-    <button class="side-panel__close-btn" id="close-modal-js">
+    <button class="side-panel__close-btn" id="close-modal-js" aria-label="close search panel button">
       <svg class="side-panel__close-svg">
         <use href="/Leaf_Of_Hope/assets/cross-DB30-WeQ.svg#cross"></use>
       </svg>
@@ -87,7 +88,7 @@
             name="name"
             type="text"
           />
-          <button type="submit" class="side-panel-search-field__btn">
+          <button type="submit" class="side-panel-search-field__btn" aria-label="complete search">
             <svg class="side-panel-search-field__svg">
               <use href="/Leaf_Of_Hope/assets/search-BnXwN9SH.svg#search"></use>
             </svg>
@@ -257,9 +258,9 @@
           </select>
         </li>
       </ul>
-      <button type="button" class="side-panel__more-btn">ще параметри</button>
-      <button type="submit" class="side-panel__submit-btn">Знайти</button>
-      <button type="button" class="side-panel-reset-btn">
+      <button type="button" class="side-panel__more-btn" aria-label="open or close more field params">ще параметри</button>
+      <button type="submit" class="side-panel__submit-btn" aria-label="complete search">Знайти</button>
+      <button type="button" class="side-panel-reset-btn" aria-label="reset search params">
         <svg class="side-panel-reset-btn__svg">
           <use href="/Leaf_Of_Hope/assets/reset-params-FOlG2EZR.svg#reset-params"></use>
         </svg>
@@ -270,21 +271,22 @@
 
       <section class="left-side">
   <div class="container left-side__container">
-    <button class="left-side__button" id="open-modal-js" type="button">
+    <h2 class="is-hidden">Оголошення</h2>
+    <button class="left-side__button" id="open-modal-js" type="button" aria-label="burger btn">
       <svg class="left-side__burger-menu-svg" width="41px" height="25px">
         <use href="/Leaf_Of_Hope/assets/burger-menu-CkG2OxNi.svg#burger-menu"></use>
       </svg>
     </button>
     <ul class="left-side__list cards-list"></ul>
     <div class="left-side__pagination pagination is-hidden">
-      <button class="pagination-arrow pagination-arrow_first">
+      <button class="pagination-arrow pagination-arrow_first" aria-label="to first adverts page">
         <img
           class="pagination-arrow__img pagination-arrow__img_left"
           src="data:image/svg+xml,%3csvg%20class='svg-icon'%20style='width:%201em;%20height:%201em;vertical-align:%20middle;fill:%20currentColor;overflow:%20hidden;'%20viewBox='0%200%201024%201024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M151.467%20204.373a34.133%2034.133%200%201%201%2048.213-48.213l331.947%20331.947a34.133%2034.133%200%200%201%200%2048.213L199.68%20867.84a34.133%2034.133%200%201%201-48.213-48.213L459.093%20512z%20m341.333%200a34.133%2034.133%200%200%201%2048.213-48.213L872.96%20488.107a34.133%2034.133%200%200%201%200%2048.213L541.013%20868.267a34.133%2034.133%200%200%201-48.213-48.214L800.427%20512z'%20/%3e%3c/svg%3e"
           alt="first"
         />
       </button>
-      <button class="pagination-arrow pagination-arrow_back">
+      <button class="pagination-arrow pagination-arrow_back" aria-label="to past adverts page">
         <img
           class="pagination-arrow__img pagination-arrow__img_left"
           src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3csvg%20fill='%23000000'%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20330%20330'%20xml:space='preserve'%3e%3cpath%20id='XMLID_222_'%20d='M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001%20c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213%20C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606%20C255,161.018,253.42,157.202,250.606,154.389z'%20/%3e%3c/svg%3e"
@@ -292,14 +294,14 @@
         />
       </button>
       <ul class="pagination__numb"></ul>
-      <button class="pagination-arrow pagination-arrow_next">
+      <button class="pagination-arrow pagination-arrow_next" aria-label="to next adverts page">
         <img
           class="pagination-arrow__img"
           src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3csvg%20fill='%23000000'%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20330%20330'%20xml:space='preserve'%3e%3cpath%20id='XMLID_222_'%20d='M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001%20c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213%20C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606%20C255,161.018,253.42,157.202,250.606,154.389z'%20/%3e%3c/svg%3e"
           alt="next"
         />
       </button>
-      <button class="pagination-arrow pagination-arrow_last">
+      <button class="pagination-arrow pagination-arrow_last" aria-label="to last adverts page">
         <img
           class="pagination-arrow__img"
           src="data:image/svg+xml,%3csvg%20class='svg-icon'%20style='width:%201em;%20height:%201em;vertical-align:%20middle;fill:%20currentColor;overflow:%20hidden;'%20viewBox='0%200%201024%201024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M151.467%20204.373a34.133%2034.133%200%201%201%2048.213-48.213l331.947%20331.947a34.133%2034.133%200%200%201%200%2048.213L199.68%20867.84a34.133%2034.133%200%201%201-48.213-48.213L459.093%20512z%20m341.333%200a34.133%2034.133%200%200%201%2048.213-48.213L872.96%20488.107a34.133%2034.133%200%200%201%200%2048.213L541.013%20868.267a34.133%2034.133%200%200%201-48.213-48.214L800.427%20512z'%20/%3e%3c/svg%3e"
@@ -313,7 +315,7 @@
     </main>
     <footer class="footer">
   <div class="container footer__container">
-    <a class="logo" href="index.html" name="logo-link">
+    <a class="logo" href="index.html" aria-label="logo-link">
       <div class="logo__svg"></div>
     </a> 
     <p class="footer__copyright">Copyright © 2024. All rights reserved</p>

@@ -1,4 +1,4 @@
-import{h as E}from"./hiddenContentLoader-BYqOox_D.js";import{a as L}from"./api-C87ePszt.js";import{g as M}from"./getValueSrcParams-BMgebK2A.js";import{g as z}from"./getDataValue-CDujFWLP.js";function I(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function S(e){const t=z(e),{light:s,alergenicity:i,humidity:l,size:o,temperature:d,lifeDuration:c,way:n,image:r,name:_,wish:a,description:p,username:v,email:m,avatar:u,adress:g,phone:h,date:f,attention:$,survive:x,state:w,flowering:y,growthRate:P,edible:b}=t;return`
+import{h as E}from"./hiddenContentLoader-BPC3HtL-.js";import{a as L}from"./api-C87ePszt.js";import{g as M}from"./getValueSrcParams-BMgebK2A.js";import{g as z}from"./getDataValue-CDujFWLP.js";function I(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function S(e){const t=z(e),{light:s,alergenicity:i,humidity:l,size:o,temperature:d,lifeDuration:c,way:n,image:r,name:_,wish:a,description:p,username:v,email:m,avatar:u,adress:g,phone:h,date:f,attention:$,survive:x,state:w,flowering:y,growthRate:b,edible:P}=t;return`
         <section class="advert">
           <div class="container advert__container">
             <h1 hidden>Оголошення</h1>
@@ -73,18 +73,18 @@ import{h as E}from"./hiddenContentLoader-BYqOox_D.js";import{a as L}from"./api-C
               <li>
                 <ul class="advert-properties__more-list">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Темп Зростання: ${P}</p>
+                    <p class="advert-properties__text">Темп Зростання: ${b}</p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">Цвітіння: ${y}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Їстівна: ${b}</p>
+                    <p class="advert-properties__text">Їстівна: ${P}</p>
                   </li>
                 </ul>
               </li>
             </ul>
-            <button class="advert-properties__more-btn">
+            <button class="advert-properties__more-btn" aria-label="more properties">
               <ul class="advert-properties-cross">
                 <li class="advert-properties-cross__line advert-properties-cross__line_vertical"></li>
                 <li class="advert-properties-cross__line advert-properties-cross__line_horizontal"></li>
