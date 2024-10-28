@@ -18,5 +18,5 @@ export function showMoreFilter() {
 
 export function hiddenMoreFilter() {
   root.moreList.classList.add("is-hidden");
-  root.btnMore.textContent = "ще фільтрація";
+  root.btnMore.textContent = "ще параметри";
 }
