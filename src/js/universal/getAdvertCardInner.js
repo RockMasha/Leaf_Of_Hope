@@ -18,13 +18,13 @@ export function getAdvertCardInner(info) {
   } = data;
 
   return `
-        <a href="advert.html?id=${id}" class="card">
+        <a href="advert.html?id=${id}" class="card" aria-label="advert ${info.name}">
           <p class="card__way">${way}</p>
           <div class="card__info-wrapp">
             <div class="card__thumb">
               <picture class="card__img">
                 <source
-                  srcset="${image["large-500px"]}"
+                  srcset="${image["medium-300px"]}"
                   media="(min-width: 1440px)"
                 />
                 <source
@@ -39,12 +39,14 @@ export function getAdvertCardInner(info) {
                   class="card__img"
                   alt="plant"
                   loading="lazy"
+                  width="250px"
+                  height="250px"
                 />
               </picture>
             </div>
             <div>
               <div class="card__title-wrapp">
-                <h4 class="card__title">${name}</h4>
+                <h3  class="card__title">${name}</h3>
               </div>
               <ul class="card__info-list">
                 <li class="card__info-item"><p>Освітлення: ${light}</p></li>
