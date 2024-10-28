@@ -1,4 +1,5 @@
 import { getAdverts } from "../servise/api";
+import { scrollUp } from "../universal/btnUpSettings";
 import { Cards } from "../universal/Cards";
 import { createFormObj } from "../universal/createFormObj";
 import { closeModal } from "./toggleModal";
@@ -33,7 +34,8 @@ export class SearchCards extends Cards {
   }
 
   async showCards(params = this.params) {
-    super.showCards(params);
+    await super.showCards(params);
+    scrollUp()
   }
 
   #resetPage() {
