@@ -67,6 +67,9 @@
       display: none;
     }
     &__svg-wpapp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 100%;
     }

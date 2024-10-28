@@ -8,12 +8,14 @@ export const getProfileCard = (info) => {
             ${getAdvertCardInner(info)}
             <ul class="profile-adverts__btn-list">
               <li>
-                <a href="formAdvert.html?id=${id}" class="profile-adverts__link">
-                  <button type="button" class="profile-adverts__btn edit-btn"></button>
+                <a href="formAdvert.html?id=${id}" class="profile-adverts__btn edit-btn" 
+                aria-label="redact advert ${info.name}">
                 </a>
               </li>
               <li>
-                <button type="button" class="profile-adverts__btn delete-btn"></button>
+                <button type="button" class="profile-adverts__btn delete-btn" aria-label="delete advert ${
+                  info.name
+                }"></button>
               </li>
             </ul>
           </li>

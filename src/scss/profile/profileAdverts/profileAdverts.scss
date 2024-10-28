@@ -46,13 +46,14 @@
     }
   }
   &__btn {
+    display: block;
     position: relative;
     top: -1px;
     width: 56px;
     height: 52px;
-    border: 1px solid $color-card-sidePanel;
+    border: 1px solid $color-search-card;
     border-radius: 0 0 20px 20px;
-    background-color: $color-card-sidePanel;
+    background-color: $color-search-card;
     background-size: 36px 32px;
     background-position: center;
     background-repeat: no-repeat;

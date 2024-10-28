@@ -1,20 +1,21 @@
 <section class="left-side">
   <div class="container left-side__container">
-    <button class="left-side__button" id="open-modal-js" type="button">
+    <h2 class="is-hidden">Оголошення</h2>
+    <button class="left-side__button" id="open-modal-js" type="button" aria-label="burger btn">
       <svg class="left-side__burger-menu-svg" width="41px" height="25px">
         <use href="./img/search/burger-menu.svg#burger-menu"></use>
       </svg>
     </button>
     <ul class="left-side__list cards-list"></ul>
     <div class="left-side__pagination pagination is-hidden">
-      <button class="pagination-arrow pagination-arrow_first">
+      <button class="pagination-arrow pagination-arrow_first" aria-label="to first adverts page">
         <img
           class="pagination-arrow__img pagination-arrow__img_left"
           src="./img/search/pagination-double-arrow.svg"
           alt="first"
         />
       </button>
-      <button class="pagination-arrow pagination-arrow_back">
+      <button class="pagination-arrow pagination-arrow_back" aria-label="to past adverts page">
         <img
           class="pagination-arrow__img pagination-arrow__img_left"
           src="./img/search/pagination-arrow.svg"
@@ -22,14 +23,14 @@
         />
       </button>
       <ul class="pagination__numb"></ul>
-      <button class="pagination-arrow pagination-arrow_next">
+      <button class="pagination-arrow pagination-arrow_next" aria-label="to next adverts page">
         <img
           class="pagination-arrow__img"
           src="./img/search/pagination-arrow.svg"
           alt="next"
         />
       </button>
-      <button class="pagination-arrow pagination-arrow_last">
+      <button class="pagination-arrow pagination-arrow_last" aria-label="to last adverts page">
         <img
           class="pagination-arrow__img"
           src="./img/search/pagination-double-arrow.svg"

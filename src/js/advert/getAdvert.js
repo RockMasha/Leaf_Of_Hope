@@ -119,7 +119,7 @@ export function getAdvert(info) {
                 </ul>
               </li>
             </ul>
-            <button class="advert-properties__more-btn">
+            <button class="advert-properties__more-btn" aria-label="more properties">
               <ul class="advert-properties-cross">
                 <li class="advert-properties-cross__line advert-properties-cross__line_vertical"></li>
                 <li class="advert-properties-cross__line advert-properties-cross__line_horizontal"></li>

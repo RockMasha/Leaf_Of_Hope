@@ -52,7 +52,7 @@ function getUserPhoto(image) {
         media="(min-width: 1440px)"
       />
       <source
-        srcset="${middleImg}"
+        srcset="${smallImg}"
         media="(min-width: 768px)"
       />
       <source
@@ -63,6 +63,8 @@ function getUserPhoto(image) {
         class="user-info__svg ${classBigPhoto}"
         alt="plant"
         loading="lazy"
+        width="250px"
+        height="250px"
       />
     </picture>`;
 }
