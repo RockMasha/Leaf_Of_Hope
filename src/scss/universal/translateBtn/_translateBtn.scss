@@ -1,0 +1,45 @@
+.translate {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  height: 44px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: 12px;
+  transform: scale(0.9, 0.9);
+  background-color: $color-brown-grey;
+  border-radius: 40px;
+  @media (min-width: 768px) {
+    transform: scale(1, 1);
+    margin-right: 38px;
+  }
+  @media (min-width: 1440px) {
+    transform: scale(1.7, 1.7);
+    margin-right: 143px;
+  }
+  &__input {
+    display: none;
+    opacity: 0;
+  }
+  &__span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 57px;
+    height: 44px;
+    background-color: $color-text-line;
+    border-radius: 40px;
+    transition: 0.7s;
+    .translate__input:checked + & {
+      left: 43px;
+    }
+  }
+  &__language {
+    color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 4;
+  }
+}

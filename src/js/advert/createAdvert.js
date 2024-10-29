@@ -9,7 +9,7 @@ export async function createAdvert() {
   const data = await getOneAdvert(id);
 
   const advertEl = getAdvert(data);
-  root.main.innerHTML = advertEl;
+  root.main.insertAdjacentHTML("beforeend", advertEl);
   setEventMoreProperties();
 }
 

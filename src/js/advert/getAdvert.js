@@ -149,8 +149,8 @@ export function getAdvert(info) {
 function getAdvertPicture(image) {
   const smallImg = image["small-250px"];
   const middleImg = image["medium-300px"];
-  const bigImg = image["large-500"];
-
+  const bigImg = image["large-500px"];
+  
   return `
           <picture class="advert-maininfo__img">
             <source
