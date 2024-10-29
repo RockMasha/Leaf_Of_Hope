@@ -2,7 +2,7 @@ import { getDataValue } from "./cardData/getDataValue";
 
 export function getAdvertCardInner(info) {
   const data = getDataValue(info);
-  
+
   const {
     light,
     alergenicity,
@@ -22,27 +22,7 @@ export function getAdvertCardInner(info) {
           <p class="card__way">${way}</p>
           <div class="card__info-wrapp">
             <div class="card__thumb">
-              <picture class="card__img">
-                <source
-                  srcset="${image["medium-300px"]}"
-                  media="(min-width: 1440px)"
-                />
-                <source
-                  srcset="${image["medium-300px"]}"
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="${image["small-250px"]}"
-                />
-                <img
-                  src="${image["small-250px"]}"
-                  class="card__img"
-                  alt="plant"
-                  loading="lazy"
-                  width="250px"
-                  height="250px"
-                />
-              </picture>
+              ${getPicture(image)}
             </div>
             <div>
               <div class="card__title-wrapp">
@@ -66,4 +46,42 @@ export function getAdvertCardInner(info) {
           </div>
           <p class="card__date">${date}</p>
         </a>`;
+}
+
+function getPicture(image) {
+  const smallImg = image["very-small-175px"];
+  const middleImg = image["medium-300px"];
+
+  return `
+  <picture class="card__img">
+    <source
+      srcset="
+        ${middleImg} 1x,
+        ${middleImg} 2x"
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="
+          ${smallImg} 1x,
+          ${smallImg} 2x"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ${smallImg} 1x,
+          ${smallImg} 2x"
+      />
+      <img
+        src="${smallImg}"
+        srcset="
+          ${smallImg} 1x,
+          ${smallImg} 2x"
+        class="card__img"
+        alt="plant"
+        loading="lazy"
+        width="250px"
+        height="250px"
+      />
+    </picture>
+  `;
 }

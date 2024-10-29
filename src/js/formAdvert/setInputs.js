@@ -60,25 +60,34 @@ function createFormInputsObj() {
 }
 
 function getPicture(image) {
-  const smallImg = image["small-250px"];
+  const smallImg = image["medium-300px"];
   const middleImg = image["medium-300px"];
   const bigImg = image["large-500px"];
 
   return `
     <picture class="form-advert__svg big-photo">
       <source
-        srcset="${bigImg}"
+        srcset="
+        ${bigImg} 1x,
+        ${bigImg} 2x"
         media="(min-width: 1440px)"
       />
       <source
-        srcset="${middleImg}"
+        srcset="
+        ${middleImg} 1x,
+        ${middleImg} 2x"
         media="(min-width: 768px)"
       />
       <source
-        srcset="${smallImg}"
+        srcset="
+        ${smallImg} 1x,
+        ${smallImg} 2x"
       />
       <img
-        src="${smallImg ? smallImg : "./img/universal/defoultPlantPhoto.jpg"}"
+        src="${smallImg}"
+        srcset="
+        ${smallImg} 1x,
+        ${smallImg} 2x"
         class="form-advert__svg big-photo"
         alt="plant"
         loading="lazy"

@@ -285,17 +285,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-width: 105px;
-      height: 105px;
+      min-width: 100px;
+      height: 100px;
       background-color: $color-grey-very-light;
       border-radius: 20px;
       @media (min-width: 768px) {
-        min-width: 160px;
-        min-height: 160px;
+        min-width: 175px;
+        min-height: 175px;
       }
       @media (min-width: 1440px) {
-        min-width: 241px;
-        min-height: 241px;
+        min-width: 250px;
+        min-height: 250px;
       }
     }
     &__img {

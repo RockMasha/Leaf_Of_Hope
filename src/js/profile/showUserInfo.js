@@ -42,26 +42,36 @@ function setLogout() {
 function getUserPhoto(image) {
   const smallImg = image["small-250px"];
   const middleImg = image["medium-300px"];
-  const bigImg = image["large-500px"];
+  const bigImg = image["big-400px"];
   const classBigPhoto = smallImg ? "big-photo" : "";
-
+  
   return `
     <picture class="user-info__svg ${classBigPhoto}">
       <source
-        srcset="${bigImg}"
+        srcset="
+        ${bigImg} 1x,
+        ${bigImg} 2x
+        "
         media="(min-width: 1440px)"
       />
       <source
-        srcset="${smallImg}"
+        srcset="
+        ${smallImg} 1x,
+        ${smallImg} 2x
+        "
         media="(min-width: 768px)"
       />
       <source
-        srcset="${smallImg}"
+        srcset="
+        ${smallImg} 1x,
+        ${smallImg} 2x
+        "
       />
       <img
-        src="${smallImg ? smallImg : "./img/universal/defoultPlantPhoto.jpg"}"
+        src="${smallImg}"
+        srcset="${smallImg} 1x, ${smallImg} 2x"
         class="user-info__svg ${classBigPhoto}"
-        alt="plant"
+        alt="user"
         loading="lazy"
         width="250px"
         height="250px"

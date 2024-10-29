@@ -34,29 +34,7 @@ export function getAdvert(info) {
           <div class="container advert__container">
             <h1 hidden>Оголошення</h1>
             <div class="advert-maininfo">
-              <picture class="advert-maininfo__img">
-                <source
-                  srcset="${image["large-500px"]}"
-                  media="(min-width: 1440px)"
-                />
-                <source
-                  srcset="${image["medium-300px"]}"
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="${image["small-250px"]}"
-                />
-                <img
-                  src="${
-                    image["small-250px"]
-                      ? image["small-250px"]
-                      : "./img/universal/defoultPlantPhoto.jpg"
-                  }"
-                  class="advert-maininfo__img"
-                  alt="plant"
-                  loading="lazy"
-                />
-              </picture>
+              ${getAdvertPicture(image)}
               <div>
                 <p class="advert-maininfo__date">${date}</p>
                 <h2 class="advert-maininfo__title">${name}</h2>
@@ -138,7 +116,7 @@ export function getAdvert(info) {
             <div class="advert-user">
               <div class="advert-userinfo">
                 <div class="advert-userinfo__profile-img">
-                  ${getPicture(avatar)}
+                  ${getUserPicture(avatar)}
                 </div>
                 <div class="advert-userinfo__userinfos">
                   <h2 class="advert-userinfo__name">${username}</h2>
@@ -168,26 +146,73 @@ export function getAdvert(info) {
         </section>`;
 }
 
-function getPicture(image) {
-  const smallImg = image["large-500px"];
+function getAdvertPicture(image) {
+  const smallImg = image["small-250px"];
   const middleImg = image["medium-300px"];
-  const bigImg = image["large-500px"];
+  const bigImg = image["large-500"];
+
+  return `
+          <picture class="advert-maininfo__img">
+            <source
+              srcset="
+              ${bigImg} 1x,
+              ${bigImg} 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="
+              ${middleImg} 1x,
+              ${middleImg} 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+              ${smallImg} 1x,
+              ${smallImg} 2x"
+            />
+            <img
+              src="${smallImg}"
+              srcset="
+              ${smallImg} 1x,
+              ${smallImg} 2x,"
+              class="advert-maininfo__img"
+              alt="plant"
+              loading="lazy"
+            />
+          </picture>
+        `;
+}
+
+function getUserPicture(image) {
+  const smallImg = image["tiny-100px"];
+  const middleImg = image["very-small-175px"];
+  const bigImg = image["small-250px"];
 
   return `
     <picture class="advert-userinfo__img big-photo">
       <source
-        srcset="${bigImg}"
+        srcset="
+          ${bigImg} 1x,
+          ${bigImg} 2x"
         media="(min-width: 1440px)"
       />
       <source
-        srcset="${middleImg}"
+        srcset="
+          ${middleImg} 1x,
+          ${middleImg} 2x"
         media="(min-width: 768px)"
       />
       <source
-        srcset="${smallImg}"
+        srcset="
+          ${smallImg} 1x,
+          ${smallImg} 2x"
       />
       <img
-        src="${smallImg ? smallImg : "./img/universal/defoultPlantPhoto.jpg"}"
+        src="${smallImg}"
+        srcset="
+          ${smallImg} 1x,
+          ${smallImg} 2x,"
         class="advert-userinfo__img big-photo"
         alt="plant"
         loading="lazy"
