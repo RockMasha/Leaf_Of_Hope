@@ -31,7 +31,7 @@
     margin-bottom: 20px;
     @media (min-width: 768px) {
       display: flex;
-      gap: 30px;
+      gap: 15px;
       margin-bottom: 31px;
     }
     @media (min-width: 1440px) {
@@ -46,8 +46,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 284.81px;
-    height: 296.792px;
+    min-width: 300px;
+    height: 300px;
     margin: 0 auto 35px;
     background-color: $color-grey-very-light;
     border-radius: 30px;
@@ -56,7 +56,7 @@
       margin: 0 auto;
     }
     @media (min-width: 1440px) {
-      width: 500px;
+      min-width: 500px;
       height: 500px;
     }
   }
@@ -172,8 +172,8 @@
       width: 290.983px;
       height: 180.7px;
       @media (min-width: 768px) {
-        width: 406px;
-        height: 187.174px;
+        width: 100%;
+        height: 165px;
         font-size: 28px;
       }
       @media (min-width: 1440px) {

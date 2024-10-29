@@ -18,8 +18,8 @@
     justify-content: center;
     align-items: center;
     @media (min-width: 768px) {
-      width: 241px;
-      height: 241px;
+      width: 250px;
+      height: 250px;
     }
     @media (min-width: 1440px) {
       width: 400px;
@@ -84,6 +84,7 @@
     font-size: 32px;
     font-weight: 600;
     line-height: 1.21;
+    word-break: break-all;
     @media (min-width: 768px) {
       font-size: 36px;
     }
@@ -96,6 +97,7 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 1.21;
+    word-break: break-all;
     color: $color-grey-dark;
     margin-top: 5px;
     &.bold {
