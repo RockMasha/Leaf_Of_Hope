@@ -227,7 +227,9 @@ function getCardLoader() {
 
 function getDefaultElement() {
   return `<div class="cards-list-default">
-            <img class="cards-list-default__img" src="./img/profile/defoultPlant.svg" alt="plant">
+            <svg class="cards-list-default__img">
+              <use href="./img/profile/defoult-plant.svg#defoult-plant"></use>
+            </svg>
             <p class="cards-list-default__text">Немає оголошень</p>
           </div>`;
 }
