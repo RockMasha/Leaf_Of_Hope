@@ -26,7 +26,7 @@ function getUserEL(user) {
         <a class="user-info__redact-link" href="formProfile.html?redact=true">
           <img
             class="user-info__redact-img"
-            src="./img/profile/redact-profile.svg"
+            src="./img/profile/redactProfile.svg"
             alt="redact img"
           />
         </a>
@@ -44,7 +44,7 @@ function getUserPhoto(image) {
   const middleImg = image["medium-300px"];
   const bigImg = image["big-400px"];
   const classBigPhoto = smallImg ? "big-photo" : "";
-  
+
   return `
     <picture class="user-info__svg ${classBigPhoto}">
       <source
