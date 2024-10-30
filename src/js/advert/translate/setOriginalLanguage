@@ -1,0 +1,11 @@
+import { setAdvert } from "../createAdvert";
+import { root } from "../root";
+
+export function setOriginalLanguage() {
+  if (root.translate.getAttribute("original")) {
+    return;
+  }
+  root.translate.setAttribute("disable", "");
+  root.translate.setAttribute("original", "true");
+  setAdvert();
+}
