@@ -68,6 +68,8 @@ var q=(s,t,i)=>{if(!t.has(s))throw TypeError("Cannot "+i)};var n=(s,t,i)=>(q(s,t
               <div class="card-loader"></div>
             </div>
           </div>`}function rt(){return`<div class="cards-list-default">
-            <img class="cards-list-default__img" src="./img/profile/defoultPlant.svg" alt="plant">
+            <svg class="cards-list-default__img">
+              <use href="./img/profile/defoult-plant.svg#defoult-plant"></use>
+            </svg>
             <p class="cards-list-default__text">Немає оголошень</p>
           </div>`}function lt(s){let t;s instanceof HTMLElement?t=new FormData(s):t=s;const i={};for(let e of t.entries())i[e[0]]=e[1];return i}export{dt as C,lt as c,it as g};
