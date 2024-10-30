@@ -1,6 +1,6 @@
 import { getAdvertPicture, getUserPicture } from "./getPicture";
 
-export function getAdvert(info, getData) {
+export function getEnglishAdvert(info, getData) {
   const data = getData(info);
 
   const {
@@ -31,7 +31,7 @@ export function getAdvert(info, getData) {
 
   return `
           <div class="container advert__container">
-            <h1 hidden>Оголошення</h1>
+            <h1 hidden>Advert</h1>
             <div class="advert-maininfo">
               ${getAdvertPicture(image)}
               <div>
@@ -42,27 +42,27 @@ export function getAdvert(info, getData) {
                 </div>
                 <ul class="advert-properties">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Освітлення: ${light}</p>
+                    <p class="advert-properties__text">Light: ${light}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Вологість: ${humidity}</p>
+                    <p class="advert-properties__text">Humidity: ${humidity}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Розмір: ${size}</p>
+                    <p class="advert-properties__text">Size: ${size}</p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Тривальсть життя: <span>${lifeDuration}</span>
+                      Life duration: <span>${lifeDuration}</span>
                     </p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Алергеність: <span>${alergenicity}</span>
+                      Allergenicity: <span>${alergenicity}</span>
                     </p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Темпаратура: <span>${temperature}</span>
+                      Temperature: <span>${temperature}</span>
                     </p>
                   </li>
                 </ul>
@@ -72,26 +72,26 @@ export function getAdvert(info, getData) {
               <li>
                 <ul class="advert-properties__more-list">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Затратва уваги: ${attention}</p>
+                    <p class="advert-properties__text">Expenditure of attention: ${attention}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Живучість: ${survive}</p>
+                    <p class="advert-properties__text">Vitality: ${survive}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Стан: ${state}</p>
+                    <p class="advert-properties__text">State: ${state}</p>
                   </li>
                 </ul>
               </li>
               <li>
                 <ul class="advert-properties__more-list">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Темп Зростання: ${growthRate}</p>
+                    <p class="advert-properties__text">Growth rate: ${growthRate}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Цвітіння: ${flowering}</p>
+                    <p class="advert-properties__text">Flowering: ${flowering}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Їстівна: ${edible}</p>
+                    <p class="advert-properties__text">Edible: ${edible}</p>
                   </li>
                 </ul>
               </li>
@@ -103,12 +103,12 @@ export function getAdvert(info, getData) {
               </ul>
             </button>
             <div class="advert-discreption">
-              <h2 class="advert-discreption__title">Опис</h2>
+              <h2 class="advert-discreption__title">Description</h2>
               <p class="advert-discreption__text">
                 ${
                   description
                     ? description
-                    : `<span class="advert-discreption__text_default">Немає опису</span>`
+                    : `<span class="advert-discreption__text_default">There is no description</span>`
                 }
               </p>
             </div>
@@ -131,13 +131,9 @@ export function getAdvert(info, getData) {
               <div class="advert-wishes ${
                 info.way === "exchange" ? `` : `is-hidden`
               }">
-                <h2 class="advert-wishes__title">Побажання</h2>
+                <h2 class="advert-wishes__title">Wish</h2>
                 <p class="advert-wishes__text">
-                 ${
-                   wish
-                     ? wish
-                     : `<span class="advert-wishes__text_default">Немає побажань</span>`
-                 }
+                 ${wish ? wish : "There are no wishes"}
                 </p>
               </div>
             </div>

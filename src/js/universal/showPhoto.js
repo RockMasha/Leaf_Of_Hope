@@ -14,9 +14,11 @@ export function showPhoto(label) {
 
   function setImgInPage() {
     imgEl.src = reader.result;
+    imgEl.srcset = `${reader.result} 1x, ${reader.result} 2x`;
     if (!imgEl.classList.contains("big-photo")) {
       imgEl.classList.add("big-photo");
     }
+    
     const imgOuter = imgEl.outerHTML;
     imgWrappEL.innerHTML = imgOuter;
   }

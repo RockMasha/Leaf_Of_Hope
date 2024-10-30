@@ -10,13 +10,13 @@ body {
   }
 }
 main {
-  padding-top: 62px;
+  padding-top: 72px;
   flex-grow: 1;
   @media (min-width: 768px) {
-    padding-top: 80px;
+    padding-top: 110px;
   }
   @media (min-width: 1440px) {
-    padding-top: 103px;
+    padding-top: 163px;
   }
 }
 .container {

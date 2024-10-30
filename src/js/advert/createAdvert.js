@@ -1,15 +1,20 @@
 import { getOneAdvert } from "../servise/api";
+import { getDataValue } from "../universal/cardData/getDataValue";
 import { getValueSrcParams } from "../universal/getValueSrcParams";
 import { changeMoreProperties } from "./changeMoreProperties";
 import { getAdvert } from "./getAdvert";
 import { root } from "./root";
 
+let data;
 export async function createAdvert() {
   const id = getValueSrcParams("id");
-  const data = await getOneAdvert(id);
+  data = await getOneAdvert(id);
+  setAdvert();
+}
 
-  const advertEl = getAdvert(data);
-  root.main.innerHTML = advertEl;
+export function setAdvert(getData = getDataValue, getAdvertTemple = getAdvert) {
+  const advertEl = getAdvertTemple(data, getData);
+  root.advert.innerHTML = advertEl;
   setEventMoreProperties();
 }
 
