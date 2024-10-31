@@ -3,6 +3,8 @@ import { showSigninModal } from "./signin/showSigninModal";
 import { showProfile } from "./profile/showProfile";
 import { hiddenContentLoader } from "./universal/hiddenContentLoader";
 import "./universal/btnUpSettings";
+import { setSwitchLanguage } from "./universal/translate/original/setSwitchLanguage";
+import { settings } from "./profile/translate/settings";
 
 const answer = await isSignin();
 
@@ -11,5 +13,7 @@ if (answer) {
 } else {
   showSigninModal();
 }
+
+setSwitchLanguage(settings);
 
 hiddenContentLoader();
