@@ -5,6 +5,8 @@ import { hiddenContentLoader } from "./universal/hiddenContentLoader.js";
 import { showPhoto } from "./universal/showPhoto.js";
 import { setRegistrationFields } from "./formProfile/setRegistrationFields.js";
 import { setInputs } from "./formProfile/setInputs.js";
+import { setSwitchLanguage } from "./universal/translate/original/setSwitchLanguage.js";
+import { settings } from "./formProfile/translate/settings.js";
 
 root.photo.onchange = showPhoto.bind(this, root.photo);
 if (isRedactForm()) {
@@ -14,5 +16,7 @@ if (isRedactForm()) {
 }
 
 root.form.addEventListener("submit", submitUser);
+
+setSwitchLanguage(settings);
 
 hiddenContentLoader();

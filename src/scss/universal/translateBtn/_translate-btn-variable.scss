@@ -1,0 +1,44 @@
+.translate-variable {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  height: 44px;
+  border-radius: 40px;
+  transition: 0.5s;
+  &__span {
+    &[lang="ua"] {
+      left: 73px;
+    }
+    &[lang="en"] {
+      left: 115px;
+    }
+    &[lang="or"] {
+      left: 0px;
+    }
+    transition: 0.7s;
+  }
+  &__item {
+    height: 100%;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    font-size: 16px;
+    color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+    &_or {
+      min-width: 57px;
+      height: 44px;
+      background-color: $color-brown-grey;
+      border-radius: 40px;
+    }
+  }
+  &__label > span {
+    z-index: 3;
+  }
+}

@@ -1,8 +1,8 @@
-import { root } from "./main/root";
 import "./main/swiper";
-import { translatePage } from "./main/translate/translatePage";
+import { settings } from "./main/translate/settings.js";
 import { hiddenContentLoader } from "./universal/hiddenContentLoader";
+import { setSwitchLanguage } from "./universal/translate/original/setSwitchLanguage.js";
 
-root.translateInput.addEventListener("change", translatePage)
+setSwitchLanguage(settings);
 
 hiddenContentLoader();

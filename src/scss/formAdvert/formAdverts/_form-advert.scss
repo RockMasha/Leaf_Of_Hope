@@ -1,11 +1,11 @@
 .formAdvert {
   position: relative;
-  padding: 23px 0 34px;
+  padding: 55px 0 34px;
   @media (min-width: 768px) {
     padding: 60px 0 41px;
   }
   @media (min-width: 1440px) {
-    padding: 117px 0 98px;
+    padding: 120px 0 98px;
   }
   &__error {
     position: absolute;
@@ -76,6 +76,7 @@
     }
   }
   &__name {
+    width: 100%;
     margin-bottom: 9px;
     color: $color-text-line;
     border: 1px solid transparent;

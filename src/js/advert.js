@@ -1,9 +1,10 @@
 import { createAdvert } from "./advert/createAdvert";
-import { root } from "./advert/root";
-import { translatePage } from "./advert/translate/translatePage";
+import { langs } from "./advert/translate/langs";
 import { hiddenContentLoader } from "./universal/hiddenContentLoader";
+import { setSwitchVariableLanguage } from "./universal/translate/variable/setSwitchVariableLanguage";
 
-root.translateWrapp.addEventListener("click", translatePage);
 await createAdvert();
+
+setSwitchVariableLanguage(langs);
 
 hiddenContentLoader();
