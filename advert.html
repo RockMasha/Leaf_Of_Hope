@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="advert" />
     <title>Leaf_Of_Hope</title>
-    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedFour-DNGrRLH7.js"></script>
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-DikfwQNk.js">
+    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedFour-BT971IB7.js"></script>
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-RgNmBLIv.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-C87ePszt.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getDataValue-Bu16Xysz.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getValueSrcParams-BMgebK2A.js">
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-DZBiZwnP.css">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-BjUyqyx0.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchVariableLanguage-BNJwzjz5.js">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-C7AeHv5N.css">
   </head>
   <body>
     <div class="content-loader-wrapper" active>
@@ -86,18 +88,48 @@
 </header>
 
     <main>
-      <div class="translate-wrapper translate-wrapper_variable">
-  <div class="translate-language-wrapper translate-language-wrapper_or">
-    <p class="translate-language">or</p>
+      <div class="trannslate-container container">
+  <div class="translate-wrapper translate-wrapper_variable">
+    <div class="translate-variable">
+      <span class="translate-variable__span translate__span"></span>
+      <label class="translate-variable__label translate-variable__label_or">
+        <input
+          type="radio"
+          name="lang"
+          class="translate-variable__input is-hidden"
+          value="or"
+        />
+        <span>or</span>
+      </label>
+      <ul class="translate-variable__list translate">
+        <li class="translate-variable__item">
+          <label class="translate-variable__label">
+            <input
+              type="radio"
+              name="lang"
+              class="translate-variable__input is-hidden"
+              value="ua"
+            />
+            <span>ua</span>
+          </label>
+        </li>
+        <li class="translate-variable__item">
+          <label class="translate-variable__label">
+            <input
+              type="radio"
+              name="lang"
+              class="translate-variable__input is-hidden"
+              value="en"
+            />
+            <span>en</span>
+          </label>
+        </li>
+      </ul>
+    </div>
   </div>
-  <label class="translate" original="true" disable>
-    <input class="translate__input" type="checkbox" />
-    <span class="translate__span"></span>
-    <p class="translate__language">ua</p>
-    <p class="translate__language">en</p>
-  </label>
 </div>
 
+      
       <section class="advert"></section>
 
     </main>

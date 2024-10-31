@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Main page">
     <title>Leaf_Of_Hope</title>
-    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/main-CacQx0hx.js"></script>
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-DikfwQNk.js">
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-DZBiZwnP.css">
+    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/main-DbKhOP_K.js"></script>
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-RgNmBLIv.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-BjUyqyx0.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-DTPAQ0s7.js">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-C7AeHv5N.css">
     <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/main-CNuEInS3.css">
   </head>
   <body>
@@ -50,21 +52,24 @@
 </header>
 
     <main>
-      <div class="translate-wrapper">
-  <label class="translate">
-    <input class="translate__input" type="checkbox" />
-    <span class="translate__span"></span>
-    <p class="translate__language">ua</p>
-    <p class="translate__language">en</p>
-  </label>
+      <div class="trannslate-container container">
+  <div class="translate-wrapper">
+    <label class="translate">
+      <input class="translate__input" type="checkbox" />
+      <span class="translate__span"></span>
+      <p class="translate__language">ua</p>
+      <p class="translate__language">en</p>
+    </label>
+  </div>
 </div>
 
+      
       <section class="main-info">
   <div class="container main-info__container">
     <h1 hidden>Головна сторінка</h1>
-    <h2 class="main-info__title">Основна інформація</h2>
+    <h2 class="main-info__title" key="mainInfoTitle">Основна інформація</h2>
     <div class="main-info__block">
-      <p class="main-info__text">
+      <p class="main-info__text" key="mainInfoText">
         На цьому сайті ви зможете знайти рослину найбільш привітну для вашої
         оселі, яка буде радувати вас своєю присутністю, а також обмінюватись чи
         віддати вашого зеленого друга і цим підтримувати рух популяризації
@@ -126,7 +131,7 @@
 
       <section class="opportunities">
   <div class="container opportunities__container">
-    <h2 class="opportunities__title">Можливості</h2>
+    <h2 class="opportunities__title" key="opportunitiesTitle">Можливості</h2>
     <div class="opportunities__list swiper">
       <div class="swiper-wrapper">
         <div class="opportunities-card swiper-slide">
@@ -183,8 +188,16 @@
               loading="lazy"
             />
           </picture>
-          <h3 class="opportunities-card__title opportunities-card__title_search">Пошук</h3>
-          <p class="opportunities-card__text opportunities-card__text_search">
+          <h3
+            class="opportunities-card__title opportunities-card__title_search"
+            key="opportunitiesSearchTitle"
+          >
+            Пошук
+          </h3>
+          <p
+            class="opportunities-card__text opportunities-card__text_search"
+            key="opportunitiesSearchText"
+          >
             Шукай свого зеленого друга тут! Ти можеш знайти рослину, найкращу
             для тебе і тим самим врятувати її від вибросу. А обмінюючись
             покращуй свій досвід в рослинництві і соціалізуйся серед таких як
@@ -245,8 +258,16 @@
               loading="lazy"
             />
           </picture>
-          <h3 class="opportunities-card__title opportunities-card__title_exchange">Обмін</h3>
-          <p class="opportunities-card__text opportunities-card__text_exchange">
+          <h3
+            class="opportunities-card__title opportunities-card__title_exchange"
+            key="opportunitiesExchangeTitle"
+          >
+            Обмін
+          </h3>
+          <p
+            class="opportunities-card__text opportunities-card__text_exchange"
+            key="opportunitiesExchangeText"
+          >
             Обінюйся з іншими людьми! Цим ти дізнаєшся більше різноманіття
             рослин та покращуєш свої знання з рослинства. А також це покращує
             твої соціальне навички, що є важливим
@@ -306,8 +327,16 @@
               loading="lazy"
             />
           </picture>
-          <h3 class="opportunities-card__title opportunities-card__title_give">Відачча</h3>
-          <p class="opportunities-card__text opportunities-card__text_give">
+          <h3
+            class="opportunities-card__title opportunities-card__title_give"
+            key="opportunitiesGiveTitle"
+          >
+            Відачча
+          </h3>
+          <p
+            class="opportunities-card__text opportunities-card__text_give"
+            key="opportunitiesGiveText"
+          >
             Віддавай рослин, які тобі непотрібні або поділись своєю радістю з
             іншими! Цим ти розповсюджуєш зелених друзів серед суспільства і тим
             самим озеленюєш наші оселі і підвищуєш екологію.
@@ -322,7 +351,9 @@
 
       <section class="need-plants">
   <div class="container need-plants__container">
-    <h2 class="need-plants__title">Навіщо потрібні рослини?</h2>
+    <h2 class="need-plants__title" key="needPlantsTitle">
+      Навіщо потрібні рослини?
+    </h2>
     <picture class="need-plants__background-image">
       <source
         srcset="/Leaf_Of_Hope/assets/needPlant-1440-1x-DlJJPoMO.avif 1x, /Leaf_Of_Hope/assets/needPlant-1440-2x-JbwPCg-K.avif 2x"
@@ -376,7 +407,7 @@
         loading="lazy"
       />
     </picture>
-    <p class="need-plants__text">
+    <p class="need-plants__text" key="needPlantsText">
       Рослини це не лише декор. За різними дослідами рослини покращують якість
       повітря, тим самим і екологічний стан, здоров’я, ефективність офісних
       працівників та знижують стрес. Також мати кімнатну рослину - підтримувати

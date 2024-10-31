@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Search adverts by filtering" />
     <title>Leaf_Of_Hope</title>
-    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nested-CKEOBIWa.js"></script>
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-DikfwQNk.js">
+    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nested-C0H_MQj3.js"></script>
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-RgNmBLIv.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-C87ePszt.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/btnUpSettings-Ck6O69iz.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getDataValue-Bu16Xysz.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createFormObj-DJ--Vbar.js">
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-DZBiZwnP.css">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-BjUyqyx0.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchVariableLanguage-BNJwzjz5.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-DTPAQ0s7.js">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-C7AeHv5N.css">
   </head>
   <body>
     <div class="content-loader-wrapper" active>
@@ -71,33 +74,83 @@
 </header>
 
     <main class="search__main">
-      <div class="translate-wrapper">
-  <label class="translate">
-    <input class="translate__input" type="checkbox" />
-    <span class="translate__span"></span>
-    <p class="translate__language">ua</p>
-    <p class="translate__language">en</p>
-  </label>
+      <div class="trannslate-container container">
+  <div class="translate-wrapper translate-wrapper_variable">
+    <div class="translate-variable">
+      <span class="translate-variable__span translate__span"></span>
+      <label class="translate-variable__label translate-variable__label_or">
+        <input
+          type="radio"
+          name="lang"
+          class="translate-variable__input is-hidden"
+          value="or"
+        />
+        <span>or</span>
+      </label>
+      <ul class="translate-variable__list translate">
+        <li class="translate-variable__item">
+          <label class="translate-variable__label">
+            <input
+              type="radio"
+              name="lang"
+              class="translate-variable__input is-hidden"
+              value="ua"
+            />
+            <span>ua</span>
+          </label>
+        </li>
+        <li class="translate-variable__item">
+          <label class="translate-variable__label">
+            <input
+              type="radio"
+              name="lang"
+              class="translate-variable__input is-hidden"
+              value="en"
+            />
+            <span>en</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
+      
       <section class="side-panel is-hidden" id="modal-js">
+  <div class="translate-wrapper translate-wrapper_left">
+    <label class="translate">
+      <input class="translate__input" type="checkbox" />
+      <span class="translate__span"></span>
+      <p class="translate__language">ua</p>
+      <p class="translate__language">en</p>
+    </label>
+  </div>
+
   <div class="side-panel__wrapp">
-    <h1 class="side-panel__title">Обери свою рослинку</h1>
-    <button class="side-panel__close-btn" id="close-modal-js" aria-label="close search panel button">
+    <h1 class="side-panel__title" key="mainTitle">Обери свою рослинку</h1>
+    <button
+      class="side-panel__close-btn"
+      id="close-modal-js"
+      aria-label="close search panel button"
+    >
       <svg class="side-panel__close-svg">
         <use href="/Leaf_Of_Hope/assets/cross-DB30-WeQ.svg#cross"></use>
       </svg>
     </button>
     <form class="side-panel__form">
       <label class="side-panel-search-field">
-        Шукати
+        <span key="searchFieldText">Шукати</span>
         <div class="side-panel-search-field__main-part">
           <input
             class="side-panel-search-field__input"
             name="name"
             type="text"
           />
-          <button type="submit" class="side-panel-search-field__btn" aria-label="complete search">
+          <button
+            type="submit"
+            class="side-panel-search-field__btn"
+            aria-label="complete search"
+          >
             <svg class="side-panel-search-field__svg">
               <use href="/Leaf_Of_Hope/assets/search-BnXwN9SH.svg#search"></use>
             </svg>
@@ -113,7 +166,7 @@
             class="side-panel__radio-btn"
             value=""
             checked
-          /><label for="all">Усе</label>
+          /><label for="all"><span key="allWayText">Усе</span></label>
         </li>
         <li>
           <input
@@ -122,7 +175,9 @@
             name="way"
             value="exchange"
             class="side-panel__radio-btn"
-          /><label for="exchange">Обмін</label>
+          /><label for="exchange"
+            ><span key="exchangeWayText">Обмін</span></label
+          >
         </li>
         <li>
           <input
@@ -131,82 +186,94 @@
             name="way"
             value="give"
             class="side-panel__radio-btn"
-          /><label for="give">Віддача</label>
+          /><label for="give"><span key="giveWayText">Віддача</span></label>
         </li>
       </ul>
       <ul class="side-panel__select-list">
         <li>
-          <label for="sort">Сортування</label>
+          <label for="sort" key="sortText">Сортування</label>
           <select name="sort" id="sort" class="side-panel__select">
-            <option value="">нові</option>
-            <option value="old">старі</option>
-            <option value="start-alphabet">алфавіт ↓</option>
-            <option value="end-alphabet">алфавіт ↑</option>
+            <option key="sortNewText" value="">нові</option>
+            <option key="sortOldText" value="old">старі</option>
+            <option key="sortStartText" value="start-alphabet">
+              алфавіт ↓
+            </option>
+            <option key="sortEndText" value="end-alphabet">алфавіт ↑</option>
           </select>
         </li>
         <li>
-          <label for="light">Освітлення</label>
+          <label key="lightText" for="light">Освітлення</label>
           <select name="light" id="light" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="many">багато</option>
-            <option value="normal">помірно</option>
-            <option value="little">мало</option>
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="lightManyText" value="many">багато</option>
+            <option key="lightNormalText" value="normal">помірно</option>
+            <option key="lightLittleText" value="little">мало</option>
           </select>
         </li>
         <li>
-          <label for="temperature">Температура</label>
+          <label key="temperatureText" for="temperature">Температура</label>
           <select
             name="temperature"
             id="temperature"
             class="side-panel__select"
           >
-            <option value="">не вказано</option>
-            <option value="low">холоднолюбиві</option>
-            <option value="normal">нейтральні</option>
-            <option value="high">теплолюбні</option>
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="temperatureLowText" value="low">холоднолюбиві</option>
+            <option key="temperatureNormalText" value="normal">
+              нейтральні
+            </option>
+            <option key="temperatureHightText" value="high">теплолюбні</option>
           </select>
         </li>
         <li>
-          <label for="size">Розмір</label>
+          <label key="sizeText" for="size">Розмір</label>
           <select name="size" id="size" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="large">великий</option>
-            <option value="medium">середній</option>
-            <option value="small">малий</option>
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="sizeLargeText" value="large">великий</option>
+            <option key="sizeMediumText" value="medium">середній</option>
+            <option key="sizeSmallText" value="small">малий</option>
           </select>
         </li>
         <li>
-          <label for="lifeDuration">Тривалість життя</label>
+          <label key="lifeDurationText" for="lifeDuration"
+            >Тривалість життя</label
+          >
           <select
             name="lifeDuration"
             id="lifeDuration"
             class="side-panel__select"
           >
-            <option value="">не вказано</option>
-            <option value="annual">однорічні</option>
-            <option value="biennial">дворічні</option>
-            <option value="perennial">довгожителі</option>
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="lifeDurationAnnualText" value="annual">
+              однорічні
+            </option>
+            <option key="lifeDurationBiennialText" value="biennial">
+              дворічні
+            </option>
+            <option key="lifeDurationPerennialText" value="perennial">
+              довгожителі
+            </option>
           </select>
         </li>
         <li>
-          <label for="alergenicity">Алергенність</label>
+          <label key="alergenicityText" for="alergenicity">Алергенність</label>
           <select
             name="alergenicity"
             id="alergenicity"
             class="side-panel__select"
           >
-            <option value="">не вказано</option>
-            <option value="true">наявна</option>
-            <option value="false">відсутня</option>
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="alergenicityTrueText" value="true">наявна</option>
+            <option key="alergenicityFalseText" value="false">відсутня</option>
           </select>
         </li>
         <li>
-          <label for="humidity">Вологість</label>
+          <label key="humidityText" for="humidity">Вологість</label>
           <select name="humidity" id="humidity" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="low">низька</option>
-            <option value="normal">помірна</option>
-            <option value="high">висока</option>
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="humidityLowText" value="low">низька</option>
+            <option key="humidityNormalText" value="normal">помірна</option>
+            <option key="humidityHighText" value="high">висока</option>
           </select>
         </li>
       </ul>
@@ -215,61 +282,79 @@
         class="side-panel__select-list side-panel__select-list_more is-hidden"
       >
         <li>
-          <label for="attention">Затрата уваги</label>
+          <label key="attentionText" for="attention">Затрата уваги</label>
           <select name="attention" id="attention" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="low">низька</option>
-            <option value="normal">середня</option>
-            <option value="hight">висока</option>
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="attentionLowText" value="low">низька</option>
+            <option key="attentionNormalText" value="normal">середня</option>
+            <option key="attentionHightText" value="hight">висока</option>
           </select>
         </li>
         <li>
-          <label for="survive">Живучисть</label>
-          <select name="survive" id="humidity" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="low">низька</option>
-            <option value="normal">середння</option>
-            <option value="hight">висока</option>
+          <label key="surviveText" for="survive">Живучecть</label>
+          <select name="survive" id="survive" class="side-panel__select">
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="surviveLowText" value="low">низька</option>
+            <option key="surviveNormalText" value="normal">середння</option>
+            <option key="surviveHightText" value="hight">висока</option>
           </select>
         </li>
         <li>
-          <label for="state">Стан</label>
-          <select name="state" id="humidity" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="good">добре</option>
-            <option value="enough">достатьо</option>
-            <option value="bad">погано</option>
+          <label key="stateText" for="state">Стан</label>
+          <select name="state" id="state" class="side-panel__select">
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="stateGoodText" value="good">добре</option>
+            <option key="stateEnoughText" value="enough">достатьо</option>
+            <option key="stateBadText" value="bad">погано</option>
           </select>
         </li>
         <li>
-          <label for="flowering">Цвітіння</label>
-          <select name="flowering" id="humidity" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="true">так</option>
-            <option value="false">ні</option>
+          <label key="floweringText" for="flowering">Цвітіння</label>
+          <select name="flowering" id="flowering" class="side-panel__select">
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="floweringTrueText" value="true">так</option>
+            <option key="floweringFalseText" value="false">ні</option>
           </select>
         </li>
         <li>
-          <label for="growth rate">Темп зростання</label>
-          <select name="growth rate" id="humidity" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="low">низька</option>
-            <option value="normal">середння</option>
-            <option value="hight">висока</option>
+          <label key="growthRateText" for="growthRate">Темп зростання</label>
+          <select name="growth rate" id="growthRate" class="side-panel__select">
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="growthRateLowText" value="low">низька</option>
+            <option key="growthRateNormalText" value="normal">середння</option>
+            <option key="growthRateHightText" value="hight">висока</option>
           </select>
         </li>
         <li>
-          <label for="edible">Їстівна</label>
-          <select name="healthy" id="humidity" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="true">так</option>
-            <option value="false">ні</option>
+          <label key="edibleText" for="edible">Їстівна</label>
+          <select name="healthy" id="edible" class="side-panel__select">
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="edibleTrueText" value="true">так</option>
+            <option key="edibleFalseText" value="false">ні</option>
           </select>
         </li>
       </ul>
-      <button type="button" class="side-panel__more-btn" aria-label="open or close more field params">ще параметри</button>
-      <button type="submit" class="side-panel__submit-btn" aria-label="complete search">Знайти</button>
-      <button type="button" class="side-panel-reset-btn" aria-label="reset search params">
+      <button
+        key="moreParamsText"
+        type="button"
+        class="side-panel__more-btn"
+        aria-label="open or close more field params"
+      >
+        ще параметри
+      </button>
+      <button
+        key="submitText"
+        type="submit"
+        class="side-panel__submit-btn"
+        aria-label="complete search"
+      >
+        Знайти
+      </button>
+      <button
+        type="button"
+        class="side-panel-reset-btn"
+        aria-label="reset search params"
+      >
         <svg class="side-panel-reset-btn__svg">
           <use href="/Leaf_Of_Hope/assets/reset-params-FOlG2EZR.svg#reset-params"></use>
         </svg>
