@@ -1,7 +1,7 @@
 export const settings = {
   mainTitle: {
     ua: `Обери свою рослинку`,
-    en: ``,
+    en: `Choose your plant`,
   },
   searchFieldText: {
     ua: `Шукати`,
@@ -45,7 +45,7 @@ export const settings = {
   },
   defaultParamsText: {
     ua: `не вказано`,
-    en: `not specified`,
+    en: `not choose`,
   },
   lightManyText: {
     ua: `багато`,
@@ -134,6 +134,102 @@ export const settings = {
   humidityHighText: {
     ua: `висока`,
     en: `high`,
+  },
+  attentionText: {
+    ua: `Затрата уваги`,
+    en: `attention`,
+  },
+  attentionLowText: {
+    ua: `низька`,
+    en: `low`,
+  },
+  attentionNormalText: {
+    ua: `середня`,
+    en: `normal`,
+  },
+  attentionHightText: {
+    ua: `висока`,
+    en: `hight`,
+  },
+  surviveText: {
+    ua: `Живучecть`,
+    en: `survive`,
+  },
+  surviveLowText: {
+    ua: `низька`,
+    en: `low`,
+  },
+  surviveNormalText: {
+    ua: `середння`,
+    en: `normal`,
+  },
+  surviveHightText: {
+    ua: `висока`,
+    en: `hight`,
+  },
+  stateText: {
+    ua: `Стан`,
+    en: `state`,
+  },
+  stateGoodText: {
+    ua: `добре`,
+    en: `good`,
+  },
+  stateEnoughText: {
+    ua: `достатьо`,
+    en: `enough`,
+  },
+  stateBadText: {
+    ua: `погано`,
+    en: `bad`,
+  },
+  floweringText: {
+    ua: `Цвітіння`,
+    en: `flowering`,
+  },
+  floweringTrueText: {
+    ua: `так`,
+    en: `true`,
+  },
+  floweringFalseText: {
+    ua: `ні`,
+    en: `false`,
+  },
+  growthRateText: {
+    ua: `Темп зростання`,
+    en: `growthRate`,
+  },
+  growthRateLowText: {
+    ua: `низька`,
+    en: `low`,
+  },
+  growthRateNormalText: {
+    ua: `середння`,
+    en: `normal`,
+  },
+  growthRateHightText: {
+    ua: `висока`,
+    en: `hight`,
+  },
+  edibleText: {
+    ua: `Їстівна`,
+    en: `edible`,
+  },
+  edibleTrueText: {
+    ua: `так`,
+    en: `true`,
+  },
+  edibleFalseText: {
+    ua: `ні`,
+    en: `false`,
+  },
+  moreParamsText: {
+    ua: `ще параметри`,
+    en: `more params`,
+  },
+  submitText: {
+    ua: `Знайти`,
+    en: `Find`,
   },
 };
 

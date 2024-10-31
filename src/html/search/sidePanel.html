@@ -150,7 +150,7 @@
           </select>
         </li>
         <li>
-          <label key="humidityText" for="humidity" >Вологість</label>
+          <label key="humidityText" for="humidity">Вологість</label>
           <select name="humidity" id="humidity" class="side-panel__select">
             <option key="defaultParamsText" value="">не вказано</option>
             <option key="humidityLowText" value="low">низька</option>
@@ -164,59 +164,60 @@
         class="side-panel__select-list side-panel__select-list_more is-hidden"
       >
         <li>
-          <label for="attention">Затрата уваги</label>
+          <label key="attentionText" for="attention">Затрата уваги</label>
           <select name="attention" id="attention" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="low">низька</option>
-            <option value="normal">середня</option>
-            <option value="hight">висока</option>
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="attentionLowText" value="low">низька</option>
+            <option key="attentionNormalText" value="normal">середня</option>
+            <option key="attentionHightText" value="hight">висока</option>
           </select>
         </li>
         <li>
-          <label for="survive">Живучисть</label>
-          <select name="survive" id="humidity" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="low">низька</option>
-            <option value="normal">середння</option>
-            <option value="hight">висока</option>
+          <label key="surviveText" for="survive">Живучecть</label>
+          <select name="survive" id="survive" class="side-panel__select">
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="surviveLowText" value="low">низька</option>
+            <option key="surviveNormalText" value="normal">середння</option>
+            <option key="surviveHightText" value="hight">висока</option>
           </select>
         </li>
         <li>
-          <label for="state">Стан</label>
-          <select name="state" id="humidity" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="good">добре</option>
-            <option value="enough">достатьо</option>
-            <option value="bad">погано</option>
+          <label key="stateText" for="state">Стан</label>
+          <select name="state" id="state" class="side-panel__select">
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="stateGoodText" value="good">добре</option>
+            <option key="stateEnoughText" value="enough">достатьо</option>
+            <option key="stateBadText" value="bad">погано</option>
           </select>
         </li>
         <li>
-          <label for="flowering">Цвітіння</label>
-          <select name="flowering" id="humidity" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="true">так</option>
-            <option value="false">ні</option>
+          <label key="floweringText" for="flowering">Цвітіння</label>
+          <select name="flowering" id="flowering" class="side-panel__select">
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="floweringTrueText" value="true">так</option>
+            <option key="floweringFalseText" value="false">ні</option>
           </select>
         </li>
         <li>
-          <label for="growth rate">Темп зростання</label>
-          <select name="growth rate" id="humidity" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="low">низька</option>
-            <option value="normal">середння</option>
-            <option value="hight">висока</option>
+          <label key="growthRateText" for="growthRate">Темп зростання</label>
+          <select name="growth rate" id="growthRate" class="side-panel__select">
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="growthRateLowText" value="low">низька</option>
+            <option key="growthRateNormalText" value="normal">середння</option>
+            <option key="growthRateHightText" value="hight">висока</option>
           </select>
         </li>
         <li>
-          <label for="edible">Їстівна</label>
-          <select name="healthy" id="humidity" class="side-panel__select">
-            <option value="">не вказано</option>
-            <option value="true">так</option>
-            <option value="false">ні</option>
+          <label key="edibleText" for="edible">Їстівна</label>
+          <select name="healthy" id="edible" class="side-panel__select">
+            <option key="defaultParamsText" value="">не вказано</option>
+            <option key="edibleTrueText" value="true">так</option>
+            <option key="edibleFalseText" value="false">ні</option>
           </select>
         </li>
       </ul>
       <button
+        key="moreParamsText"
         type="button"
         class="side-panel__more-btn"
         aria-label="open or close more field params"
@@ -224,6 +225,7 @@
         ще параметри
       </button>
       <button
+        key="submitText"
         type="submit"
         class="side-panel__submit-btn"
         aria-label="complete search"
