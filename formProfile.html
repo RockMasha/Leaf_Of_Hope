@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Create or regenerate a profile">
     <title>Leaf_Of_Hope</title>
-    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedSix-CGlqfanw.js"></script>
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-RgNmBLIv.js">
+    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedSix-BC1FCLgt.js"></script>
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-CJZyqsh0.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getValueSrcParams-BMgebK2A.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-C87ePszt.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setInProgressLoader-DtNgW6Wc.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/showPhoto-BRLbcwku.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-BjUyqyx0.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-DTPAQ0s7.js">
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/hiddenContentLoader-C7AeHv5N.css">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-BMUXg3mB.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setInProgressLoader-BLew8mDa.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/showPhoto-Dqlw9-i9.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-oS9WtCGq.js">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-BXFcw70M.css">
   </head>
   <body>
     <div class="content-loader-wrapper" active>
@@ -58,7 +57,12 @@
       <div class="trannslate-container container">
   <div class="translate-wrapper">
     <label class="translate">
-      <input class="translate__input" type="checkbox" />
+      <input
+        class="translate__input"
+        type="checkbox"
+        name="lang"
+        value="en"
+      />
       <span class="translate__span"></span>
       <p class="translate__language">ua</p>
       <p class="translate__language">en</p>
@@ -69,7 +73,7 @@
       
       <section class="change-profile">
   <div class="container change-profile__container">
-    <h1 class="change-profile__title">Редагування</h1>
+    <h1 class="change-profile__title" key="mainTitle">Редагування</h1>
     <form class="change-profile-form">
       <div class="change-profile-form__main-block">
         <label class="change-profile-form__img">
@@ -90,11 +94,12 @@
         <ul class="change-profile-form__list">
           <li class="change-profile-form__item">
             <label class="change-profile-form__enter">
-              Ім'я
+              <span key="nameText">Ім'я</span>
               <input
                 class="change-profile-form__input change-profile-form__input_name"
+                key="namePlaceholder"
                 type="text"
-                placeholder="Ведіть ім'я"
+                placeholder="Введіть ім'я"
                 name="username"
                 required
               />
@@ -102,11 +107,12 @@
           </li>
           <li class="change-profile-form__item">
             <label class="change-profile-form__enter">
-              Місце проживання
+              <span key="locationText">Місце проживання</span>
               <input
                 class="change-profile-form__input change-profile-form__input_location"
+                key="locationPlaceholder"
                 type="text"
-                placeholder="Ведіть місце проживання"
+                placeholder="Введіть місце проживання"
                 name="adress"
                 required
               />
@@ -114,11 +120,12 @@
           </li>
           <li class="change-profile-form__item">
             <label class="change-profile-form__enter">
-              Телефон
+              <span key="phoneText">Телефон</span>
               <input
                 class="change-profile-form__input change-profile-form__input_phone"
+                key="phonePlaceholder"
                 type="tel"
-                placeholder="Ведіть номер телефону"
+                placeholder="Введіть номер телефону"
                 name="phone"
                 required
             /></label>
@@ -135,7 +142,7 @@
           </li>
         </ul>
       </div>
-      <button class="change-profile-form__btn-submit" type="submit">
+      <button class="change-profile-form__btn-submit" key="submitText" type="submit">
         Зберегти
       </button>
     </form>

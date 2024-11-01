@@ -1,15 +1,15 @@
-import{h as V}from"./hiddenContentLoader-RgNmBLIv.js";import{a as M}from"./api-C87ePszt.js";import{g as T,r as q,c as O}from"./getDataValue-Bu16Xysz.js";import{g as B}from"./getValueSrcParams-BMgebK2A.js";import{s as H}from"./setSwitchVariableLanguage-BNJwzjz5.js";import"./setCurrentLanguage-BjUyqyx0.js";function W(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function I(e){const t=e["small-250px"],r=e["medium-300px"],s=e["large-500px"];return`
+import{h as M}from"./setCurrentLanguage-CJZyqsh0.js";import{a as O}from"./api-BMUXg3mB.js";import{g as k,a as z,b as T,c as U}from"./getUkraineDataValue-jTDJ14QS.js";import{g as B}from"./getValueSrcParams-BMgebK2A.js";import{s as H}from"./setSwitchVariableLanguage-CdRF62D8.js";function R(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function D(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
             <picture class="advert-maininfo__img">
               <source
                 srcset="
-                ${s} 1x,
-                ${s} 2x"
+                ${r} 1x,
+                ${r} 2x"
                 media="(min-width: 1440px)"
               />
               <source
                 srcset="
-                ${r} 1x,
-                ${r} 2x
+                ${s} 1x,
+                ${s} 2x
                 "
                 media="(min-width: 768px)"
               />
@@ -28,18 +28,18 @@ import{h as V}from"./hiddenContentLoader-RgNmBLIv.js";import{a as M}from"./api-C
                 loading="lazy"
               />
             </picture>
-          `}function k(e){const t=e["tiny-100px"],r=e["very-small-175px"],s=e["small-250px"];return`
+          `}function I(e){const t=e["tiny-100px"],s=e["very-small-175px"],r=e["small-250px"];return`
       <picture class="advert-userinfo__img big-photo">
-        <source
-          srcset="
-            ${s} 1x,
-            ${s} 2x"
-          media="(min-width: 1440px)"
-        />
         <source
           srcset="
             ${r} 1x,
             ${r} 2x"
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="
+            ${s} 1x,
+            ${s} 2x"
           media="(min-width: 768px)"
         />
         <source
@@ -56,11 +56,11 @@ import{h as V}from"./hiddenContentLoader-RgNmBLIv.js";import{a as M}from"./api-C
           alt="plant"
           loading="lazy"
         />
-      </picture>`}function j(e,t){const r=t(e),{light:s,alergenicity:n,humidity:d,size:c,temperature:_,lifeDuration:v,way:u,image:m,name:h,wish:p,description:o,username:g,email:f,avatar:$,adress:x,phone:w,date:y,attention:b,survive:E,state:D,flowering:z,growthRate:S,edible:l}=r;return`
+      </picture>`}function P(e,t){const s=t(e),{light:r,alergenicity:d,humidity:n,size:c,temperature:_,lifeDuration:v,way:u,image:m,name:h,wish:i,description:a,username:$,email:x,avatar:g,adress:f,phone:w,date:y,attention:b,survive:E,state:S,flowering:A,growthRate:L,edible:q}=s;return`
           <div class="container advert__container">
             <h1 hidden>Оголошення</h1>
             <div class="advert-maininfo">
-              ${I(m)}
+              ${D(m)}
               <div>
                 <p class="advert-maininfo__date">${y}</p>
                 <h2 class="advert-maininfo__title">${h}</h2>
@@ -69,10 +69,10 @@ import{h as V}from"./hiddenContentLoader-RgNmBLIv.js";import{a as M}from"./api-C
                 </div>
                 <ul class="advert-properties">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Освітлення: ${s}</p>
+                    <p class="advert-properties__text">Освітлення: ${r}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Вологість: ${d}</p>
+                    <p class="advert-properties__text">Вологість: ${n}</p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">Розмір: ${c}</p>
@@ -84,7 +84,7 @@ import{h as V}from"./hiddenContentLoader-RgNmBLIv.js";import{a as M}from"./api-C
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Алергеність: <span>${n}</span>
+                      Алергеність: <span>${d}</span>
                     </p>
                   </li>
                   <li class="advert-properties__item">
@@ -105,20 +105,20 @@ import{h as V}from"./hiddenContentLoader-RgNmBLIv.js";import{a as M}from"./api-C
                     <p class="advert-properties__text">Живучість: ${E}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Стан: ${D}</p>
+                    <p class="advert-properties__text">Стан: ${S}</p>
                   </li>
                 </ul>
               </li>
               <li>
                 <ul class="advert-properties__more-list">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Темп Зростання: ${S}</p>
+                    <p class="advert-properties__text">Темп Зростання: ${L}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Цвітіння: ${z}</p>
+                    <p class="advert-properties__text">Цвітіння: ${A}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Їстівна: ${l}</p>
+                    <p class="advert-properties__text">Їстівна: ${q}</p>
                   </li>
                 </ul>
               </li>
@@ -132,37 +132,37 @@ import{h as V}from"./hiddenContentLoader-RgNmBLIv.js";import{a as M}from"./api-C
             <div class="advert-discreption">
               <h2 class="advert-discreption__title">Опис</h2>
               <p class="advert-discreption__text">
-                ${o||'<span class="advert-discreption__text_default">Немає опису</span>'}
+                ${a||'<span class="advert-discreption__text_default">Немає опису</span>'}
               </p>
             </div>
             <div class="advert-user">
               <div class="advert-userinfo">
                 <div class="advert-userinfo__profile-img">
-                  ${k($)}
+                  ${I(g)}
                 </div>
                 <div class="advert-userinfo__userinfos">
-                  <h2 class="advert-userinfo__name">${g}</h2>
-                  <p class="advert-userinfo__adress">${x}</p>
+                  <h2 class="advert-userinfo__name">${$}</h2>
+                  <p class="advert-userinfo__adress">${f}</p>
                   <p class="advert-userinfo__phone">
                     ${w}
                   </p>
                   <p class="advert-userinfo__email">
-                    ${f}
+                    ${x}
                   </p>
                 </div>
               </div>
               <div class="advert-wishes ${e.way==="exchange"?"":"is-hidden"}">
                 <h2 class="advert-wishes__title">Побажання</h2>
                 <p class="advert-wishes__text">
-                 ${p||'<span class="advert-wishes__text_default">Немає побажань</span>'}
+                 ${i||'<span class="advert-wishes__text_default">Немає побажань</span>'}
                 </p>
               </div>
             </div>
-          </div>`}const C={translateWrapp:document.querySelector(".translate-wrapper_variable"),translate:document.querySelector(".translate"),translateInput:document.querySelector(".translate__input"),main:document.querySelector("main"),advert:document.querySelector(".advert")};let R;async function F(){const e=B("id");R=await M(e),P()}function P(e=T,t=j){const r=t(R,e);C.advert.innerHTML=r,G()}function G(){document.querySelector(".advert-properties__more-btn").addEventListener("click",W)}function J(e){const{alergenicity:t,humidity:r,image:s,keeper:n,lifeDuration:d,light:c,size:_,temperature:v,way:u,translated:m,createdAt:h,attention:p,survive:o,state:g,flowering:f,growthRate:$,edible:x,_id:w}=e,y=q(h,"en"),{username:b,email:E,avatar:D,adress:z,phone:S}=n,{name:l,wish:A,description:L}=m;return{light:i(c),alergenicity:i(t),humidity:i(r),size:i(_),temperature:i(v),lifeDuration:i(d),way:i(u),attention:i(p),survive:i(o),state:i(g),flowering:i(f),growthRate:i($),edible:i(x),image:s,name:l==null?void 0:l.transEng,wish:A==null?void 0:A.transEng,description:L==null?void 0:L.transEng,username:b,email:E,avatar:D,adress:z,phone:S,date:y,id:w}}function i(e){return e||"not specified"}function K(e){const{translated:t,alergenicity:r,humidity:s,image:n,keeper:d,lifeDuration:c,light:_,size:v,temperature:u,way:m,createdAt:h,attention:p,survive:o,state:g,flowering:f,growthRate:$,edible:x,_id:w}=e,y=q(h),{username:b,email:E,avatar:D,adress:z,phone:S}=d,{name:l,wish:A,description:L}=t;return{light:a({light:_}),alergenicity:a({alergenicity:r}),humidity:a({humidity:s}),size:a({size:v}),temperature:a({temperature:u}),lifeDuration:a({lifeDuration:c}),way:a({way:m}),attention:a({attention:p}),survive:a({survive:o}),state:a({state:g}),flowering:a({flowering:f}),growthRate:a({growthRate:$}),edible:a({edible:x}),image:n,name:l==null?void 0:l.transUa,wish:A==null?void 0:A.transUa,description:L==null?void 0:L.transUa,username:b,email:E,avatar:D,adress:z,phone:S,date:y,id:w}}function a(e){const t=Object.keys(e)[0],r=e[t];return`${r}`!="undefined"?O[t][r]:"не вказано"}function N(e,t){const r=t(e),{light:s,alergenicity:n,humidity:d,size:c,temperature:_,lifeDuration:v,way:u,image:m,name:h,wish:p,description:o,username:g,email:f,avatar:$,adress:x,phone:w,date:y,attention:b,survive:E,state:D,flowering:z,growthRate:S,edible:l}=r;return`
+          </div>`}function V(e,t){const s=t(e),{light:r,alergenicity:d,humidity:n,size:c,temperature:_,lifeDuration:v,way:u,image:m,name:h,wish:i,description:a,username:$,email:x,avatar:g,adress:f,phone:w,date:y,attention:b,survive:E,state:S,flowering:A,growthRate:L,edible:q}=s;return`
           <div class="container advert__container">
             <h1 hidden>Advert</h1>
             <div class="advert-maininfo">
-              ${I(m)}
+              ${D(m)}
               <div>
                 <p class="advert-maininfo__date">${y}</p>
                 <h2 class="advert-maininfo__title">${h}</h2>
@@ -171,10 +171,10 @@ import{h as V}from"./hiddenContentLoader-RgNmBLIv.js";import{a as M}from"./api-C
                 </div>
                 <ul class="advert-properties">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Light: ${s}</p>
+                    <p class="advert-properties__text">Light: ${r}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Humidity: ${d}</p>
+                    <p class="advert-properties__text">Humidity: ${n}</p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">Size: ${c}</p>
@@ -186,7 +186,7 @@ import{h as V}from"./hiddenContentLoader-RgNmBLIv.js";import{a as M}from"./api-C
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Allergenicity: <span>${n}</span>
+                      Allergenicity: <span>${d}</span>
                     </p>
                   </li>
                   <li class="advert-properties__item">
@@ -207,20 +207,20 @@ import{h as V}from"./hiddenContentLoader-RgNmBLIv.js";import{a as M}from"./api-C
                     <p class="advert-properties__text">Vitality: ${E}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">State: ${D}</p>
+                    <p class="advert-properties__text">State: ${S}</p>
                   </li>
                 </ul>
               </li>
               <li>
                 <ul class="advert-properties__more-list">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Growth rate: ${S}</p>
+                    <p class="advert-properties__text">Growth rate: ${L}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Flowering: ${z}</p>
+                    <p class="advert-properties__text">Flowering: ${A}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Edible: ${l}</p>
+                    <p class="advert-properties__text">Edible: ${q}</p>
                   </li>
                 </ul>
               </li>
@@ -234,30 +234,30 @@ import{h as V}from"./hiddenContentLoader-RgNmBLIv.js";import{a as M}from"./api-C
             <div class="advert-discreption">
               <h2 class="advert-discreption__title">Description</h2>
               <p class="advert-discreption__text">
-                ${o||'<span class="advert-discreption__text_default">There is no description</span>'}
+                ${a||'<span class="advert-discreption__text_default">There is no description</span>'}
               </p>
             </div>
             <div class="advert-user">
               <div class="advert-userinfo">
                 <div class="advert-userinfo__profile-img">
-                  ${k($)}
+                  ${I(g)}
                 </div>
                 <div class="advert-userinfo__userinfos">
-                  <h2 class="advert-userinfo__name">${g}</h2>
-                  <p class="advert-userinfo__adress">${x}</p>
+                  <h2 class="advert-userinfo__name">${$}</h2>
+                  <p class="advert-userinfo__adress">${f}</p>
                   <p class="advert-userinfo__phone">
                     ${w}
                   </p>
                   <p class="advert-userinfo__email">
-                    ${f}
+                    ${x}
                   </p>
                 </div>
               </div>
               <div class="advert-wishes ${e.way==="exchange"?"":"is-hidden"}">
                 <h2 class="advert-wishes__title">Wish</h2>
                 <p class="advert-wishes__text">
-                 ${p||"There are no wishes"}
+                 ${i||"There are no wishes"}
                 </p>
               </div>
             </div>
-          </div>`}const Q={setUkrainian:X,setEnglish:Y,setOriginal:Z};function X(){P(K)}function Y(){P(J,N)}function Z(){P()}await F();H(Q);V();
+          </div>`}const W={translateWrapp:document.querySelector(".translate-wrapper_variable"),translate:document.querySelector(".translate"),translateInput:document.querySelector(".translate__input"),main:document.querySelector("main"),advert:document.querySelector(".advert")};let l;const p={};async function C(){const e=B("id");l=await O(e),console.log(l),G(l.lang),p.set()}function o(e=z,t=P){const s=t(l,e);W.advert.innerHTML=s,F()}function F(){document.querySelector(".advert-properties__more-btn").addEventListener("click",R)}function G(e){if(e==="en"){p.set=o.bind(null,k,V);return}p.set=o.bind(null,z,P)}const j={setUkrainian:J,setEnglish:K,setOriginal:N};function J(){o(T)}function K(){o(U,V)}function N(){p.set()}await C();H(j);M();
