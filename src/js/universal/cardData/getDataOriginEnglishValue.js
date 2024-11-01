@@ -1,6 +1,6 @@
 import { redactDate } from "../redactDate";
 
-export function getEnglishDataValue(info) {
+export function getDataOriginEnglishValue(info) {
   const {
     alergenicity,
     humidity,
@@ -8,10 +8,12 @@ export function getEnglishDataValue(info) {
     keeper,
     lifeDuration,
     light,
+    name,
     size,
     temperature,
     way,
-    translated,
+    wish,
+    description,
     createdAt,
     attention,
     survive,
@@ -22,9 +24,7 @@ export function getEnglishDataValue(info) {
     _id: id,
   } = info;
   const date = redactDate(createdAt, "en");
-
   const { username, email, avatar, adress, phone } = keeper;
-  const { name, wish, description } = translated;
 
   const result = {
     light: processProperty(light),
@@ -41,9 +41,9 @@ export function getEnglishDataValue(info) {
     growthRate: processProperty(growthRate),
     edible: processProperty(edible),
     image,
-    name: name?.transEng,
-    wish: wish?.transEng,
-    description: description?.transEng,
+    name,
+    wish,
+    description,
     username,
     email,
     avatar,

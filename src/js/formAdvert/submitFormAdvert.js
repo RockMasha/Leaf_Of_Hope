@@ -12,8 +12,11 @@ export async function submitFormAdvert(event) {
   setInProgressLoader();
 
   try {
-    const data = createFormData(root.form);
     const id = getValueSrcParams("id");
+    const data = createFormData(root.form);
+    if (!data.get("lang")) {
+      data.set("lang", "ua");
+    }
     if (id) {
       await changeAdvert(id, data);
     } else {
@@ -22,9 +25,8 @@ export async function submitFormAdvert(event) {
     }
     window.location.href = "profile.html";
   } catch (error) {
-    console.log(error);
     ableFormSubmit();
-    root.error.textContent = "Неравельно ввід";
+    root.error.textContent = `Неравельно ввід: ${error.response.data.message}`;
   } finally {
     removeInProgressLoader();
   }

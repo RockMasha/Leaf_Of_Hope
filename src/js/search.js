@@ -10,6 +10,7 @@ import { setSwitchVariableLanguage } from "./universal/translate/variable/setSwi
 import { setSwitchLanguage } from "./universal/translate/original/setSwitchLanguage";
 import { settings } from "./search/translate/settings";
 import { langs } from "./search/translate/langs";
+import { advertCard } from "./search/advertsCard";
 
 modalCheck();
 window.addEventListener("resize", modalCheck);
@@ -18,7 +19,6 @@ root.closeModalBtn.addEventListener("click", closeModal);
 root.btnMore.addEventListener("click", changeMoreFilter);
 root.resetBtn.addEventListener("click", resetForm);
 
-const advertCard = new SearchCards(root.leftSide, root.form);
 advertCard.addSubmitEvent();
 advertCard.showOpenCard();
 

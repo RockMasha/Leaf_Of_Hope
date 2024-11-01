@@ -4,27 +4,19 @@ import { getToken } from "../token/getToken";
 axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
 
 export async function authorization(user) {
-  try {
-    const answer = await axios.post("/api/auth/signup", user, {
-      headers: { "Content-Type": "multipart/form-data" },
-    });
-    return answer.data;
-  } catch (error) {
-    console.log(error);
-  }
+  const answer = await axios.post("/api/auth/signup", user, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+  return answer.data;
 }
 export async function redactUser(user, token = getToken()) {
-  try {
-    const answer = await axios.put("/api/auth/", user, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-        Authorization: token,
-      },
-    });
-    return answer.data;
-  } catch (error) {
-    console.log(error);
-  }
+  const answer = await axios.put("/api/auth/", user, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+      Authorization: token,
+    },
+  });
+  return answer.data;
 }
 export async function getInfo(token = getToken()) {
   try {
@@ -115,16 +107,12 @@ export async function getOneAdvert(id) {
 }
 
 export async function postAdvert(info, token = getToken()) {
-  try {
-    const answer = await axios.post("/api/advert/", info, {
-      headers: {
-        Authorization: token,
-      },
-    });
-    return answer.data;
-  } catch (error) {
-    console.log(error);
-  }
+  const answer = await axios.post("/api/advert/", info, {
+    headers: {
+      Authorization: token,
+    },
+  });
+  return answer.data;
 }
 export async function deleteAdvert(id) {
   const token = getToken();
@@ -141,16 +129,12 @@ export async function deleteAdvert(id) {
 }
 export async function changeAdvert(id, data) {
   const token = getToken();
-  try {
-    const answer = await axios.put(`/api/advert/${id}`, data, {
-      headers: {
-        Authorization: token,
-      },
-    });
-    return answer.data;
-  } catch (error) {
-    console.log(error);
-  }
+  const answer = await axios.put(`/api/advert/${id}`, data, {
+    headers: {
+      Authorization: token,
+    },
+  });
+  return answer.data;
 }
 
 function getFilterParams(params) {

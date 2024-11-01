@@ -21,7 +21,7 @@ export async function submitUser(event) {
     }
     window.location.href = "profile.html";
   } catch (error) {
-    root.error.textContent = "Неравельно ввід або такий юзер вже є";
+    root.error.textContent = `Неравельно ввід: ${error.response.data.message}`;
     ableFormSubmit();
   } finally {
     removeInProgressLoader();

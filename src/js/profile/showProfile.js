@@ -15,7 +15,6 @@ export async function showProfile(user) {
   }
 
   showUserInfo(user);
-  root.advertsTitle.textContent = "Мої оголошення:";
   const cards = new ProfileCard(
     root.profileAdverts,
     getUserAdverts,

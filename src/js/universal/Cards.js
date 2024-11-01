@@ -22,6 +22,7 @@ export class Cards {
     this.max_page;
     this.getCard = temple;
     this.request = request;
+    this.lastCardInfo = [];
   }
 
   async showMainCard(params) {
@@ -32,7 +33,6 @@ export class Cards {
     if (this.page >= this.max_page) {
       return;
     }
-
     this.#nextPage();
     this.showCards();
   }
@@ -41,7 +41,6 @@ export class Cards {
     if (this.page <= 1) {
       return;
     }
-
     this.#backPage();
     this.showCards();
   }
@@ -50,7 +49,6 @@ export class Cards {
     if (this.page <= 1) {
       return;
     }
-
     this.#firstPage();
     this.showCards();
   }
@@ -59,7 +57,6 @@ export class Cards {
     if (this.page === this.max_page) {
       return;
     }
-
     this.#lastPage();
     this.showCards();
   }
@@ -78,6 +75,10 @@ export class Cards {
     this.showCards();
   }
 
+  async showSomeCards() {
+    this.#setCardsInPage(this.lastCardInfo);
+  }
+
   async showCards(params = {}) {
     this.#setLoaderCard();
     this.disablePagination();
@@ -93,15 +94,21 @@ export class Cards {
       const answer = await this.request(this.page, params);
       this.#setMaxPage(answer.tottal);
       const cardsArr = answer.result;
-      if (cardsArr.length === 0) {
-        this.setDefaultElement();
-        return false;
-      }
-      const cardsEl = cardsArr.map((advert) => this.getCard(advert));
-      this.listCardsEl.innerHTML = cardsEl.join("");
+      this.#setLastCardInfo(cardsArr);
+      const result = this.#setCardsInPage(cardsArr);
+      return result;
     } catch (error) {
       return false;
     }
+  }
+
+  #setCardsInPage(cardsArr) {
+    if (cardsArr.length === 0) {
+      this.setDefaultElement();
+      return false;
+    }
+    const cardsEl = cardsArr.map((advert) => this.getCard(advert));
+    this.listCardsEl.innerHTML = cardsEl.join("");
     return true;
   }
 
@@ -123,6 +130,10 @@ export class Cards {
 
   #setMaxPage(maxAdvert) {
     this.max_page = Math.ceil(maxAdvert / this.maxAdvertInPage);
+  }
+
+  #setLastCardInfo(answer) {
+    this.lastCardInfo = answer;
   }
 
   setPagination() {

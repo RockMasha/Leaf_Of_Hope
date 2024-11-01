@@ -1,4 +1,4 @@
-import { getAdvertCardInner } from "../universal/getAdvertCardInner";
+import { getAdvertCardInner } from "../universal/getAdvertCardInner/getAdvertCardInner";
 
 export const getProfileCard = (info) => {
   const id = info._id;
