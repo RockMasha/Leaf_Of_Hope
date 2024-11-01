@@ -1,8 +1,8 @@
-import { searchCard } from "../searchCard";
+import { profileCards } from "../profileCards";
 
 function createSetLanguage() {
   return () => {
-    searchCard.showSomeCards();
+    profileCards.showSomeCards();
   };
 }
 

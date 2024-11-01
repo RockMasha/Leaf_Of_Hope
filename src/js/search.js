@@ -1,6 +1,5 @@
 import { modalCheck } from "./search/modalCheck";
 import { root } from "./search/root";
-import { SearchCards } from "./search/SearchCards";
 import { changeMoreFilter } from "./search/changeMoreFilter";
 import { closeModal, openModal } from "./search/toggleModal";
 import { hiddenContentLoader } from "./universal/hiddenContentLoader";
@@ -10,6 +9,7 @@ import { setSwitchVariableLanguage } from "./universal/translate/variable/setSwi
 import { setSwitchLanguage } from "./universal/translate/original/setSwitchLanguage";
 import { settings } from "./search/translate/settings";
 import { langs } from "./search/translate/langs";
+import { searchCard } from "./search/searchCard";
 
 modalCheck();
 window.addEventListener("resize", modalCheck);
@@ -18,9 +18,8 @@ root.closeModalBtn.addEventListener("click", closeModal);
 root.btnMore.addEventListener("click", changeMoreFilter);
 root.resetBtn.addEventListener("click", resetForm);
 
-const advertCard = new SearchCards(root.leftSide, root.form);
-advertCard.addSubmitEvent();
-advertCard.showOpenCard();
+searchCard.addSubmitEvent();
+searchCard.showOpenCard();
 
 setSwitchLanguage(settings);
 setSwitchVariableLanguage(langs);

@@ -1,5 +1,5 @@
 import { root } from "./root";
-import { closeModal, openModal } from "./toggleModal";
+import { closeModal } from "./toggleModal";
 
 let isNotPhone = false;
 

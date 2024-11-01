@@ -1,6 +1,6 @@
 <section class="change-profile">
   <div class="container change-profile__container">
-    <h1 class="change-profile__title">Редагування</h1>
+    <h1 class="change-profile__title" key="mainTitle">Редагування</h1>
     <form class="change-profile-form">
       <div class="change-profile-form__main-block">
         <label class="change-profile-form__img">
@@ -21,11 +21,12 @@
         <ul class="change-profile-form__list">
           <li class="change-profile-form__item">
             <label class="change-profile-form__enter">
-              Ім'я
+              <span key="nameText">Ім'я</span>
               <input
                 class="change-profile-form__input change-profile-form__input_name"
+                key="namePlaceholder"
                 type="text"
-                placeholder="Ведіть ім'я"
+                placeholder="Введіть ім'я"
                 name="username"
                 required
               />
@@ -33,11 +34,12 @@
           </li>
           <li class="change-profile-form__item">
             <label class="change-profile-form__enter">
-              Місце проживання
+              <span key="locationText">Місце проживання</span>
               <input
                 class="change-profile-form__input change-profile-form__input_location"
+                key="locationPlaceholder"
                 type="text"
-                placeholder="Ведіть місце проживання"
+                placeholder="Введіть місце проживання"
                 name="adress"
                 required
               />
@@ -45,11 +47,12 @@
           </li>
           <li class="change-profile-form__item">
             <label class="change-profile-form__enter">
-              Телефон
+              <span key="phoneText">Телефон</span>
               <input
                 class="change-profile-form__input change-profile-form__input_phone"
+                key="phonePlaceholder"
                 type="tel"
-                placeholder="Ведіть номер телефону"
+                placeholder="Введіть номер телефону"
                 name="phone"
                 required
             /></label>
@@ -66,7 +69,7 @@
           </li>
         </ul>
       </div>
-      <button class="change-profile-form__btn-submit" type="submit">
+      <button class="change-profile-form__btn-submit" key="submitText" type="submit">
         Зберегти
       </button>
     </form>

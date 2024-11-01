@@ -21,7 +21,7 @@ function getUserEL(user) {
             <p class="user-info__text bold">${phone}</p>
             <p class="user-info__text bold">${email}</p>
           </div>
-          <button class="user-info__logout">Вийти</button>
+          <button class="user-info__logout" key="logoutText">Вийти</button>
         </div>
         <a class="user-info__redact-link" href="formProfile.html?redact=true">
           <img

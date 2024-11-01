@@ -1,4 +1,4 @@
-import { getAdvertCardInner } from "../universal/getAdvertCardInner";
+import { getAdvertCardInner } from "../universal/getAdvertCardInner/getAdvertCardInner";
 
 export function getCard(info) {
   return `

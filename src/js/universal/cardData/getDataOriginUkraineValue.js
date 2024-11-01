@@ -1,7 +1,7 @@
 import { redactDate } from "../redactDate";
 import { cardData } from "./cardData";
 
-export function getDataValue(info) {
+export function getDataOriginUkraineValue(info) {
   const {
     alergenicity,
     humidity,
@@ -61,5 +61,7 @@ function translateProperty(item) {
   const name = Object.keys(item)[0];
   const property = item[name];
 
-  return `${property}` !== "undefined" ? cardData[name][property] : "не вказано";
+  return `${property}` !== "undefined"
+    ? cardData[name][property]
+    : "не вказано";
 }

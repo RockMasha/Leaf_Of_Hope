@@ -1,26 +1,22 @@
 .formAdvert {
   position: relative;
-  padding: 55px 0 34px;
+  padding: 15px 0 34px;
   @media (min-width: 768px) {
-    padding: 60px 0 41px;
+    padding: 15px 0 41px;
   }
   @media (min-width: 1440px) {
-    padding: 120px 0 98px;
+    padding: 40px 0 98px;
   }
   &__error {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
     font-size: 14px;
     font-weight: 600;
     color: $color-red;
+    text-align: center;
+    word-break: break-word;
     @media (min-width: 768px) {
       font-size: 22px;
     }
     @media (min-width: 1440px) {
-      bottom: 50px;
       font-size: 34px;
     }
   }
@@ -28,14 +24,17 @@
 
 .form-advert {
   &__flex-block {
+    margin-top: 45px;
     margin-bottom: 20px;
     @media (min-width: 768px) {
       display: flex;
       gap: 15px;
+      margin-top: 50px;
       margin-bottom: 31px;
     }
     @media (min-width: 1440px) {
       gap: 53px;
+      margin-top: 100px;
       margin-bottom: 57px;
     }
   }
@@ -316,6 +315,7 @@
     left: 100%;
     transform: translateX(-100%);
     padding: 12px 42px;
+    margin-bottom: 20px;
     font-size: 20px;
     color: $color-text-line;
     background-color: $color-card;
@@ -323,10 +323,12 @@
     border-radius: 25px;
     @media (min-width: 768px) {
       padding: 18px 66px;
+      margin-bottom: 30px;
       font-size: 32px;
     }
     @media (min-width: 1440px) {
       padding: 25px 103px;
+      margin-bottom: 50px;
       font-size: 40px;
     }
   }

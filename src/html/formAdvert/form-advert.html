@@ -1,0 +1,202 @@
+<h1 hidden>створити оголошення</h1>
+<div class="form-advert__flex-block">
+  <label class="form-advert__img">
+    <input class="form-advert__file" type="file" name="image" />
+    <div class="form-advert__svg-wrapp img-wrapp">
+      <img
+        class="form-advert__svg"
+        src="./img/formAdvert/plant.svg"
+        alt="plant"
+      />
+    </div>
+  </label>
+  <div class="form-advert__flex-block-small">
+    <input
+      class="form-advert__name"
+      key="namePlaceholder"
+      type="text"
+      placeholder="Введіть назву рослини"
+      name="name"
+      required
+    />
+    <div class="form-advert-way">
+      <label class="form-advert-way__label">
+        <input
+          class="form-advert-way__input form-advert-way__input_exchange"
+          type="radio"
+          name="way"
+          id="exchange"
+          value="exchange"
+          checked
+        />
+        <span key="exchangeWayText">Обмін</span>
+      </label>
+      <label class="form-advert-way__label">
+        <input
+          class="form-advert-way__input form-advert-way__input_give"
+          type="radio"
+          name="way"
+          id="give"
+          value="give"
+        />
+        <span key="giveWayText">Віддача</span>
+      </label>
+    </div>
+    <div
+      class="form-advert__textarea-field form-advert__textarea-field_description"
+    >
+      <textarea
+        class="form-advert__description form-advert__textarea"
+        key="descriptionPlaceholder"
+        placeholder="Опишіть вашу рослинку"
+        id="description"
+        name="description"
+      ></textarea>
+    </div>
+  </div>
+</div>
+<div class="form-advert__opinion-of-plant">
+  <ul class="form-advert__opinion-block-one">
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="lightText">Освітлення</span>
+        <select class="form-advert-characteristic-select" name="light">
+          <option key="lightManyText" value="many">багато</option>
+          <option key="lightNormalText" value="normal">помірно</option>
+          <option key="lightLittleText" value="little">мало</option>
+        </select>
+      </label>
+    </li>
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="temperatureText">Темпаратура</span>
+        <select class="form-advert-characteristic-select" name="temperature">
+          <option key="temperatureLowText" value="low">холоднолюбива</option>
+          <option key="temperatureNormalText" value="normal">нейтральна</option>
+          <option key="temperatureHightText" value="hight">теплолюбна</option>
+        </select>
+      </label>
+    </li>
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="sizeText">Розмір</span>
+        <select class="form-advert-characteristic-select" name="size">
+          <option key="sizeSmallText" value="small">малий</option>
+          <option key="sizeMediumText" value="medium">середній</option>
+          <option key="sizeLargeText" value="large">великий</option>
+        </select>
+      </label>
+    </li>
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="attentionText">Затрата уваги</span>
+        <select class="form-advert-characteristic-select" name="attention">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="attentionLowText" value="little">низька</option>
+          <option key="attentionNormalText" value="normal">середня</option>
+          <option key="attentionHightText" value="many">висока</option>
+        </select>
+      </label>
+    </li>
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="surviveText">Живучисть</span>
+        <select class="form-advert-characteristic-select" name="survive">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="surviveLowText" value="low">низька</option>
+          <option key="surviveNormalText" value="normal">середня</option>
+          <option key="surviveHightText" value="high">висока</option>
+        </select>
+      </label>
+    </li>
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="growthRateText">Темп зростання</span>
+        <select class="form-advert-characteristic-select" name="growthRate">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="growthRateLowText" value="low">низька</option>
+          <option key="growthRateNormalText" value="normal">середня</option>
+          <option key="growthRateHightText" value="high">висока</option>
+        </select>
+      </label>
+    </li>
+  </ul>
+  <ul class="form-advert__opinion-block-two">
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="lifeDurationText">Тривалісь життя</span>
+        <select class="form-advert-characteristic-select" name="lifeDuration">
+          <option key="lifeDurationAnnualText" value="annual">однорічні</option>
+          <option key="lifeDurationBiennialText" value="biennial">
+            дворічні
+          </option>
+          <option key="lifeDurationPerennialText" value="perennial">
+            довгожителі
+          </option>
+        </select>
+      </label>
+    </li>
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="alergenicityText">Алергійність</span>
+        <select class="form-advert-characteristic-select" name="alergenicity">
+          <option key="alergenicityTrueText" value="true">наявна</option>
+          <option key="alergenicityFalseText" value="false">відсутння</option>
+        </select>
+      </label>
+    </li>
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="humidityText">Вологість</span>
+        <select class="form-advert-characteristic-select" name="humidity">
+          <option key="humidityHighText" value="high">багато</option>
+          <option key="humidityNormalText" value="normal">помірно</option>
+          <option key="humidityLowText" value="low">мало</option>
+        </select>
+      </label>
+    </li>
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="stateText">Стан</span>
+        <select class="form-advert-characteristic-select" name="state">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="stateGoodText" value="good">добре</option>
+          <option key="stateEnoughText" value="enough">достатньо</option>
+          <option key="stateBadText" value="bad">погано</option>
+        </select>
+      </label>
+    </li>
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="floweringText">Цвітіння</span>
+        <select class="form-advert-characteristic-select" name="flowering">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="floweringTrueText" value="true">так</option>
+          <option key="floweringFalseText" value="false">ні</option>
+        </select>
+      </label>
+    </li>
+    <li class="form-advert-characteristic">
+      <label class="form-advert-characteristic__signature"
+        ><span key="edibleText">Їстівна</span>
+        <select class="form-advert-characteristic-select" name="edible">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="edibleTrueText" value="true">так</option>
+          <option key="edibleFalseText" value="false">ні</option>
+        </select>
+      </label>
+    </li>
+  </ul>
+</div>
+<div class="form-advert__textarea-field form-advert__textarea-field_wish">
+  <textarea
+    class="form-advert__wish form-advert__textarea"
+    key="wishPlaceholder"
+    placeholder="На що б ви хотіли обміняти цю рослину?"
+    name="wish"
+  ></textarea>
+</div>
+<button class="form-advert__btn-submit" key="submitText" type="submit">
+  Створити
+</button>
+<p class="formAdvert__error"></p>

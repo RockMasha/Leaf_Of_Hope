@@ -1,6 +1,6 @@
 import { getEnglishDataValue } from "../../universal/cardData/getEnglishDataValue";
 import { getUkraineDataValue } from "../../universal/cardData/getUkraineDataValue";
-import { setAdvert } from "../createAdvert";
+import { originalAdvert, setAdvert } from "../createAdvert";
 import { getEnglishAdvert } from "../getEnglishAdvert";
 
 export const langs = {
@@ -18,5 +18,5 @@ function setEnglish() {
 }
 
 function setOriginal() {
-  setAdvert();
+  originalAdvert.set();
 }
