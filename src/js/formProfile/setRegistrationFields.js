@@ -1,26 +1,40 @@
+import { changeSettingsValue } from "../universal/translate/universal/changeSettingsValue";
 import { root } from "./root";
+import { settings } from "./translate/settings";
 
 export function setRegistrationFields() {
   root.password.innerHTML = `
-              Пароль
+              <span key="passwordText">Пароль</span>
               <input
                 class="change-profile-form__input change-profile-form__input_password"
+                key="passwordPlaceholder"
                 type="password"
-                placeholder="Ведіть пароль"
+                placeholder="Введіть пароль"
                 name="password"
                 required
               />`;
 
   root.email.innerHTML = `
-              Пошта
+              <span key="emailText">Пошта</span>
               <input
                 class="change-profile-form__input change-profile-form__input_email"
+                key="emailPlaceholder"
                 type="email"
-                placeholder="Ведіть ваш емейл"
+                placeholder="Введіть ваш емейл"
                 name="email"
                 required
               />`;
 
   root.title.textContent = "Реєстрація";
   root.btnSubmit.textContent = "Cтворити";
+
+  const titleData = {
+    property: "mainTitle",
+    ua: "Реєстрація",
+    en: "Registration",
+  };
+  changeSettingsValue(settings, titleData);
+
+  const submitData = { property: "submitText", ua: "Cтворити", en: "Create" };
+  changeSettingsValue(settings, submitData);
 }

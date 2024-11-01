@@ -1,4 +1,6 @@
 import { root } from "./root";
 import { SearchCards } from "./SearchCards";
 
-export const searchCard = new SearchCards(root.leftSide, root.form);
+export const searchCard = root.leftSide
+  ? new SearchCards(root.leftSide, root.form)
+  : {};
