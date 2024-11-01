@@ -1,8 +1,8 @@
-import { advertCard } from "../advertsCard";
+import { searchCard } from "../searchCard";
 
 function createSetLanguage() {
   return () => {
-    advertCard.showSomeCards();
+    searchCard.showSomeCards();
   };
 }
 

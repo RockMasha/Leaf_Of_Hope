@@ -1,14 +1,17 @@
-export const langs = {
-    setUkrainian,
-    setEnglish,
-    setOriginal,
+import { profileCards } from "../profileCards";
+
+function createSetLanguage() {
+  return () => {
+    profileCards.showSomeCards();
   };
-  
-  function setUkrainian() {
-    
-  }
-  
-  function setEnglish() {}
-  
-  function setOriginal() {}
-  
+}
+
+const setUkrainian = createSetLanguage();
+const setEnglish = createSetLanguage();
+const setOriginal = createSetLanguage();
+
+export const langs = {
+  setUkrainian,
+  setEnglish,
+  setOriginal,
+};
