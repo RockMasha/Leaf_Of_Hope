@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Create or edit an advert" />
     <title>Leaf_Of_Hope</title>
-    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedFive-BqOGQ7ue.js"></script>
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-CJZyqsh0.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/showPhoto-Dqlw9-i9.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-BMUXg3mB.js">
+    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedFive-BbW4mvI1.js"></script>
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-Bvpoq5JC.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/changeSettingsValue-79FUIYGn.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-CZvNR4Wc.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getValueSrcParams-BMgebK2A.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/propertiesSettings-B1L4uMac.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setInProgressLoader-BLew8mDa.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getUkraineDataValue-jTDJ14QS.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createFormObj-BbTY6VS_.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/showSigninModal-DZaGpdzE.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-oS9WtCGq.js">
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-BXFcw70M.css">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setInProgressLoader-BvJ9Zrz-.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getUkraineDataValue-BN_FPkab.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createFormObj-D7ulFSlZ.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-C6bkzce6.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/showSigninModal-C2c1EDNa.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/showPhoto-BRLbcwku.js">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-DGE8wFF-.css">
   </head>
   <body>
     <div class="content-loader-wrapper" active>
@@ -25,35 +26,48 @@
 
     <div class="modal-wrapper is-hidden">
   <div class="signin-modal modal">
-    <h2 class="signin-modal__title">Вхід</h2>
+    <h2 class="signin-modal__title" key="singinModalTitle">Вхід</h2>
     <form class="signin-modal-form">
       <div class="signin-modal-form__enter-block">
         <label class="signin-modal-form__enter">
-          Пошта
+          <span key="singinModalEmail">Пошта</span>
           <input
             class="signin-modal-form__input"
+            key="singinModalPasswordEmail"
             type="email"
-            placeholder="Ведіть ваш емейл"
+            placeholder="Введіть ваш емейл"
             name="email"
             required
         /></label>
         <label class="signin-modal-form__enter">
-          Пароль
+          <span key="singinModalPassword">Пароль</span>
           <input
             class="signin-modal-form__input"
+            key="singinModalPasswordPlaceholder"
             type="password"
-            placeholder="Ведіть пароль"
+            placeholder="Введіть пароль"
             name="password"
             required
           />
         </label>
       </div>
-      <button class="signin-modal-form__btn-submit" type="submit" aria-label="button sign in">
+      <button
+        class="signin-modal-form__btn-submit"
+        key="singinModalSubmit"
+        type="submit"
+        aria-label="button sign in"
+      >
         Увійти
       </button>
     </form>
     <p class="signin-modal__error"></p>
-    <a class="signin-modal__link" href="formProfile.html" aria-label="to register">Зареєструватись</a>
+    <a
+      class="signin-modal__link"
+      key="singinModalLink"
+      href="formProfile.html"
+      aria-label="to register"
+      >Зареєструватись</a
+    >
   </div>
 </div>
 
@@ -95,7 +109,7 @@
       <section class="formAdvert">
         <div class="container">
           <form class="form-advert">
-            <div class="trannslate-container container">
+            <div class="translate-container container">
   <div class="translate-wrapper">
     <label class="translate">
       <input

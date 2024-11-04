@@ -1,4 +1,4 @@
-import{h as M}from"./setCurrentLanguage-CJZyqsh0.js";import{a as O}from"./api-BMUXg3mB.js";import{g as k,a as z,b as T,c as U}from"./getUkraineDataValue-jTDJ14QS.js";import{g as B}from"./getValueSrcParams-BMgebK2A.js";import{s as H}from"./setSwitchVariableLanguage-CdRF62D8.js";function R(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function D(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
+import{h as M}from"./setCurrentLanguage-Bvpoq5JC.js";import{a as O}from"./api-CZvNR4Wc.js";import{g as k,a as z,b as T,c as U}from"./getUkraineDataValue-BN_FPkab.js";import{g as B}from"./getValueSrcParams-BMgebK2A.js";import{s as H}from"./setSwitchVariableLanguage-BiSswjnb.js";function R(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function D(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
             <picture class="advert-maininfo__img">
               <source
                 srcset="
@@ -56,30 +56,30 @@ import{h as M}from"./setCurrentLanguage-CJZyqsh0.js";import{a as O}from"./api-BM
           alt="plant"
           loading="lazy"
         />
-      </picture>`}function P(e,t){const s=t(e),{light:r,alergenicity:d,humidity:n,size:c,temperature:_,lifeDuration:v,way:u,image:m,name:h,wish:i,description:a,username:$,email:x,avatar:g,adress:f,phone:w,date:y,attention:b,survive:E,state:S,flowering:A,growthRate:L,edible:q}=s;return`
+      </picture>`}function P(e,t){const s=t(e),{light:r,alergenicity:d,humidity:o,size:n,temperature:c,lifeDuration:_,way:v,image:u,name:m,wish:i,description:a,username:h,email:$,avatar:x,adress:g,phone:f,date:w,attention:y,survive:b,state:E,flowering:S,growthRate:A,edible:L}=s;return`
           <div class="container advert__container">
             <h1 hidden>Оголошення</h1>
             <div class="advert-maininfo">
-              ${D(m)}
+              ${D(u)}
               <div>
-                <p class="advert-maininfo__date">${y}</p>
-                <h2 class="advert-maininfo__title">${h}</h2>
+                <p class="advert-maininfo__date">${w}</p>
+                <h2 class="advert-maininfo__title">${m}</h2>
                 <div class="advert-maininfo-way">
-                  <p class="advert-maininfo-way__text">${u}</p>
+                  <p class="advert-maininfo-way__text">${v}</p>
                 </div>
                 <ul class="advert-properties">
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">Освітлення: ${r}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Вологість: ${n}</p>
+                    <p class="advert-properties__text">Вологість: ${o}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Розмір: ${c}</p>
+                    <p class="advert-properties__text">Розмір: ${n}</p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Тривальсть життя: <span>${v}</span>
+                      Тривальсть життя: <span>${_}</span>
                     </p>
                   </li>
                   <li class="advert-properties__item">
@@ -89,7 +89,7 @@ import{h as M}from"./setCurrentLanguage-CJZyqsh0.js";import{a as O}from"./api-BM
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Темпаратура: <span>${_}</span>
+                      Темпаратура: <span>${c}</span>
                     </p>
                   </li>
                 </ul>
@@ -99,26 +99,26 @@ import{h as M}from"./setCurrentLanguage-CJZyqsh0.js";import{a as O}from"./api-BM
               <li>
                 <ul class="advert-properties__more-list">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Затратва уваги: ${b}</p>
+                    <p class="advert-properties__text">Затратва уваги: ${y}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Живучість: ${E}</p>
+                    <p class="advert-properties__text">Живучість: ${b}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Стан: ${S}</p>
+                    <p class="advert-properties__text">Стан: ${E}</p>
                   </li>
                 </ul>
               </li>
               <li>
                 <ul class="advert-properties__more-list">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Темп Зростання: ${L}</p>
+                    <p class="advert-properties__text">Темп Зростання: ${A}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Цвітіння: ${A}</p>
+                    <p class="advert-properties__text">Цвітіння: ${S}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Їстівна: ${q}</p>
+                    <p class="advert-properties__text">Їстівна: ${L}</p>
                   </li>
                 </ul>
               </li>
@@ -138,16 +138,16 @@ import{h as M}from"./setCurrentLanguage-CJZyqsh0.js";import{a as O}from"./api-BM
             <div class="advert-user">
               <div class="advert-userinfo">
                 <div class="advert-userinfo__profile-img">
-                  ${I(g)}
+                  ${I(x)}
                 </div>
                 <div class="advert-userinfo__userinfos">
-                  <h2 class="advert-userinfo__name">${$}</h2>
-                  <p class="advert-userinfo__adress">${f}</p>
+                  <h2 class="advert-userinfo__name">${h}</h2>
+                  <p class="advert-userinfo__adress">${g}</p>
                   <p class="advert-userinfo__phone">
-                    ${w}
+                    ${f}
                   </p>
                   <p class="advert-userinfo__email">
-                    ${x}
+                    ${$}
                   </p>
                 </div>
               </div>
@@ -158,30 +158,30 @@ import{h as M}from"./setCurrentLanguage-CJZyqsh0.js";import{a as O}from"./api-BM
                 </p>
               </div>
             </div>
-          </div>`}function V(e,t){const s=t(e),{light:r,alergenicity:d,humidity:n,size:c,temperature:_,lifeDuration:v,way:u,image:m,name:h,wish:i,description:a,username:$,email:x,avatar:g,adress:f,phone:w,date:y,attention:b,survive:E,state:S,flowering:A,growthRate:L,edible:q}=s;return`
+          </div>`}function V(e,t){const s=t(e),{light:r,alergenicity:d,humidity:o,size:n,temperature:c,lifeDuration:_,way:v,image:u,name:m,wish:i,description:a,username:h,email:$,avatar:x,adress:g,phone:f,date:w,attention:y,survive:b,state:E,flowering:S,growthRate:A,edible:L}=s;return`
           <div class="container advert__container">
             <h1 hidden>Advert</h1>
             <div class="advert-maininfo">
-              ${D(m)}
+              ${D(u)}
               <div>
-                <p class="advert-maininfo__date">${y}</p>
-                <h2 class="advert-maininfo__title">${h}</h2>
+                <p class="advert-maininfo__date">${w}</p>
+                <h2 class="advert-maininfo__title">${m}</h2>
                 <div class="advert-maininfo-way">
-                  <p class="advert-maininfo-way__text">${u}</p>
+                  <p class="advert-maininfo-way__text">${v}</p>
                 </div>
                 <ul class="advert-properties">
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">Light: ${r}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Humidity: ${n}</p>
+                    <p class="advert-properties__text">Humidity: ${o}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Size: ${c}</p>
+                    <p class="advert-properties__text">Size: ${n}</p>
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Life duration: <span>${v}</span>
+                      Life duration: <span>${_}</span>
                     </p>
                   </li>
                   <li class="advert-properties__item">
@@ -191,7 +191,7 @@ import{h as M}from"./setCurrentLanguage-CJZyqsh0.js";import{a as O}from"./api-BM
                   </li>
                   <li class="advert-properties__item">
                     <p class="advert-properties__text">
-                      Temperature: <span>${_}</span>
+                      Temperature: <span>${c}</span>
                     </p>
                   </li>
                 </ul>
@@ -201,26 +201,26 @@ import{h as M}from"./setCurrentLanguage-CJZyqsh0.js";import{a as O}from"./api-BM
               <li>
                 <ul class="advert-properties__more-list">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Expenditure of attention: ${b}</p>
+                    <p class="advert-properties__text">Expenditure of attention: ${y}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Vitality: ${E}</p>
+                    <p class="advert-properties__text">Vitality: ${b}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">State: ${S}</p>
+                    <p class="advert-properties__text">State: ${E}</p>
                   </li>
                 </ul>
               </li>
               <li>
                 <ul class="advert-properties__more-list">
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Growth rate: ${L}</p>
+                    <p class="advert-properties__text">Growth rate: ${A}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Flowering: ${A}</p>
+                    <p class="advert-properties__text">Flowering: ${S}</p>
                   </li>
                   <li class="advert-properties__item">
-                    <p class="advert-properties__text">Edible: ${q}</p>
+                    <p class="advert-properties__text">Edible: ${L}</p>
                   </li>
                 </ul>
               </li>
@@ -240,16 +240,16 @@ import{h as M}from"./setCurrentLanguage-CJZyqsh0.js";import{a as O}from"./api-BM
             <div class="advert-user">
               <div class="advert-userinfo">
                 <div class="advert-userinfo__profile-img">
-                  ${I(g)}
+                  ${I(x)}
                 </div>
                 <div class="advert-userinfo__userinfos">
-                  <h2 class="advert-userinfo__name">${$}</h2>
-                  <p class="advert-userinfo__adress">${f}</p>
+                  <h2 class="advert-userinfo__name">${h}</h2>
+                  <p class="advert-userinfo__adress">${g}</p>
                   <p class="advert-userinfo__phone">
-                    ${w}
+                    ${f}
                   </p>
                   <p class="advert-userinfo__email">
-                    ${x}
+                    ${$}
                   </p>
                 </div>
               </div>
@@ -260,4 +260,4 @@ import{h as M}from"./setCurrentLanguage-CJZyqsh0.js";import{a as O}from"./api-BM
                 </p>
               </div>
             </div>
-          </div>`}const W={translateWrapp:document.querySelector(".translate-wrapper_variable"),translate:document.querySelector(".translate"),translateInput:document.querySelector(".translate__input"),main:document.querySelector("main"),advert:document.querySelector(".advert")};let l;const p={};async function C(){const e=B("id");l=await O(e),console.log(l),G(l.lang),p.set()}function o(e=z,t=P){const s=t(l,e);W.advert.innerHTML=s,F()}function F(){document.querySelector(".advert-properties__more-btn").addEventListener("click",R)}function G(e){if(e==="en"){p.set=o.bind(null,k,V);return}p.set=o.bind(null,z,P)}const j={setUkrainian:J,setEnglish:K,setOriginal:N};function J(){o(T)}function K(){o(U,V)}function N(){p.set()}await C();H(j);M();
+          </div>`}const W={translateWrapp:document.querySelector(".translate-wrapper_variable"),translate:document.querySelector(".translate"),translateInput:document.querySelector(".translate__input"),main:document.querySelector("main"),advert:document.querySelector(".advert")};let q;const l={};async function C(){const e=B("id");q=await O(e),G(q.lang),l.set()}function p(e=z,t=P){const s=t(q,e);W.advert.innerHTML=s,F()}function F(){document.querySelector(".advert-properties__more-btn").addEventListener("click",R)}function G(e){if(e==="en"){l.set=p.bind(null,k,V);return}l.set=p.bind(null,z,P)}const j={setUkrainian:J,setEnglish:K,setOriginal:N};function J(){p(T)}function K(){p(U,V)}function N(){l.set()}await C();H(j);M();

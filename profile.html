@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="User profile" />
     <title>Leaf_Of_Hope</title>
-    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedTwo-BkkRkC5u.js"></script>
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-CJZyqsh0.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-BMUXg3mB.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setInProgressLoader-BLew8mDa.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getUkraineDataValue-jTDJ14QS.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createFormObj-BbTY6VS_.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/showSigninModal-DZaGpdzE.js">
+    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedTwo-WzFCSADy.js"></script>
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-Bvpoq5JC.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-CZvNR4Wc.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setInProgressLoader-BvJ9Zrz-.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getUkraineDataValue-BN_FPkab.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createFormObj-D7ulFSlZ.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-C6bkzce6.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/showSigninModal-C2c1EDNa.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/btnUpSettings-Ck6O69iz.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-oS9WtCGq.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchVariableLanguage-CdRF62D8.js">
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-BXFcw70M.css">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchVariableLanguage-BiSswjnb.js">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-DGE8wFF-.css">
   </head>
   <body>
     <div class="content-loader-wrapper" active>
@@ -24,35 +24,48 @@
 
     <div class="modal-wrapper is-hidden">
   <div class="signin-modal modal">
-    <h2 class="signin-modal__title">Вхід</h2>
+    <h2 class="signin-modal__title" key="singinModalTitle">Вхід</h2>
     <form class="signin-modal-form">
       <div class="signin-modal-form__enter-block">
         <label class="signin-modal-form__enter">
-          Пошта
+          <span key="singinModalEmail">Пошта</span>
           <input
             class="signin-modal-form__input"
+            key="singinModalPasswordEmail"
             type="email"
-            placeholder="Ведіть ваш емейл"
+            placeholder="Введіть ваш емейл"
             name="email"
             required
         /></label>
         <label class="signin-modal-form__enter">
-          Пароль
+          <span key="singinModalPassword">Пароль</span>
           <input
             class="signin-modal-form__input"
+            key="singinModalPasswordPlaceholder"
             type="password"
-            placeholder="Ведіть пароль"
+            placeholder="Введіть пароль"
             name="password"
             required
           />
         </label>
       </div>
-      <button class="signin-modal-form__btn-submit" type="submit" aria-label="button sign in">
+      <button
+        class="signin-modal-form__btn-submit"
+        key="singinModalSubmit"
+        type="submit"
+        aria-label="button sign in"
+      >
         Увійти
       </button>
     </form>
     <p class="signin-modal__error"></p>
-    <a class="signin-modal__link" href="formProfile.html" aria-label="to register">Зареєструватись</a>
+    <a
+      class="signin-modal__link"
+      key="singinModalLink"
+      href="formProfile.html"
+      aria-label="to register"
+      >Зареєструватись</a
+    >
   </div>
 </div>
 
@@ -109,7 +122,7 @@
 </header>
 
     <main>
-      <div class="trannslate-container container">
+      <div class="translate-container container">
   <div class="translate-wrapper">
     <label class="translate">
       <input
@@ -125,7 +138,8 @@
   </div>
 </div>
 
-      <section class="user-info">
+      <div class="profile-wrapper">
+        <section class="user-info">
   <div class="container user-info__container">
     <h1 hidden>Профіль</h1>
     <div class="user-info__card-user" id="user-info-js"></div>
@@ -133,10 +147,12 @@
 </section>
 
 
-      <section class="profile-adverts">
-        <div class="container profile-adverts__container">
-          <h2 class="profile-adverts__title" key="advertsTitle">Мої оголошення:</h2>
-          <div class="trannslate-container container">
+        <section class="profile-adverts">
+          <div class="container profile-adverts__container">
+            <h2 class="profile-adverts__title" key="advertsTitle">
+              Мої оголошення:
+            </h2>
+            <div class="trannslate-container container">
   <div class="translate-wrapper translate-wrapper_variable">
     <div class="translate-variable">
       <span class="translate-variable__span translate__span"></span>
@@ -177,7 +193,7 @@
   </div>
 </div>
 
-          <ul class="profile-adverts__list cards-list" id="user-cards-js"></ul>
+            <ul class="profile-adverts__list cards-list" id="user-cards-js"></ul>
 <div class="left-side__pagination pagination is-hidden">
   <button class="pagination-arrow pagination-arrow_first">
     <img
@@ -210,8 +226,9 @@
   </button>
 </div>
 
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="footer">
   <div class="container footer__container">
