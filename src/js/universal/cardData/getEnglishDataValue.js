@@ -57,5 +57,5 @@ export function getEnglishDataValue(info) {
 }
 
 function processProperty(item) {
-  return item ? item : "not choose";
+  return item !== undefined ? item : "not choose";
 }

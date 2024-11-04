@@ -1,33 +1,46 @@
 <div class="modal-wrapper is-hidden">
   <div class="signin-modal modal">
-    <h2 class="signin-modal__title">Вхід</h2>
+    <h2 class="signin-modal__title" key="singinModalTitle">Вхід</h2>
     <form class="signin-modal-form">
       <div class="signin-modal-form__enter-block">
         <label class="signin-modal-form__enter">
-          Пошта
+          <span key="singinModalEmail">Пошта</span>
           <input
             class="signin-modal-form__input"
+            key="singinModalPasswordEmail"
             type="email"
-            placeholder="Ведіть ваш емейл"
+            placeholder="Введіть ваш емейл"
             name="email"
             required
         /></label>
         <label class="signin-modal-form__enter">
-          Пароль
+          <span key="singinModalPassword">Пароль</span>
           <input
             class="signin-modal-form__input"
+            key="singinModalPasswordPlaceholder"
             type="password"
-            placeholder="Ведіть пароль"
+            placeholder="Введіть пароль"
             name="password"
             required
           />
         </label>
       </div>
-      <button class="signin-modal-form__btn-submit" type="submit" aria-label="button sign in">
+      <button
+        class="signin-modal-form__btn-submit"
+        key="singinModalSubmit"
+        type="submit"
+        aria-label="button sign in"
+      >
         Увійти
       </button>
     </form>
     <p class="signin-modal__error"></p>
-    <a class="signin-modal__link" href="formProfile.html" aria-label="to register">Зареєструватись</a>
+    <a
+      class="signin-modal__link"
+      key="singinModalLink"
+      href="formProfile.html"
+      aria-label="to register"
+      >Зареєструватись</a
+    >
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { getCard } from "../search/getCard";
+import { getCurrentLanguage } from "./translate/universal/currentLanguage/getCurrentLanguage";
 
 export class Cards {
   #showBackCards;
@@ -237,10 +238,12 @@ function getCardLoader() {
 }
 
 function getDefaultElement() {
+  const lang = getCurrentLanguage();
+  const text = lang === "ua" ? "Немає оголошень" : "There are no adverts";
   return `<div class="cards-list-default">
             <svg class="cards-list-default__img">
               <use href="./img/profile/defoult-plant.svg#defoult-plant"></use>
             </svg>
-            <p class="cards-list-default__text">Немає оголошень</p>
+            <p class="cards-list-default__text" key="defaultCardListText">${text}</p>
           </div>`;
 }

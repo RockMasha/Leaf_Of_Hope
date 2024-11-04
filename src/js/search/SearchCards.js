@@ -18,7 +18,7 @@ export class SearchCards extends Cards {
 
   showOpenCard() {
     this.#resetPage();
-    const params = createFormObj(this.formEl);
+    const params = createFormObj(this.formEl);  
 
     super.showMainCard(params);
     this.#setParams(params);

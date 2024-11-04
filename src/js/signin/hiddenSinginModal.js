@@ -1,4 +1,7 @@
+import { root } from "../profile/root";
 import { showProfile } from "../profile/showProfile";
+import { settings } from "../profile/translate/settings";
+import { setSwitchLanguage } from "../universal/translate/original/setSwitchLanguage";
 import { modalEl } from "./root";
 
 export async function hiddenSigninModal() {
@@ -7,6 +10,12 @@ export async function hiddenSigninModal() {
 
   const isProfilePage = document.querySelector(".profile-adverts");
   if (isProfilePage) {
-    showProfile();
+    await setShowProfile();
   }
+}
+
+async function setShowProfile() {
+  await showProfile();
+  setSwitchLanguage(settings);
+  root.profileWrapper.classList.remove("is-hidden");
 }

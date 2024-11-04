@@ -2,8 +2,9 @@ import Swiper from "swiper/bundle";
 import "swiper/css";
 import "swiper/css/bundle";
 
+export const swiper = {};
 if (window.innerWidth < 1440) {
-  const swiper = new Swiper(".swiper", {
+  swiper.data = new Swiper(".swiper", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -11,10 +12,10 @@ if (window.innerWidth < 1440) {
     centeredSlides: true,
     breakpoints: {
       320: {
-        spaceBetween: "50px", 
+        spaceBetween: 50,
       },
       768: {
-        spaceBetween: "90px",
+        spaceBetween: 90,
       },
     },
   });

@@ -87,7 +87,9 @@
     font-size: 32px;
     font-weight: 600;
     line-height: 1.21;
-    word-break: break-all;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
     @media (min-width: 768px) {
       font-size: 36px;
     }
@@ -97,12 +99,14 @@
     }
   }
   &__text {
+    margin-top: 5px;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.21;
-    word-break: break-all;
     color: $color-grey-dark;
-    margin-top: 5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
     &.bold {
       font-size: 20px;
       margin-top: 10px;

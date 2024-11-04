@@ -1,4 +1,5 @@
 import { propertiesSettings } from "../../universal/translate/universal/templeSettings/propertiesSettings";
+import { signinSettings } from "../../universal/translate/universal/templeSettings/signinSettings";
 
 export const settings = {
   namePlaceholder: {
@@ -22,4 +23,4 @@ export const settings = {
   },
 };
 
-Object.assign(settings, propertiesSettings);
+Object.assign(settings, propertiesSettings, signinSettings);
