@@ -2,8 +2,14 @@ import { deleteAdvert } from "../servise/api";
 import { Cards } from "../universal/Cards";
 import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
 import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
+import { translateAllPage } from "../universal/translate/original/translateAllPage";
+import { getCurrentLanguage } from "../universal/translate/universal/currentLanguage/getCurrentLanguage";
+import { settings } from "./translate/settings";
 
 export class ProfileCard extends Cards {
+  #cloneCloseDeleteModal;
+  #cloneDeleteCard;
+
   constructor(element, request, temple) {
     super(element, request, temple);
   }
@@ -40,6 +46,7 @@ export class ProfileCard extends Cards {
     this.#closeDeleteModal();
     try {
       await deleteAdvert(data.id);
+
       removeInProgressLoader();
       await this.showCards(this.params);
     } catch (error) {
@@ -57,17 +64,30 @@ export class ProfileCard extends Cards {
 
     modalEl = getDeleteModal();
     document.body.insertAdjacentHTML("afterbegin", modalEl);
+    const lang = getCurrentLanguage();
+    if (lang === "en") {
+      translateAllPage(settings, "en");
+    }
   }
   #closeDeleteModal() {
+    this.#removeModalBtnEvent();
     const modalEl = document.querySelector(".delete-modal-wrapper");
     modalEl.classList.add("is-hidden");
     document.body.removeAttribute("lock", "");
   }
   #setModalBtnEvent(data) {
+    this.#cloneCloseDeleteModal = this.#closeDeleteModal.bind(this, data);
+    this.#cloneDeleteCard = this.#deleteCard.bind(this, data);
     const disagreeBtn = document.querySelector(".delete-modal__btn_disagree");
     const agreeBtn = document.querySelector(".delete-modal__btn_agree");
-    disagreeBtn.addEventListener("click", this.#closeDeleteModal);
-    agreeBtn.addEventListener("click", this.#deleteCard.bind(this, data));
+    disagreeBtn.addEventListener("click", this.#cloneCloseDeleteModal);
+    agreeBtn.addEventListener("click", this.#cloneDeleteCard);
+  }
+  #removeModalBtnEvent() {
+    const disagreeBtn = document.querySelector(".delete-modal__btn_disagree");
+    const agreeBtn = document.querySelector(".delete-modal__btn_agree");
+    disagreeBtn.removeEventListener("click", this.#cloneCloseDeleteModal);
+    agreeBtn.removeEventListener("click", this.#cloneDeleteCard);
   }
 
   #deleteCardOnPage(element) {
@@ -100,10 +120,10 @@ function getDeleteModal() {
   return `
     <div class="modal-wrapper delete-modal-wrapper">
       <div class="delete-modal modal">
-        <h3 class="delete-modal__title">Ви дійсно хочете видалити це оголошення?</h3>
+        <h3 class="delete-modal__title" key="deleteModalTitle">Ви дійсно хочете видалити це оголошення?</h3>
         <div class="delete-modal__btns">
-          <button class="delete-modal__btn delete-modal__btn_disagree" type="button">Ні</button>
-          <button class="delete-modal__btn delete-modal__btn_agree" type="button">Так</button>
+          <button class="delete-modal__btn delete-modal__btn_disagree" key="deleteModalFalse" type="button">Ні</button>
+          <button class="delete-modal__btn delete-modal__btn_agree" key="deleteModalTrue" type="button">Так</button>
         </div>
       </div>
     </div>

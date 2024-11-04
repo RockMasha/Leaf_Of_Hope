@@ -8,13 +8,13 @@ import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInP
 
 export async function signinUser(event) {
   event.preventDefault();
-
   setInProgressLoader();
   const data = createFormObj(root.form);
   try {
     const answer = await signin(data);
     createToken(answer.token);
-    hiddenSigninModal();
+
+    await hiddenSigninModal();
   } catch (error) {
     root.errorText.textContent = "неправельний логін чи пароль";
   } finally {

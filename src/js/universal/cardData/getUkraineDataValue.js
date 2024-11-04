@@ -2,6 +2,8 @@ import { redactDate } from "../redactDate";
 import { cardData } from "./cardData";
 
 export function getUkraineDataValue(info) {
+  console.log(info);
+  
   const {
     translated,
     alergenicity,

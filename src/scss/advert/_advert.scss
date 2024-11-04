@@ -43,6 +43,9 @@
       font-size: 26px;
       font-weight: 500;
       margin-bottom: 10px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      white-space: normal;
       @media (min-width: 768px) {
         margin-bottom: 6px;
         font-size: 40px;
@@ -190,7 +193,9 @@
     }
     &__text {
       font-size: 16px;
-      word-break: break-all;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      white-space: normal;
       @media (min-width: 768px) {
         font-size: 26px;
       }
@@ -231,7 +236,9 @@
       color: $color-black;
       font-size: 16px;
       font-weight: 600;
-      word-break: break-all;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      white-space: normal;
       @media (min-width: 768px) {
         margin-bottom: 1px;
         font-size: 22px;
@@ -245,8 +252,10 @@
       margin-bottom: 3px;
       font-size: 11px;
       font-weight: 600;
-      color:$color-brown-grey;
-      word-break: break-all;
+      color: $color-brown-grey;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      white-space: normal;
       @media (min-width: 768px) {
         margin-bottom: 6px;
         font-size: 14px;
@@ -332,6 +341,9 @@
     &__text {
       color: $color-black;
       font-size: 14px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      white-space: normal;
       @media (min-width: 768px) {
         font-size: 18px;
       }

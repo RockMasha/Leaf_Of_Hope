@@ -31,12 +31,8 @@ export async function getInfo(token = getToken()) {
   }
 }
 export async function signin(info) {
-  try {
-    const answer = await axios.post("/api/auth/signin", info);
-    return answer.data;
-  } catch (error) {
-    console.log(error);
-  }
+  const answer = await axios.post("/api/auth/signin", info);
+  return answer.data;
 }
 export async function logout(token = getToken()) {
   try {

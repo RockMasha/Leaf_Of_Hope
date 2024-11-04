@@ -12,7 +12,6 @@ export const originalAdvert = {};
 export async function createAdvert() {
   const id = getValueSrcParams("id");
   data = await getOneAdvert(id);
-  console.log(data);
   setOriginalAdvert(data.lang);
   originalAdvert.set();
   return;

@@ -1,3 +1,4 @@
+import { defaultCardListSettings } from "../../universal/translate/universal/templeSettings/defaultCardListSettings";
 import { propertiesSettings } from "../../universal/translate/universal/templeSettings/propertiesSettings";
 
 export const settings = {
@@ -12,6 +13,18 @@ export const settings = {
   searchFieldText: {
     ua: `Шукати`,
     en: `Search`,
+  },
+  langText: {
+    ua: `Мова`,
+    en: `Language`,
+  },
+  langUaText: {
+    ua: `українські`,
+    en: `ukrainian`,
+  },
+  langEnText: {
+    ua: `англійські`,
+    en: `english`,
   },
   sortText: {
     ua: `Сортування`,
@@ -43,4 +56,4 @@ export const settings = {
   },
 };
 
-Object.assign(settings, propertiesSettings);
+Object.assign(settings, propertiesSettings, defaultCardListSettings);
