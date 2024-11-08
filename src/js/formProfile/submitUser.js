@@ -1,6 +1,7 @@
 import { authorization, redactUser } from "../servise/api";
 import { createToken } from "../token/createToken";
 import { createFormData } from "../universal/createFormData";
+import { getErrorText } from "../universal/errorData/getErrorText";
 import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
 import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
 import { isRedactForm } from "./isRedactForm";
@@ -21,7 +22,8 @@ export async function submitUser(event) {
     }
     window.location.href = "profile.html";
   } catch (error) {
-    root.error.textContent = `Неравельно ввід: ${error.response.data.message}`;
+    const errorText = getErrorText(error?.response?.data?.message);
+    root.error.textContent = errorText;
     ableFormSubmit();
   } finally {
     removeInProgressLoader();

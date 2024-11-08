@@ -5,6 +5,7 @@ import { getToken } from "../token/getToken";
 import { getValueSrcParams } from "../universal/getValueSrcParams";
 import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
 import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
+import { getErrorText } from "../universal/errorData/getErrorText";
 
 export async function submitFormAdvert(event) {
   event.preventDefault();
@@ -23,10 +24,13 @@ export async function submitFormAdvert(event) {
       const token = getToken();
       await postAdvert(data, token);
     }
-    window.location.href = "profile.html";
+    // window.location.href = "profile.html";
   } catch (error) {
+    console.log(error);
+
     ableFormSubmit();
-    root.error.textContent = `Неравельно ввід: ${error.response.data.message}`;
+    const errorText = getErrorText(error?.response?.data?.message);
+    root.error.textContent = errorText;
   } finally {
     removeInProgressLoader();
   }

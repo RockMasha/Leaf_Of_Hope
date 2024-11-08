@@ -5,6 +5,7 @@ import { createFormObj } from "../universal/createFormObj";
 import { hiddenSigninModal } from "./hiddenSinginModal";
 import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
 import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
+import { getErrorText } from "../universal/errorData/getErrorText";
 
 export async function signinUser(event) {
   event.preventDefault();
@@ -16,7 +17,8 @@ export async function signinUser(event) {
 
     await hiddenSigninModal();
   } catch (error) {
-    root.errorText.textContent = "неправельний логін чи пароль";
+    const errorText = getErrorText(error?.response?.data?.message);
+    root.errorText.textContent = errorText;
   } finally {
     removeInProgressLoader();
   }

@@ -1,3 +1,5 @@
+import { errorSettings } from "./errorSettings";
+
 export const signinSettings = {
   singinModalTitle: {
     ua: `Вхід`,
@@ -30,3 +32,5 @@ export const signinSettings = {
     en: `Enter your password`,
   },
 };
+
+Object.assign(signinSettings, errorSettings);

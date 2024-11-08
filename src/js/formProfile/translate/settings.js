@@ -1,3 +1,5 @@
+import { errorSettings } from "../../universal/translate/universal/templeSettings/errorSettings";
+
 export const settings = {
   mainTitle: {
     ua: `Редагування`,
@@ -53,3 +55,5 @@ export const settings = {
     en: `Save`,
   },
 };
+
+Object.assign(settings, errorSettings);

@@ -108,6 +108,8 @@ export async function postAdvert(info, token = getToken()) {
       Authorization: token,
     },
   });
+
+  console.log(answer.data);
   return answer.data;
 }
 export async function deleteAdvert(id) {
