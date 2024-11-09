@@ -24,16 +24,19 @@ export async function submitFormAdvert(event) {
       const token = getToken();
       await postAdvert(data, token);
     }
-    // window.location.href = "profile.html";
+    window.location.href = "profile.html";
   } catch (error) {
-    console.log(error);
-
+    showError(error);
     ableFormSubmit();
-    const errorText = getErrorText(error?.response?.data?.message);
-    root.error.textContent = errorText;
   } finally {
     removeInProgressLoader();
   }
+}
+
+function showError(error) {
+  const errorText = error?.response?.data?.message;
+  const message = getErrorText(errorText);
+  root.error.textContent = message;
 }
 
 async function disableFormSubmit() {

@@ -3,14 +3,19 @@ import { getCurrentLanguage } from "../translate/universal/currentLanguage/getCu
 import { errorSettings } from "../translate/universal/templeSettings/errorSettings";
 import { errorData } from "./errorData";
 
+const translateDataDefault = { property: "error", settings: errorSettings };
+
 let lang = getCurrentLanguage();
-export function getErrorText(error) {
+export function getErrorText(error, translateData = translateDataDefault) {
+  console.log(error);
+
+  const { property, settings } = translateData;
   lang = getCurrentLanguage();
   const key = error ? getNeedErrorDataKey(error) : false;
 
-  const data = Object.assign({ ...errorData[key] }, { property: "error" });
-  changeSettingsValue(errorSettings, data);
-  
+  const data = Object.assign({ ...errorData[key] }, { property: property });
+  changeSettingsValue(settings, data);
+
   return key ? errorData[key][lang] : getDefaultText();
 }
 

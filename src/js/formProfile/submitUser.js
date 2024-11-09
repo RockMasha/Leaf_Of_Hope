@@ -22,12 +22,17 @@ export async function submitUser(event) {
     }
     window.location.href = "profile.html";
   } catch (error) {
-    const errorText = getErrorText(error?.response?.data?.message);
-    root.error.textContent = errorText;
+    showError(error);
     ableFormSubmit();
   } finally {
     removeInProgressLoader();
   }
+}
+
+function showError(error) {
+  const errorText = error?.response?.data?.message;
+  const message = getErrorText(errorText);
+  root.error.textContent = message;
 }
 
 function disableFormSubmit() {
