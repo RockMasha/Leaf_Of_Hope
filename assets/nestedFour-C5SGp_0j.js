@@ -1,4 +1,4 @@
-import{h as M}from"./setCurrentLanguage-Bvpoq5JC.js";import{a as O}from"./api-CZvNR4Wc.js";import{g as k,a as z,b as T,c as U}from"./getUkraineDataValue-BN_FPkab.js";import{g as B}from"./getValueSrcParams-BMgebK2A.js";import{s as H}from"./setSwitchVariableLanguage-BiSswjnb.js";function R(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function D(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
+import{h as M}from"./setCurrentLanguage-NOXEc7TY.js";import{a as O}from"./api-BBffhmo6.js";import{g as k,a as z,b as T,c as U}from"./getUkraineDataValue-Ds0VW_Xj.js";import{g as B}from"./getValueSrcParams-BMgebK2A.js";import{s as H}from"./setSwitchVariableLanguage-BFnLBi2Y.js";function R(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function D(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
             <picture class="advert-maininfo__img">
               <source
                 srcset="
