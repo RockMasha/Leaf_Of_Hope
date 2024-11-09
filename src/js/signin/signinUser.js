@@ -5,6 +5,8 @@ import { createFormObj } from "../universal/createFormObj";
 import { hiddenSigninModal } from "./hiddenSinginModal";
 import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
 import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
+import { getErrorText } from "../universal/errorData/getErrorText";
+import { signinSettings } from "../universal/translate/universal/templeSettings/signinSettings";
 
 export async function signinUser(event) {
   event.preventDefault();
@@ -16,8 +18,15 @@ export async function signinUser(event) {
 
     await hiddenSigninModal();
   } catch (error) {
-    root.errorText.textContent = "неправельний логін чи пароль";
+    showError(error);
   } finally {
     removeInProgressLoader();
   }
+}
+
+function showError(error) {
+  const errorText = error?.response?.data?.message;
+  const translateData = { property: "singinError", settings: signinSettings };
+  const message = getErrorText(errorText, translateData);
+  root.errorText.textContent = message;
 }

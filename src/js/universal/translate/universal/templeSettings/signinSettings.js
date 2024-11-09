@@ -19,14 +19,18 @@ export const signinSettings = {
     ua: `Зареєструватись`,
     en: `Register`,
   },
-  singinModalPasswordPlaceholder: {
+  singinModalEmailPlaceholder: {
     placeholder: true,
     ua: `Введіть ваш емейл`,
     en: `Enter your email`,
   },
-  singinModalPasswordEmail: {
+  singinModalPasswordPlaceholder: {
     placeholder: true,
     ua: `Введіть пароль`,
     en: `Enter your password`,
+  },
+  singinError: {
+    ua: ``,
+    en: ``,
   },
 };

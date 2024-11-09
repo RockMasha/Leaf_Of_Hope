@@ -5,6 +5,7 @@ import { getToken } from "../token/getToken";
 import { getValueSrcParams } from "../universal/getValueSrcParams";
 import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
 import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
+import { getErrorText } from "../universal/errorData/getErrorText";
 
 export async function submitFormAdvert(event) {
   event.preventDefault();
@@ -25,11 +26,17 @@ export async function submitFormAdvert(event) {
     }
     window.location.href = "profile.html";
   } catch (error) {
+    showError(error);
     ableFormSubmit();
-    root.error.textContent = `Неравельно ввід: ${error.response.data.message}`;
   } finally {
     removeInProgressLoader();
   }
+}
+
+function showError(error) {
+  const errorText = error?.response?.data?.message;
+  const message = getErrorText(errorText);
+  root.error.textContent = message;
 }
 
 async function disableFormSubmit() {

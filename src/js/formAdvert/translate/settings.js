@@ -1,3 +1,4 @@
+import { errorSettings } from "../../universal/translate/universal/templeSettings/errorSettings";
 import { propertiesSettings } from "../../universal/translate/universal/templeSettings/propertiesSettings";
 import { signinSettings } from "../../universal/translate/universal/templeSettings/signinSettings";
 
@@ -23,4 +24,4 @@ export const settings = {
   },
 };
 
-Object.assign(settings, propertiesSettings, signinSettings);
+Object.assign(settings, propertiesSettings, signinSettings, errorSettings);
