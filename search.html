@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Search adverts by filtering" />
     <title>Leaf_Of_Hope</title>
-    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nested-CuwjnmYu.js"></script>
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-NOXEc7TY.js">
+    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nested-CCfcJEje.js"></script>
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-0poYnjjN.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/changeSettingsValue-79FUIYGn.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getUkraineDataValue-Ds0VW_Xj.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createFormObj-BJ-kS3To.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/propertiesSettings-B1L4uMac.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getDataValue-DJk4az9Q.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/createFormObj-DBdvGM74.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/propertiesSettings-DpaMImoB.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/btnUpSettings-Ck6O69iz.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchVariableLanguage-BFnLBi2Y.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-BD8z4uMl.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-BBffhmo6.js">
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-B9BDohzd.css">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchVariableLanguage-B00RYMg6.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-BbQiSuXy.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-CZvNR4Wc.js">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-6QgpXtAp.css">
   </head>
   <body>
     <div class="content-loader-wrapper" active>
@@ -195,6 +195,7 @@
       <li>
         <label for="sort" key="sortText">Сортування</label>
         <select name="sort" id="sort" class="side-panel__select">
+          <option key="defaultParamsText" value="">не вказано</option>
           <option key="sortNewText" value="">нові</option>
           <option key="sortOldText" value="old">старі</option>
           <option key="sortStartText" value="start-alphabet">алфавіт ↓</option>
@@ -205,130 +206,205 @@
         <label for="lang" key="langText">Мова</label>
         <select name="lang" id="lang" class="side-panel__select">
           <option key="defaultParamsText" value="">не вказано</option>
+          <option key="defaultParamsText" value="">не вказано</option>
           <option key="langUaText" value="ua">українські</option>
           <option key="langEnText" value="en">англійські</option>
         </select>
       </li>
       <li>
-        <label key="lightText" for="light">Освітлення</label>
-        <select name="light" id="light" class="side-panel__select">
+        <label key="toxicitySignature" for="toxicity">Отруйні</label>
+        <select class="side-panel__select" id="toxicity" name="toxicity">
           <option key="defaultParamsText" value="">не вказано</option>
-          <option key="lightManyText" value="many">багато</option>
-          <option key="lightNormalText" value="normal">помірно</option>
-          <option key="lightLittleText" value="little">мало</option>
-        </select>
-      </li>
-      <li>
-        <label key="temperatureText" for="temperature">Температура</label>
-        <select name="temperature" id="temperature" class="side-panel__select">
-          <option key="defaultParamsText" value="">не вказано</option>
-          <option key="temperatureLowText" value="low">холоднолюбиві</option>
-          <option key="temperatureNormalText" value="normal">нейтральні</option>
-          <option key="temperatureHightText" value="high">теплолюбні</option>
-        </select>
-      </li>
-      <li>
-        <label key="sizeText" for="size">Розмір</label>
-        <select name="size" id="size" class="side-panel__select">
-          <option key="defaultParamsText" value="">не вказано</option>
-          <option key="sizeLargeText" value="large">великий</option>
-          <option key="sizeMediumText" value="medium">середній</option>
-          <option key="sizeSmallText" value="small">малий</option>
-        </select>
-      </li>
-      <li>
-        <label key="lifeDurationText" for="lifeDuration"
-          >Тривалість життя</label
-        >
-        <select
-          name="lifeDuration"
-          id="lifeDuration"
-          class="side-panel__select"
-        >
-          <option key="defaultParamsText" value="">не вказано</option>
-          <option key="lifeDurationAnnualText" value="annual">однорічні</option>
-          <option key="lifeDurationBiennialText" value="biennial">
-            дворічні
+          <option key="toxicityVeryPoisonousText" value="very-poisonous">
+            дуже отруйні
           </option>
-          <option key="lifeDurationPerennialText" value="perennial">
-            довгожителі
+          <option key="toxicityHighlyToxicText" value="highly-toxic">
+            сильно токсичні
+          </option>
+          <option key="toxicityToxicText" value="toxic">токсичні</option>
+          <option key="toxicityNonToxicText" value="non-toxic">
+            нетоксичні
           </option>
         </select>
       </li>
       <li>
-        <label key="alergenicityText" for="alergenicity">Алергенність</label>
+        <label key="plantConditionSignature" for="plantCondition"
+          >Стан рослини</label
+        >
         <select
-          name="alergenicity"
-          id="alergenicity"
           class="side-panel__select"
+          id="plantCondition"
+          name="plantCondition"
         >
           <option key="defaultParamsText" value="">не вказано</option>
-          <option key="alergenicityTrueText" value="true">наявна</option>
-          <option key="alergenicityFalseText" value="false">відсутня</option>
+          <option key="plantConditionConditionedText" value="conditioned">
+            кондиційний
+          </option>
+          <option key="plantConditionUnconditionedText" value="unconditioned">
+            некондиційний
+          </option>
         </select>
       </li>
       <li>
-        <label key="humidityText" for="humidity">Вологість</label>
-        <select name="humidity" id="humidity" class="side-panel__select">
+        <label key="plantTypeSignature" for="plantType">Тип рослини</label>
+        <select class="side-panel__select" id="plantType" name="plantType">
           <option key="defaultParamsText" value="">не вказано</option>
-          <option key="humidityLowText" value="low">низька</option>
-          <option key="humidityNormalText" value="normal">помірна</option>
-          <option key="humidityHighText" value="high">висока</option>
+          <option key="plantTypeFloweringText" value="flowering">
+            квітучі
+          </option>
+          <option key="plantTypeFoliageText" value="foliage">листяні</option>
+        </select>
+      </li>
+      <li>
+        <label key="heightSignature" for="height">Висота</label>
+        <select class="side-panel__select" id="height" name="height">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="heightDwarfText" value="dwarf">карликові</option>
+          <option key="heightLowText" value="low">низькі</option>
+          <option key="heightAverageText" value="average">середні</option>
+          <option key="heightHighText" value="high">високі</option>
+          <option key="heightVeryHighText" value="very high">
+            дуже високі
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="lightSignature" for="light">Світло</label>
+        <select class="side-panel__select" id="light" name="light">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="lightLightLovingText" value="light-loving">
+            світлолюбна
+          </option>
+          <option key="lightRelLightLovingText" value="relatively light-loving">
+            відносно світлолюбна
+          </option>
+          <option key="lightShadeTolerantText" value="shade-tolerant">
+            тіньовитривала
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="temperatureSignature" for="temperature">Температура</label>
+        <select class="side-panel__select" id="temperature" name="temperature">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="temperatureHeatLovingText" value="heat-loving">
+            теплолюбні
+          </option>
+          <option key="temperatureColdResistantText" value="cold-resistant">
+            холодостійкі
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="wateringSignature" for="watering">Полив раз на</label>
+        <select class="side-panel__select" id="watering" name="watering">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="wateringThreeDaysText" value="three days">
+            три дні
+          </option>
+          <option key="wateringWeekText" value="week">тиждень</option>
+          <option key="wateringTwoWeeksText" value="two weeks">
+            два тижні
+          </option>
+          <option key="wateringMonthText" value="month">місяць</option>
         </select>
       </li>
     </ul>
     <div class="side-panel__more-line"></div>
     <ul class="side-panel__select-list side-panel__select-list_more is-hidden">
       <li>
-        <label key="attentionText" for="attention">Затрата уваги</label>
-        <select name="attention" id="attention" class="side-panel__select">
+        <label key="careSignature" for="care">Догляд</label>
+        <select class="side-panel__select" id="care" name="care">
           <option key="defaultParamsText" value="">не вказано</option>
-          <option key="attentionLowText" value="low">низька</option>
-          <option key="attentionNormalText" value="normal">середня</option>
-          <option key="attentionHightText" value="hight">висока</option>
+          <option key="carePickyText" value="picky">вибагливий</option>
+          <option key="careUnassumingText" value="unassuming">
+            невибагливий
+          </option>
         </select>
       </li>
       <li>
-        <label key="surviveText" for="survive">Живучecть</label>
-        <select name="survive" id="survive" class="side-panel__select">
+        <label key="substrateSignature" for="substrate">Субстрат</label>
+        <select class="side-panel__select" id="substrate" name="substrate">
           <option key="defaultParamsText" value="">не вказано</option>
-          <option key="surviveLowText" value="low">низька</option>
-          <option key="surviveNormalText" value="normal">середння</option>
-          <option key="surviveHightText" value="hight">висока</option>
+          <option key="substrateUniversalText" value="universal">
+            універсальний
+          </option>
+          <option key="substratePeatText" value="peat">торф'яний</option>
+          <option key="substrateCactusText" value="cactus">кактусовий</option>
+          <option key="substrateOrchidsText" value="orchids">
+            для орхідей
+          </option>
+          <option key="substratePalmText" value="palm">пальмовий</option>
+          <option key="substrateOtherText" value="other">інше</option>
         </select>
       </li>
       <li>
-        <label key="stateText" for="state">Стан</label>
-        <select name="state" id="state" class="side-panel__select">
+        <label key="windowDistanceSignature" for="windowDistance"
+          >Відстань до вікна</label
+        >
+        <select
+          class="side-panel__select"
+          id="windowDistance"
+          name="windowDistance"
+        >
           <option key="defaultParamsText" value="">не вказано</option>
-          <option key="stateGoodText" value="good">добре</option>
-          <option key="stateEnoughText" value="enough">достатьо</option>
-          <option key="stateBadText" value="bad">погано</option>
+          <option key="windowDistanceUpTo05mText" value="up to 0.5m">
+            до 0.5м
+          </option>
+          <option key="windowDistanceUpTo1mText" value="up to 1m">до 1м</option>
+          <option key="windowDistanceUpTo2mText" value="up to 2m">до 2м</option>
+          <option key="windowDistanceOver2mText" value="over 2m">
+            більше 2м
+          </option>
         </select>
       </li>
       <li>
-        <label key="floweringText" for="flowering">Цвітіння</label>
-        <select name="flowering" id="flowering" class="side-panel__select">
+        <label key="allergenicitySignature" for="allergenicity"
+          >Алергічність</label
+        >
+        <select
+          class="side-panel__select"
+          id="allergenicity"
+          name="allergenicity"
+        >
           <option key="defaultParamsText" value="">не вказано</option>
-          <option key="floweringTrueText" value="true">так</option>
-          <option key="floweringFalseText" value="false">ні</option>
+          <option key="allergenicityAvailableText" value="available">
+            наявна
+          </option>
+          <option key="allergenicityAbsentText" value="absent">немає</option>
         </select>
       </li>
       <li>
-        <label key="growthRateText" for="growthRate">Темп зростання</label>
-        <select name="growth rate" id="growthRate" class="side-panel__select">
+        <label key="growthRateSignature" for="growthRate"
+          >Швидкість зростання</label
+        >
+        <select class="side-panel__select" id="growthRate" name="growthRate">
           <option key="defaultParamsText" value="">не вказано</option>
-          <option key="growthRateLowText" value="low">низька</option>
-          <option key="growthRateNormalText" value="normal">середння</option>
-          <option key="growthRateHightText" value="hight">висока</option>
+          <option key="growthRateFastText" value="fast-growing">
+            швидкорослі
+          </option>
+          <option key="growthRateMediumText" value="medium-growing">
+            середньорослі
+          </option>
+          <option key="growthRateSlowText" value="slow-growing">
+            повільнорослі
+          </option>
         </select>
       </li>
       <li>
-        <label key="edibleText" for="edible">Їстівна</label>
-        <select name="healthy" id="edible" class="side-panel__select">
+        <label key="lifeDuration" for="lifeDuration">Тривалість життя</label>
+        <select
+          class="side-panel__select"
+          id="lifeDuration"
+          name="lifeDuration"
+        >
           <option key="defaultParamsText" value="">не вказано</option>
-          <option key="edibleTrueText" value="true">так</option>
-          <option key="edibleFalseText" value="false">ні</option>
+          <option key="lifeDurationShortLivedText" value="short-lived">
+            недовговічні
+          </option>
+          <option key="lifeDurationLongLivedText" value="long-lived">
+            довговічні
+          </option>
         </select>
       </li>
     </ul>
