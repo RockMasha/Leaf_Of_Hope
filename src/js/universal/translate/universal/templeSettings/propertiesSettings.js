@@ -1,7 +1,7 @@
 export const propertiesSettings = {
   defaultParamsText: {
     ua: `не вказано`,
-    en: `not choose`,
+    en: `no choose`,
   },
   exchangeWayText: {
     ua: `Обмін`,
@@ -11,184 +11,232 @@ export const propertiesSettings = {
     ua: `Віддача`,
     en: `Give`,
   },
-  lightText: {
-    ua: `Освітлення`,
+  toxicitySignature: {
+    ua: `Отруйні`,
+    en: `Toxicity`,
+  },
+  toxicityVeryPoisonousText: {
+    ua: `дуже отруйні`,
+    en: `very poisonous`,
+  },
+  toxicityHighlyToxicText: {
+    ua: `сильно токсичні`,
+    en: `highly toxic`,
+  },
+  toxicityToxicText: {
+    ua: `токсичні`,
+    en: `toxic`,
+  },
+  toxicityNonToxicText: {
+    ua: `нетоксичні`,
+    en: `non-toxic`,
+  },
+
+  plantConditionSignature: {
+    ua: `Стан рослини`,
+    en: `Plant condition`,
+  },
+  plantConditionConditionedText: {
+    ua: `кондиційний`,
+    en: `conditioned`,
+  },
+  plantConditionUnconditionedText: {
+    ua: `некондиційний`,
+    en: `unconditioned`,
+  },
+
+  plantTypeSignature: {
+    ua: `Тип рослини`,
+    en: `Plant type`,
+  },
+  plantTypeFloweringText: {
+    ua: `квітучі`,
+    en: `flowering`,
+  },
+  plantTypeFoliageText: {
+    ua: `листяні`,
+    en: `foliage`,
+  },
+
+  heightSignature: {
+    ua: `Висота`,
+    en: `Height`,
+  },
+  heightDwarfText: {
+    ua: `карликові`,
+    en: `dwarf`,
+  },
+  heightLowText: {
+    ua: `низькі`,
+    en: `low`,
+  },
+  heightAverageText: {
+    ua: `середні`,
+    en: `average`,
+  },
+  heightHighText: {
+    ua: `високі`,
+    en: `high`,
+  },
+  heightVeryHighText: {
+    ua: `дуже високі`,
+    en: `very high`,
+  },
+
+  lightSignature: {
+    ua: `Світло`,
     en: `Light`,
   },
-  lightManyText: {
-    ua: `багато`,
-    en: `many`,
+  lightLightLovingText: {
+    ua: `світлолюбна`,
+    en: `light-loving`,
   },
-  lightNormalText: {
-    ua: `помірно`,
-    en: `normal`,
+  lightRelLightLovingText: {
+    ua: `відн. світлолюбна`,
+    en: `rel. light-loving`,
   },
-  lightLittleText: {
-    ua: `мало`,
-    en: `little`,
+  lightShadeTolerantText: {
+    ua: `тіньовитривала`,
+    en: `shade-tolerant`,
   },
-  temperatureText: {
+
+  temperatureSignature: {
     ua: `Температура`,
     en: `Temperature`,
   },
-  temperatureLowText: {
-    ua: `холоднолюбиві`,
-    en: `low`,
-  },
-  temperatureNormalText: {
-    ua: `нейтральні`,
-    en: `normal`,
-  },
-  temperatureHightText: {
+  temperatureHeatLovingText: {
     ua: `теплолюбні`,
-    en: `high`,
+    en: `heat-loving`,
   },
-  sizeText: {
-    ua: `Розмір`,
-    en: `Size`,
+  temperatureColdResistantText: {
+    ua: `холодостійкі`,
+    en: `cold-resistant`,
   },
-  sizeLargeText: {
-    ua: `великий`,
-    en: `large`,
+
+  wateringSignature: {
+    ua: `Полив раз на`,
+    en: `watering once every`,
   },
-  sizeMediumText: {
-    ua: `середній`,
-    en: `medium`,
+  wateringThreeDaysText: {
+    ua: `три дні`,
+    en: `three days`,
   },
-  sizeSmallText: {
-    ua: `малий`,
-    en: `small`,
+  wateringWeekText: {
+    ua: `тиждень`,
+    en: `week`,
   },
-  lifeDurationText: {
-    ua: `Тривалість життя`,
-    en: `Life duration`,
+  wateringTwoWeeksText: {
+    ua: `два тижні`,
+    en: `two weeks`,
   },
-  lifeDurationAnnualText: {
-    ua: `однорічні`,
-    en: `annual`,
+  wateringMonthText: {
+    ua: `місяць`,
+    en: `a month`,
   },
-  lifeDurationBiennialText: {
-    ua: `дворічні`,
-    en: `biennial`,
+
+  careSignature: {
+    ua: `Догляд`,
+    en: `Care`,
   },
-  lifeDurationPerennialText: {
-    ua: `довгожителі`,
-    en: `perennial`,
+  carePickyText: {
+    ua: `вибагливий`,
+    en: `picky`,
   },
-  alergenicityText: {
-    ua: `Алергенність`,
+  careUnassumingText: {
+    ua: `невибагливи`,
+    en: `unassuming`,
+  },
+
+  substrateSignature: {
+    ua: `Субстрат`,
+    en: `Substrate`,
+  },
+  substrateUniversalText: {
+    ua: `універсальний`,
+    en: `universal`,
+  },
+  substratePeatText: {
+    ua: `торф'яний`,
+    en: `peat`,
+  },
+  substrateCactusText: {
+    ua: `кактусовий`,
+    en: `cactus`,
+  },
+  substrateOrchidsText: {
+    ua: `для орхідей`,
+    en: `orchids`,
+  },
+  substratePalmText: {
+    ua: `пальмовий`,
+    en: `palm`,
+  },
+  substrateOtherText: {
+    ua: `інше`,
+    en: `other`,
+  },
+
+  windowDistanceSignature: {
+    ua: `Відстань до вікна`,
+    en: `Distance to the window`,
+  },
+  windowDistanceUpTo05mText: {
+    ua: `до 0.5м`,
+    en: `up to 0.5m`,
+  },
+  windowDistanceUpTo1mText: {
+    ua: `до 1м`,
+    en: `up to 1m`,
+  },
+  windowDistanceUpTo2mText: {
+    ua: `до 2м`,
+    en: `up to 2m`,
+  },
+  windowDistanceOver2mText: {
+    ua: `більше 2м`,
+    en: `over 2m`,
+  },
+
+  allergenicitySignature: {
+    ua: `Алергічність`,
     en: `Allergenicity`,
   },
-  alergenicityTrueText: {
+  allergenicityAvailableText: {
     ua: `наявна`,
-    en: `true`,
+    en: `available`,
   },
-  alergenicityFalseText: {
-    ua: `відсутня`,
-    en: `false`,
+  allergenicityAbsentText: {
+    ua: `немає`,
+    en: `absent`,
   },
-  humidityText: {
-    ua: `Вологість`,
-    en: `Humidity`,
+
+  growthRateSignature: {
+    ua: `Швидкість зростання`,
+    en: `Growth rate`,
   },
-  humidityLowText: {
-    ua: `низька`,
-    en: `low`,
+  growthRateFastText: {
+    ua: `швидкорослі`,
+    en: `fast-growing`,
   },
-  humidityNormalText: {
-    ua: `помірна`,
-    en: `normal`,
+  growthRateMediumText: {
+    ua: `середньорослі`,
+    en: `medium-growing`,
   },
-  humidityHighText: {
-    ua: `висока`,
-    en: `high`,
+  growthRateSlowText: {
+    ua: `повільнорослі`,
+    en: `slow-growing"`,
   },
-  attentionText: {
-    ua: `Затрата уваги`,
-    en: `Attention`,
+
+  lifeDuration: {
+    ua: `Тривалість життя`,
+    en: `Lifespan`,
   },
-  attentionLowText: {
-    ua: `низька`,
-    en: `low`,
+  lifeDurationShortLivedText: {
+    ua: `недовговічні`,
+    en: `short-lived`,
   },
-  attentionNormalText: {
-    ua: `середня`,
-    en: `normal`,
-  },
-  attentionHightText: {
-    ua: `висока`,
-    en: `hight`,
-  },
-  surviveText: {
-    ua: `Живучecть`,
-    en: `Survive`,
-  },
-  surviveLowText: {
-    ua: `низька`,
-    en: `low`,
-  },
-  surviveNormalText: {
-    ua: `середння`,
-    en: `normal`,
-  },
-  surviveHightText: {
-    ua: `висока`,
-    en: `hight`,
-  },
-  stateText: {
-    ua: `Стан`,
-    en: `State`,
-  },
-  stateGoodText: {
-    ua: `добре`,
-    en: `good`,
-  },
-  stateEnoughText: {
-    ua: `достатьо`,
-    en: `enough`,
-  },
-  stateBadText: {
-    ua: `погано`,
-    en: `bad`,
-  },
-  floweringText: {
-    ua: `Цвітіння`,
-    en: `Flowering`,
-  },
-  floweringTrueText: {
-    ua: `так`,
-    en: `true`,
-  },
-  floweringFalseText: {
-    ua: `ні`,
-    en: `false`,
-  },
-  growthRateText: {
-    ua: `Темп зростання`,
-    en: `GrowthRate`,
-  },
-  growthRateLowText: {
-    ua: `низька`,
-    en: `low`,
-  },
-  growthRateNormalText: {
-    ua: `середння`,
-    en: `normal`,
-  },
-  growthRateHightText: {
-    ua: `висока`,
-    en: `hight`,
-  },
-  edibleText: {
-    ua: `Їстівна`,
-    en: `Edible`,
-  },
-  edibleTrueText: {
-    ua: `так`,
-    en: `true`,
-  },
-  edibleFalseText: {
-    ua: `ні`,
-    en: `false`,
+  lifeDurationLongLivedText: {
+    ua: `довговічні`,
+    en: `long-lived`,
   },
 };

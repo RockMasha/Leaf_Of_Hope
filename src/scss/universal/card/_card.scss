@@ -133,13 +133,10 @@
       border-radius: 0 12px 12px 12px;
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       row-gap: 8px;
       column-gap: 79px;
       font-size: 24px;
-      & span {
-        display: block;
-      }
     }
   }
   &__date {

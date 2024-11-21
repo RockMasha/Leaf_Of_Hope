@@ -1,63 +1,256 @@
 export const cardData = {
-  alergenicity: {
-    false: "відсутння",
-    true: "наявна",
+  toxicity: {
+    name: {
+      ua: `Отруйні`,
+      en: `Toxicity`,
+    },
+    "very-poisonous": {
+      ua: `дуже отруйні`,
+      en: `very poisonous`,
+    },
+    "highly-toxic": {
+      ua: `сильно токсичні`,
+      en: `highly toxic`,
+    },
+    toxic: {
+      ua: `токсичні`,
+      en: `toxic`,
+    },
+    "non-toxic": {
+      ua: `нетоксичні`,
+      en: `non-toxic`,
+    },
   },
-  humidity: {
-    high: "низька",
-    normal: "помірна",
-    low: "висока",
+
+  plantCondition: {
+    name: {
+      ua: `Стан рослини`,
+      en: `Plant condition`,
+    },
+    conditioned: {
+      ua: `кондиційний`,
+      en: `conditioned`,
+    },
+    unconditioned: {
+      ua: `некондиційний`,
+      en: `unconditioned`,
+    },
   },
-  lifeDuration: {
-    annual: "однорічна",
-    biennial: "дворічна",
-    perennial: "довгожитель",
+
+  plantType: {
+    name: {
+      ua: `Тип рослини`,
+      en: `Plant type`,
+    },
+    flowering: {
+      ua: `квітучі`,
+      en: `flowering`,
+    },
+    foliage: {
+      ua: `листяні`,
+      en: `foliage`,
+    },
   },
+
+  height: {
+    name: {
+      ua: `Висота`,
+      en: `Height`,
+    },
+    dwarf: {
+      ua: `карликові`,
+      en: `dwarf`,
+    },
+    low: {
+      ua: `низькі`,
+      en: `low`,
+    },
+    average: {
+      ua: `середні`,
+      en: `average`,
+    },
+    high: {
+      ua: `високі`,
+      en: `high`,
+    },
+    "very high": {
+      ua: `дуже високі`,
+      en: `very high`,
+    },
+  },
+
   light: {
-    many: "багато",
-    normal: "помірно",
-    little: "мало",
+    name: {
+      ua: `Світло`,
+      en: `Light`,
+    },
+    "light-loving": {
+      ua: `світлолюбна`,
+      en: `light-loving`,
+    },
+    "relatively light-loving": {
+      ua: `відн. світлолюбна`,
+      en: `rel. light-loving`,
+    },
+    "shade-tolerant": {
+      ua: `тіньовитривала`,
+      en: `shade-tolerant`,
+    },
   },
-  size: {
-    large: "великий",
-    medium: "середній",
-    small: "малий",
-  },
+
   temperature: {
-    high: "теплолюбива",
-    normal: "нейтральна",
-    low: "холоднолюбива",
+    name: {
+      ua: `Температура`,
+      en: `Temperature`,
+    },
+    "heat-loving": {
+      ua: `теплолюбні`,
+      en: `heat-loving`,
+    },
+    "cold-resistant": {
+      ua: `холодостійкі`,
+      en: `cold-resistant`,
+    },
   },
-  way: {
-    exchange: "обмін",
-    give: "відачча",
+
+  watering: {
+    name: {
+      ua: `Полив раз на`,
+      en: `watering once every`,
+    },
+    "three days": {
+      ua: `три дні`,
+      en: `three days`,
+    },
+    week: {
+      ua: `тиждень`,
+      en: `week`,
+    },
+    "two weeks": {
+      ua: `два тижні`,
+      en: `two weeks`,
+    },
+    month: {
+      ua: `місяць`,
+      en: `a month`,
+    },
   },
-  attention: {
-    many: "висока",
-    normal: "середня",
-    little: "низька",
+
+  care: {
+    name: {
+      ua: `Догляд`,
+      en: `Care`,
+    },
+    picky: {
+      ua: `вибагливий`,
+      en: `picky`,
+    },
+    unassuming: {
+      ua: `невибагливи`,
+      en: `unassuming`,
+    },
   },
-  survive: {
-    high: "висока",
-    normal: "середня",
-    low: "низька",
+
+  substrate: {
+    name: {
+      ua: `Субстрат`,
+      en: `Substrate`,
+    },
+    universal: {
+      ua: `універсальний`,
+      en: `universal`,
+    },
+    peat: {
+      ua: `торф'яний`,
+      en: `peat`,
+    },
+    cactus: {
+      ua: `кактусовий`,
+      en: `cactus`,
+    },
+    orchids: {
+      ua: `для орхідей`,
+      en: `orchids`,
+    },
+    palm: {
+      ua: `пальмовий`,
+      en: `palm`,
+    },
+    other: {
+      ua: `інше`,
+      en: `other`,
+    },
   },
-  state: {
-    good: "добре",
-    bad: "погано",
-    enough: "середній",
+
+  windowDistance: {
+    name: {
+      ua: `Відстань до вікна`,
+      en: `Distance to the window`,
+    },
+    "up to 0.5m": {
+      ua: `до 0.5м`,
+      en: `up to 0.5m`,
+    },
+    "up to 1m": {
+      ua: `до 1м`,
+      en: `up to 1m`,
+    },
+    "up to 2m": {
+      ua: `до 2м`,
+      en: `up to 2m`,
+    },
+    "over 2m": {
+      ua: `більше 2м`,
+      en: `over 2m`,
+    },
   },
-  flowering: {
-    false: "так",
-    true: "ні",
+
+  allergenicity: {
+    name: {
+      ua: `Алергічність`,
+      en: `Allergenicity`,
+    },
+    available: {
+      ua: `наявна`,
+      en: `available`,
+    },
+    absent: {
+      ua: `немає`,
+      en: `absent`,
+    },
   },
+
   growthRate: {
-    high: "висока",
-    normal: "середня",
-    low: "низька",
+    name: {
+      ua: `Швидкість зростання`,
+      en: `Growth rate`,
+    },
+    "fast-growing": {
+      ua: `швидкорослі`,
+      en: `fast-growing`,
+    },
+    "medium-growing": {
+      ua: `середньорослі`,
+      en: `medium-growing`,
+    },
+    "slow-growing": {
+      ua: `повільнорослі`,
+      en: `slow-growing"`,
+    },
   },
-  edible: {
-    false: "так",
-    true: "ні",
+
+  lifeDuration: {
+    name: {
+      ua: `Тривалість життя`,
+      en: `Lifespan`,
+    },
+    "short-lived": {
+      ua: `недовговічні`,
+      en: `short-lived`,
+    },
+    "long-lived": {
+      ua: `довговічні`,
+      en: `long-lived`,
+    },
   },
 };

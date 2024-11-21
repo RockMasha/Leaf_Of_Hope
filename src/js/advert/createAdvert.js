@@ -1,27 +1,20 @@
 import { getOneAdvert } from "../servise/api";
-import { getDataOriginEnglishValue } from "../universal/cardData/getDataOriginEnglishValue";
-import { getDataOriginUkraineValue } from "../universal/cardData/getDataOriginUkraineValue";
+import { getDataValue } from "../universal/cardData/getDataValue";
 import { getValueSrcParams } from "../universal/getValueSrcParams";
 import { changeMoreProperties } from "./changeMoreProperties";
 import { getAdvert } from "./getAdvert";
-import { getEnglishAdvert } from "./getEnglishAdvert";
 import { root } from "./root";
 
-let data;
-export const originalAdvert = {};
+let data = {};
 export async function createAdvert() {
   const id = getValueSrcParams("id");
   data = await getOneAdvert(id);
-  setOriginalAdvert(data.lang);
-  originalAdvert.set();
+  setAdvert();
   return;
 }
 
-export function setAdvert(
-  getData = getDataOriginUkraineValue,
-  getAdvertTemple = getAdvert
-) {
-  const advertEl = getAdvertTemple(data, getData);
+export function setAdvert() {
+  const advertEl = getAdvert(data, getDataValue);
   root.advert.innerHTML = advertEl;
   setEventMoreProperties();
 }
@@ -29,21 +22,4 @@ export function setAdvert(
 function setEventMoreProperties() {
   const BtnMoreEl = document.querySelector(".advert-properties__more-btn");
   BtnMoreEl.addEventListener("click", changeMoreProperties);
-}
-
-export function setOriginalAdvert(lang) {
-  if (lang === "en") {
-    originalAdvert.set = setAdvert.bind(
-      null,
-      getDataOriginEnglishValue,
-      getEnglishAdvert
-    );
-    return;
-  }
-
-  originalAdvert.set = setAdvert.bind(
-    null,
-    getDataOriginUkraineValue,
-    getAdvert
-  );
 }
