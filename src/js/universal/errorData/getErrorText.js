@@ -7,8 +7,6 @@ const translateDataDefault = { property: "error", settings: errorSettings };
 
 let lang = getCurrentLanguage();
 export function getErrorText(error, translateData = translateDataDefault) {
-  console.log(error);
-
   const { property, settings } = translateData;
   lang = getCurrentLanguage();
   const key = error ? getNeedErrorDataKey(error) : false;

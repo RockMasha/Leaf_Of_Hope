@@ -108,7 +108,11 @@ export class Cards {
       this.setDefaultElement();
       return false;
     }
-    const cardsEl = cardsArr.map((advert) => this.getCard(advert));
+
+    const cardsEl = cardsArr.map((advert) => {
+      return this.getCard(advert);
+    });
+
     this.listCardsEl.innerHTML = cardsEl.join("");
     return true;
   }
