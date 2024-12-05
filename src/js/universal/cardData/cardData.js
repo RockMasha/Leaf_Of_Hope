@@ -235,7 +235,7 @@ export const cardData = {
     },
     "slow-growing": {
       ua: `повільнорослі`,
-      en: `slow-growing"`,
+      en: `slow-growing`,
     },
   },
 

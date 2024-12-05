@@ -61,6 +61,19 @@
       height: 49px;
     }
   }
+  &__svg_ai-assist {
+    color: $color-main-background;
+    font-weight: 700;
+    font-size: 20px;
+    @media (min-width: 768px) {
+      font-weight: 800;
+      font-size: 24px;
+    }
+    @media (min-width: 1440px) {
+      font-weight: 900;
+      font-size: 38px;
+    }
+  }
   &__item {
     border-radius: 10px;
     @media (min-width: 768px) {
