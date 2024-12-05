@@ -7,7 +7,7 @@ export default defineConfig({
   root: "src",
 
   build: {
-    target: ['es2022', 'chrome89', 'firefox89', 'safari15'],
+    target: ["es2022", "chrome89", "firefox89", "safari15"],
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src/index.html"),
@@ -16,6 +16,7 @@ export default defineConfig({
         nestedFour: resolve(__dirname, "src/advert.html"),
         nestedFive: resolve(__dirname, "src/formAdvert.html"),
         nestedSix: resolve(__dirname, "src/formProfile.html"),
+        nestedSix: resolve(__dirname, "src/ai-assist.html"),
       },
     },
     outDir: "../dist",
