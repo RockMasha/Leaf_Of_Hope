@@ -54,3 +54,13 @@ body .is-hidden {
 body[lock] {
   overflow: hidden;
 }
+
+main[ai-assist] {
+  padding-top: 65px;
+  @media (min-width: 768px) {
+    padding-top: 85px;
+  }
+  @media (min-width: 1440px) {
+    padding-top: 115px;
+  }
+}

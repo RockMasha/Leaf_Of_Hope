@@ -56,7 +56,7 @@ export function getAdvertCardInner(info) {
   return result;
 }
 
-function getPropertiesEls(properties) {
+function getPropertiesEls(properties) {  
   const propertiesInnerListEls = [];
   for (const item of properties) {
     const name = Object.keys(item)[0];

@@ -1,0 +1,46 @@
+<section class="ai-assist">
+  <div class="container ai-assist__container">
+    <div class="ai-assist-chat-wrapper">
+      <ul class="ai-assist-chat chat"></ul>
+    </div>
+    <div class="ai-assist-panel__loader chat-loader is-hidden"></div>
+    <div class="ai-assist-panel">
+      <div class="ai-assist-panel-plus">
+        <ul class="ai-assist-panel-plus-list is-hidden chat-plus-list">
+          <li
+            class="ai-assist-panel-plus-list__item ai-assist-panel-plus-list__item_delete-chat"
+          >
+            <button
+              class="ai-assist-panel-plus-list__btn ai-assist-panel-plus-list__btn_delete-chat chat-delete"
+              key="deleteChatText"
+            >
+              Очистити чат
+            </button>
+          </li>
+        </ul>
+        <button class="ai-assist-panel-plus-btn chat-plus-btn">
+          <svg class="ai-assist-panel-plus-btn__svg">
+            <use href="./img/ai-assist/three-dots-vertical.svg#dots"></use>
+          </svg>
+        </button>
+      </div>
+      <form class="ai-assist-panel__form chat-form">
+        <label class="ai-assist-panel__enter-wrapper">
+          <textarea
+            type="text"
+            class="ai-assist-panel__enter"
+            name="message"
+          ></textarea>
+          <p class="ai-assist-panel__text enter-text" key="EnterDefaultText">
+            Написати...
+          </p>
+        </label>
+        <button type="submit" class="ai-assist-panel-send">
+          <svg class="ai-assist-panel-send__svg">
+            <use href="./img/ai-assist/arrow-enter.svg#arrow-enter"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -220,7 +220,7 @@
         border-width: 2.5px, 20px, 2.5px, 2.5px;
       }
     }
-    &__description::placeholder {
+    &::placeholder {
       color: $color-grey-lightblue;
     }
   }

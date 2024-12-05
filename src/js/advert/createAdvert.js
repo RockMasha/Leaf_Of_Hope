@@ -14,7 +14,7 @@ export async function createAdvert() {
 }
 
 export function setAdvert() {
-  const advertEl = getAdvert(data, getDataValue);
+  const advertEl = getAdvert(data);
   root.advert.innerHTML = advertEl;
   setEventMoreProperties();
 }

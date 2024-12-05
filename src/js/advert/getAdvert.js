@@ -1,10 +1,11 @@
 import { cardData } from "../universal/cardData/cardData";
+import { getDataValue } from "../universal/cardData/getDataValue";
 import { getCurrentVariableLang } from "../universal/translate/universal/currentLanguage/getCurrentLanguage";
 import { getAdvertPicture, getUserPicture } from "./getPicture";
 
 let lang;
-export function getAdvert(info, getData) {
-  const data = getData(info);
+export function getAdvert(info) {
+  const data = getDataValue(info);
 
   const {
     image,
@@ -33,7 +34,7 @@ export function getAdvert(info, getData) {
     phone,
     way,
   } = data;
-
+  
   const pageLang = getCurrentVariableLang();
   lang = getCurrentVariableLang() === "or" ? cardLang : pageLang;
 

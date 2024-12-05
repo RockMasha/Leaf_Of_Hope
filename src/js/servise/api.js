@@ -1,5 +1,6 @@
 import axios from "axios";
 import { getToken } from "../token/getToken";
+import { getCurrentLanguage } from "../universal/translate/universal/currentLanguage/getCurrentLanguage";
 
 axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
 
@@ -126,6 +127,52 @@ export async function deleteAdvert(id) {
 export async function changeAdvert(id, data) {
   const token = getToken();
   const answer = await axios.put(`/api/advert/${id}`, data, {
+    headers: {
+      Authorization: token,
+    },
+  });
+  return answer.data;
+}
+
+export async function createChat() {
+  const lang = getCurrentLanguage();
+  const token = getToken();
+  const answer = await axios.post(
+    `/api/ai-chat/`,
+    { lang },
+    {
+      headers: {
+        Authorization: token,
+      },
+    }
+  );
+  return answer.data;
+}
+export async function sendMessage(message) {
+  const token = getToken();
+  const answer = await axios.put(
+    `/api/ai-chat/`,
+    { message: message },
+    {
+      headers: {
+        Authorization: token,
+      },
+    }
+  );
+  return answer.data;
+}
+export async function getChat() {
+  const token = getToken();
+  const answer = await axios.get(`/api/ai-chat/`, {
+    headers: {
+      Authorization: token,
+    },
+  });
+  return answer.data;
+}
+export async function deleteChat() {
+  const token = getToken();
+  const answer = await axios.delete(`/api/ai-chat/`, {
     headers: {
       Authorization: token,
     },
