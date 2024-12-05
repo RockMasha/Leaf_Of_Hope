@@ -1,4 +1,4 @@
-import{a as d,h as N}from"./setCurrentLanguage-0poYnjjN.js";import{a as O}from"./api-CZvNR4Wc.js";import{c as j,g as B}from"./getDataValue-DJk4az9Q.js";import{g as U}from"./getValueSrcParams-BMgebK2A.js";import{s as H}from"./setSwitchVariableLanguage-B00RYMg6.js";function R(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function F(e){const t=e["small-250px"],r=e["medium-300px"],s=e["large-500px"];return`
+import{a as c,h as C}from"./setCurrentLanguage-DtO1VHaQ.js";import{a as N}from"./api-BUf5wovn.js";import{g as O}from"./getValueSrcParams-BMgebK2A.js";import{g as j,c as B}from"./getDataValue-BdD5QQUB.js";import{s as U}from"./setSwitchVariableLanguage-Dg5E03zG.js";function H(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function R(e){const t=e["small-250px"],r=e["medium-300px"],s=e["large-500px"];return`
             <picture class="advert-maininfo__img">
               <source
                 srcset="
@@ -28,7 +28,7 @@ import{a as d,h as N}from"./setCurrentLanguage-0poYnjjN.js";import{a as O}from".
                 loading="lazy"
               />
             </picture>
-          `}function G(e){const t=e["tiny-100px"],r=e["very-small-175px"],s=e["small-250px"];return`
+          `}function F(e){const t=e["tiny-100px"],r=e["very-small-175px"],s=e["small-250px"];return`
       <picture class="advert-userinfo__img big-photo">
         <source
           srcset="
@@ -56,31 +56,31 @@ import{a as d,h as N}from"./setCurrentLanguage-0poYnjjN.js";import{a as O}from".
           alt="plant"
           loading="lazy"
         />
-      </picture>`}let a;function J(e,t){const r=t(e),{image:s,name:n,description:l,wish:c,date:u,lang:v,toxicity:m,plantCondition:_,plantType:g,height:h,light:f,temperature:$,watering:x,care:w,substrate:y,windowDistance:b,allergenicity:L,growthRate:E,lifeDuration:S,username:I,email:P,avatar:T,adress:q,phone:D,way:A}=r,W=d();a=d()==="or"?v:W;const{pageName:M,descriptionTitle:V,defaultDescription:k,WishTitle:z,defaultWish:C}=K();return`
+      </picture>`}let a;function G(e){const t=j(e),{image:r,name:s,description:i,wish:l,date:p,lang:u,toxicity:v,plantCondition:m,plantType:_,height:g,light:h,temperature:f,watering:$,care:x,substrate:w,windowDistance:y,allergenicity:b,growthRate:L,lifeDuration:E,username:S,email:I,avatar:P,adress:T,phone:q,way:D}=t,A=c();a=c()==="or"?u:A;const{pageName:W,descriptionTitle:M,defaultDescription:V,WishTitle:k,defaultWish:z}=J();return`
           <div class="container advert__container">
-            <h1 hidden>${M}</h1>
+            <h1 hidden>${W}</h1>
             <div class="advert-maininfo">
-              ${F(s)}
+              ${R(r)}
               <div>
-                <p class="advert-maininfo__date">${u}</p>
-                <h2 class="advert-maininfo__title">${n}</h2>
+                <p class="advert-maininfo__date">${p}</p>
+                <h2 class="advert-maininfo__title">${s}</h2>
                 <div class="advert-maininfo-way">
-                  <p class="advert-maininfo-way__text">${A}</p>
+                  <p class="advert-maininfo-way__text">${D}</p>
                 </div>
                 <ul class="advert-properties">
-                  ${o([{toxicity:m},{plantCondition:_},{plantType:g},{height:h},{light:f},{temperature:$},{watering:x}])}
+                  ${o([{toxicity:v},{plantCondition:m},{plantType:_},{height:g},{light:h},{temperature:f},{watering:$}])}
                 </ul>
               </div>
             </div>
             <ul class="advert-properties advert-properties_more advert-properties_hidden">
               <li>
                 <ul class="advert-properties__more-list">
-                  ${o([{care:w},{substrate:y},{windowDistance:b}])}
+                  ${o([{care:x},{substrate:w},{windowDistance:y}])}
                 </ul>
               </li>
               <li>
                 <ul class="advert-properties__more-list">
-                  ${o([{allergenicity:L},{growthRate:E},{lifeDuration:S}])}
+                  ${o([{allergenicity:b},{growthRate:L},{lifeDuration:E}])}
                 </ul>
               </li>
             </ul>
@@ -91,35 +91,35 @@ import{a as d,h as N}from"./setCurrentLanguage-0poYnjjN.js";import{a as O}from".
               </ul>
             </button>
             <div class="advert-discreption">
-              <h2 class="advert-discreption__title">${V}</h2>
+              <h2 class="advert-discreption__title">${M}</h2>
               <p class="advert-discreption__text">
-                ${l||`<span class="advert-discreption__text_default">${k}</span>`}
+                ${i||`<span class="advert-discreption__text_default">${V}</span>`}
               </p>
             </div>
             <div class="advert-user">
               <div class="advert-userinfo">
                 <div class="advert-userinfo__profile-img">
-                  ${G(T)}
+                  ${F(P)}
                 </div>
                 <div class="advert-userinfo__userinfos">
-                  <h2 class="advert-userinfo__name">${I}</h2>
-                  <p class="advert-userinfo__adress">${q}</p>
+                  <h2 class="advert-userinfo__name">${S}</h2>
+                  <p class="advert-userinfo__adress">${T}</p>
                   <p class="advert-userinfo__phone">
-                    ${D}
+                    ${q}
                   </p>
                   <p class="advert-userinfo__email">
-                    ${P}
+                    ${I}
                   </p>
                 </div>
               </div>
               <div class="advert-wishes ${e.way==="exchange"?"":"is-hidden"}">
-                <h2 class="advert-wishes__title">${z}</h2>
+                <h2 class="advert-wishes__title">${k}</h2>
                 <p class="advert-wishes__text">
-                 ${c||`<span class="advert-wishes__text_default">${C}</span>`}
+                 ${l||`<span class="advert-wishes__text_default">${z}</span>`}
                 </p>
               </div>
             </div>
-          </div>`}function K(){const e={};return e.pageName=a==="ua"?"Оголошення":"Advert",e.descriptionTitle=a==="ua"?"Опис":"Description",e.defaultDescription=a==="ua"?"Немає опису":"There is no description",e.WishTitle=a==="ua"?"Побажання":"Wish",e.defaultWish=a==="ua"?"Немає побажань":"There are no wishes",e}function o(e){const t=[];for(const r of e){const s=Object.keys(r)[0],n=`
+          </div>`}function J(){const e={};return e.pageName=a==="ua"?"Оголошення":"Advert",e.descriptionTitle=a==="ua"?"Опис":"Description",e.defaultDescription=a==="ua"?"Немає опису":"There is no description",e.WishTitle=a==="ua"?"Побажання":"Wish",e.defaultWish=a==="ua"?"Немає побажань":"There are no wishes",e}function o(e){const t=[];for(const r of e){const s=Object.keys(r)[0],i=`
     <li class="advert-properties__item">
-      <p class="advert-properties__text">${Q(s)}: ${r[s]}</p>
-    </li>`;t.push(n)}return t.join("")}function Q(e){return j[e].name[a]}const X={translateWrapp:document.querySelector(".translate-wrapper_variable"),translate:document.querySelector(".translate"),translateInput:document.querySelector(".translate__input"),main:document.querySelector("main"),advert:document.querySelector(".advert")};let p={};async function Y(){const e=U("id");p=await O(e),i()}function i(){const e=J(p,B);X.advert.innerHTML=e,Z()}function Z(){document.querySelector(".advert-properties__more-btn").addEventListener("click",R)}const ee=i,te=i,re=i,se={setUkrainian:ee,setEnglish:te,setOriginal:re};await Y();H(se);N();
+      <p class="advert-properties__text">${K(s)}: ${r[s]}</p>
+    </li>`;t.push(i)}return t.join("")}function K(e){return B[e].name[a]}const Q={translateWrapp:document.querySelector(".translate-wrapper_variable"),translate:document.querySelector(".translate"),translateInput:document.querySelector(".translate__input"),main:document.querySelector("main"),advert:document.querySelector(".advert")};let d={};async function X(){const e=O("id");d=await N(e),n()}function n(){const e=G(d);Q.advert.innerHTML=e,Y()}function Y(){document.querySelector(".advert-properties__more-btn").addEventListener("click",H)}const Z=n,ee=n,te=n,re={setUkrainian:Z,setEnglish:ee,setOriginal:te};await X();U(re);C();
