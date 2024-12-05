@@ -15,13 +15,16 @@
     <load src="./html/universal/header/header.html" />
     <main>
       <load src="./html/universal/translateBtn/translate-btn.html" />
-      <div class="profile-wrapper">
-        <load src="./html/profile/profileInfo/profileInfo.html" />
-
-        <load src="./html/profile/profileAdverts/profileAdverts-start.html" />
-        <load src="./html/universal/translateBtn/variable-translate-btn.html" />
-        <load src="./html/profile/profileAdverts/profileAdvets-end.html" />
-      </div>
+      <load src="./html/profile/profileInfo/profileInfo.html" />
+      <section class="profile-adverts">
+        <div class="container profile-adverts__container">
+          <h2 class="profile-adverts__title">Мої оголошення:</h2>
+          <load
+            src="./html/universal/translateBtn/variable-translate-btn.html"
+          />
+          <load src="./html/profile/profileAdverts/profileAdvets.html" />
+        </div>
+      </section>
     </main>
     <load src="./html/universal/footer/footer.html" />
     <script type="module" src="./js/profile.js"></script>
