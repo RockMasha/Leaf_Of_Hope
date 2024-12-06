@@ -246,7 +246,7 @@ function getDefaultElement() {
   const text = lang === "ua" ? "Немає оголошень" : "There are no adverts";
   return `<div class="cards-list-default">
             <svg class="cards-list-default__img">
-              <use href="./img/profile/defoult-plant.svg#defoult-plant"></use>
+              <use href="https://res.cloudinary.com/dk3syrsg5/image/upload/v1733484608/defoult-plant_rd42lo.svg"></use>
             </svg>
             <p class="cards-list-default__text" key="defaultCardListText">${text}</p>
           </div>`;
