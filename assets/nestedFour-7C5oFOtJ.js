@@ -1,4 +1,4 @@
-import{a as c,h as C}from"./setCurrentLanguage-DtO1VHaQ.js";import{a as N,c as O,b as j}from"./getDataValue-9dXxiyqd.js";import{g as B}from"./getValueSrcParams-BMgebK2A.js";import{s as U}from"./setSwitchVariableLanguage-Dg5E03zG.js";function H(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function R(e){const t=e["small-250px"],r=e["medium-300px"],s=e["large-500px"];return`
+import{a as c,h as C}from"./setCurrentLanguage-DtO1VHaQ.js";import{a as N}from"./api-3ERTuq6T.js";import{g as O}from"./getValueSrcParams-BMgebK2A.js";import{g as j,c as B}from"./getDataValue-BdD5QQUB.js";import{s as U}from"./setSwitchVariableLanguage-Dg5E03zG.js";function H(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function R(e){const t=e["small-250px"],r=e["medium-300px"],s=e["large-500px"];return`
             <picture class="advert-maininfo__img">
               <source
                 srcset="
@@ -56,7 +56,7 @@ import{a as c,h as C}from"./setCurrentLanguage-DtO1VHaQ.js";import{a as N,c as O
           alt="plant"
           loading="lazy"
         />
-      </picture>`}let a;function G(e){const t=N(e),{image:r,name:s,description:i,wish:l,date:p,lang:u,toxicity:v,plantCondition:m,plantType:_,height:g,light:h,temperature:f,watering:$,care:x,substrate:w,windowDistance:y,allergenicity:b,growthRate:L,lifeDuration:E,username:S,email:I,avatar:P,adress:T,phone:q,way:D}=t,A=c();a=c()==="or"?u:A;const{pageName:W,descriptionTitle:M,defaultDescription:V,WishTitle:k,defaultWish:z}=J();return`
+      </picture>`}let a;function G(e){const t=j(e),{image:r,name:s,description:i,wish:l,date:p,lang:u,toxicity:v,plantCondition:m,plantType:_,height:g,light:h,temperature:f,watering:$,care:x,substrate:w,windowDistance:y,allergenicity:b,growthRate:L,lifeDuration:E,username:S,email:I,avatar:P,adress:T,phone:q,way:D}=t,A=c();a=c()==="or"?u:A;const{pageName:W,descriptionTitle:M,defaultDescription:V,WishTitle:k,defaultWish:z}=J();return`
           <div class="container advert__container">
             <h1 hidden>${W}</h1>
             <div class="advert-maininfo">
@@ -122,4 +122,4 @@ import{a as c,h as C}from"./setCurrentLanguage-DtO1VHaQ.js";import{a as N,c as O
           </div>`}function J(){const e={};return e.pageName=a==="ua"?"Оголошення":"Advert",e.descriptionTitle=a==="ua"?"Опис":"Description",e.defaultDescription=a==="ua"?"Немає опису":"There is no description",e.WishTitle=a==="ua"?"Побажання":"Wish",e.defaultWish=a==="ua"?"Немає побажань":"There are no wishes",e}function o(e){const t=[];for(const r of e){const s=Object.keys(r)[0],i=`
     <li class="advert-properties__item">
       <p class="advert-properties__text">${K(s)}: ${r[s]}</p>
-    </li>`;t.push(i)}return t.join("")}function K(e){return O[e].name[a]}const Q={translateWrapp:document.querySelector(".translate-wrapper_variable"),translate:document.querySelector(".translate"),translateInput:document.querySelector(".translate__input"),main:document.querySelector("main"),advert:document.querySelector(".advert")};let d={};async function X(){const e=B("id");d=await j(e),n()}function n(){const e=G(d);Q.advert.innerHTML=e,Y()}function Y(){document.querySelector(".advert-properties__more-btn").addEventListener("click",H)}const Z=n,ee=n,te=n,re={setUkrainian:Z,setEnglish:ee,setOriginal:te};await X();U(re);C();
+    </li>`;t.push(i)}return t.join("")}function K(e){return B[e].name[a]}const Q={translateWrapp:document.querySelector(".translate-wrapper_variable"),translate:document.querySelector(".translate"),translateInput:document.querySelector(".translate__input"),main:document.querySelector("main"),advert:document.querySelector(".advert")};let d={};async function X(){const e=O("id");d=await N(e),n()}function n(){const e=G(d);Q.advert.innerHTML=e,Y()}function Y(){document.querySelector(".advert-properties__more-btn").addEventListener("click",H)}const Z=n,ee=n,te=n,re={setUkrainian:Z,setEnglish:ee,setOriginal:te};await X();U(re);C();
