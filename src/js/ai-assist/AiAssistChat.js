@@ -20,8 +20,9 @@ export class AiAssistChat {
     this.userAvatar = userImage;
     this.assistAvatar = {
       "small-chat-avatar-45px":
-        "./img/ai-assist/ai-assist-avatar/ai-assist_45.jpg",
-      "chat-avatar-75px": "./img/ai-assist/ai-assist-avatar/ai-assist_75.jpg",
+        "https://res.cloudinary.com/dk3syrsg5/image/upload/v1733484557/ai-assist_45_v4r2wi.jpg",
+      "chat-avatar-75px":
+        "https://res.cloudinary.com/dk3syrsg5/image/upload/v1733484555/ai-assist_75_cejgdp.jpg",
     };
   }
 

@@ -26,7 +26,7 @@ function getUserEL(user) {
         <a class="user-info__redact-link" href="formProfile.html?redact=true">
           <img
             class="user-info__redact-img"
-            src="./img/profile/redactProfile.svg"
+            src="https://res.cloudinary.com/dk3syrsg5/image/upload/v1733484552/redactProfile_vyxmap.svg"
             alt="redact img"
           />
         </a>
