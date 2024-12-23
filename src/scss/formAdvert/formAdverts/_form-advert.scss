@@ -267,6 +267,24 @@
       @media (min-width: 1440px) {
         gap: 13px;
       }
+
+      .form-advert-characteristic_rarity & {
+        @media (min-width: 1440px) {
+          gap: 4px;
+        }
+        & > span {
+          padding: 3px 5px;
+          margin-right: auto;
+          border: 3px solid $color-red;
+          border-radius: 15px;
+          @media (min-width: 768px) {
+            padding: 4px 7px;
+          }
+          @media (min-width: 1440px) {
+            padding: 2px 7px;
+          }
+        }
+      }
     }
     &-select {
       padding: 16px 14px;

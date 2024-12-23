@@ -22,7 +22,7 @@ export async function submitFormAdvert(event) {
       await changeAdvert(id, data);
     } else {
       const token = getToken();
-      await postAdvert(data, token);     
+      await postAdvert(data, token);
     }
     window.location.href = "profile.html";
   } catch (error) {
@@ -35,7 +35,7 @@ export async function submitFormAdvert(event) {
 
 function showError(error) {
   console.log(error);
-  
+
   const errorText = error?.response?.data?.message;
   const message = getErrorText(errorText);
   root.error.textContent = message;

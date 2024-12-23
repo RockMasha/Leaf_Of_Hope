@@ -115,7 +115,7 @@ export const propertiesSettings = {
 
   wateringSignature: {
     ua: `Полив раз на`,
-    en: `watering once every`,
+    en: `Watering once every`,
   },
   wateringThreeDaysText: {
     ua: `три дні`,
@@ -238,5 +238,42 @@ export const propertiesSettings = {
   lifeDurationLongLivedText: {
     ua: `довговічні`,
     en: `long-lived`,
+  },
+
+  raritySignature: {
+    ua: `Рідкість`,
+    en: `Rarity`,
+  },
+  rarityNEText: {
+    ua: `NE`,
+    en: `NE`,
+  },
+  rarityDDText: {
+    ua: `DD`,
+    en: `DD`,
+  },
+  rarityLCText: {
+    ua: `LC`,
+    en: `LC`,
+  },
+  rarityNTText: {
+    ua: `NT`,
+    en: `NT`,
+  },
+  rarityVUText: {
+    ua: `VU`,
+    en: `VU`,
+  },
+  rarityENText: {
+    ua: `EN`,
+    en: `EN`,
+  },
+  rarityCRText: {
+    ua: `CR`,
+    en: `CR`,
+  },
+  rarityEWText: {
+    ua: `EW`,
+    en: `EW`,
   },
 };

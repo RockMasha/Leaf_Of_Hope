@@ -29,7 +29,7 @@ export function getAdvertCardInner(info) {
           <a href="advert.html?id=${id}" class="card" aria-label="advert ${
     info.name
   }">
-            <p class="card__way">${way}</p>
+            <p class="card__way">${cardData.way[way][lang]}</p>
             <div class="card__info-wrapp">
               <div class="card__thumb">
                 ${getCardPicture(image)}
@@ -56,7 +56,7 @@ export function getAdvertCardInner(info) {
   return result;
 }
 
-function getPropertiesEls(properties) {  
+function getPropertiesEls(properties) {
   const propertiesInnerListEls = [];
   for (const item of properties) {
     const name = Object.keys(item)[0];
