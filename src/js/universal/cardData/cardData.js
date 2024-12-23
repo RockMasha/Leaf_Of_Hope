@@ -1,4 +1,15 @@
 export const cardData = {
+  way: {
+    give: {
+      ua: `віддіча`,
+      en: `give`,
+    },
+    exchange: {
+      ua: `обмін`,
+      en: `exchange`,
+    },
+  },
+
   toxicity: {
     name: {
       ua: `Отруйні`,
@@ -251,6 +262,45 @@ export const cardData = {
     "long-lived": {
       ua: `довговічні`,
       en: `long-lived`,
+    },
+  },
+
+  rarity: {
+    name: {
+      ua: `Рідкість`,
+      en: `Rarity`,
+    },
+    NE: {
+      ua: `NE`,
+      en: `NE`,
+    },
+    DD: {
+      ua: `DD`,
+      en: `DD`,
+    },
+    LC: {
+      ua: `LC`,
+      en: `LC`,
+    },
+    NT: {
+      ua: `NT`,
+      en: `NT`,
+    },
+    VU: {
+      ua: `VU`,
+      en: `VU`,
+    },
+    EN: {
+      ua: `EN`,
+      en: `EN`,
+    },
+    CR: {
+      ua: `CR`,
+      en: `CR`,
+    },
+    EW: {
+      ua: `EW`,
+      en: `EW`,
     },
   },
 };

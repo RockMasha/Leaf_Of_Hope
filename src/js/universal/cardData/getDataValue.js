@@ -27,6 +27,7 @@ export function getDataValue(info) {
     allergenicity,
     growthRate,
     lifeDuration,
+    rarity,
     way,
   } = info;
 
@@ -89,6 +90,7 @@ export function getDataValue(info) {
     allergenicity: processProperty({ allergenicity }),
     growthRate: processProperty({ growthRate }),
     lifeDuration: processProperty({ lifeDuration }),
+    rarity: processProperty({ rarity }),
     username,
     email,
     avatar,

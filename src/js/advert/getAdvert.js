@@ -27,6 +27,7 @@ export function getAdvert(info) {
     allergenicity,
     growthRate,
     lifeDuration,
+    rarity,
     username,
     email,
     avatar,
@@ -34,7 +35,7 @@ export function getAdvert(info) {
     phone,
     way,
   } = data;
-  
+
   const pageLang = getCurrentVariableLang();
   lang = getCurrentVariableLang() === "or" ? cardLang : pageLang;
 
@@ -55,7 +56,9 @@ export function getAdvert(info) {
                 <p class="advert-maininfo__date">${date}</p>
                 <h2 class="advert-maininfo__title">${name}</h2>
                 <div class="advert-maininfo-way">
-                  <p class="advert-maininfo-way__text">${way}</p>
+                  <p class="advert-maininfo-way__text">${
+                    cardData.way[way][lang]
+                  }</p>
                 </div>
                 <ul class="advert-properties">
                   ${getPropertiesEls([
@@ -63,10 +66,11 @@ export function getAdvert(info) {
                     { plantCondition },
                     { plantType },
                     { height },
-                    { light },
-                    { temperature },
-                    { watering },
                   ])}
+                  ${getPropertiesEls(
+                    [{ light }, { temperature }, { watering }],
+                    false
+                  )}
                 </ul>
               </div>
             </div>
@@ -77,15 +81,17 @@ export function getAdvert(info) {
                     { care },
                     { substrate },
                     { windowDistance },
+                    { growthRate },
                   ])}
+
                 </ul>
               </li>
               <li>
                 <ul class="advert-properties__more-list">
                   ${getPropertiesEls([
                     { allergenicity },
-                    { growthRate },
                     { lifeDuration },
+                    { rarity },
                   ])}
                 </ul>
               </li>
@@ -149,18 +155,33 @@ function getSignatures() {
   return items;
 }
 
-function getPropertiesEls(properties) {
+function getPropertiesEls(properties, isOrdinary = true) {
   const propertiesInnerListEls = [];
+
   for (const item of properties) {
     const name = Object.keys(item)[0];
-
-    const element = `
-    <li class="advert-properties__item">
-      <p class="advert-properties__text">${getName(name)}: ${item[name]}</p>
-    </li>`;
+    let element = isOrdinary
+      ? getOrdinaryItem(item, name)
+      : getSpanItem(item, name);
     propertiesInnerListEls.push(element);
   }
+
   return propertiesInnerListEls.join("");
+}
+
+function getOrdinaryItem(item, name) {
+  return `
+  <li class="advert-properties__item">
+    <p class="advert-properties__text">${getName(name)}: ${item[name]}</p>
+  </li>`;
+}
+function getSpanItem(item, name) {
+  return `
+  <li class="advert-properties__item">
+    <p class="advert-properties__text"> 
+    ${getName(name)}: <span>${item[name]}</span>
+    </p>
+  </li>`;
 }
 
 function getName(property) {

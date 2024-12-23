@@ -1,5 +1,4 @@
 import { getOneAdvert } from "../servise/api";
-import { getDataValue } from "../universal/cardData/getDataValue";
 import { getValueSrcParams } from "../universal/getValueSrcParams";
 import { changeMoreProperties } from "./changeMoreProperties";
 import { getAdvert } from "./getAdvert";

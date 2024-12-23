@@ -38,6 +38,7 @@ function createFormInputsObj() {
     allergenicity,
     growthRate,
     lifeDuration,
+    rarity,
   } = root.form;
 
   return {
@@ -58,6 +59,7 @@ function createFormInputsObj() {
     allergenicity,
     growthRate,
     lifeDuration,
+    rarity,
   };
 }
 
