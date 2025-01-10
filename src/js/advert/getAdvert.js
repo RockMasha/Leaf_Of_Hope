@@ -52,7 +52,7 @@ export function getAdvert(info) {
             <h1 hidden>${pageName}</h1>
             <div class="advert-maininfo">
               ${getAdvertPicture(image)}
-              <div>
+              <div class="advert-maininfo__property-box">
                 <p class="advert-maininfo__date">${date}</p>
                 <h2 class="advert-maininfo__title">${name}</h2>
                 <div class="advert-maininfo-way">
@@ -60,6 +60,7 @@ export function getAdvert(info) {
                     cardData.way[way][lang]
                   }</p>
                 </div>
+                <a class="criteria-btn" href="criteria.html">i</a>
                 <ul class="advert-properties">
                   ${getPropertiesEls([
                     { toxicity },
@@ -83,7 +84,6 @@ export function getAdvert(info) {
                     { windowDistance },
                     { growthRate },
                   ])}
-
                 </ul>
               </li>
               <li>
