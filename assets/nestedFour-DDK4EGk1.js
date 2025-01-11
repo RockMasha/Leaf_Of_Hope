@@ -1,4 +1,4 @@
-import{a as c,h as j}from"./setCurrentLanguage-0Hl_EXOw.js";import{a as B}from"./api-DfaLOtv4.js";import{g as U}from"./getValueSrcParams-BMgebK2A.js";import{g as H,c as d}from"./getDataValue-BE9Ttjkr.js";import{s as R}from"./setSwitchVariableLanguage-XrKfQosM.js";function F(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function G(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
+import{a as c,h as j}from"./setCurrentLanguage-BcqUJ1w1.js";import{a as B}from"./api-BuuO_-Fj.js";import{g as U}from"./getValueSrcParams-BMgebK2A.js";import{c as d}from"./cardData-CVkVixM2.js";import{g as H}from"./getDataValue-Cov4wBjI.js";import{s as R}from"./setSwitchVariableLanguage-CPcptztw.js";function F(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function G(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
             <picture class="advert-maininfo__img">
               <source
                 srcset="
@@ -56,28 +56,28 @@ import{a as c,h as j}from"./setCurrentLanguage-0Hl_EXOw.js";import{a as B}from".
           alt="plant"
           loading="lazy"
         />
-      </picture>`}let a;function K(e){const t=H(e),{image:s,name:r,description:i,wish:n,date:v,lang:m,toxicity:_,plantCondition:g,plantType:h,height:f,light:$,temperature:x,watering:w,care:y,substrate:b,windowDistance:L,allergenicity:S,growthRate:E,lifeDuration:I,rarity:P,username:T,email:q,avatar:D,adress:A,phone:W,way:M}=t,O=c();a=c()==="or"?m:O;const{pageName:V,descriptionTitle:k,defaultDescription:z,WishTitle:C,defaultWish:N}=Q();return`
+      </picture>`}let a;function K(e){const t=H(e),{image:s,name:r,description:i,wish:n,date:m,lang:v,toxicity:_,plantCondition:g,plantType:h,height:f,light:$,temperature:x,watering:y,care:w,substrate:b,windowDistance:L,allergenicity:S,growthRate:E,lifeDuration:I,rarity:P,username:T,email:q,avatar:D,adress:A,phone:W,way:M}=t,O=c();a=c()==="or"?v:O;const{pageName:V,descriptionTitle:k,defaultDescription:z,WishTitle:C,defaultWish:N}=Q();return`
           <div class="container advert__container">
             <h1 hidden>${V}</h1>
             <div class="advert-maininfo">
               ${G(s)}
-              <div>
-                <p class="advert-maininfo__date">${v}</p>
+              <div class="advert-maininfo__property-box">
+                <p class="advert-maininfo__date">${m}</p>
                 <h2 class="advert-maininfo__title">${r}</h2>
                 <div class="advert-maininfo-way">
                   <p class="advert-maininfo-way__text">${d.way[M][a]}</p>
                 </div>
+                <a class="criteria-btn" href="criteria.html">i</a>
                 <ul class="advert-properties">
                   ${o([{toxicity:_},{plantCondition:g},{plantType:h},{height:f}])}
-                  ${o([{light:$},{temperature:x},{watering:w}],!1)}
+                  ${o([{light:$},{temperature:x},{watering:y}],!1)}
                 </ul>
               </div>
             </div>
             <ul class="advert-properties advert-properties_more advert-properties_hidden">
               <li>
                 <ul class="advert-properties__more-list">
-                  ${o([{care:y},{substrate:b},{windowDistance:L},{growthRate:E}])}
-
+                  ${o([{care:w},{substrate:b},{windowDistance:L},{growthRate:E}])}
                 </ul>
               </li>
               <li>
