@@ -1,4 +1,4 @@
-import{a as c,h as j}from"./setCurrentLanguage-BcqUJ1w1.js";import{a as B}from"./api-BuuO_-Fj.js";import{g as U}from"./getValueSrcParams-BMgebK2A.js";import{c as d}from"./cardData-CVkVixM2.js";import{g as H}from"./getDataValue-Cov4wBjI.js";import{s as R}from"./setSwitchVariableLanguage-CPcptztw.js";function F(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function G(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
+import{a as c,h as j}from"./setCurrentLanguage-BcqUJ1w1.js";import{a as B}from"./api-BuuO_-Fj.js";import{g as U}from"./getValueSrcParams-BMgebK2A.js";import{c as d}from"./cardData-CVkVixM2.js";import{g as H}from"./getDataValue-DmRiCDfi.js";import{s as R}from"./setSwitchVariableLanguage-CPcptztw.js";function F(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function G(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
             <picture class="advert-maininfo__img">
               <source
                 srcset="
