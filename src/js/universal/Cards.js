@@ -248,7 +248,7 @@ function getDefaultElement() {
             <img
               class="cards-list-default__img"
               src="https://res.cloudinary.com/dk3syrsg5/image/upload/v1733484608/defoult-plant_rd42lo.svg"
-              alt="Незнайдено оголошень"
+              alt="${text}"
             />
             <p class="cards-list-default__text" key="defaultCardListText">${text}</p>
           </div>`;

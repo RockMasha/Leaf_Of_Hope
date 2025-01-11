@@ -4,9 +4,9 @@ export function createCriterion(info) {
 
   return `
       <li class="criteria-info-criteria__item">
-        <h3 class="criteria-info-criteria__title" id="${variableName}">${
+        <h2 class="criteria-info-criteria__title" id="${variableName}">${
     name[lang]
-  }</h3>
+  }</h2>
         <p class="criteria-info-criteria__text">${text[lang]}</p>
         <table class="criteria-info-criteria-table">
           <thead>

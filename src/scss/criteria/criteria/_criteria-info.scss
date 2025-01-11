@@ -11,6 +11,36 @@
     }
   }
 
+  &__open-btn {
+    position: fixed;
+    top: 75px;
+    left: 10px;
+    width: 50px;
+    height: 40px;
+    transform: scale(0.8, 0.9);
+    font-size: 36px;
+    color: $color-text-line;
+    background-color: $color-formProfile-btn-submit;
+    border: 2px solid $color-text-line;
+    border-radius: 10px;
+    @media (min-width: 768px) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+  &__open-svg {
+    width: 40px;
+    height: 30px;
+  }
+
   &__title {
     font-size: 26px;
     margin-bottom: 4px;
@@ -46,9 +76,6 @@
     }
     @media (min-width: 1440px) {
       gap: 17px;
-    }
-
-    &__item {
     }
 
     &__title {

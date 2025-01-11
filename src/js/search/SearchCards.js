@@ -2,7 +2,7 @@ import { getAdverts } from "../servise/api";
 import { scrollUp } from "../universal/btnUpSettings";
 import { Cards } from "../universal/Cards";
 import { createFormObj } from "../universal/createFormObj";
-import { closeModal } from "./toggleModal";
+import { closeModal } from "../universal/modalPanel/toggleModal";
 
 export class SearchCards extends Cards {
   constructor(element, form) {

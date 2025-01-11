@@ -19,6 +19,30 @@
     padding-bottom: 150px;
   }
 
+  &::-webkit-scrollbar {
+    width: 9px;
+    @media (min-width: 768px) {
+      width: 10px;
+    }
+    @media (min-width: 1440px) {
+      width: 12px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $color-grey-lightblue;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-brown-grey;
+    border-radius: 20px;
+    border: 2.5px solid $color-grey-lightblue;
+    border-width: 2.5px, 10px, 2.5px, 2.5px;
+    @media (min-width: 1440px) {
+      border-width: 2.5px, 20px, 2.5px, 2.5px;
+    }
+  }
+
   &__title {
     margin-bottom: 10px;
     font-size: 28px;
