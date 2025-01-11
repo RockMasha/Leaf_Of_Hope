@@ -3,10 +3,17 @@ export function createCriterion(info) {
   const { name, text, variables } = data;
 
   return `
-      <li class="criteria-info-criteria__item">
-        <h2 class="criteria-info-criteria__title" id="${variableName}">${
-    name[lang]
-  }</h2>
+      <li class="criteria-info-criteria__item">   
+        <div class="criteria-info-criteria__title-box">
+          <img
+            class="criteria-info-criteria__img"
+            src="./img/criteria/${variableName}.svg"
+            alt="${name[lang]}"
+          />
+          <h2 class="criteria-info-criteria__title" id="${variableName}">
+            ${name[lang]}
+          </h2>
+        </div>
         <p class="criteria-info-criteria__text">${text[lang]}</p>
         <table class="criteria-info-criteria-table">
           <thead>
