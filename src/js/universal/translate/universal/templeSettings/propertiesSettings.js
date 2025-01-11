@@ -108,6 +108,10 @@ export const propertiesSettings = {
     ua: `теплолюбні`,
     en: `heat-loving`,
   },
+  temperatureMediumText: {
+    ua: `cередньотривалі`,
+    en: `medium-duration`,
+  },
   temperatureColdResistantText: {
     ua: `холодостійкі`,
     en: `cold-resistant`,
