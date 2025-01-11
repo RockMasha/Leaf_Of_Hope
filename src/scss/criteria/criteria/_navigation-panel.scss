@@ -1,0 +1,138 @@
+.navigation-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  overflow-y: scroll;
+  width: 100vw;
+  height: 100vh;
+  padding: 85px 0 75px 12px;
+  background-color: $color-grey-lightblue;
+  @media (min-width: 768px) {
+    width: 25%;
+    height: 100%;
+    padding: 100px 0px 100px 10px;
+  }
+  @media (min-width: 1440px) {
+    padding-top: 175px;
+    width: 20%;
+    padding-bottom: 150px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 9px;
+    @media (min-width: 768px) {
+      width: 10px;
+    }
+    @media (min-width: 1440px) {
+      width: 12px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $color-grey-lightblue;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-brown-grey;
+    border-radius: 20px;
+    border: 2.5px solid $color-grey-lightblue;
+    border-width: 2.5px, 10px, 2.5px, 2.5px;
+    @media (min-width: 1440px) {
+      border-width: 2.5px, 20px, 2.5px, 2.5px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 500;
+    color: $color-black;
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+    @media (min-width: 1440px) {
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+  }
+
+  &__nav {
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1440px) {
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5px;
+    @media (min-width: 768px) {
+      gap: 1.5px;
+    }
+    @media (min-width: 1440px) {
+      gap: 6px;
+    }
+  }
+
+  &__item {
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1440px) {
+    }
+    &_about {
+      margin-bottom: 5px;
+      @media (min-width: 768px) {
+        margin-bottom: 3.5px;
+      }
+      @media (min-width: 1440px) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    color: $color_modal-link;
+    border-bottom: 1.5px solid $color_modal-link;
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 24px;
+    }
+  }
+
+  &__close-btn {
+    position: fixed;
+    top: 85px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    color: $color-text-line;
+    background-color: $color-formProfile-btn-submit;
+    border: 2px solid $color-text-line;
+    border-radius: 10px;
+    @media (min-width: 768px) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+  &__close-svg {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+  }
+}

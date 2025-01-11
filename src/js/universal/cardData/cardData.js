@@ -16,16 +16,16 @@ export const cardData = {
       en: `Toxicity`,
     },
     "very-poisonous": {
-      ua: `дуже отруйні`,
-      en: `very poisonous`,
+      ua: `дуже токсичні`,
+      en: `very toxic`,
     },
     "highly-toxic": {
-      ua: `сильно токсичні`,
-      en: `highly toxic`,
-    },
-    toxic: {
       ua: `токсичні`,
       en: `toxic`,
+    },
+    toxic: {
+      ua: `від. токсичні`,
+      en: `rel. toxic`,
     },
     "non-toxic": {
       ua: `нетоксичні`,
@@ -118,6 +118,10 @@ export const cardData = {
       ua: `теплолюбні`,
       en: `heat-loving`,
     },
+    medium: {
+      ua: `cередньотривалі`,
+      en: `medium-duration`,
+    },
     "cold-resistant": {
       ua: `холодостійкі`,
       en: `cold-resistant`,
@@ -127,7 +131,7 @@ export const cardData = {
   watering: {
     name: {
       ua: `Полив раз на`,
-      en: `watering once every`,
+      en: `Watering once every`,
     },
     "three days": {
       ua: `три дні`,
@@ -267,7 +271,7 @@ export const cardData = {
 
   rarity: {
     name: {
-      ua: `Рідкість`,
+      ua: `Раритетність`,
       en: `Rarity`,
     },
     NE: {

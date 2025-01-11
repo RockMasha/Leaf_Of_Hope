@@ -17,6 +17,7 @@ export default defineConfig({
         nestedFive: resolve(__dirname, "src/formAdvert.html"),
         nestedSix: resolve(__dirname, "src/formProfile.html"),
         nestedSeven: resolve(__dirname, "src/ai-assist.html"),
+        nestedEight: resolve(__dirname, "src/criteria.html"),
       },
     },
     outDir: "../dist",

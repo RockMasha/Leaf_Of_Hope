@@ -14,7 +14,7 @@ const answer = await isSignin();
 if (answer) {
   await showProfile(answer.user);
 } else {
-  // root.profileWrapper.classList.add("is-hidden");
+  root.profileWrapper.classList.add("is-hidden");
   showSigninModal();
 }
 setSwitchLanguage(settings);

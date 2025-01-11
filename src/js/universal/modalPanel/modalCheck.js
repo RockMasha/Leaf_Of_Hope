@@ -1,7 +1,7 @@
-import { root } from "./root";
 import { closeModal } from "./toggleModal";
 
 let isNotPhone = false;
+export const modalEl = document.querySelector("#modal-js");
 
 export function modalCheck() {
   const state = window.matchMedia("(min-width: 768px)").matches;
@@ -10,9 +10,9 @@ export function modalCheck() {
 
   if (isChangeToMobile) {
     isNotPhone = false;
-    closeModal();
+    closeModal(modalEl);
   } else if (isChangeToNotMobile) {
     isNotPhone = true;
-    root.modal.classList.remove("is-hidden");
+    modalEl.classList.remove("is-hidden");
   }
 }

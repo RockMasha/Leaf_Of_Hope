@@ -16,16 +16,16 @@ export const propertiesSettings = {
     en: `Toxicity`,
   },
   toxicityVeryPoisonousText: {
-    ua: `дуже отруйні`,
-    en: `very poisonous`,
+    ua: `дуже токсичні`,
+    en: `very toxic`,
   },
   toxicityHighlyToxicText: {
-    ua: `сильно токсичні`,
-    en: `highly toxic`,
-  },
-  toxicityToxicText: {
     ua: `токсичні`,
     en: `toxic`,
+  },
+  toxicityToxicText: {
+    ua: `від. токсичні`,
+    en: `rel. toxic`,
   },
   toxicityNonToxicText: {
     ua: `нетоксичні`,
@@ -241,7 +241,7 @@ export const propertiesSettings = {
   },
 
   raritySignature: {
-    ua: `Рідкість`,
+    ua: `Раритетність`,
     en: `Rarity`,
   },
   rarityNEText: {
