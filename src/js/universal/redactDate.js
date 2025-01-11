@@ -1,5 +1,5 @@
 const monthsUA = [
-  "Січеня",
+  "Січня",
   "Лютого",
   "Березеня",
   "Квітеня",
@@ -31,7 +31,7 @@ const monthsEn = [
 export function redactDate(date, lang = "ua") {
   const time = new Date(date);
   const day = time.getDate();
-  const mouth = time.getMonth() - 1;
+  const mouth = time.getMonth();
   const year = time.getFullYear();
   const hours = time.getHours();
   const minutes =
