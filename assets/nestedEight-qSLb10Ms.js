@@ -1,12 +1,12 @@
-import{g as p,h as g}from"./setCurrentLanguage-BcqUJ1w1.js";import{c as f,s as w}from"./setModalPanel-_Ci3H_RC.js";import{c as h}from"./cardData-CVkVixM2.js";import{p as v}from"./propertiesSettings-Cdfy4mIZ.js";import{s as y}from"./setSwitchLanguage-Db4k4_JV.js";function b(e){const a=e.target.closest(".navigation-panel__link"),t=!window.matchMedia("(min-width: 768px)").matches;!a||!t||f()}const c={criteriaList:document.querySelector(".criteria-info-criteria"),navigationList:document.querySelector(".navigation-panel__list")};function T(e){const{name:a,data:t,lang:n}=e,{name:i,text:r,variables:l}=t;return`
+import{g,h as p}from"./setCurrentLanguage-BcqUJ1w1.js";import{c as f,s as w}from"./setModalPanel-_Ci3H_RC.js";import{c as v}from"./cardData-CVkVixM2.js";import{p as y}from"./propertiesSettings-Cdfy4mIZ.js";import{s as b}from"./setSwitchLanguage-Db4k4_JV.js";function T(e){const t=e.target.closest(".navigation-panel__link"),a=!window.matchMedia("(min-width: 768px)").matches;!t||!a||f()}const h={criteriaList:document.querySelector(".criteria-info-criteria"),navigationList:document.querySelector(".navigation-panel__list")};function x(e){const{name:t,data:a,lang:n}=e,{name:i,text:r,variables:u}=a;return`
       <li class="criteria-info-criteria__item">   
         <div class="criteria-info-criteria__title-box">
           <img
             class="criteria-info-criteria__img"
-            src="./img/criteria/${a}.svg"
+            src="./img/criteria/${t}.svg"
             alt="${i[n]}"
           />
-          <h2 class="criteria-info-criteria__title" id="${a}">
+          <h2 class="criteria-info-criteria__title" id="${t}">
             ${i[n]}
           </h2>
         </div>
@@ -18,13 +18,13 @@ import{g as p,h as g}from"./setCurrentLanguage-BcqUJ1w1.js";import{c as f,s as w
               <td>${n==="ua"?"Пояснення":"Explanation"}</td>
             </tr>
           </thead>
-          ${x(l,n)}
+          ${C(u,n)}
         </table>
       </li>
-    `}function x(e,a){let t="";for(const n in e)t+=`<tr>
-                <td>${e[n].name[a]}</td>
-                <td>${e[n].text[a]}</td>
-            </tr>`;return t}const C={toxicity:{mainText:{ua:`Цей критерій описує отруйніть рослини. Він потрібен, аби людина розуміла, чи
+    `}function C(e,t){let a="";for(const n in e)a+=`<tr>
+                <td>${e[n].name[t]}</td>
+                <td>${e[n].text[t]}</td>
+            </tr>`;return a}const k={toxicity:{mainText:{ua:`Цей критерій описує отруйніть рослини. Він потрібен, аби людина розуміла, чи
           буде безпечно тримати цю рослину враховцчі умови її проживання`,en:`This criterion describes poisonous plants. It is needed so that a person
           understands whether it will be safe to keep this plant, given its habitat
           conditions.`},"very-poisonous":{ua:"при торкані до кімнатної рослини може сприсинити негативний ефект",en:"touching a houseplant can have a negative effect"},"highly-toxic":{ua:"може спричиняти негативні ефект при споживані",en:"may cause negative effects when consumed"},toxic:{ua:"небезпечні лише при значній дозі або тривалому контакті",en:"dangerous only in large doses or with prolonged contact"},"non-toxic":{ua:"не мають негативного впливу, підходять для життя з тваринами",en:"have no negative impact, suitable for living with animals"}},plantCondition:{mainText:{ua:"Ознака описує стан рослини, наскільки вона себе добре почуває",en:"The sign describes the condition of the plant, how well it feels."},conditioned:{ua:"рослин в гарному стані, добре себе почуває",en:"the plant is in good condition, doing well."},unconditioned:{ua:"рослин в поганому стані, недобре себе почуває",en:"the plant is in poor condition, not feeling well."}},plantType:{mainText:{ua:"Критерій визначає декоративну переважаючю функцію рослини",en:"The criterion determines the decorative predominant function of the plant"},flowering:{ua:"рослина має чудові квіти і саме через них її зазвичай заводять",en:"the plant has beautiful flowers and it is because of them that it is usually planted."},foliage:{ua:"рослина має чудові лисят і саме через ниї її зазвичай заводять",en:"the plant has beautiful leaves and it is because of them that it is usually planted."}},height:{mainText:{ua:`Ознака позначає висоту рослини. Вона потрібна, аби людина розуміла, чи помістиця
@@ -48,7 +48,7 @@ import{g as p,h as g}from"./setCurrentLanguage-BcqUJ1w1.js";import{c as f,s as w
           у суспільстві, тому його було додано з метою популеризувати для збереження рослин 
           під загрозою вимерання`,en:`The criterion indicates the status according to the IUCN Red List. It is not 
           relevant in society, so it was added to popularize the preservation of plants under 
-          threat of extinction.`},NE:{ua:"рослина не оцінювалося",en:"the plant was not evaluated"},DD:{ua:"для визначення раритетності недостатньо даних",en:"insufficient data to determine rarity"},LC:{ua:"кімнатні рослини мають найменший ризик вимирання",en:"houseplants have the lowest risk of extinction"},NT:{ua:"рослини близькі до загрозливого статусу",en:"plants close to threatened status"},VU:{ua:"рослини вразливі та можуть невдовзі стати зникаючими",en:"plants are vulnerable and may soon become extinct"},EN:{ua:"зникаючі рослини",en:"endangered plants"},CR:{ua:"критично зникаючі види",en:"critically endangered species"},EW:{ua:"рослини зниклі в дикій природі",en:"plants extinct in the wild"}}};function k(){return{...C}}const d={},o=k();for(const e in o)d[e]={name:{...h[e].name},text:o[e].mainText,variables:E(e)};function E(e){const a={};for(const t in o[e])t!=="mainText"&&(a[t]={name:h[e][t],text:o[e][t]});return a}function _(){return{...d}}const u=_();function s(){const e=p();let a="";for(const t in u){const n={name:t,data:u[t],lang:e};a+=T(n)}c.criteriaList.innerHTML=a}const L=s,D=s,$={setUkrainian:L,setEnglish:D},m={aboutCriteriaTitle:{ua:"Що таке критерії?",en:"What are the criteria?"},aboutCriteriaText:{ua:`Критерії це ознаки, за якими буде шукатись кімнатні рослина. Вони
+          threat of extinction.`},NE:{ua:"рослина не оцінювалося",en:"the plant was not evaluated"},DD:{ua:"для визначення раритетності недостатньо даних",en:"insufficient data to determine rarity"},LC:{ua:"кімнатні рослини мають найменший ризик вимирання",en:"houseplants have the lowest risk of extinction"},NT:{ua:"рослини близькі до загрозливого статусу",en:"plants close to threatened status"},VU:{ua:"рослини вразливі та можуть невдовзі стати зникаючими",en:"plants are vulnerable and may soon become extinct"},EN:{ua:"зникаючі рослини",en:"endangered plants"},CR:{ua:"критично зникаючі види",en:"critically endangered species"},EW:{ua:"рослини зниклі в дикій природі",en:"plants extinct in the wild"}}};function E(){return{...k}}const s={},d={...v},o=E();for(const e in o)s[e]={name:{...d[e].name},text:o[e].mainText,variables:_(e)};function _(e){const t={};for(const a in o[e])a!=="mainText"&&(t[a]={name:d[e][a],text:o[e][a]});return t}function L(e,t){s[e].name=t}L("watering",{ua:"Полив",en:"Watering"});function D(){return{...s}}const c=D();function l(){const e=g();let t="";for(const a in c){const n={name:a,data:c[a],lang:e};t+=x(n)}h.criteriaList.innerHTML=t}const $=l,I=l,N={setUkrainian:$,setEnglish:I},m={aboutCriteriaTitle:{ua:"Що таке критерії?",en:"What are the criteria?"},aboutCriteriaText:{ua:`Критерії це ознаки, за якими буде шукатись кімнатні рослина. Вони
         допомагають їх знаходити за тими умовами і побажанями, які хоче людина та
         в подальншому допоможе за доглядати рослиною та більше про неї знати. Щоб
         їх визначати рекомендуємо користуватись додатками для індефікації рослин
@@ -56,4 +56,4 @@ import{g as p,h as g}from"./setCurrentLanguage-BcqUJ1w1.js";import{c as f,s as w
         help to find them according to the conditions and wishes that a person wants and
         will later help to care for the plant and learn more about it. To determine
         them, we recommend using identification applications and the AI​​assistant that
-        is available on our website.`},navigationTitle:{ua:"Навігація",en:"Navigation"}};Object.assign(m,v);function I(e){const{setUkrainian:a,setEnglish:t}=e;document.querySelector(".translate__input").addEventListener("change",i);function i(r){r.target.checked?t():a()}}w();c.navigationList.addEventListener("click",b);s();y(m);I($);g();
+        is available on our website.`},navigationTitle:{ua:"Навігація",en:"Navigation"}};Object.assign(m,y);function q(e){const{setUkrainian:t,setEnglish:a}=e;document.querySelector(".translate__input").addEventListener("change",i);function i(r){r.target.checked?a():t()}}w();h.navigationList.addEventListener("click",T);l();b(m);q(N);p();
