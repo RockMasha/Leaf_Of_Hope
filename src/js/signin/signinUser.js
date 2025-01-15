@@ -17,7 +17,6 @@ export async function signinUser(event) {
     const answer = await signin(data);
     createToken(answer.token);
     checkPage(answer);
-
     await hiddenSigninModal();
   } catch (error) {
     showError(error);
