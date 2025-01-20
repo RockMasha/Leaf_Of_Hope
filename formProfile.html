@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Create or regenerate a profile">
     <title>Leaf_Of_Hope</title>
-    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedSix-B1AfUXMQ.js"></script>
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-BcqUJ1w1.js">
+    <script type="module" crossorigin src="/Leaf_Of_Hope/assets/nestedSix-BKBgtevX.js"></script>
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-DdORZCPD.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getValueSrcParams-BMgebK2A.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-BuuO_-Fj.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/changeSettingsValue-79FUIYGn.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getErrorText-BIic-AA2.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/api-B7v0WwrB.js">
     <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/showPhoto-BRLbcwku.js">
-    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-Db4k4_JV.js">
-    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-BAw9eQcz.css">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/changeSettingsValue-79FUIYGn.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/getErrorText-BbwCwusH.js">
+    <link rel="modulepreload" crossorigin href="/Leaf_Of_Hope/assets/setSwitchLanguage-CyEaCAgr.js">
+    <link rel="stylesheet" crossorigin href="/Leaf_Of_Hope/assets/setCurrentLanguage-5xH6tt4Z.css">
   </head>
   <body>
     <div class="content-loader-wrapper" active>
@@ -104,6 +104,7 @@
               <input
                 class="change-profile-form__input change-profile-form__input_name"
                 key="namePlaceholder"
+                autocomplete="nickname"
                 type="text"
                 placeholder="Введіть ім'я"
                 name="username"
@@ -130,8 +131,10 @@
               <input
                 class="change-profile-form__input change-profile-form__input_phone"
                 key="phonePlaceholder"
+                autocomplete="tel-country-code"
+                pattern="^[1-9]\d{1,3}\d{9}$"
                 type="tel"
-                placeholder="Введіть номер телефону"
+                placeholder="Починайте з коду країни"
                 name="phone"
                 required
             /></label>
@@ -148,7 +151,11 @@
           </li>
         </ul>
       </div>
-      <button class="change-profile-form__btn-submit" key="submitText" type="submit">
+      <button
+        class="change-profile-form__btn-submit"
+        key="submitText"
+        type="submit"
+      >
         Зберегти
       </button>
     </form>
