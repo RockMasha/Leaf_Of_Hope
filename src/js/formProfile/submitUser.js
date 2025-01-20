@@ -1,11 +1,11 @@
-import { authorization, redactUser } from "../servise/api";
-import { createToken } from "../token/createToken";
+import { authentication, redactUser } from "../servise/api";
 import { createFormData } from "../universal/createFormData";
 import { getErrorText } from "../universal/errorData/getErrorText";
 import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
 import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
 import { isRedactForm } from "./isRedactForm";
 import { root } from "./root";
+import { showSubmitModal } from "./showSubmitModal";
 
 export async function submitUser(event) {
   event.preventDefault();
@@ -16,11 +16,11 @@ export async function submitUser(event) {
     const data = createFormData(root.form);
     if (isRedactForm()) {
       await redactUser(data);
+      window.location.href = "profile.html";
     } else {
-      const answer = await authorization(data);
-      createToken(answer.token);
+      await authentication(data);
+      showSubmitModal();
     }
-    window.location.href = "profile.html";
   } catch (error) {
     showError(error);
     ableFormSubmit();

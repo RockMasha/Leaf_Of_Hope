@@ -8,6 +8,7 @@ export function setRegistrationFields() {
               <input
                 class="change-profile-form__input change-profile-form__input_password"
                 key="passwordPlaceholder"
+                autocomplete="new-password"
                 type="password"
                 placeholder="Введіть пароль"
                 name="password"
@@ -19,6 +20,7 @@ export function setRegistrationFields() {
               <input
                 class="change-profile-form__input change-profile-form__input_email"
                 key="emailPlaceholder"
+                autocomplete="email"
                 type="email"
                 placeholder="Введіть ваш емейл"
                 name="email"

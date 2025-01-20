@@ -29,8 +29,8 @@ export const settings = {
   },
   phonePlaceholder: {
     placeholder: true,
-    ua: `Введіть номер телефону`,
-    en: `Enter a phone number`,
+    ua: `Починайте з коду країни`,
+    en: `Start with the country code`,
   },
   passwordText: {
     ua: `Пароль`,

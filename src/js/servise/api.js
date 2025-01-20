@@ -4,6 +4,24 @@ import { getCurrentLanguage } from "../universal/translate/universal/currentLang
 
 axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
 
+export async function authentication(user) {
+  const answer = await axios.post("/api/auth/signup/verificate", user, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+  return answer.data;
+}
+export async function checkAuthentication(verificationToken) {
+  const answer = await axios.put(
+    `/api/auth/verificate/${verificationToken}`,
+    {},
+    {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    }
+  );
+  return answer.data;
+}
 export async function authorization(user) {
   const answer = await axios.post("/api/auth/signup", user, {
     headers: { "Content-Type": "multipart/form-data" },
