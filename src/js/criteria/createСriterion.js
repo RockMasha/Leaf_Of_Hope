@@ -1,13 +1,13 @@
 export function createCriterion(info) {
   const { name: variableName, data, lang } = info;
-  const { name, text, variables } = data;
+  const { name, text, img, variables } = data;
 
   return `
       <li class="criteria-info-criteria__item">   
         <div class="criteria-info-criteria__title-box">
           <img
             class="criteria-info-criteria__img"
-            src="./img/criteria/${variableName}.svg"
+            src="${img}"
             alt="${name[lang]}"
           />
           <h2 class="criteria-info-criteria__title" id="${variableName}">
