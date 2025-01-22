@@ -9,6 +9,7 @@ for (const key in criteriaTextData) {
   criteriaData[key] = {
     name: { ...criteriaNameData[key].name },
     text: criteriaTextData[key].mainText,
+    img: criteriaTextData[key].img,
     variables: getVariables(key),
   };
 }
@@ -16,7 +17,7 @@ for (const key in criteriaTextData) {
 function getVariables(prop) {
   const variables = {};
   for (const key in criteriaTextData[prop]) {
-    if (key === "mainText") {
+    if (key === "mainText" || key === "img") {
       continue;
     }
     variables[key] = {

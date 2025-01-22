@@ -1,5 +1,6 @@
 const criteriaTextData = {
   toxicity: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382709/toxicity_myazvz.svg",
     mainText: {
       ua: `Цей критерій описує отруйніть рослини. Він потрібен, аби людина розуміла, чи
           буде безпечно тримати цю рослину враховцчі умови її проживання`,
@@ -26,6 +27,7 @@ const criteriaTextData = {
   },
 
   plantCondition: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382653/plantCondition_ulr3sn.svg",
     mainText: {
       ua: `Ознака описує стан рослини, наскільки вона себе добре почуває`,
       en: `The sign describes the condition of the plant, how well it feels.`,
@@ -41,6 +43,7 @@ const criteriaTextData = {
   },
 
   plantType: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382669/plantType_n7c8ed.svg",
     mainText: {
       ua: `Критерій визначає декоративну переважаючю функцію рослини`,
       en: `The criterion determines the decorative predominant function of the plant`,
@@ -56,6 +59,7 @@ const criteriaTextData = {
   },
 
   height: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382755/height_rdx0gx.svg",
     mainText: {
       ua: `Ознака позначає висоту рослини. Вона потрібна, аби людина розуміла, чи помістиця
           рослина у неї дома`,
@@ -85,6 +89,7 @@ const criteriaTextData = {
   },
 
   light: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382650/light_vag89b.svg",
     mainText: {
       ua: `Критерій позначає потреби рослин до освітлення`,
       en: `The criterion indicates the lighting needs of plants`,
@@ -104,6 +109,7 @@ const criteriaTextData = {
   },
 
   temperature: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382690/temperature_frosfh.svg",
     mainText: {
       ua: `Позначає, при якій темпаратурі повітря буде добре кімнатні рослині`,
       en: `Indicates at what air temperature indoor plants will be comfortable`,
@@ -123,6 +129,7 @@ const criteriaTextData = {
   },
 
   watering: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382716/watering_u6btqk.svg",
     mainText: {
       ua: `Критерій позначає скільки разів на яку кількість часу треба поливати рослину`,
       en: `The criterion indicates how many times and with what frequency the plant should 
@@ -147,6 +154,7 @@ const criteriaTextData = {
   },
 
   care: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382747/care_bovl09.svg",
     mainText: {
       ua: `Критерій позначає чи є вибагливим у догляді кімнатна рослина`,
       en: `The criterion indicates whether a houseplant is demanding in care.`,
@@ -162,6 +170,7 @@ const criteriaTextData = {
   },
 
   substrate: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382685/substrate_amd80q.svg",
     mainText: {
       ua: `Грунт, в якому буде добре рости кімнатна рослина`,
       en: `Soil in which a houseplant will grow well`,
@@ -203,6 +212,7 @@ const criteriaTextData = {
   },
 
   windowDistance: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382727/windowDistance_de0vcn.svg",
     mainText: {
       ua: `Позначає, на яку відстань від південого вікна треба ставити кімнатну рослину`,
       en: `means how far from a south window you should place a houseplant`,
@@ -228,6 +238,7 @@ const criteriaTextData = {
   },
 
   allergenicity: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382731/allergenicity_nyxjl0.svg",
     mainText: {
       ua: `Позначає, чи викликає кімнатна рослин алергію у людей-алергіків`,
       en: `Indicates whether the houseplant causes allergies in allergic people`,
@@ -243,6 +254,7 @@ const criteriaTextData = {
   },
 
   growthRate: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382751/growthRate_v84upu.svg",
     mainText: {
       ua: `Критерій позначає, наскільки швидко росте рослина`,
       en: `The criterion indicates how fast the plant grows.`,
@@ -262,6 +274,7 @@ const criteriaTextData = {
   },
 
   lifeDuration: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382635/lifeDuration_byna4v.svg",
     mainText: {
       ua: `Позначає, тривалість життевого циклу рослини, чи розрахована вона на довге 
           перебування в домі `,
@@ -279,6 +292,7 @@ const criteriaTextData = {
   },
 
   rarity: {
+    img: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1737382671/rarity_gpxov3.svg",
     mainText: {
       ua: `Критерій позначає статус за червоною книгою, розроблених IUCN. Він не є актуальним 
           у суспільстві, тому його було додано з метою популеризувати для збереження рослин 
