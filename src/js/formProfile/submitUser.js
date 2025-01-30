@@ -24,6 +24,7 @@ export async function submitUser(event) {
   } catch (error) {
     showError(error);
     ableFormSubmit();
+    console.log(error);
   } finally {
     removeInProgressLoader();
   }
