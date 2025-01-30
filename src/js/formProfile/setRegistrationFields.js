@@ -8,7 +8,7 @@ export function setRegistrationFields() {
               <input
                 class="change-profile-form__input change-profile-form__input_password"
                 key="passwordPlaceholder"
-                autocomplete="new-password"
+                autocomplete="current-password"
                 type="password"
                 placeholder="Введіть пароль"
                 name="password"

@@ -1,5 +1,5 @@
 export function showSubmitModal() {
-  document.body.addAttribute("lock", "");
+  document.body.setAttribute("lock", "");
   const modalEl = `
     <div class="modal-wrapper authentication-modal-wrapper">
     <div class="authentication-modal modal">
