@@ -39,4 +39,8 @@ export const errorData = {
     ua: `Довжина адреси має бути меншою або дорівнювати 60 символам`,
     en: `Adress length must be less than or equal to 60 characters long`,
   },
+  "File size too large": {
+    ua: `Перевищено максимальний розмір зображення`,
+    en: `Maximum image size exceeded`,
+  },
 };

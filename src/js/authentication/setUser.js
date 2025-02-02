@@ -8,7 +8,7 @@ export async function setUser() {
   if (token) {
     showSuccess();
     createToken(token);
-    window.location.href = "profile.html";
+    // window.location.href = "profile.html";
   } else {
     showError();
   }
