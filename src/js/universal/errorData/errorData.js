@@ -39,10 +39,8 @@ export const errorData = {
     ua: `Довжина адреси має бути меншою або дорівнювати 60 символам`,
     en: `Adress length must be less than or equal to 60 characters long`,
   },
-  'File size too large': {
+  "File size too large": {
     ua: `Перевищено максимальний розмір зображення`,
     en: `Maximum image size exceeded`,
   },
 };
-
-//"File size too large. Got 15959573. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"
