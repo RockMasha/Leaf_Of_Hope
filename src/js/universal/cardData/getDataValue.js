@@ -46,7 +46,7 @@ export function getDataValue(info) {
         ? changeDescription
         : currentLang === "ua"
         ? translated?.description?.transUa
-        : translated?.description?.transEn;
+        : translated?.description?.transEng;
   } else {
     description = cardLang === "ua" ? "Немає Опису" : "No Description";
   }
@@ -64,7 +64,7 @@ export function getDataValue(info) {
         ? changeWish
         : currentLang === "ua"
         ? translated?.wish?.transUa
-        : translated?.wish?.transEn;
+        : translated?.wish?.transEng;
   } else {
     wish = cardLang === "ua" ? "Немає побажань" : "No wish";
   }
