@@ -7,10 +7,8 @@ export async function isVerificationCodeTrue() {
   try {
     const verificationCode = getValueSrcParams("verification");
     answer = await checkAuthentication(verificationCode);
-    console.log(answer);
   } catch (error) {
     console.log(error);
-
     return false;
   }
 
