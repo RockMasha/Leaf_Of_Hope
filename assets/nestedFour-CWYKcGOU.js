@@ -1,4 +1,4 @@
-import{a as c,h as j}from"./setCurrentLanguage-8AsnexD0.js";import{a as B}from"./api-D1JSuAN_.js";import{g as U}from"./getValueSrcParams-BMgebK2A.js";import{c as d}from"./cardData-CybJiSso.js";import{g as H}from"./getDataValue-Dc0zDU7s.js";import{s as R}from"./setSwitchVariableLanguage-D3PdUII5.js";function F(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function G(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
+import{a as c,h as j}from"./getCurrentLanguage-DI8YqOFu.js";import{a as B}from"./api-Ds9QXwAK.js";import{g as U}from"./getValueSrcParams-BMgebK2A.js";import{c as d}from"./cardData-CybJiSso.js";import{g as H}from"./getDataValue-BE3G6MX_.js";import{s as R}from"./setSwitchVariableLanguage-iRzX6Vlw.js";import"./setCurrentLanguage-UYMi4kGm.js";function F(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function G(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
             <picture class="advert-maininfo__img">
               <source
                 srcset="
