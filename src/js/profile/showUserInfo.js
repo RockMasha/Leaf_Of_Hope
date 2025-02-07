@@ -7,7 +7,7 @@ export function showUserInfo(user) {
 }
 
 function getUserEL(user) {
-  const { avatar, username, adress, phone, email } = user;
+  const { avatar, username, adress, phone, email, role } = user;
 
   return `
     <div class="user-info__thumb">
@@ -21,7 +21,17 @@ function getUserEL(user) {
             <p class="user-info__text bold">${phone}</p>
             <p class="user-info__text bold">${email}</p>
           </div>
-          <button class="user-info__logout" key="logoutText">Вийти</button>
+          <div class="user-info__btn-box">
+            <button class="user-info__btn user-info__logout" key="logoutText">Вийти</button>
+            ${
+              role === "admin"
+                ? `<button class="user-info__btn user-info__metabase">
+                    <a class="user-info__metabase-link" href="metabase.html"> Metabase </a>
+                  </button>`
+                : ""
+            }
+            
+          </div>
         </div>
         <a class="user-info__redact-link" href="formProfile.html?redact=true">
           <img

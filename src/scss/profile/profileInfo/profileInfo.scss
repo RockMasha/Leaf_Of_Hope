@@ -133,7 +133,11 @@
       }
     }
   }
-  &__logout {
+  &__btn-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
     width: 100px;
     padding: 5px 0;
     margin-top: 15px;
@@ -153,6 +157,12 @@
       padding: 12px 0;
       font-size: 28px;
     }
+  }
+  &__metabase {
+    background-color: $color_modal-link;
+  }
+  &__metabase-link {
+    color: $color-black;
   }
   &__card-user {
     @media (min-width: 768px) {
