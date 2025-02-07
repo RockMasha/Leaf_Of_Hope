@@ -2,9 +2,10 @@ import { getAdvertCardInner } from "../universal/getAdvertCardInner/getAdvertCar
 
 export const getProfileCard = (info) => {
   const id = info._id;
+  const { active } = info;
 
   return `
-          <li class="profile-adverts__card" data-id="${id}">
+          <li class="profile-adverts__card" ${active} data-id="${id}">
             ${getAdvertCardInner(info)}
             <ul class="profile-adverts__btn-list">
               <li>
@@ -12,11 +13,18 @@ export const getProfileCard = (info) => {
                 aria-label="redact advert ${info.name}">
                 </a>
               </li>
+               ${
+                 active
+                   ? ""
+                   : `<li>
+                      <button type="button" class="profile-adverts__btn active-btn" aria-label="active advert ${info.name}"></button>
+                    </li>`
+               }
               <li>
-                <button type="button" class="profile-adverts__btn delete-btn" aria-label="delete advert ${
-                  info.name
-                }"></button>
-              </li>
+                <button type="button" class="profile-adverts__btn delete-btn" aria-label="${
+                  active ? "inactive" : "delete"
+                }  advert ${info.name}"></button>
+              </li>           
             </ul>
           </li>
         `;

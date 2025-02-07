@@ -1,7 +1,7 @@
 export const cardData = {
   way: {
     give: {
-      ua: `віддіча`,
+      ua: `віддача`,
       en: `give`,
     },
     exchange: {

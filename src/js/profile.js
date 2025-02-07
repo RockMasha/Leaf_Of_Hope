@@ -9,6 +9,7 @@ import { setSwitchVariableLanguage } from "./universal/translate/variable/setSwi
 import { langs } from "./profile/translate/langs";
 
 const answer = await isSignin();
+
 if (answer) {
   await showProfile(answer.user);
 } else {

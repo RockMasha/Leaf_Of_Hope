@@ -67,7 +67,7 @@ export async function logout(token = getToken()) {
 }
 
 let userAdvertsController = null;
-export const getUserAdverts = async (page = 1) => {
+export const getUserAdverts = async (page = 1, info = {}) => {
   if (userAdvertsController) {
     getAdvertsController.abort();
   }
@@ -75,8 +75,9 @@ export const getUserAdverts = async (page = 1) => {
   const token = getToken();
   try {
     userAdvertsController = new AbortController();
+    const params = getFilterParams(info);
     const answer = await axios.get(
-      `/api/advert/userAdverts?page=${page}&limit=10`,
+      `/api/advert/userAdverts?page=${page}&limit=10${params}`,
       {
         signal: userAdvertsController.signal,
         headers: {
@@ -145,6 +146,15 @@ export async function deleteAdvert(id) {
 export async function changeAdvert(id, data) {
   const token = getToken();
   const answer = await axios.put(`/api/advert/${id}`, data, {
+    headers: {
+      Authorization: token,
+    },
+  });
+  return answer.data;
+}
+export async function doInactiveAdvert(id, data) {
+  const token = getToken();
+  const answer = await axios.put(`/api/advert/activity/${id}`, data, {
     headers: {
       Authorization: token,
     },
