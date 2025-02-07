@@ -8,6 +8,13 @@ export function showUserInfo(user) {
 
 function getUserEL(user) {
   const { avatar, username, adress, phone, email, role } = user;
+  console.log(
+    role === "admin"
+      ? `<button class="user-info__btn user-info__metabase">
+        <a class="user-info__metabase-link" href="metabase.html"> Metabase </a>
+      </button>`
+      : ""
+  );
 
   return `
     <div class="user-info__thumb">
