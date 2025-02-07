@@ -1,7 +1,7 @@
 import { root } from "./root";
 
 export function showError() {
-  root.authenticationCont = `
+  root.authenticationCont.innerHTML = `
     <img
       class="authentication__img"
       src="https://res.cloudinary.com/dk3syrsg5/image/upload/v1737148271/error-occurred_eo4gcm.svg"
