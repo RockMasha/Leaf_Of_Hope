@@ -5,6 +5,9 @@ import { showSuccess } from "./showSuccess";
 
 export async function setUser() {
   const token = await isVerificationCodeTrue();
+  console.log(token);
+  console.log(typeof token);
+
   if (token) {
     showSuccess();
     createToken(token);

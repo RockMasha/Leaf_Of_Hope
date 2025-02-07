@@ -19,6 +19,7 @@ export default defineConfig({
         nestedSeven: resolve(__dirname, "src/ai-assist.html"),
         nestedEight: resolve(__dirname, "src/criteria.html"),
         nestedNine: resolve(__dirname, "src/authentication.html"),
+        nestedTen: resolve(__dirname, "src/metabase.html"),
       },
     },
     outDir: "../dist",

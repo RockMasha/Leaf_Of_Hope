@@ -208,6 +208,16 @@ export async function deleteChat() {
   return answer.data;
 }
 
+export async function getMetabaseIframe() {
+  const token = getToken();
+  const answer = await axios.get(`/api/metabase/`, {
+    headers: {
+      Authorization: token,
+    },
+  });
+  return answer.data;
+}
+
 function getFilterParams(params) {
   let paramsStr = "";
   for (const key in params) {
