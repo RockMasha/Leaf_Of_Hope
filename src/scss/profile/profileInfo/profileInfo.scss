@@ -136,12 +136,16 @@
   &__btn-box {
     display: flex;
     justify-content: space-between;
+    margin-top: 24px;
+    gap: 24px;
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
   }
   &__btn {
     width: 100px;
     padding: 5px 0;
-    margin-top: 15px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     border: 1px solid transparent;
     border-radius: 15px;
@@ -158,11 +162,11 @@
       font-size: 28px;
     }
   }
-  &__metabase {
-    background-color: $color_modal-link;
-  }
   &__metabase-link {
-    color: $color-black;
+    display: block;
+    text-align: center;
+    color: $color-white;
+    background-color: $color_modal-link;
   }
   &__card-user {
     @media (min-width: 768px) {
