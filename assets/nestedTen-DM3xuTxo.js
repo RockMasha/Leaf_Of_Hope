@@ -1,0 +1,1 @@
+import{h as e}from"./getCurrentLanguage-DUgTUic5.js";import{t as r}from"./api-C319RYlQ.js";const{iframeUrl:a}=await r(),t=document.querySelector("main");t.innerHTML=`<iframe src="${a}" frameborder="0" width="100%" height="100%" allowtransparency ></iframe>`;e();
