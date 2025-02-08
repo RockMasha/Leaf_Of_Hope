@@ -20,7 +20,6 @@ export default defineConfig({
         nestedEight: resolve(__dirname, "src/criteria.html"),
         nestedNine: resolve(__dirname, "src/authentication.html"),
         nestedTen: resolve(__dirname, "src/metabase.html"),
-        nestedEleven: "https://my-mbasedomain.site/embed/dashboard/",
       },
     },
     outDir: "../dist",
