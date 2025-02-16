@@ -29,6 +29,14 @@ export const signinSettings = {
     ua: `Введіть пароль`,
     en: `Enter your password`,
   },
+  singinModalGoogleText: {
+    ua: `Продовжити з Google`,
+    en: `Continue with Google`,
+  },
+  singinModalOrText: {
+    ua: `або`,
+    en: `or`,
+  },
   singinError: {
     ua: ``,
     en: ``,
