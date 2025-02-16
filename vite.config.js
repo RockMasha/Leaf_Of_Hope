@@ -25,7 +25,7 @@ export default defineConfig({
         nestedTen: resolve(__dirname, "src/metabase.html"),
       },
     },
-    outDir: "../dist",
+    // outDir: "../dist",
   },
   plugins: [injectHTML(), FullReload(["./src//.html"])],
 });
