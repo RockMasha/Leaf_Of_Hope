@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="User profile" />
+    <title>Leaf_Of_Hope</title>
+    <script type="module" crossorigin src="/assets/nestedTwo-CMRgXLxe.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/getCurrentLanguage-D_LdVtxv.js">
+    <link rel="modulepreload" crossorigin href="/assets/api-DfHq31_J.js">
+    <link rel="modulepreload" crossorigin href="/assets/createToken-DFf1TOwY.js">
+    <link rel="modulepreload" crossorigin href="/assets/cardData-CybJiSso.js">
+    <link rel="modulepreload" crossorigin href="/assets/getDataValue-COx-laTb.js">
+    <link rel="modulepreload" crossorigin href="/assets/createFormObj-BD14BULD.js">
+    <link rel="modulepreload" crossorigin href="/assets/changeSettingsValue-79FUIYGn.js">
+    <link rel="modulepreload" crossorigin href="/assets/getErrorText-BW_ES9eX.js">
+    <link rel="modulepreload" crossorigin href="/assets/setCurrentLanguage-B5kzYEYi.js">
+    <link rel="modulepreload" crossorigin href="/assets/setSwitchLanguage-DF6hJLdU.js">
+    <link rel="modulepreload" crossorigin href="/assets/showSigninModal-DTKN-8EW.js">
+    <link rel="modulepreload" crossorigin href="/assets/btnUpSettings-Ck6O69iz.js">
+    <link rel="modulepreload" crossorigin href="/assets/setSwitchVariableLanguage-CGP-iGZU.js">
+    <link rel="stylesheet" crossorigin href="/assets/getCurrentLanguage-V9_2vn7p.css">
+  </head>
+  <body>
+    <div class="content-loader-wrapper" active>
+  <div class="content-loader"></div>
+</div>
+
+    <div class="modal-wrapper signin-modal-wrapper is-hidden">
+  <div class="signin-modal modal">
+    <h2 class="signin-modal__title" key="singinModalTitle">Вхід</h2>
+    <button class="signin-modal-goggle google-login-btn">
+      <img
+        class="signin-modal-goggle__svg"
+        src="https://res.cloudinary.com/dk3syrsg5/image/upload/v1739639733/google_nfpem7.svg"
+        alt="google icon"
+      />
+      <span key="singinModalGoogleText">Продовжити з Google</span>
+    </button>
+    <p class="signin-modal__or" key="singinModalOrText">або</p>
+    <form class="signin-modal-form">
+      <div class="signin-modal-form__enter-block">
+        <label class="signin-modal-form__enter">
+          <span key="singinModalEmail">Пошта</span>
+          <input
+            class="signin-modal-form__input"
+            key="singinModalEmailPlaceholder"
+            autocomplete="email"
+            type="email"
+            placeholder="Введіть ваш емейл"
+            name="email"
+            required
+        /></label>
+        <label class="signin-modal-form__enter">
+          <span key="singinModalPassword">Пароль</span>
+          <input
+            class="signin-modal-form__input"
+            key="singinModalPasswordPlaceholder"
+            autocomplete="current-password"
+            type="password"
+            placeholder="Введіть пароль"
+            name="password"
+            required
+          />
+        </label>
+      </div>
+      <button
+        class="signin-modal-form__btn-submit"
+        key="singinModalSubmit"
+        type="submit"
+        aria-label="button sign in"
+      >
+        Увійти
+      </button>
+    </form>
+    <p class="signin-modal__error" key="error"></p>
+    <a
+      class="signin-modal__link"
+      key="singinModalLink"
+      href="formProfile.html"
+      aria-label="to register"
+      >Зареєструватись</a
+    >
+  </div>
+</div>
+
+    <div class="modal-wrapper delete-modal-wrapper is-hidden"></div>
+    <button class="btn-up" aria-label="btn-up">
+  <svg class="btn-up__progress-bar" viewBox="0 0 32 32">
+    <rect
+      class="btn-up__line"
+      x="1.5"
+      y="1.5"
+      width="27"
+      height="27"
+      rx="6"
+      ry="6"
+    />
+  </svg>
+  <svg class="btn-up__img">
+    <use href="/assets/arrowUp-B6d7lGeJ.svg#arrowUp"></use>
+  </svg>
+</button>
+
+
+    <header class="header">
+  <div class="container header__container">
+    <a class="logo" href="index.html" aria-label="logo-link">
+      <div class="logo__svg"></div>
+    </a>
+    <ul class="header__menu menu">
+      <li class="menu__item menu__item_ai-assist">
+        <a class="menu__link" href="ai-assist.html" aria-label="ai-assist-link">
+          <p class="menu__svg menu__svg_ai-assist">Ai</p>
+        </a>
+      </li>
+      <li class="menu__item menu__item_search">
+        <a class="menu__link" href="search.html" aria-label="search-link">
+          <svg class="menu__svg menu__svg_search">
+            <use href="/assets/search-DtyNUSZq.svg#search"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="menu__item menu__item_add">
+        <a class="menu__link" href="formAdvert" aria-label="plus-link">
+          <svg class="menu__svg menu__svg_add">
+            <use href="/assets/plus-CQ9xH6wd.svg#plus"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="menu__item menu__item_profile">
+        <a class="menu__link" href="profile.html" aria-label="profile-link">
+          <img
+            class="menu__svg menu__svg_profile"
+            src="/assets/profile-CrWxUfWR.svg#profile"
+            alt="profile"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <main>
+      <div class="translate-container container">
+  <div class="translate-wrapper">
+    <label class="translate">
+      <input
+        class="translate__input"
+        type="checkbox"
+        name="lang"
+        value="en"
+      />
+      <span class="translate__span"></span>
+      <p class="translate__language">ua</p>
+      <p class="translate__language">en</p>
+    </label>
+  </div>
+</div>
+
+      <section class="user-info">
+  <div class="container user-info__container">
+    <h1 hidden>Профіль</h1>
+    <div class="user-info__card-user" id="user-info-js"></div>
+  </div>
+</section>
+
+      <section class="profile-adverts">
+        <div class="container profile-adverts__container">
+          <h2 class="profile-adverts__title">Мої оголошення:</h2>
+          <label class="profile-adverts-state">
+  <ul class="profile-adverts-state__list">
+    <li class="profile-adverts-state__item">
+      <p class="profile-adverts-state__text">Active</p>
+    </li>
+    <li class="profile-adverts-state__item">
+      <p class="profile-adverts-state__text">Inactive</p>
+    </li>
+  </ul>
+  <input class="profile-adverts-state__input is-hidden" aria-label="change cards state" type="checkbox" />
+  <span class="profile-adverts-state__indicator"></span>
+</label>
+
+          <div class="trannslate-container container">
+  <div class="translate-wrapper translate-wrapper_variable">
+    <div class="translate-variable">
+      <span class="translate-variable__span translate__span"></span>
+      <label class="translate-variable__label translate-variable__label_or">
+        <input
+          type="radio"
+          name="lang"
+          class="translate-variable__input is-hidden"
+          value="or"
+        />
+        <span>or</span>
+      </label>
+      <ul class="translate-variable__list translate">
+        <li class="translate-variable__item">
+          <label class="translate-variable__label">
+            <input
+              type="radio"
+              name="lang"
+              class="translate-variable__input is-hidden"
+              value="ua"
+            />
+            <span>ua</span>
+          </label>
+        </li>
+        <li class="translate-variable__item">
+          <label class="translate-variable__label">
+            <input
+              type="radio"
+              name="lang"
+              class="translate-variable__input is-hidden"
+              value="en"
+            />
+            <span>en</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+          <ul class="profile-adverts__list cards-list" id="user-cards-js"></ul>
+<div class="left-side__pagination pagination is-hidden">
+  <button class="pagination-arrow pagination-arrow_first">
+    <img
+      class="pagination-arrow__img pagination-arrow__img_left"
+      src="data:image/svg+xml,%3csvg%20class='svg-icon'%20style='width:%201em;%20height:%201em;vertical-align:%20middle;fill:%20currentColor;overflow:%20hidden;'%20viewBox='0%200%201024%201024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M151.467%20204.373a34.133%2034.133%200%201%201%2048.213-48.213l331.947%20331.947a34.133%2034.133%200%200%201%200%2048.213L199.68%20867.84a34.133%2034.133%200%201%201-48.213-48.213L459.093%20512z%20m341.333%200a34.133%2034.133%200%200%201%2048.213-48.213L872.96%20488.107a34.133%2034.133%200%200%201%200%2048.213L541.013%20868.267a34.133%2034.133%200%200%201-48.213-48.214L800.427%20512z'%20/%3e%3c/svg%3e"
+      alt="first"
+    />
+  </button>
+  <button class="pagination-arrow pagination-arrow_back">
+    <img
+      class="pagination-arrow__img pagination-arrow__img_left"
+      src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3csvg%20fill='%23000000'%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20330%20330'%20xml:space='preserve'%3e%3cpath%20id='XMLID_222_'%20d='M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001%20c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213%20C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606%20C255,161.018,253.42,157.202,250.606,154.389z'%20/%3e%3c/svg%3e"
+      alt="back"
+    />
+  </button>
+  <ul class="pagination__numb"></ul>
+  <button class="pagination-arrow pagination-arrow_next">
+    <img
+      class="pagination-arrow__img"
+      src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3csvg%20fill='%23000000'%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20330%20330'%20xml:space='preserve'%3e%3cpath%20id='XMLID_222_'%20d='M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001%20c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213%20C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606%20C255,161.018,253.42,157.202,250.606,154.389z'%20/%3e%3c/svg%3e"
+      alt="next"
+    />
+  </button>
+  <button class="pagination-arrow pagination-arrow_last">
+    <img
+      class="pagination-arrow__img"
+      src="data:image/svg+xml,%3csvg%20class='svg-icon'%20style='width:%201em;%20height:%201em;vertical-align:%20middle;fill:%20currentColor;overflow:%20hidden;'%20viewBox='0%200%201024%201024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M151.467%20204.373a34.133%2034.133%200%201%201%2048.213-48.213l331.947%20331.947a34.133%2034.133%200%200%201%200%2048.213L199.68%20867.84a34.133%2034.133%200%201%201-48.213-48.213L459.093%20512z%20m341.333%200a34.133%2034.133%200%200%201%2048.213-48.213L872.96%20488.107a34.133%2034.133%200%200%201%200%2048.213L541.013%20868.267a34.133%2034.133%200%200%201-48.213-48.214L800.427%20512z'%20/%3e%3c/svg%3e"
+      alt="last"
+    />
+  </button>
+</div>
+
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+  <div class="container footer__container">
+    <a class="logo" href="index.html" aria-label="logo-link">
+      <div class="logo__svg"></div>
+    </a> 
+    <p class="footer__copyright">Copyright © 2024. All rights reserved</p>
+  </div>
+</footer>
+
+  </body>
+</html>

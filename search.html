@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Search adverts by filtering" />
+    <title>Leaf_Of_Hope</title>
+    <script type="module" crossorigin src="/assets/nested-BeH49shg.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/getCurrentLanguage-D_LdVtxv.js">
+    <link rel="modulepreload" crossorigin href="/assets/changeSettingsValue-79FUIYGn.js">
+    <link rel="modulepreload" crossorigin href="/assets/cardData-CybJiSso.js">
+    <link rel="modulepreload" crossorigin href="/assets/getDataValue-COx-laTb.js">
+    <link rel="modulepreload" crossorigin href="/assets/createFormObj-BD14BULD.js">
+    <link rel="modulepreload" crossorigin href="/assets/propertiesSettings-Cdfy4mIZ.js">
+    <link rel="modulepreload" crossorigin href="/assets/btnUpSettings-Ck6O69iz.js">
+    <link rel="modulepreload" crossorigin href="/assets/setCurrentLanguage-B5kzYEYi.js">
+    <link rel="modulepreload" crossorigin href="/assets/setSwitchVariableLanguage-CGP-iGZU.js">
+    <link rel="modulepreload" crossorigin href="/assets/setSwitchLanguage-DF6hJLdU.js">
+    <link rel="modulepreload" crossorigin href="/assets/api-DfHq31_J.js">
+    <link rel="modulepreload" crossorigin href="/assets/setModalPanel-_Ci3H_RC.js">
+    <link rel="stylesheet" crossorigin href="/assets/getCurrentLanguage-V9_2vn7p.css">
+  </head>
+  <body>
+    <div class="content-loader-wrapper" active>
+  <div class="content-loader"></div>
+</div>
+
+    <button class="btn-up" aria-label="btn-up">
+  <svg class="btn-up__progress-bar" viewBox="0 0 32 32">
+    <rect
+      class="btn-up__line"
+      x="1.5"
+      y="1.5"
+      width="27"
+      height="27"
+      rx="6"
+      ry="6"
+    />
+  </svg>
+  <svg class="btn-up__img">
+    <use href="/assets/arrowUp-B6d7lGeJ.svg#arrowUp"></use>
+  </svg>
+</button>
+
+
+    <header class="header">
+  <div class="container header__container">
+    <a class="logo" href="index.html" aria-label="logo-link">
+      <div class="logo__svg"></div>
+    </a>
+    <ul class="header__menu menu">
+      <li class="menu__item menu__item_ai-assist">
+        <a class="menu__link" href="ai-assist.html" aria-label="ai-assist-link">
+          <p class="menu__svg menu__svg_ai-assist">Ai</p>
+        </a>
+      </li>
+      <li class="menu__item menu__item_search">
+        <a class="menu__link" href="search.html" aria-label="search-link">
+          <svg class="menu__svg menu__svg_search">
+            <use href="/assets/search-DtyNUSZq.svg#search"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="menu__item menu__item_add">
+        <a class="menu__link" href="formAdvert" aria-label="plus-link">
+          <svg class="menu__svg menu__svg_add">
+            <use href="/assets/plus-CQ9xH6wd.svg#plus"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="menu__item menu__item_profile">
+        <a class="menu__link" href="profile.html" aria-label="profile-link">
+          <img
+            class="menu__svg menu__svg_profile"
+            src="/assets/profile-CrWxUfWR.svg#profile"
+            alt="profile"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <main class="search__main">
+      <div class="trannslate-container container">
+  <div class="translate-wrapper translate-wrapper_variable">
+    <div class="translate-variable">
+      <span class="translate-variable__span translate__span"></span>
+      <label class="translate-variable__label translate-variable__label_or">
+        <input
+          type="radio"
+          name="lang"
+          class="translate-variable__input is-hidden"
+          value="or"
+        />
+        <span>or</span>
+      </label>
+      <ul class="translate-variable__list translate">
+        <li class="translate-variable__item">
+          <label class="translate-variable__label">
+            <input
+              type="radio"
+              name="lang"
+              class="translate-variable__input is-hidden"
+              value="ua"
+            />
+            <span>ua</span>
+          </label>
+        </li>
+        <li class="translate-variable__item">
+          <label class="translate-variable__label">
+            <input
+              type="radio"
+              name="lang"
+              class="translate-variable__input is-hidden"
+              value="en"
+            />
+            <span>en</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+      <section class="side-panel is-hidden" id="modal-js">
+        <div class="translate-container container">
+  <div class="translate-wrapper">
+    <label class="translate">
+      <input
+        class="translate__input"
+        type="checkbox"
+        name="lang"
+        value="en"
+      />
+      <span class="translate__span"></span>
+      <p class="translate__language">ua</p>
+      <p class="translate__language">en</p>
+    </label>
+  </div>
+</div>
+
+        <div class="side-panel__wrapp">
+  <h1 class="side-panel__title" key="mainTitle">Обери свою рослинку</h1>
+  <button
+    class="side-panel__close-btn"
+    id="close-modal-js"
+    aria-label="close search panel button"
+  >
+    <svg class="side-panel__close-svg">
+      <use href="/assets/cross-DB30-WeQ.svg#cross"></use>
+    </svg>
+  </button>
+  <form class="side-panel__form">
+    <label class="side-panel-search-field">
+      <span key="searchFieldText">Шукати</span>
+      <div class="side-panel-search-field__main-part">
+        <input class="side-panel-search-field__input" name="name" type="text" />
+        <button
+          type="submit"
+          class="side-panel-search-field__btn"
+          aria-label="complete search"
+        >
+          <svg class="side-panel-search-field__svg">
+            <use href="/assets/search-BnXwN9SH.svg#search"></use>
+          </svg>
+        </button>
+      </div>
+    </label>
+    <a class="criteria-btn" href="criteria.html">i</a>
+    <ul class="side-panel__radio-list">
+      <li>
+        <input
+          type="radio"
+          id="all"
+          name="way"
+          class="side-panel__radio-btn"
+          value=""
+          checked
+        /><label for="all"><span key="allWayText">Усе</span></label>
+      </li>
+      <li>
+        <input
+          type="radio"
+          id="exchange"
+          name="way"
+          value="exchange"
+          class="side-panel__radio-btn"
+        /><label for="exchange"><span key="exchangeWayText">Обмін</span></label>
+      </li>
+      <li>
+        <input
+          type="radio"
+          id="give"
+          name="way"
+          value="give"
+          class="side-panel__radio-btn"
+        /><label for="give"><span key="giveWayText">Віддача</span></label>
+      </li>
+    </ul>
+    <ul class="side-panel__select-list">
+      <li>
+        <label for="sort" key="sortText">Сортування</label>
+        <select name="sort" id="sort" class="side-panel__select">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="sortNewText" value="">нові</option>
+          <option key="sortOldText" value="old">старі</option>
+          <option key="sortStartText" value="start-alphabet">алфавіт ↓</option>
+          <option key="sortEndText" value="end-alphabet">алфавіт ↑</option>
+        </select>
+      </li>
+      <li>
+        <label for="lang" key="langText">Мова</label>
+        <select name="lang" id="lang" class="side-panel__select">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="langUaText" value="ua">українські</option>
+          <option key="langEnText" value="en">англійські</option>
+        </select>
+      </li>
+      <li>
+        <label key="toxicitySignature" for="toxicity">Отруйні</label>
+        <select class="side-panel__select" id="toxicity" name="toxicity">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="toxicityVeryPoisonousText" value="very-poisonous">
+            дуже токсичні
+          </option>
+          <option key="toxicityHighlyToxicText" value="highly-toxic">
+            токсичні
+          </option>
+          <option key="toxicityToxicText" value="toxic">відносно токсичні</option>
+          <option key="toxicityNonToxicText" value="non-toxic">
+            нетоксичні
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="plantConditionSignature" for="plantCondition"
+          >Стан рослини</label
+        >
+        <select
+          class="side-panel__select"
+          id="plantCondition"
+          name="plantCondition"
+        >
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="plantConditionConditionedText" value="conditioned">
+            кондиційний
+          </option>
+          <option key="plantConditionUnconditionedText" value="unconditioned">
+            некондиційний
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="plantTypeSignature" for="plantType">Тип рослини</label>
+        <select class="side-panel__select" id="plantType" name="plantType">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="plantTypeFloweringText" value="flowering">
+            квітучі
+          </option>
+          <option key="plantTypeFoliageText" value="foliage">листяні</option>
+        </select>
+      </li>
+      <li>
+        <label key="heightSignature" for="height">Висота</label>
+        <select class="side-panel__select" id="height" name="height">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="heightDwarfText" value="dwarf">карликові</option>
+          <option key="heightLowText" value="low">низькі</option>
+          <option key="heightAverageText" value="average">середні</option>
+          <option key="heightHighText" value="high">високі</option>
+          <option key="heightVeryHighText" value="very high">
+            дуже високі
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="lightSignature" for="light">Світло</label>
+        <select class="side-panel__select" id="light" name="light">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="lightLightLovingText" value="light-loving">
+            світлолюбна
+          </option>
+          <option key="lightRelLightLovingText" value="relatively light-loving">
+            відносно світлолюбна
+          </option>
+          <option key="lightShadeTolerantText" value="shade-tolerant">
+            тіньовитривала
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="temperatureSignature" for="temperature">Температура</label>
+        <select class="side-panel__select" id="temperature" name="temperature">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="temperatureHeatLovingText" value="heat-loving">
+            теплолюбні
+          </option>
+          <option key="temperatureMediumText" value="medium">
+            cередньотривалі
+          </option>
+          <option key="temperatureColdResistantText" value="cold-resistant">
+            холодостійкі
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="wateringSignature" for="watering">Полив раз на</label>
+        <select class="side-panel__select" id="watering" name="watering">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="wateringThreeDaysText" value="three days">
+            три дні
+          </option>
+          <option key="wateringWeekText" value="week">тиждень</option>
+          <option key="wateringTwoWeeksText" value="two weeks">
+            два тижні
+          </option>
+          <option key="wateringMonthText" value="month">місяць</option>
+        </select>
+      </li>
+    </ul>
+    <div class="side-panel__more-line"></div>
+    <ul class="side-panel__select-list side-panel__select-list_more is-hidden">
+      <li>
+        <label key="careSignature" for="care">Догляд</label>
+        <select class="side-panel__select" id="care" name="care">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="carePickyText" value="picky">вибагливий</option>
+          <option key="careUnassumingText" value="unassuming">
+            невибагливий
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="substrateSignature" for="substrate">Субстрат</label>
+        <select class="side-panel__select" id="substrate" name="substrate">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="substrateUniversalText" value="universal">
+            універсальний
+          </option>
+          <option key="substratePeatText" value="peat">торф'яний</option>
+          <option key="substrateCactusText" value="cactus">кактусовий</option>
+          <option key="substrateOrchidsText" value="orchids">
+            для орхідей
+          </option>
+          <option key="substratePalmText" value="palm">пальмовий</option>
+          <option key="substrateOtherText" value="other">інше</option>
+        </select>
+      </li>
+      <li>
+        <label key="windowDistanceSignature" for="windowDistance"
+          >Відстань до вікна</label
+        >
+        <select
+          class="side-panel__select"
+          id="windowDistance"
+          name="windowDistance"
+        >
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="windowDistanceUpTo05mText" value="up to 0.5m">
+            до 0.5м
+          </option>
+          <option key="windowDistanceUpTo1mText" value="up to 1m">до 1м</option>
+          <option key="windowDistanceUpTo2mText" value="up to 2m">до 2м</option>
+          <option key="windowDistanceOver2mText" value="over 2m">
+            більше 2м
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="allergenicitySignature" for="allergenicity"
+          >Алергічність</label
+        >
+        <select
+          class="side-panel__select"
+          id="allergenicity"
+          name="allergenicity"
+        >
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="allergenicityAvailableText" value="available">
+            наявна
+          </option>
+          <option key="allergenicityAbsentText" value="absent">немає</option>
+        </select>
+      </li>
+      <li>
+        <label key="growthRateSignature" for="growthRate"
+          >Швидкість зростання</label
+        >
+        <select class="side-panel__select" id="growthRate" name="growthRate">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="growthRateFastText" value="fast-growing">
+            швидкорослі
+          </option>
+          <option key="growthRateMediumText" value="medium-growing">
+            середньорослі
+          </option>
+          <option key="growthRateSlowText" value="slow-growing">
+            повільнорослі
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="lifeDuration" for="lifeDuration">Тривалість життя</label>
+        <select
+          class="side-panel__select"
+          id="lifeDuration"
+          name="lifeDuration"
+        >
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="lifeDurationShortLivedText" value="short-lived">
+            недовговічні
+          </option>
+          <option key="lifeDurationLongLivedText" value="long-lived">
+            довговічні
+          </option>
+        </select>
+      </li>
+      <li>
+        <label key="raritySignature" for="rarity">Раритетність</label>
+        <select class="side-panel__select" id="rarity" name="rarity">
+          <option key="defaultParamsText" value="">не вказано</option>
+          <option key="rarityNEText" value="NE">NE</option>
+          <option key="rarityDDText" value="DD">DD</option>
+          <option key="rarityLCText" value="LC">LC</option>
+          <option key="rarityNTText" value="NT">NT</option>
+          <option key="rarityVUText" value="VU">VU</option>
+          <option key="rarityENText" value="EN">EN</option>
+          <option key="rarityCRText" value="CR">CR</option>
+          <option key="rarityEWText" value="EW">EW</option>
+        </select>
+      </li>
+    </ul>
+    <button
+      key="moreParamsText"
+      type="button"
+      class="side-panel__more-btn"
+      aria-label="open or close more field params"
+    >
+      ще параметри
+    </button>
+    <button
+      key="submitText"
+      type="submit"
+      class="side-panel__submit-btn"
+      aria-label="complete search"
+    >
+      Знайти
+    </button>
+    <button
+      type="button"
+      class="side-panel-reset-btn"
+      aria-label="reset search params"
+    >
+      <svg class="side-panel-reset-btn__svg">
+        <use href="/assets/reset-params-FOlG2EZR.svg#reset-params"></use>
+      </svg>
+    </button>
+  </form>
+</div>
+
+      </section>
+      <section class="left-side">
+  <div class="container left-side__container">
+    <h2 class="is-hidden">Оголошення</h2>
+    <button class="left-side__button" id="open-modal-js" type="button" aria-label="burger btn">
+      <svg class="left-side__burger-menu-svg" width="41px" height="25px">
+        <use href="/assets/burger-menu-C7YEBO_f.svg#burger-menu"></use>
+      </svg>
+    </button>
+    <ul class="left-side__list cards-list"></ul>
+    <div class="left-side__pagination pagination is-hidden">
+      <button class="pagination-arrow pagination-arrow_first" aria-label="to first adverts page">
+        <img
+          class="pagination-arrow__img pagination-arrow__img_left"
+          src="data:image/svg+xml,%3csvg%20class='svg-icon'%20style='width:%201em;%20height:%201em;vertical-align:%20middle;fill:%20currentColor;overflow:%20hidden;'%20viewBox='0%200%201024%201024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M151.467%20204.373a34.133%2034.133%200%201%201%2048.213-48.213l331.947%20331.947a34.133%2034.133%200%200%201%200%2048.213L199.68%20867.84a34.133%2034.133%200%201%201-48.213-48.213L459.093%20512z%20m341.333%200a34.133%2034.133%200%200%201%2048.213-48.213L872.96%20488.107a34.133%2034.133%200%200%201%200%2048.213L541.013%20868.267a34.133%2034.133%200%200%201-48.213-48.214L800.427%20512z'%20/%3e%3c/svg%3e"
+          alt="first"
+        />
+      </button>
+      <button class="pagination-arrow pagination-arrow_back" aria-label="to past adverts page">
+        <img
+          class="pagination-arrow__img pagination-arrow__img_left"
+          src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3csvg%20fill='%23000000'%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20330%20330'%20xml:space='preserve'%3e%3cpath%20id='XMLID_222_'%20d='M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001%20c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213%20C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606%20C255,161.018,253.42,157.202,250.606,154.389z'%20/%3e%3c/svg%3e"
+          alt="back"
+        />
+      </button>
+      <ul class="pagination__numb"></ul>
+      <button class="pagination-arrow pagination-arrow_next" aria-label="to next adverts page">
+        <img
+          class="pagination-arrow__img"
+          src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3csvg%20fill='%23000000'%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20330%20330'%20xml:space='preserve'%3e%3cpath%20id='XMLID_222_'%20d='M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001%20c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213%20C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606%20C255,161.018,253.42,157.202,250.606,154.389z'%20/%3e%3c/svg%3e"
+          alt="next"
+        />
+      </button>
+      <button class="pagination-arrow pagination-arrow_last" aria-label="to last adverts page">
+        <img
+          class="pagination-arrow__img"
+          src="data:image/svg+xml,%3csvg%20class='svg-icon'%20style='width:%201em;%20height:%201em;vertical-align:%20middle;fill:%20currentColor;overflow:%20hidden;'%20viewBox='0%200%201024%201024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M151.467%20204.373a34.133%2034.133%200%201%201%2048.213-48.213l331.947%20331.947a34.133%2034.133%200%200%201%200%2048.213L199.68%20867.84a34.133%2034.133%200%201%201-48.213-48.213L459.093%20512z%20m341.333%200a34.133%2034.133%200%200%201%2048.213-48.213L872.96%20488.107a34.133%2034.133%200%200%201%200%2048.213L541.013%20868.267a34.133%2034.133%200%200%201-48.213-48.214L800.427%20512z'%20/%3e%3c/svg%3e"
+          alt="last"
+        />
+      </button>
+    </div>
+  </div>
+</section>
+
+    </main>
+  </body>
+</html>

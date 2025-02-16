@@ -1,0 +1,1 @@
+function c(s){const i=s.querySelector(".img-wrapp"),e=i.querySelector("img"),o=s.querySelector("input[type=file]").files[0],t=new FileReader;t.addEventListener("load",r,!1),o&&t.readAsDataURL(o);function r(){e.src=t.result,e.srcset=`${t.result} 1x, ${t.result} 2x`,e.classList.contains("big-photo")||e.classList.add("big-photo");const n=e.outerHTML;i.innerHTML=n}}export{c as s};

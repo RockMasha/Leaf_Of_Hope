@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="advert" />
+    <title>Leaf_Of_Hope</title>
+    <script type="module" crossorigin src="/assets/nestedFour-BU0P1h2D.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/getCurrentLanguage-D_LdVtxv.js">
+    <link rel="modulepreload" crossorigin href="/assets/api-DfHq31_J.js">
+    <link rel="modulepreload" crossorigin href="/assets/getValueSrcParams-BMgebK2A.js">
+    <link rel="modulepreload" crossorigin href="/assets/cardData-CybJiSso.js">
+    <link rel="modulepreload" crossorigin href="/assets/getDataValue-COx-laTb.js">
+    <link rel="modulepreload" crossorigin href="/assets/setCurrentLanguage-B5kzYEYi.js">
+    <link rel="modulepreload" crossorigin href="/assets/setSwitchVariableLanguage-CGP-iGZU.js">
+    <link rel="stylesheet" crossorigin href="/assets/getCurrentLanguage-V9_2vn7p.css">
+  </head>
+  <body>
+    <div class="content-loader-wrapper" active>
+  <div class="content-loader"></div>
+</div>
+
+    <div class="modal-wrapper signin-modal-wrapper is-hidden">
+  <div class="signin-modal modal">
+    <h2 class="signin-modal__title" key="singinModalTitle">Вхід</h2>
+    <button class="signin-modal-goggle google-login-btn">
+      <img
+        class="signin-modal-goggle__svg"
+        src="https://res.cloudinary.com/dk3syrsg5/image/upload/v1739639733/google_nfpem7.svg"
+        alt="google icon"
+      />
+      <span key="singinModalGoogleText">Продовжити з Google</span>
+    </button>
+    <p class="signin-modal__or" key="singinModalOrText">або</p>
+    <form class="signin-modal-form">
+      <div class="signin-modal-form__enter-block">
+        <label class="signin-modal-form__enter">
+          <span key="singinModalEmail">Пошта</span>
+          <input
+            class="signin-modal-form__input"
+            key="singinModalEmailPlaceholder"
+            autocomplete="email"
+            type="email"
+            placeholder="Введіть ваш емейл"
+            name="email"
+            required
+        /></label>
+        <label class="signin-modal-form__enter">
+          <span key="singinModalPassword">Пароль</span>
+          <input
+            class="signin-modal-form__input"
+            key="singinModalPasswordPlaceholder"
+            autocomplete="current-password"
+            type="password"
+            placeholder="Введіть пароль"
+            name="password"
+            required
+          />
+        </label>
+      </div>
+      <button
+        class="signin-modal-form__btn-submit"
+        key="singinModalSubmit"
+        type="submit"
+        aria-label="button sign in"
+      >
+        Увійти
+      </button>
+    </form>
+    <p class="signin-modal__error" key="error"></p>
+    <a
+      class="signin-modal__link"
+      key="singinModalLink"
+      href="formProfile.html"
+      aria-label="to register"
+      >Зареєструватись</a
+    >
+  </div>
+</div>
+
+
+    <header class="header">
+  <div class="container header__container">
+    <a class="logo" href="index.html" aria-label="logo-link">
+      <div class="logo__svg"></div>
+    </a>
+    <ul class="header__menu menu">
+      <li class="menu__item menu__item_ai-assist">
+        <a class="menu__link" href="ai-assist.html" aria-label="ai-assist-link">
+          <p class="menu__svg menu__svg_ai-assist">Ai</p>
+        </a>
+      </li>
+      <li class="menu__item menu__item_search">
+        <a class="menu__link" href="search.html" aria-label="search-link">
+          <svg class="menu__svg menu__svg_search">
+            <use href="/assets/search-DtyNUSZq.svg#search"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="menu__item menu__item_add">
+        <a class="menu__link" href="formAdvert" aria-label="plus-link">
+          <svg class="menu__svg menu__svg_add">
+            <use href="/assets/plus-CQ9xH6wd.svg#plus"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="menu__item menu__item_profile">
+        <a class="menu__link" href="profile.html" aria-label="profile-link">
+          <img
+            class="menu__svg menu__svg_profile"
+            src="/assets/profile-CrWxUfWR.svg#profile"
+            alt="profile"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <main>
+      <div class="trannslate-container container">
+  <div class="translate-wrapper translate-wrapper_variable">
+    <div class="translate-variable">
+      <span class="translate-variable__span translate__span"></span>
+      <label class="translate-variable__label translate-variable__label_or">
+        <input
+          type="radio"
+          name="lang"
+          class="translate-variable__input is-hidden"
+          value="or"
+        />
+        <span>or</span>
+      </label>
+      <ul class="translate-variable__list translate">
+        <li class="translate-variable__item">
+          <label class="translate-variable__label">
+            <input
+              type="radio"
+              name="lang"
+              class="translate-variable__input is-hidden"
+              value="ua"
+            />
+            <span>ua</span>
+          </label>
+        </li>
+        <li class="translate-variable__item">
+          <label class="translate-variable__label">
+            <input
+              type="radio"
+              name="lang"
+              class="translate-variable__input is-hidden"
+              value="en"
+            />
+            <span>en</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+      
+      <section class="advert"></section>
+
+    </main>
+    <footer class="footer">
+  <div class="container footer__container">
+    <a class="logo" href="index.html" aria-label="logo-link">
+      <div class="logo__svg"></div>
+    </a> 
+    <p class="footer__copyright">Copyright © 2024. All rights reserved</p>
+  </div>
+</footer>
+
+  </body>
+</html>
