@@ -3,10 +3,14 @@ import { getToken } from "../token/getToken";
 import { getCurrentLanguage } from "../universal/translate/universal/currentLanguage/getCurrentLanguage";
 
 axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
+// axios.defaults.baseURL = "https://e196-188-163-74-127.ngrok-free.app";
 
 export async function authentication(user) {
   const answer = await axios.post("/api/auth/signup/verificate", user, {
-    headers: { "Content-Type": "multipart/form-data" },
+    headers: {
+      "Content-Type": "multipart/form-data",
+      "ngrok-skip-browser-warning": "69420",
+    },
   });
   return answer.data;
 }
@@ -16,6 +20,7 @@ export async function checkAuthentication(verificationToken) {
     {},
     {
       headers: {
+        "ngrok-skip-browser-warning": "69420",
         "Content-Type": "multipart/form-data",
       },
     }
@@ -24,7 +29,10 @@ export async function checkAuthentication(verificationToken) {
 }
 export async function authorization(user) {
   const answer = await axios.post("/api/auth/signup", user, {
-    headers: { "Content-Type": "multipart/form-data" },
+    headers: {
+      "Content-Type": "multipart/form-data",
+      "ngrok-skip-browser-warning": "69420",
+    },
   });
   return answer.data;
 }
@@ -42,6 +50,7 @@ export async function getInfo(token = getToken()) {
     const answer = await axios.get("/api/auth/getInfo", {
       headers: {
         Authorization: token,
+        "ngrok-skip-browser-warning": "69420",
       },
     });
     return answer.data;
@@ -54,16 +63,12 @@ export async function signin(info) {
   return answer.data;
 }
 export async function logout(token = getToken()) {
-  try {
-    const answer = await axios.post("/api/auth/logout", {
-      headers: {
-        Authorization: token,
-      },
-    });
-    return answer.data;
-  } catch (error) {
-    console.log(error);
-  }
+  const answer = await axios.post("/api/auth/logout", {
+    headers: {
+      Authorization: token,
+    },
+  });
+  return answer.data;
 }
 
 let userAdvertsController = null;
@@ -82,6 +87,7 @@ export const getUserAdverts = async (page = 1, info = {}) => {
         signal: userAdvertsController.signal,
         headers: {
           Authorization: token,
+          "ngrok-skip-browser-warning": "69420",
         },
       }
     );
@@ -157,6 +163,7 @@ export async function doInactiveAdvert(id, data) {
   const answer = await axios.put(`/api/advert/activity/${id}`, data, {
     headers: {
       Authorization: token,
+      "ngrok-skip-browser-warning": "69420",
     },
   });
   return answer.data;
@@ -213,8 +220,11 @@ export async function getMetabaseIframe() {
   const answer = await axios.get(`/api/metabase/`, {
     headers: {
       Authorization: token,
+      "ngrok-skip-browser-warning": "69420",
     },
   });
+  console.log(answer);
+
   return answer.data;
 }
 
@@ -226,6 +236,7 @@ function getFilterParams(params) {
       paramsStr += `&${key}=${value}`;
     }
   }
+
   return paramsStr;
 }
 

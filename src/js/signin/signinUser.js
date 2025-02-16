@@ -11,15 +11,22 @@ import { setChat } from "../ai-assist/setChat";
 
 export async function signinUser(event) {
   event.preventDefault();
-  setInProgressLoader();
   const data = createFormObj(root.form);
+  await enterUser(data);
+}
+
+export async function enterUser(data) {
+  setInProgressLoader();
   try {
     const answer = await signin(data);
     createToken(answer.token);
     checkPage(answer);
     await hiddenSigninModal();
   } catch (error) {
+    console.log(error);
+
     showError(error);
+    return false;
   } finally {
     removeInProgressLoader();
   }
