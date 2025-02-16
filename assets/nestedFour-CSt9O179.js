@@ -1,4 +1,4 @@
-import{a as c,h as j}from"./getCurrentLanguage-DUgTUic5.js";import{a as B}from"./api-C319RYlQ.js";import{g as U}from"./getValueSrcParams-BMgebK2A.js";import{c as d}from"./cardData-CybJiSso.js";import{g as H}from"./getDataValue-CJIOxqeN.js";import{s as R}from"./setSwitchVariableLanguage-DdJ1DRlT.js";import"./setCurrentLanguage-BJ078Sy1.js";function F(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function G(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
+import{a as c,h as j}from"./getCurrentLanguage-DEWq27zJ.js";import{a as B}from"./api-3qFQw6mT.js";import{g as U}from"./getValueSrcParams-BMgebK2A.js";import{c as d}from"./cardData-CybJiSso.js";import{g as H}from"./getDataValue-DqxqGyeP.js";import{s as R}from"./setSwitchVariableLanguage-B-BUalMS.js";import"./setCurrentLanguage-BDYY6lHY.js";function F(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function G(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
             <picture class="advert-maininfo__img">
               <source
                 srcset="
