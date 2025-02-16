@@ -11,6 +11,8 @@ export default defineConfig({
   },
   build: {
     target: ["es2022", "chrome89", "firefox89", "safari15"],
+    outDir: "../dist",
+    emptyOutDir: true,
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src/index.html"),
@@ -25,7 +27,6 @@ export default defineConfig({
         nestedTen: resolve(__dirname, "src/metabase.html"),
       },
     },
-    outDir: "dist",
   },
   plugins: [injectHTML(), FullReload(["./src//.html"])],
 });
