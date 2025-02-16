@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Leaf_Of_Hope/"
+    "build": "vite build"
   },
   "author": "Mary",
   "license": "ISC",
