@@ -13,10 +13,13 @@ function setGoogleScript(callback) {
   script.onload = callback;
   document.head.appendChild(script);
 }
+console.log(1);
 
 export function setSigninGoogle() {
+  console.log(2);
+
   console.log(GOOGLE_AUTH_ID);
-  
+
   setGoogleScript(() => {
     google.accounts.id.initialize({
       client_id: GOOGLE_AUTH_ID,
