@@ -15,6 +15,8 @@ function setGoogleScript(callback) {
 }
 
 export function setSigninGoogle() {
+  console.log(GOOGLE_AUTH_ID);
+  
   setGoogleScript(() => {
     google.accounts.id.initialize({
       client_id: GOOGLE_AUTH_ID,
