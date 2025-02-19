@@ -1,4 +1,4 @@
-import{a as c,h as j}from"./getCurrentLanguage-D_LdVtxv.js";import{a as B}from"./api-DfHq31_J.js";import{g as U}from"./getValueSrcParams-BMgebK2A.js";import{c as d}from"./cardData-CybJiSso.js";import{g as H}from"./getDataValue-COx-laTb.js";import{s as R}from"./setSwitchVariableLanguage-CGP-iGZU.js";import"./setCurrentLanguage-B5kzYEYi.js";function F(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function G(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
+import{a as p,h as j}from"./getCurrentLanguage-DI-PwgdS.js";import{a as B}from"./api-60J6nx4w.js";import{g as U}from"./getValueSrcParams-BMgebK2A.js";import{c as u}from"./cardData-CybJiSso.js";import{g as H}from"./getDataValue-B945K_NK.js";import{s as R}from"./setSwitchVariableLanguage-CoGPSywS.js";import"./setCurrentLanguage-nWxqZ8mC.js";function F(){document.querySelector(".advert-properties_more").classList.toggle("advert-properties_hidden")}function G(e){const t=e["small-250px"],s=e["medium-300px"],r=e["large-500px"];return`
             <picture class="advert-maininfo__img">
               <source
                 srcset="
@@ -56,33 +56,33 @@ import{a as c,h as j}from"./getCurrentLanguage-D_LdVtxv.js";import{a as B}from".
           alt="plant"
           loading="lazy"
         />
-      </picture>`}let a;function K(e){const t=H(e),{image:s,name:r,description:i,wish:n,date:m,lang:v,toxicity:_,plantCondition:g,plantType:h,height:f,light:$,temperature:x,watering:y,care:w,substrate:b,windowDistance:L,allergenicity:S,growthRate:E,lifeDuration:I,rarity:P,username:T,email:q,avatar:D,adress:A,phone:W,way:M}=t,O=c();a=c()==="or"?v:O;const{pageName:V,descriptionTitle:k,defaultDescription:z,WishTitle:C,defaultWish:N}=Q();return`
+      </picture>`}let a;function K(e){const t=H(e),{image:s,name:r,description:i,wish:n,date:_,lang:g,toxicity:h,plantCondition:f,plantType:$,height:x,light:y,temperature:w,watering:b,care:L,substrate:S,windowDistance:E,allergenicity:I,growthRate:P,lifeDuration:T,rarity:q,username:D,email:A,avatar:W,adress:c,phone:d,way:M}=t,O=p();a=p()==="or"?g:O;const{pageName:V,descriptionTitle:k,defaultDescription:z,WishTitle:C,defaultWish:N}=Q();return`
           <div class="container advert__container">
             <h1 hidden>${V}</h1>
             <div class="advert-maininfo">
               ${G(s)}
               <div class="advert-maininfo__property-box">
-                <p class="advert-maininfo__date">${m}</p>
+                <p class="advert-maininfo__date">${_}</p>
                 <h2 class="advert-maininfo__title">${r}</h2>
                 <div class="advert-maininfo-way">
-                  <p class="advert-maininfo-way__text">${d.way[M][a]}</p>
+                  <p class="advert-maininfo-way__text">${u.way[M][a]}</p>
                 </div>
                 <a class="criteria-btn" href="criteria.html">i</a>
                 <ul class="advert-properties">
-                  ${o([{toxicity:_},{plantCondition:g},{plantType:h},{height:f}])}
-                  ${o([{light:$},{temperature:x},{watering:y}],!1)}
+                  ${o([{toxicity:h},{plantCondition:f},{plantType:$},{height:x}])}
+                  ${o([{light:y},{temperature:w},{watering:b}],!1)}
                 </ul>
               </div>
             </div>
             <ul class="advert-properties advert-properties_more advert-properties_hidden">
               <li>
                 <ul class="advert-properties__more-list">
-                  ${o([{care:w},{substrate:b},{windowDistance:L},{growthRate:E}])}
+                  ${o([{care:L},{substrate:S},{windowDistance:E},{growthRate:P}])}
                 </ul>
               </li>
               <li>
                 <ul class="advert-properties__more-list">
-                  ${o([{allergenicity:S},{lifeDuration:I},{rarity:P}])}
+                  ${o([{allergenicity:I},{lifeDuration:T},{rarity:q}])}
                 </ul>
               </li>
             </ul>
@@ -101,16 +101,16 @@ import{a as c,h as j}from"./getCurrentLanguage-D_LdVtxv.js";import{a as B}from".
             <div class="advert-user">
               <div class="advert-userinfo">
                 <div class="advert-userinfo__profile-img">
-                  ${J(D)}
+                  ${J(W)}
                 </div>
                 <div class="advert-userinfo__userinfos">
-                  <h2 class="advert-userinfo__name">${T}</h2>
-                  <p class="advert-userinfo__adress">${A}</p>
+                  <h2 class="advert-userinfo__name">${D}</h2>
+                  <p class="advert-userinfo__adress">${c||"adress hidden"}</p>
                   <p class="advert-userinfo__phone">
-                    ${W}
+                    ${d||"phone hidden"}
                   </p>
                   <p class="advert-userinfo__email">
-                    ${q}
+                    ${A}
                   </p>
                 </div>
               </div>
@@ -123,10 +123,10 @@ import{a as c,h as j}from"./getCurrentLanguage-D_LdVtxv.js";import{a as B}from".
             </div>
           </div>`}function Q(){const e={};return e.pageName=a==="ua"?"Оголошення":"Advert",e.descriptionTitle=a==="ua"?"Опис":"Description",e.defaultDescription=a==="ua"?"Немає опису":"There is no description",e.WishTitle=a==="ua"?"Побажання":"Wish",e.defaultWish=a==="ua"?"Немає побажань":"There are no wishes",e}function o(e,t=!0){const s=[];for(const r of e){const i=Object.keys(r)[0];let n=t?X(r,i):Y(r,i);s.push(n)}return s.join("")}function X(e,t){return`
   <li class="advert-properties__item">
-    <p class="advert-properties__text">${p(t)}: ${e[t]}</p>
+    <p class="advert-properties__text">${m(t)}: ${e[t]}</p>
   </li>`}function Y(e,t){return`
   <li class="advert-properties__item">
     <p class="advert-properties__text"> 
-    ${p(t)}: <span>${e[t]}</span>
+    ${m(t)}: <span>${e[t]}</span>
     </p>
-  </li>`}function p(e){return d[e].name[a]}const Z={translateWrapp:document.querySelector(".translate-wrapper_variable"),translate:document.querySelector(".translate"),translateInput:document.querySelector(".translate__input"),main:document.querySelector("main"),advert:document.querySelector(".advert")};let u={};async function ee(){const e=U("id");u=await B(e),l()}function l(){const e=K(u);Z.advert.innerHTML=e,te()}function te(){document.querySelector(".advert-properties__more-btn").addEventListener("click",F)}const re=l,se=l,ae=l,ie={setUkrainian:re,setEnglish:se,setOriginal:ae};await ee();R(ie);j();
+  </li>`}function m(e){return u[e].name[a]}const Z={translateWrapp:document.querySelector(".translate-wrapper_variable"),translate:document.querySelector(".translate"),translateInput:document.querySelector(".translate__input"),main:document.querySelector("main"),advert:document.querySelector(".advert")};let v={};async function ee(){const e=U("id");v=await B(e),l()}function l(){const e=K(v);Z.advert.innerHTML=e,te()}function te(){document.querySelector(".advert-properties__more-btn").addEventListener("click",F)}const re=l,se=l,ae=l,ie={setUkrainian:re,setEnglish:se,setOriginal:ae};await ee();R(ie);j();
