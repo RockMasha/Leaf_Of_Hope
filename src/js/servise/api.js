@@ -2,8 +2,8 @@ import axios from "axios";
 import { getToken } from "../token/getToken";
 import { getCurrentLanguage } from "../universal/translate/universal/currentLanguage/getCurrentLanguage";
 
-// axios.defaults.baseURL = "https://shnap.mom";
-axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
+axios.defaults.baseURL = "https://shnap.mom";
+// axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
 
 export async function authentication(user) {
   const answer = await axios.post("/api/auth/signup/verificate", user, {
