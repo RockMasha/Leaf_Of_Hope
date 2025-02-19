@@ -8,6 +8,7 @@ export function showSigninModal() {
   document.body.setAttribute("lock", "");
   root.modalEl.addEventListener("submit", signinUser);
   setSigninGoogle();
+
   root.googleBtn.addEventListener("click", () => {
     google.accounts.id.prompt();
   });

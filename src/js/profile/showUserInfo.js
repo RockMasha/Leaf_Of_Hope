@@ -17,8 +17,10 @@ function getUserEL(user) {
         <div class="user-info__user">
           <div>
             <h2 class="user-info__title">${username}</h2>
-            <p class="user-info__text">${adress}</p>
-            <p class="user-info__text bold">${phone}</p>
+            <p class="user-info__text">${adress ? adress : "adress hidden"}</p>
+            <p class="user-info__text bold">${
+              phone ? phone : "phone hidden"
+            }</p>
             <p class="user-info__text bold">${email}</p>
           </div>
           <div class="user-info__btn-box">

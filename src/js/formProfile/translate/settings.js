@@ -54,6 +54,10 @@ export const settings = {
     ua: `Зберегти`,
     en: `Save`,
   },
+  backText: {
+    ua: `← Вхід`,
+    en: `← Login`,
+  },
 };
 
 Object.assign(settings, errorSettings);

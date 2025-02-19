@@ -1,4 +1,5 @@
 export const root = {
+  section: document.querySelector(".change-profile"),
   form: document.querySelector(".change-profile-form"),
   title: document.querySelector(".change-profile__title"),
   photo: document.querySelector(".change-profile-form__img"),

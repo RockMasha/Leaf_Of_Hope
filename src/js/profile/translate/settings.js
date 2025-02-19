@@ -23,6 +23,14 @@ export const settings = {
     ua: `Так`,
     en: `Yes`,
   },
+  advertsStateActiveState: {
+    ua: `Активні`,
+    en: `Active`,
+  },
+  advertsStateInactiveState: {
+    ua: `Неактивні`,
+    en: `Inactive`,
+  },
 };
 
 Object.assign(settings, signinSettings, defaultCardListSettings);

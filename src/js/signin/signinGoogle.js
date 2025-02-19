@@ -1,8 +1,8 @@
-import { jwtDecode } from "jwt-decode";
-import { enterUser } from "./signinUser";
-import { authorization } from "../servise/api";
 import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
 import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
+import { signin, signupGoogle } from "../servise/api";
+import { hiddenSigninModal } from "./hiddenSinginModal";
+import { createToken } from "../token/createToken";
 export const GOOGLE_AUTH_ID = import.meta.env.VITE_GOOGLEAUTHID;
 
 function setGoogleScript(callback) {
@@ -13,13 +13,8 @@ function setGoogleScript(callback) {
   script.onload = callback;
   document.head.appendChild(script);
 }
-console.log(1);
 
 export function setSigninGoogle() {
-  console.log(2);
-
-  console.log(GOOGLE_AUTH_ID);
-
   setGoogleScript(() => {
     google.accounts.id.initialize({
       client_id: GOOGLE_AUTH_ID,
@@ -29,46 +24,21 @@ export function setSigninGoogle() {
 }
 
 async function signinGoogle(response) {
-  const data = jwtDecode(response.credential);
-  console.log(data);
-  const info = getSigninData(data);
-  // console.log(info);
-  const answer = await enterUser(info);
-  if (!answer) {
-    const info = getRegistrationData(data);
-    authorizationUser(info);
-  }
-}
-
-async function authorizationUser(info) {
   setInProgressLoader();
+  const { credential } = response;
   try {
-    const answer = await authorization(info);
-    // console.log(answer);
+    const answer = await signin({ token_id: credential });
+    const { token } = answer;
+    createToken(token);
+    await hiddenSigninModal();
   } catch (error) {
-    // console.log(error);
+    try {
+      const answer = await signupGoogle(credential);
+      const { token } = answer;
+      createToken(token);
+      await hiddenSigninModal();
+    } catch (error) {}
   } finally {
     removeInProgressLoader();
   }
-}
-
-function getSigninData(data) {
-  const { email, jti: password } = data;
-  return {
-    email,
-    password,
-  };
-}
-
-function getRegistrationData(data) {
-  const { email, name: username, picture: avatar, jti: password } = data;
-
-  return {
-    email,
-    username,
-    // avatar,
-    password,
-    phone: "0000000000",
-    adress: "не вказано",
-  };
 }
