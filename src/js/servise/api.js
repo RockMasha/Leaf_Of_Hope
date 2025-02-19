@@ -2,14 +2,13 @@ import axios from "axios";
 import { getToken } from "../token/getToken";
 import { getCurrentLanguage } from "../universal/translate/universal/currentLanguage/getCurrentLanguage";
 
-axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
-// axios.defaults.baseURL = "https://e196-188-163-74-127.ngrok-free.app";
+axios.defaults.baseURL = "https://shnap.mom";
+// axios.defaults.baseURL = "https://leafofhope-backend.onrender.com";
 
 export async function authentication(user) {
   const answer = await axios.post("/api/auth/signup/verificate", user, {
     headers: {
       "Content-Type": "multipart/form-data",
-      "ngrok-skip-browser-warning": "69420",
     },
   });
   return answer.data;
@@ -20,7 +19,6 @@ export async function checkAuthentication(verificationToken) {
     {},
     {
       headers: {
-        "ngrok-skip-browser-warning": "69420",
         "Content-Type": "multipart/form-data",
       },
     }
@@ -31,7 +29,6 @@ export async function authorization(user) {
   const answer = await axios.post("/api/auth/signup", user, {
     headers: {
       "Content-Type": "multipart/form-data",
-      "ngrok-skip-browser-warning": "69420",
     },
   });
   return answer.data;
@@ -50,7 +47,6 @@ export async function getInfo(token = getToken()) {
     const answer = await axios.get("/api/auth/getInfo", {
       headers: {
         Authorization: token,
-        "ngrok-skip-browser-warning": "69420",
       },
     });
     return answer.data;
@@ -58,16 +54,27 @@ export async function getInfo(token = getToken()) {
     console.log(error);
   }
 }
+export async function signupGoogle(credential) {
+  const data = { token_id: credential };
+  const answer = await axios.post(`/api/auth/signupGoogle`, data);
+  console.log(answer);
+  return answer.data;
+}
 export async function signin(info) {
   const answer = await axios.post("/api/auth/signin", info);
   return answer.data;
 }
 export async function logout(token = getToken()) {
-  const answer = await axios.post("/api/auth/logout", {
-    headers: {
-      Authorization: token,
-    },
-  });
+  const answer = await axios.post(
+    "/api/auth/logout",
+    {},
+    {
+      headers: {
+        Authorization: token,
+      },
+    }
+  );
+
   return answer.data;
 }
 
@@ -87,7 +94,6 @@ export const getUserAdverts = async (page = 1, info = {}) => {
         signal: userAdvertsController.signal,
         headers: {
           Authorization: token,
-          "ngrok-skip-browser-warning": "69420",
         },
       }
     );
@@ -163,7 +169,6 @@ export async function doInactiveAdvert(id, data) {
   const answer = await axios.put(`/api/advert/activity/${id}`, data, {
     headers: {
       Authorization: token,
-      "ngrok-skip-browser-warning": "69420",
     },
   });
   return answer.data;
@@ -220,11 +225,8 @@ export async function getMetabaseIframe() {
   const answer = await axios.get(`/api/metabase/`, {
     headers: {
       Authorization: token,
-      "ngrok-skip-browser-warning": "69420",
     },
   });
-  console.log(answer);
-
   return answer.data;
 }
 

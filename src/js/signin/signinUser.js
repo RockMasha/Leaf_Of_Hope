@@ -23,8 +23,6 @@ export async function enterUser(data) {
     checkPage(answer);
     await hiddenSigninModal();
   } catch (error) {
-    console.log(error);
-
     showError(error);
     return false;
   } finally {

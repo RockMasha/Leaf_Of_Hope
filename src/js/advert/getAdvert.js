@@ -119,9 +119,11 @@ export function getAdvert(info) {
                 </div>
                 <div class="advert-userinfo__userinfos">
                   <h2 class="advert-userinfo__name">${username}</h2>
-                  <p class="advert-userinfo__adress">${adress}</p>
+                  <p class="advert-userinfo__adress">${
+                    adress ? adress : "adress hidden"
+                  }</p>
                   <p class="advert-userinfo__phone">
-                    ${phone}
+                    ${phone ? phone : "phone hidden"}
                   </p>
                   <p class="advert-userinfo__email">
                     ${email}

@@ -1,5 +1,6 @@
 import { authentication, redactUser } from "../servise/api";
 import { createFormData } from "../universal/createFormData";
+import { createFormObj } from "../universal/createFormObj";
 import { getErrorText } from "../universal/errorData/getErrorText";
 import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
 import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
@@ -14,6 +15,13 @@ export async function submitUser(event) {
 
   try {
     const data = createFormData(root.form);
+    if (!data.get("phone")) {
+      data.set("phone", "");
+    }
+    if (!data.get("adress")) {
+      data.set("adress", "");
+    }
+
     if (isRedactForm()) {
       await redactUser(data);
       window.location.href = "profile.html";

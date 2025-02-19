@@ -3,6 +3,17 @@ import { root } from "./root";
 import { settings } from "./translate/settings";
 
 export function setRegistrationFields() {
+  const backEl = `
+  <a class="change-profile-back" href="profile.html">
+    <img
+      class="change-profile-back__svg"
+      src="./img/formAdvert/select-arrow.svg#select-arrow"
+      alt=""
+    />
+    <p class="change-profile-back__hint" key="backText">← Вхід</p>
+  </a>`;
+  root.section.insertAdjacentHTML("afterbegin", backEl);
+
   root.password.innerHTML = `
               <span key="passwordText">Пароль</span>
               <input

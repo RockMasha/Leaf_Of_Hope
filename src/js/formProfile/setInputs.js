@@ -7,6 +7,10 @@ export async function setInputs() {
   const { user } = await getInfo();
 
   for (const name in formInputs) {
+    if (!user[name]) {
+      continue;
+    }
+
     formInputs[name].value = user[name];
   }
 
