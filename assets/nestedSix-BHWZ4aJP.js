@@ -15,7 +15,7 @@ import{h as p}from"./getCurrentLanguage-DI-PwgdS.js";import{g as d}from"./getVal
   <a class="change-profile-back" href="profile.html">
     <img
       class="change-profile-back__svg"
-      src="./img/formAdvert/select-arrow.svg#select-arrow"
+      src="https://res.cloudinary.com/dk3syrsg5/image/upload/v1740074542/select-arrow_i5119r.svg"
       alt=""
     />
     <p class="change-profile-back__hint" key="backText">← Вхід</p>
