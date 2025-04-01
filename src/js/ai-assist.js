@@ -1,13 +1,15 @@
-import { root } from "./ai-assist/root";
 import { setChat } from "./ai-assist/setChat";
-import { setEnterText } from "./ai-assist/setEnterText";
 import { settings } from "./ai-assist/translate/settings";
 import { isSignin } from "./signin/isSignin";
 import { showSigninModal } from "./signin/showSigninModal";
 import { hiddenContentLoader } from "./universal/hiddenContentLoader";
-import { setSwitchLanguage } from "./universal/translate/original/setSwitchLanguage";
+import { translateAllPage } from "./universal/translate/original/translateAllPage";
+import { getCurrentLanguage } from "./universal/translate/universal/currentLanguage/getCurrentLanguage";
 
-setSwitchLanguage(settings);
+const lang = getCurrentLanguage()
+if (lang === "en") {
+  translateAllPage(settings);
+}
 
 const user = await isSignin();
 
@@ -16,7 +18,4 @@ if (!user) {
 } else {
   setChat(user);
 }
-
-root.panelEnter.addEventListener("input", setEnterText);
-
 hiddenContentLoader();

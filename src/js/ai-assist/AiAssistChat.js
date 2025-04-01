@@ -12,7 +12,6 @@ export class AiAssistChat {
   constructor(aiAssistEl, userImage) {
     this.chatEl = aiAssistEl.querySelector(".chat");
     this.chatForm = aiAssistEl.querySelector(".chat-form");
-    this.chatText = aiAssistEl.querySelector(".enter-text");
     this.chatPlusBtn = aiAssistEl.querySelector(".chat-plus-btn");
     this.chatPlusList = aiAssistEl.querySelector(".chat-plus-list");
     this.chatDeleteEl = aiAssistEl.querySelector(".chat-delete");
@@ -83,10 +82,7 @@ export class AiAssistChat {
   }
   async setOneSession() {
     const userText = this.#getUserText();
-    if (
-      userText.trim() === "" ||
-      userText.trim() === this.#getDefaultEnterText()
-    ) {
+    if (userText.trim() === "") {
       return;
     }
     this.#removeOneSessionEvent();
@@ -94,7 +90,6 @@ export class AiAssistChat {
     this.#addMessage({ role: "user", content: userText });
     await this.#setAiAnswer(userText);
     this.#addOneSessionEvent();
-    this.chatText.textContent = this.#getDefaultEnterText();
   }
 
   async #setAiAnswer(userText) {
@@ -171,7 +166,6 @@ export class AiAssistChat {
 
   #clearForm() {
     this.chatForm.reset();
-    this.chatText.textContent = this.#getDefaultEnterText();
   }
 
   #setLoader() {
@@ -179,11 +173,6 @@ export class AiAssistChat {
   }
   #removeLoader() {
     this.loader.classList.add("is-hidden");
-  }
-
-  #getDefaultEnterText() {
-    const lang = getCurrentLanguage();
-    return lang == "ua" ? `Написати...` : `Write...`;
   }
 }
 

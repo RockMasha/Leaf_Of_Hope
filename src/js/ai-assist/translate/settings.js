@@ -3,7 +3,8 @@ export const settings = {
     ua: `Очистити чат`,
     en: `Clear chat`,
   },
-  EnterDefaultText: {
+  EnterDefaultPlaceholder: {
+    placeholder: true,
     ua: `Написати...`,
     en: `Write...`,
   },
