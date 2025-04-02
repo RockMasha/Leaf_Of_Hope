@@ -3,6 +3,7 @@ import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgres
 import { signin, signupGoogle } from "../servise/api";
 import { hiddenSigninModal } from "./hiddenSinginModal";
 import { createToken } from "../token/createToken";
+import { checkPage } from "./checkPage";
 export const GOOGLE_AUTH_ID = import.meta.env.VITE_GOOGLEAUTHID;
 
 function setGoogleScript(callback) {
@@ -30,6 +31,7 @@ async function signinGoogle(response) {
     const answer = await signin({ token_id: credential });
     const { token } = answer;
     createToken(token);
+    checkPage(answer);
     await hiddenSigninModal();
   } catch (error) {
     try {

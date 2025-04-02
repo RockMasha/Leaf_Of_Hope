@@ -1,4 +1,5 @@
 import { createToken } from "../token/createToken";
+import { changePage } from "../universal/chanhePage";
 import { isVerificationCodeTrue } from "./isVerificationCodeTrue";
 import { showError } from "./showError";
 import { showSuccess } from "./showSuccess";
@@ -9,7 +10,7 @@ export async function setUser() {
   if (token) {
     showSuccess();
     createToken(token);
-    window.location.href = "profile.html";
+    changePage("profile.html");
   } else {
     showError();
   }
