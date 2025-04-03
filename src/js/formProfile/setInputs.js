@@ -1,10 +1,14 @@
 import { getInfo } from "../servise/api";
+import { changePage } from "../universal/chanhePage";
 import { root } from "./root";
 
 export async function setInputs() {
   const { username, adress, phone } = root.form;
   const formInputs = { username, adress, phone };
-  const { user } = await getInfo();
+  const user = await getInfo();
+  if (!user) {
+    changePage("profile.html");
+  }
 
   for (const name in formInputs) {
     if (!user[name]) {

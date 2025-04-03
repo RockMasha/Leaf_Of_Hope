@@ -1,4 +1,5 @@
 import { authentication, redactUser } from "../servise/api";
+import { changePage } from "../universal/chanhePage";
 import { createFormData } from "../universal/createFormData";
 import { createFormObj } from "../universal/createFormObj";
 import { getErrorText } from "../universal/errorData/getErrorText";
@@ -24,7 +25,7 @@ export async function submitUser(event) {
 
     if (isRedactForm()) {
       await redactUser(data);
-      window.location.href = "profile.html";
+      changePage("profile.html");
     } else {
       await authentication(data);
       showSubmitModal();

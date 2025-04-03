@@ -1,4 +1,5 @@
 import { createChat, deleteChat, getChat, sendMessage } from "../servise/api";
+import { changePage } from "../universal/chanhePage";
 import { removeInProgressLoader } from "../universal/inProgressLoadder/removeInProgressLoader";
 import { setInProgressLoader } from "../universal/inProgressLoadder/setInProgressLoader";
 import { getCurrentLanguage } from "../universal/translate/universal/currentLanguage/getCurrentLanguage";
@@ -94,8 +95,24 @@ export class AiAssistChat {
 
   async #setAiAnswer(userText) {
     this.#setLoader();
-    const assistMessage = await sendMessage(userText);
-    this.#addMessage(assistMessage);
+    let assistMessage;
+    try {
+      assistMessage = await sendMessage(userText);
+    } catch (error) {
+      this.chatEl.innerHTML = `
+        <div class="ai-assist__error-wrapper">
+          <img
+            class="authentication__img"
+            src="https://res.cloudinary.com/dk3syrsg5/image/upload/v1737148271/error-occurred_eo4gcm.svg"
+            alt="an error occurred"
+          />
+          <p class="authentication__message" key="messageErrorText">Сталася помилка</p>
+        </div>
+  `;
+      setTimeout(() => {
+        changePage("ai-assist.html");
+      }, 1500);
+    }
     this.#removeLoader();
   }
   #addMessage(message) {
