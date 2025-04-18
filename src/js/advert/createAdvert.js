@@ -19,6 +19,6 @@ export function setAdvert() {
 }
 
 function setEventMoreProperties() {
-  const BtnMoreEl = document.querySelector(".advert-properties__more-btn");
+  const BtnMoreEl = document.querySelector(".plant-post-properties__more-btn");
   BtnMoreEl.addEventListener("click", changeMoreProperties);
 }

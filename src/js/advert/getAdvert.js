@@ -48,20 +48,20 @@ export function getAdvert(info) {
   } = getSignatures();
 
   return `
-          <div class="container advert__container">
+          <div class="container plant-post__container">
             <h1 hidden>${pageName}</h1>
-            <div class="advert-maininfo">
+            <div class="plant-post-maininfo">
               ${getAdvertPicture(image)}
-              <div class="advert-maininfo__property-box">
-                <p class="advert-maininfo__date">${date}</p>
-                <h2 class="advert-maininfo__title">${name}</h2>
-                <div class="advert-maininfo-way">
-                  <p class="advert-maininfo-way__text">${
+              <div class="plant-post-maininfo__property-box">
+                <p class="plant-post-maininfo__date">${date}</p>
+                <h2 class="plant-post-maininfo__title">${name}</h2>
+                <div class="plant-post-maininfo-way">
+                  <p class="plant-post-maininfo-way__text">${
                     cardData.way[way][lang]
                   }</p>
                 </div>
                 <a class="criteria-btn" href="criteria.html">i</a>
-                <ul class="advert-properties">
+                <ul class="plant-post-properties">
                   ${getPropertiesEls([
                     { toxicity },
                     { plantCondition },
@@ -75,9 +75,9 @@ export function getAdvert(info) {
                 </ul>
               </div>
             </div>
-            <ul class="advert-properties advert-properties_more advert-properties_hidden">
+            <ul class="plant-post-properties plant-post-properties_more plant-post-properties_hidden">
               <li>
-                <ul class="advert-properties__more-list">
+                <ul class="plant-post-properties__more-list">
                   ${getPropertiesEls([
                     { care },
                     { substrate },
@@ -87,7 +87,7 @@ export function getAdvert(info) {
                 </ul>
               </li>
               <li>
-                <ul class="advert-properties__more-list">
+                <ul class="plant-post-properties__more-list">
                   ${getPropertiesEls([
                     { allergenicity },
                     { lifeDuration },
@@ -96,49 +96,49 @@ export function getAdvert(info) {
                 </ul>
               </li>
             </ul>
-            <button class="advert-properties__more-btn" aria-label="more properties">
-              <ul class="advert-properties-cross">
-                <li class="advert-properties-cross__line advert-properties-cross__line_vertical"></li>
-                <li class="advert-properties-cross__line advert-properties-cross__line_horizontal"></li>
+            <button class="plant-post-properties__more-btn" aria-label="more properties">
+              <ul class="plant-post-properties-cross">
+                <li class="plant-post-properties-cross__line plant-post-properties-cross__line_vertical"></li>
+                <li class="plant-post-properties-cross__line plant-post-properties-cross__line_horizontal"></li>
               </ul>
             </button>
-            <div class="advert-discreption">
-              <h2 class="advert-discreption__title">${descriptionTitle}</h2>
-              <p class="advert-discreption__text">
+            <div class="plant-post-discreption">
+              <h2 class="plant-post-discreption__title">${descriptionTitle}</h2>
+              <p class="plant-post-discreption__text">
                 ${
                   description
                     ? description
-                    : `<span class="advert-discreption__text_default">${defaultDescription}</span>`
+                    : `<span class="plant-post-discreption__text_default">${defaultDescription}</span>`
                 }
               </p>
             </div>
-            <div class="advert-user">
-              <div class="advert-userinfo">
-                <div class="advert-userinfo__profile-img">
+            <div class="plant-post-user">
+              <div class="plant-post-userinfo">
+                <div class="plant-post-userinfo__profile-img">
                   ${getUserPicture(avatar)}
                 </div>
-                <div class="advert-userinfo__userinfos">
-                  <h2 class="advert-userinfo__name">${username}</h2>
-                  <p class="advert-userinfo__adress">${
+                <div class="plant-post-userinfo__userinfos">
+                  <h2 class="plant-post-userinfo__name">${username}</h2>
+                  <p class="plant-post-userinfo__adress">${
                     adress ? adress : "adress hidden"
                   }</p>
-                  <p class="advert-userinfo__phone">
+                  <p class="plant-post-userinfo__phone">
                     ${phone ? phone : "phone hidden"}
                   </p>
-                  <p class="advert-userinfo__email">
+                  <p class="plant-post-userinfo__email">
                     ${email}
                   </p>
                 </div>
               </div>
-              <div class="advert-wishes ${
+              <div class="plant-post-wishes ${
                 info.way === "exchange" ? `` : `is-hidden`
               }">
-                <h2 class="advert-wishes__title">${WishTitle}</h2>
-                <p class="advert-wishes__text">
+                <h2 class="plant-post-wishes__title">${WishTitle}</h2>
+                <p class="plant-post-wishes__text">
                  ${
                    wish
                      ? wish
-                     : `<span class="advert-wishes__text_default">${defaultWish}</span>`
+                     : `<span class="plant-post-wishes__text_default">${defaultWish}</span>`
                  }
                 </p>
               </div>
@@ -173,14 +173,14 @@ function getPropertiesEls(properties, isOrdinary = true) {
 
 function getOrdinaryItem(item, name) {
   return `
-  <li class="advert-properties__item">
-    <p class="advert-properties__text">${getName(name)}: ${item[name]}</p>
+  <li class="plant-post-properties__item">
+    <p class="plant-post-properties__text">${getName(name)}: ${item[name]}</p>
   </li>`;
 }
 function getSpanItem(item, name) {
   return `
-  <li class="advert-properties__item">
-    <p class="advert-properties__text"> 
+  <li class="plant-post-properties__item">
+    <p class="plant-post-properties__text"> 
     ${getName(name)}: <span>${item[name]}</span>
     </p>
   </li>`;
