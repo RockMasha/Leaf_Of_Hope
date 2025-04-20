@@ -197,6 +197,10 @@
     @media (min-width: 1440px) {
       font-size: 40px;
     }
+    @supports (-moz-appearance: none) {
+      scrollbar-width: thin;
+      scrollbar-color: $color-grey-dark $color-white;
+    }
     &::-webkit-scrollbar {
       width: 6px;
       border-radius: 15px;

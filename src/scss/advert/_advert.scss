@@ -1,4 +1,4 @@
-.advert {
+.plant-post {
   padding: 40px 0 28px;
   @media (min-width: 768px) {
     padding: 50px 0 30px;
@@ -419,8 +419,8 @@
         }
         @media (min-width: 1440px) {
         }
-        .advert-properties_more.advert-properties_hidden
-          ~ .advert-properties__more-btn
+        .plant-post-properties_more.plant-post-properties_hidden
+          ~ .plant-post-properties__more-btn
           & {
           transform: translate(-50%, -50%) rotate(90deg);
         }

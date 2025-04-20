@@ -4,7 +4,7 @@ export function getAdvertPicture(image) {
   const bigImg = image["large-500px"];
 
   return `
-            <picture class="advert-maininfo__img">
+            <picture class="plant-post-maininfo__img">
               <source
                 srcset="
                 ${bigImg} 1x,
@@ -28,7 +28,7 @@ export function getAdvertPicture(image) {
                 srcset="
                 ${smallImg} 1x,
                 ${smallImg} 2x,"
-                class="advert-maininfo__img"
+                class="plant-post-maininfo__img"
                 alt="plant"
                 loading="lazy"
               />
@@ -42,7 +42,7 @@ export function getUserPicture(image) {
   const bigImg = image["small-250px"];
 
   return `
-      <picture class="advert-userinfo__img big-photo">
+      <picture class="plant-post-userinfo__img big-photo">
         <source
           srcset="
             ${bigImg} 1x,
@@ -65,7 +65,7 @@ export function getUserPicture(image) {
           srcset="
             ${smallImg} 1x,
             ${smallImg} 2x,"
-          class="advert-userinfo__img big-photo"
+          class="plant-post-userinfo__img big-photo"
           alt="plant"
           loading="lazy"
         />

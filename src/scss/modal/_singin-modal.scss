@@ -4,6 +4,10 @@
   }
   @media (min-width: 1440px) {
   }
+
+  @supports (-moz-appearance: none) {
+    scrollbar-width: none;
+  }
   &::-webkit-scrollbar {
     width: 1px;
   }

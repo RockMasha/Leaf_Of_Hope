@@ -4,5 +4,5 @@ export const root = {
   translateInput: document.querySelector(".translate__input"),
 
   main: document.querySelector("main"),
-  advert: document.querySelector(".advert"),
+  advert: document.querySelector(".plant-post"),
 };
