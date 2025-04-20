@@ -1,0 +1,1 @@
+import{h as e}from"./getCurrentLanguage-CVvCI2XH.js";import{u as r}from"./api-B07jxQ4q.js";const{iframeUrl:a}=await r(),t=document.querySelector("main");t.innerHTML=`<iframe src="${a}" frameborder="0" width="100%" height="100%" allowtransparency ></iframe>`;e();
