@@ -98,6 +98,7 @@ export class AiAssistChat {
     let assistMessage;
     try {
       assistMessage = await sendMessage(userText);
+      this.#addMessage(assistMessage);
     } catch (error) {
       this.chatEl.innerHTML = `
         <div class="ai-assist__error-wrapper">

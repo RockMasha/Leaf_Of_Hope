@@ -22,6 +22,8 @@ export async function enterUser(data) {
     checkPage(answer);
     await hiddenSigninModal();
   } catch (error) {
+    console.log(error);
+
     showError(error);
     return false;
   } finally {
@@ -35,5 +37,3 @@ function showError(error) {
   const message = getErrorText(errorText, translateData);
   root.errorText.textContent = message;
 }
-
-

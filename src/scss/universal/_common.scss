@@ -3,10 +3,19 @@ body {
   flex-direction: column;
   font-family: Inter;
   line-height: normal;
+  overflow: hidden;
+}
+.scrollable-wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+  @supports (-moz-appearance: none) {
+    scrollbar-width: none;
+  }
   &::-webkit-scrollbar {
     display: none;
   }
 }
+
 main {
   padding-top: 82px;
   flex-grow: 1;

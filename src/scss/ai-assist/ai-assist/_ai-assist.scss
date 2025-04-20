@@ -41,6 +41,10 @@
     @media (min-width: 1440px) {
       padding-right: 20px;
     }
+
+    @supports (-moz-appearance: none) {
+      scrollbar-width: none;
+    }
     &::-webkit-scrollbar {
       width: 1px;
     }
@@ -234,6 +238,10 @@
       }
       &::placeholder {
         color: $color-black;
+      }
+      @supports (-moz-appearance: none) {
+        scrollbar-width: thin;
+        scrollbar-color: $color-text-line transparent;
       }
       &::-webkit-scrollbar {
         width: 4px;

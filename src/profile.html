@@ -8,27 +8,29 @@
     <link rel="stylesheet" href="./scss/index.scss" />
   </head>
   <body>
-    <load src="./html/universal/loaders/content-loader.html" />
-    <load src="./html/modal/modal.html" />
-    <div class="modal-wrapper delete-modal-wrapper is-hidden"></div>
-    <load src="./html/universal/btnUp/btnUp.html" />
+    <div class="scrollable-wrapper">
+      <load src="./html/universal/loaders/content-loader.html" />
+      <load src="./html/modal/modal.html" />
+      <div class="modal-wrapper delete-modal-wrapper is-hidden"></div>
+      <load src="./html/universal/btnUp/btnUp.html" />
 
-    <load src="./html/universal/header/header.html" />
-    <main>
-      <load src="./html/universal/translateBtn/translate-btn.html" />
-      <load src="./html/profile/profileInfo/profileInfo.html" />
-      <section class="profile-adverts">
-        <div class="container profile-adverts__container">
-          <h2 class="profile-adverts__title">Мої оголошення:</h2>
-          <load src="./html/profile/active/active.html" />
-          <load
-            src="./html/universal/translateBtn/variable-translate-btn.html"
-          />
-          <load src="./html/profile/profileAdverts/profileAdvets.html" />
-        </div>
-      </section>
-    </main>
-    <load src="./html/universal/footer/footer.html" />
+      <load src="./html/universal/header/header.html" />
+      <main>
+        <load src="./html/universal/translateBtn/translate-btn.html" />
+        <load src="./html/profile/profileInfo/profileInfo.html" />
+        <section class="profile-adverts">
+          <div class="container profile-adverts__container">
+            <h2 class="profile-adverts__title">Мої оголошення:</h2>
+            <load src="./html/profile/active/active.html" />
+            <load
+              src="./html/universal/translateBtn/variable-translate-btn.html"
+            />
+            <load src="./html/profile/profileAdverts/profileAdvets.html" />
+          </div>
+        </section>
+      </main>
+      <load src="./html/universal/footer/footer.html" />
+    </div>
     <script type="module" src="./js/profile.js"></script>
   </body>
 </html>
