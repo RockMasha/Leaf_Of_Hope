@@ -7,11 +7,12 @@ import { setRegistrationFields } from "./formProfile/setRegistrationFields.js";
 import { setInputs } from "./formProfile/setInputs.js";
 import { setSwitchLanguage } from "./universal/translate/original/setSwitchLanguage.js";
 import { settings } from "./formProfile/translate/settings.js";
-import { checkLogin } from "./universal/CheckLogin.js";
+import { checkLogin } from "./universal/checkLogin.js";
+
 
 root.photo.onchange = showPhoto.bind(this, root.photo);
 if (isRedactForm()) {
-  // await checkLogin()
+  await checkLogin()
   await setInputs();
 } else {
   setRegistrationFields();
