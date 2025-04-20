@@ -5,15 +5,15 @@ import { submitFormAdvert } from "./formAdvert/submitFormAdvert";
 import { settings } from "./formAdvert/translate/settings";
 import { isSignin } from "./signin/isSignin";
 import { showSigninModal } from "./signin/showSigninModal";
-import { checkLogin } from "./universal/CheckLogin";
 import { getValueSrcParams } from "./universal/getValueSrcParams";
 import { hiddenContentLoader } from "./universal/hiddenContentLoader";
 import { showPhoto } from "./universal/showPhoto";
 import { setSwitchLanguage } from "./universal/translate/original/setSwitchLanguage";
+import { checkLogin } from "./universal/CheckLogin";
 
 const id = getValueSrcParams("id");
 if (id) {
-  await checkLogin()
+  await checkLogin();
   await redactAdvert();
 } else {
   const answer = await isSignin();
