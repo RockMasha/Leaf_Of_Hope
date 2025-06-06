@@ -1,0 +1,1 @@
+import{h as t}from"./getCurrentLanguage-BQe-LnNi.js";import{u as a}from"./api-g_UhaQ4A.js";try{const{iframeUrl:r}=await a(),e=document.querySelector("main");e.innerHTML=`<iframe src="${r}" frameborder="0" width="100%" height="100%" allowtransparency ></iframe>`,e.setAttribute("metabase","")}catch(r){console.log("error",r)}t();
