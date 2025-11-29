@@ -111,7 +111,7 @@ export class AiAssistChat {
         </div>
   `;
       setTimeout(() => {
-        changePage("ai-assist.html");
+        // changePage("ai-assist.html");
       }, 1500);
     }
     this.#removeLoader();

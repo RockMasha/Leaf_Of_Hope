@@ -76,9 +76,13 @@
   }
   &__item {
     border-radius: 10px;
+    transition: transform 0.3s;
     @media (min-width: 768px) {
     }
     @media (min-width: 1440px) {
+    }
+    &:hover {
+      transform: scale(1.1);
     }
   }
   &__link {
@@ -87,7 +91,7 @@
     align-items: center;
     width: 36px;
     height: 36px;
-    background-color: white;
+    background-color: $color-white;
     border-radius: 10px;
     @media (min-width: 768px) {
       width: 44px;

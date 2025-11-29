@@ -4,12 +4,16 @@
   padding: 3.5px 20px 3.5px 3.5px;
   background-color: $color-white;
   border-radius: 10px;
+  transition: transform 0.3s;
   @media (min-width: 768px) {
     padding: 5px;
   }
   @media (min-width: 1440px) {
     padding: 5px 9px;
     border-radius: 15px;
+  }
+  &:hover {
+    transform: scale(1.1);
   }
 }
 
