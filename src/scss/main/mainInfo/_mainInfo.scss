@@ -11,10 +11,10 @@
     background: $color-main-background;
     border-radius: 20px;
     @media (min-width: 768px) {
-      padding: 34px 22px 87px 37px;
+      padding: 34px 22px 42px 37px;
     }
     @media (min-width: 1440px) {
-      padding: 48px 53px;
+      padding: 60px 53px;
     }
   }
   &__title {
@@ -33,10 +33,10 @@
   &__block {
     @media (min-width: 768px) {
       display: flex;
-      gap: 41px;
+      gap: 20px;
     }
     @media (min-width: 1440px) {
-      gap: 66px;
+      gap: 40px;
     }
   }
   &__text {
@@ -55,13 +55,66 @@
     width: 260px;
     height: 165px;
     border-radius: 20px;
+    margin-bottom: 15px;
     @media (min-width: 768px) {
-      width: 324px;
-      height: 235px;
+      width: 300px;
+      height: 220px;
+      margin-bottom: 0px;
     }
     @media (min-width: 1440px) {
       width: 504px;
-      height: 375px;
+      height: 400px;
+    }
+  }
+  &__btn {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    padding: 7px 17px;
+    font-size: 20px;
+    font-weight: 500;
+    color: $color-text-line;
+    background-color: $color-card;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    transition: outline 0.5s, gap 0.5s;
+    outline: 2px solid transparent;
+    @media (min-width: 768px) {
+      gap: 10px;
+      padding: 10px 20px;
+      font-size: 24px;
+      outline: 2px solid transparent;
+    }
+    @media (min-width: 1440px) {
+      padding: 20px 40px;
+      font-size: 36px;
+      outline: 4px solid transparent;
+    }
+    &:hover {
+      outline: 2px solid $color-card;
+      gap: 10px;
+      @media (min-width: 768px) {
+        outline: 2px solid $color-card;
+        gap: 20px;
+      }
+      @media (min-width: 1440px) {
+        outline: 4px solid $color-card;
+        gap: 20px;
+      }
+    }
+  }
+  &__btn-img {
+    width: 15px;
+    height: 15px;
+    transform: rotate(90deg);
+    @media (min-width: 768px) {
+      width: 20px;
+      height: 20px;
+    }
+    @media (min-width: 1440px) {
+      width: 32px;
+      height: 32px;
     }
   }
 }

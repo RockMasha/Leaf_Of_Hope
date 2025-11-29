@@ -8,13 +8,19 @@ import { setInputs } from "./formProfile/setInputs.js";
 import { setSwitchLanguage } from "./universal/translate/original/setSwitchLanguage.js";
 import { settings } from "./formProfile/translate/settings.js";
 import { checkLogin } from "./universal/checkLogin.js";
-
+import { changePage } from "./universal/chanhePage.js";
 
 root.photo.onchange = showPhoto.bind(this, root.photo);
+const isLogin = await checkLogin();
 if (isRedactForm()) {
-  await checkLogin()
+  if (!isLogin) {
+    changePage("profile.html");
+  }
   await setInputs();
 } else {
+  if (isLogin) {
+    changePage("profile.html");
+  }
   setRegistrationFields();
 }
 
